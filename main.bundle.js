@@ -17,6 +17,60 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 
 /***/ }),
 
+/***/ "./src/app/Services/customerlog.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CustomerlogService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var httpOptions = {
+    headers: new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]({
+        'Content-Type': 'application/json'
+    }),
+    params: null,
+    withCredentials: false
+};
+var CustomerlogService = /** @class */ (function () {
+    function CustomerlogService(http) {
+        this.http = http;
+        //url:string = "https://localhost:44347/api/CustomerLogApi/"; 
+        this.url = "https://leecloud.azurewebsites.net/api/CustomerLogApi/";
+    }
+    CustomerlogService.prototype.PostCustomerLog = function (c) {
+        return this.http.post(this.url, c, httpOptions);
+    };
+    CustomerlogService.prototype.GetAllCustomerLog = function () {
+        return this.http.get(this.url);
+    };
+    CustomerlogService.prototype.DeleteCustomerLog = function (rowkey) {
+        return this.http.delete(this.url + rowkey);
+    };
+    CustomerlogService.prototype.UpdateCustomerLog = function (c) {
+        return this.http.put(this.url + '5', c, httpOptions);
+    };
+    CustomerlogService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
+    ], CustomerlogService);
+    return CustomerlogService;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/Services/emailservice.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -381,22 +435,26 @@ var AppComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__("./node_modules/@angular/http/esm5/http.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Services_product_service__ = __webpack_require__("./src/app/Services/product.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Services_shop_cart_service__ = __webpack_require__("./src/app/Services/shop-cart.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Services_emailservice__ = __webpack_require__("./src/app/Services/emailservice.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__Services_list_email_service__ = __webpack_require__("./src/app/Services/list-email.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__app_component__ = __webpack_require__("./src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__products_component__ = __webpack_require__("./src/app/products.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__menu_component__ = __webpack_require__("./src/app/menu.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__cart_component__ = __webpack_require__("./src/app/cart.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__stoneweight_component__ = __webpack_require__("./src/app/stoneweight.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__angular_common__ = __webpack_require__("./node_modules/@angular/common/esm5/common.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ngx_bootstrap__ = __webpack_require__("./node_modules/ngx-bootstrap/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Services_product_service__ = __webpack_require__("./src/app/Services/product.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Services_shop_cart_service__ = __webpack_require__("./src/app/Services/shop-cart.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__Services_emailservice__ = __webpack_require__("./src/app/Services/emailservice.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Services_list_email_service__ = __webpack_require__("./src/app/Services/list-email.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__Services_customerlog_service__ = __webpack_require__("./src/app/Services/customerlog.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__app_component__ = __webpack_require__("./src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__products_component__ = __webpack_require__("./src/app/products.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__menu_component__ = __webpack_require__("./src/app/menu.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__cart_component__ = __webpack_require__("./src/app/cart.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__stoneweight_component__ = __webpack_require__("./src/app/stoneweight.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__customerlog_component__ = __webpack_require__("./src/app/customerlog.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__angular_common__ = __webpack_require__("./node_modules/@angular/common/esm5/common.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -410,7 +468,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 //Components
+
+
 
 
 
@@ -425,8 +486,9 @@ var AppModule = /** @class */ (function () {
             imports: [
                 __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_common_http__["a" /* HttpClientModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_common_http__["b" /* HttpClientModule */],
                 __WEBPACK_IMPORTED_MODULE_4__angular_http__["c" /* HttpModule */],
+                __WEBPACK_IMPORTED_MODULE_6_ngx_bootstrap__["b" /* ModalModule */].forRoot(),
                 //InMemoryWebApiModule.forRoot(InMemoryDataService),
                 __WEBPACK_IMPORTED_MODULE_3__angular_router__["b" /* RouterModule */].forRoot([
                     {
@@ -436,33 +498,42 @@ var AppModule = /** @class */ (function () {
                     },
                     {
                         path: 'products',
-                        component: __WEBPACK_IMPORTED_MODULE_11__products_component__["a" /* ProductsComponent */]
+                        component: __WEBPACK_IMPORTED_MODULE_13__products_component__["a" /* ProductsComponent */]
                     },
                     {
                         path: 'cart',
-                        component: __WEBPACK_IMPORTED_MODULE_13__cart_component__["a" /* CartComponent */]
+                        component: __WEBPACK_IMPORTED_MODULE_15__cart_component__["a" /* CartComponent */]
                     },
                     {
                         path: 'stoneweight',
-                        component: __WEBPACK_IMPORTED_MODULE_14__stoneweight_component__["a" /* StoneweightComponent */]
+                        component: __WEBPACK_IMPORTED_MODULE_16__stoneweight_component__["a" /* StoneweightComponent */]
+                    },
+                    {
+                        path: 'customerlog',
+                        component: __WEBPACK_IMPORTED_MODULE_17__customerlog_component__["a" /* CustomerlogComponent */]
                     }
                 ])
             ],
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_10__app_component__["a" /* AppComponent */],
-                __WEBPACK_IMPORTED_MODULE_11__products_component__["a" /* ProductsComponent */],
-                __WEBPACK_IMPORTED_MODULE_12__menu_component__["a" /* MenuComponent */],
-                __WEBPACK_IMPORTED_MODULE_13__cart_component__["a" /* CartComponent */],
-                __WEBPACK_IMPORTED_MODULE_14__stoneweight_component__["a" /* StoneweightComponent */]
+                __WEBPACK_IMPORTED_MODULE_12__app_component__["a" /* AppComponent */],
+                __WEBPACK_IMPORTED_MODULE_13__products_component__["a" /* ProductsComponent */],
+                __WEBPACK_IMPORTED_MODULE_14__menu_component__["a" /* MenuComponent */],
+                __WEBPACK_IMPORTED_MODULE_15__cart_component__["a" /* CartComponent */],
+                __WEBPACK_IMPORTED_MODULE_16__stoneweight_component__["a" /* StoneweightComponent */],
+                __WEBPACK_IMPORTED_MODULE_17__customerlog_component__["a" /* CustomerlogComponent */],
+                __WEBPACK_IMPORTED_MODULE_17__customerlog_component__["b" /* ModalContentComponent */]
             ],
+            entryComponents: [__WEBPACK_IMPORTED_MODULE_17__customerlog_component__["b" /* ModalContentComponent */]],
             providers: [
-                __WEBPACK_IMPORTED_MODULE_6__Services_product_service__["a" /* ProductService */],
-                __WEBPACK_IMPORTED_MODULE_7__Services_shop_cart_service__["a" /* ShopCartService */],
-                __WEBPACK_IMPORTED_MODULE_8__Services_emailservice__["a" /* EmailService */],
-                __WEBPACK_IMPORTED_MODULE_9__Services_list_email_service__["a" /* ListEmailService */],
-                { provide: __WEBPACK_IMPORTED_MODULE_15__angular_common__["g" /* LocationStrategy */], useClass: __WEBPACK_IMPORTED_MODULE_15__angular_common__["d" /* HashLocationStrategy */] }
+                __WEBPACK_IMPORTED_MODULE_7__Services_product_service__["a" /* ProductService */],
+                __WEBPACK_IMPORTED_MODULE_8__Services_shop_cart_service__["a" /* ShopCartService */],
+                __WEBPACK_IMPORTED_MODULE_9__Services_emailservice__["a" /* EmailService */],
+                __WEBPACK_IMPORTED_MODULE_10__Services_list_email_service__["a" /* ListEmailService */],
+                __WEBPACK_IMPORTED_MODULE_11__Services_customerlog_service__["a" /* CustomerlogService */],
+                __WEBPACK_IMPORTED_MODULE_6_ngx_bootstrap__["a" /* BsModalService */],
+                { provide: __WEBPACK_IMPORTED_MODULE_18__angular_common__["g" /* LocationStrategy */], useClass: __WEBPACK_IMPORTED_MODULE_18__angular_common__["d" /* HashLocationStrategy */] }
             ],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_10__app_component__["a" /* AppComponent */]]
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_12__app_component__["a" /* AppComponent */]]
         })
     ], AppModule);
     return AppModule;
@@ -475,7 +546,7 @@ var AppModule = /** @class */ (function () {
 /***/ "./src/app/cart.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<a routerLink=\"/products\" routerLinkActive=\"active\"><img src=\"app/Services/Model/Photos/product.jpg\" alt=\"product Icon\" style=\"width:50px;height:50px;\">返回產品線</a>\r\n<p>\r\n \r\n<h3>數量: {{count}}  總價: {{totalamount}} 運費: {{shipmentfee}}</h3>\r\n \r\n \r\n  <div class='table-responsive'>\r\n            <table class='table'>\r\n                <thead>\r\n                    <tr>\r\n                        <th>產品</th>\r\n                        <th>數量</th>\r\n                        <th>價格</th>\r\n                        <th></th>\r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr *ngFor='let product of sumuplist'>\r\n                        <td>{{ product.Name}}<img [src]='product.Photo'></td>\r\n                        <td>{{ product.Volume}}</td>\r\n                        <td>{{ product.SellPrice }}</td>  \r\n                        <td><button class=\"btn btn-info\" (click)=\"add(product)\">增加</button>   \r\n                         <button class=\"btn btn-warning\" (click)=\"remove(product)\">減少</button></td>     \r\n                    </tr>\r\n                    <tr *ngIf=\"shipmentfee > 0 && sumuplist.length\">\r\n                        <td>運費</td>\r\n                        <td></td>\r\n                        <td>{{ shipmentfee }}</td>\r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n   </div>\r\n\r\n\r\n     <div class='panel'  *ngIf='sumuplist && sumuplist.length'>\r\n        <div class=\"form-group\">\r\n             <div class=\"form-group\">\r\n                <label>姓名:</label>\r\n                <input type='text' [(ngModel)]='Name' />\r\n            </div>\r\n            <div class=\"form-group\">\r\n                <label>地址:</label>\r\n                <input type='text' [(ngModel)]='Address' size=\"100\" />\r\n            </div>\r\n            <div class=\"form-group\">\r\n                <label>電話:</label>\r\n                <input type='text' [(ngModel)]='Phone' />\r\n            </div>\r\n             <div class=\"form-group\">\r\n                <label>Email:</label>\r\n                <input type='text' [(ngModel)]='Email' size=\"80\"/>\r\n            </div>\r\n             <div class=\"form-group\">\r\n                <label>備註:</label>\r\n                <input type='text' [(ngModel)]='Note' size=\"80\"/>\r\n            </div>\r\n             <h3>數量: {{count}}  總價: {{totalamount}} 運費: {{shipmentfee}}</h3>\r\n             \r\n                 <h5>付款方式(滿兩千免運費)</h5>\r\n                 <input type=\"radio\" [(ngModel)]=\"paymenttype\"  name=\"paymenttype\" value=\"貨到付款\"/>貨到付款 <br>\r\n                 <input type=\"radio\" [(ngModel)]=\"paymenttype\"  name=\"paymenttype\" value=\"信用卡\"/>信用卡(專員會與您聯絡信用卡付費方式) \r\n            \r\n             <p>\r\n             <hr>\r\n             <button class=\"btn btn-primary\" (click)=\"submitorder()\">確認訂購</button>\r\n         </div>\r\n\r\n         \r\n     </div>\r\n\r\n    \r\n"
+module.exports = "<a routerLink=\"/products\" routerLinkActive=\"active\"><img src=\"app/Services/Model/Photos/product.jpg\" alt=\"product Icon\" style=\"width:50px;height:50px;\">返回產品線</a>\r\n<p>\r\n \r\n<h3>數量: {{count}}  總價: {{totalamount}} 運費: {{shipmentfee}}</h3>\r\n \r\n \r\n  <div class='table-responsive'>\r\n            <table class='table table-dark'>\r\n                <thead>\r\n                    <tr>\r\n                        <th>產品</th>\r\n                        <th>數量</th>\r\n                        <th>價格</th>\r\n                        <th></th>\r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr *ngFor='let product of sumuplist'>\r\n                        <td>{{ product.Name}}<img [src]='product.Photo'></td>\r\n                        <td>{{ product.Volume}}</td>\r\n                        <td>{{ product.SellPrice }}</td>  \r\n                        <td><button class=\"btn btn-info\" (click)=\"add(product)\">增加</button>   \r\n                         <button class=\"btn btn-warning\" (click)=\"remove(product)\">減少</button></td>     \r\n                    </tr>\r\n                    <tr *ngIf=\"shipmentfee > 0 && sumuplist.length\">\r\n                        <td>運費</td>\r\n                        <td></td>\r\n                        <td>{{ shipmentfee }}</td>\r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n   </div>\r\n\r\n\r\n     <div class='panel'  *ngIf='sumuplist && sumuplist.length'>\r\n        <div class=\"form-group\">\r\n             <div class=\"form-group\">\r\n                <label>姓名:</label>\r\n                <input type='text' [(ngModel)]='Name' />\r\n            </div>\r\n            <div class=\"form-group\">\r\n                <label>地址:</label>\r\n                <input type='text' [(ngModel)]='Address' size=\"100\" />\r\n            </div>\r\n            <div class=\"form-group\">\r\n                <label>電話:</label>\r\n                <input type='text' [(ngModel)]='Phone' />\r\n            </div>\r\n             <div class=\"form-group\">\r\n                <label>Email:</label>\r\n                <input type='text' [(ngModel)]='Email' size=\"80\"/>\r\n            </div>\r\n             <div class=\"form-group\">\r\n                <label>備註:</label>\r\n                <input type='text' [(ngModel)]='Note' size=\"80\"/>\r\n            </div>\r\n             <h3>數量: {{count}}  總價: {{totalamount}} 運費: {{shipmentfee}}</h3>\r\n             \r\n                 <h5>付款方式(滿兩千免運費)</h5>\r\n                 <input type=\"radio\" [(ngModel)]=\"paymenttype\"  name=\"paymenttype\" value=\"貨到付款\"/>貨到付款 <br>\r\n                 <input type=\"radio\" [(ngModel)]=\"paymenttype\"  name=\"paymenttype\" value=\"信用卡\"/>信用卡(專員會與您聯絡信用卡付費方式) \r\n            \r\n             <p>\r\n             <hr>\r\n             <button class=\"btn btn-primary\" (click)=\"submitorder()\">確認訂購</button>\r\n         </div>\r\n\r\n         \r\n     </div>\r\n\r\n    \r\n"
 
 /***/ }),
 
@@ -599,6 +670,213 @@ var CartComponent = /** @class */ (function () {
             __WEBPACK_IMPORTED_MODULE_2__Services_emailservice__["a" /* EmailService */]])
     ], CartComponent);
     return CartComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/customerlog.component.css":
+/***/ (function(module, exports) {
+
+module.exports = "div{\r\n    -ms-flex-line-pack: left;\r\n        align-content: left;\r\n}\r\n\r\ntable {\r\n    width: 200;\r\n}\r\n\r\nthead{\r\n    color: #337AB7; \r\n    -ms-flex-line-pack: center; \r\n        align-content: center;\r\n    \r\n}\r\n\r\nrow td{\r\n    -ms-flex-line-pack: left;\r\n        align-content: left;\r\n    text-align: left;\r\n}"
+
+/***/ }),
+
+/***/ "./src/app/customerlog.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<table class=\"table table-bordered table-striped\">\r\n    <tr>\r\n        <th>\r\n            顧客姓名\r\n        </th>\r\n        <th>\r\n            電話\r\n        </th>\r\n        <th>\r\n            Email\r\n        </th>\r\n        <th>\r\n            通話紀錄\r\n        </th>\r\n    </tr>\r\n    \r\n        <tr>\r\n            <td>\r\n                <input type=\"string\"\r\n                [(ngModel)]='Name'\r\n                style=\"width: 6em;\"\r\n                /> \r\n            </td>\r\n            <td>\r\n                <input type=\"string\"\r\n                [(ngModel)]='PhoneNumber'\r\n                /> \r\n            </td>\r\n            <td>\r\n                <input type=\"string\"\r\n                [(ngModel)]='Email'  \r\n                /> \r\n            </td>\r\n            <td>\r\n                <textarea [(ngModel)]='Note' class=\"form-control\" >\r\n\r\n                </textarea>\r\n            </td>\r\n            <td>\r\n                <button class=\"btn btn-primary\" (click) = 'addlog()'>\r\n                    新增\r\n                 </button>\r\n                \r\n            </td>\r\n        </tr>\r\n\r\n        <tbody> \r\n            <tr *ngFor = 'let item of logList'>\r\n                \r\n                <td>{{ item.Name}}</td>\r\n                <td>{{ item.PhoneNumber }}</td>\r\n                <td>{{ item.Email}}</td>\r\n                <td>{{ item.Note}}</td>\r\n                <td>{{ item.RecordTime}}</td>\r\n                <td>\r\n                        <button class=\"btn btn-danger\" (click) = 'DeleteLog(item.RowKey, item.Name)' >\r\n                                刪除\r\n                        </button>\r\n                        <button type=\"button\" class=\"btn btn-info\" (click)=\"openModal(item)\">編輯</button>\r\n                </td>\r\n\r\n            </tr>\r\n        </tbody>\r\n   \r\n</table>\r\n\r\n<ng-template #template>\r\n        <div class=\"modal-header\">\r\n          <h4 class=\"modal-title pull-left\">Modal</h4>\r\n          {{ item.Name }}\r\n          <button type=\"button\" class=\"close pull-right\" aria-label=\"Close\" (click)=\"modalRef.hide()\">\r\n            <span aria-hidden=\"true\">&times;</span>\r\n          </button>\r\n        </div>\r\n        <div class=\"modal-body\">\r\n          This is a modal.\r\n        </div>\r\n</ng-template>"
+
+/***/ }),
+
+/***/ "./src/app/customerlog.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CustomerlogComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return ModalContentComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__customerlog__ = __webpack_require__("./src/app/customerlog.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Services_customerlog_service__ = __webpack_require__("./src/app/Services/customerlog.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ngx_bootstrap_modal__ = __webpack_require__("./node_modules/ngx-bootstrap/modal/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ngx_bootstrap_modal_bs_modal_ref_service__ = __webpack_require__("./node_modules/ngx-bootstrap/modal/bs-modal-ref.service.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var CustomerlogComponent = /** @class */ (function () {
+    function CustomerlogComponent(logservice, modalService) {
+        this.logservice = logservice;
+        this.modalService = modalService;
+    }
+    CustomerlogComponent.prototype.ngOnInit = function () {
+        this.GetLogList();
+    };
+    Object.defineProperty(CustomerlogComponent.prototype, "Name", {
+        get: function () {
+            return this._name;
+        },
+        set: function (value) {
+            this._name = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(CustomerlogComponent.prototype, "PhoneNumber", {
+        get: function () {
+            return this._phone;
+        },
+        set: function (value) {
+            this._phone = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(CustomerlogComponent.prototype, "Email", {
+        get: function () {
+            return this._emailaddress;
+        },
+        set: function (value) {
+            this._emailaddress = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(CustomerlogComponent.prototype, "Note", {
+        get: function () {
+            return this._note;
+        },
+        set: function (value) {
+            this._note = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(CustomerlogComponent.prototype, "logList", {
+        get: function () {
+            return this._loglist;
+        },
+        set: function (value) {
+            this._loglist = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    CustomerlogComponent.prototype.openModal = function (item) {
+        var initialState = {
+            log: item,
+            parent: this.GetLogList
+        };
+        this.bsModalRef = this.modalService.show(ModalContentComponent, { initialState: initialState });
+    };
+    CustomerlogComponent.prototype.GetLogList = function () {
+        var _this = this;
+        this.logservice.GetAllCustomerLog().subscribe(function (list) {
+            _this.logList = list;
+        }, function (error) { return alert(error); });
+    };
+    CustomerlogComponent.prototype.DeleteLog = function (rowkey, key) {
+        var _this = this;
+        if (confirm('確定刪除 ' + key + "?")) {
+            this.logservice.DeleteCustomerLog(rowkey).subscribe(function (r) {
+                alert('資料已被刪除');
+                _this.GetLogList();
+            }, function (error) { return alert(error); });
+        }
+    };
+    CustomerlogComponent.prototype.addlog = function () {
+        var _this = this;
+        if (this.Name !== '' && typeof this.Name !== 'undefined') {
+            var newitem_1 = new __WEBPACK_IMPORTED_MODULE_1__customerlog__["a" /* customerlog */]();
+            newitem_1.Name = this.Name;
+            newitem_1.Email = this.Email;
+            newitem_1.PhoneNumber = this.PhoneNumber;
+            newitem_1.Note = this.Note;
+            newitem_1.RecordTime = new Date().toLocaleDateString() + "-" + new Date().toLocaleTimeString();
+            this.logservice.PostCustomerLog(newitem_1).subscribe(function (res) {
+                alert(newitem_1.Name + ' 資料輸入成功!');
+                _this.resetInput();
+                _this.GetLogList();
+            }, function (error) { return alert(error); });
+        }
+    };
+    CustomerlogComponent.prototype.resetInput = function () {
+        this.Name = '';
+        this.PhoneNumber = '';
+        this.Email = '';
+        this.Note = '';
+    };
+    CustomerlogComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            moduleId: module.i,
+            template: __webpack_require__("./src/app/customerlog.component.html"),
+            styles: [__webpack_require__("./src/app/customerlog.component.css")]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__Services_customerlog_service__["a" /* CustomerlogService */], __WEBPACK_IMPORTED_MODULE_3_ngx_bootstrap_modal__["a" /* BsModalService */]])
+    ], CustomerlogComponent);
+    return CustomerlogComponent;
+}());
+
+/* This is a component which we pass in modal*/
+var ModalContentComponent = /** @class */ (function () {
+    function ModalContentComponent(bsModalRef, logservice) {
+        this.bsModalRef = bsModalRef;
+        this.logservice = logservice;
+    }
+    ModalContentComponent.prototype.ngOnInit = function () {
+        this.Name = this.log.Name;
+        this.PhoneNumber = this.log.PhoneNumber;
+        this.Email = this.log.Email;
+        this.Note = this.log.Note;
+    };
+    ModalContentComponent.prototype.savelog = function () {
+        var _this = this;
+        this.log.Name = this.Name;
+        this.log.PhoneNumber = this.PhoneNumber;
+        this.log.Email = this.Email;
+        this.log.Note = this.Note;
+        this.log.RecordTime = new Date().toLocaleDateString() + "-" + new Date().toLocaleTimeString();
+        this.logservice.UpdateCustomerLog(this.log).subscribe(function (res) {
+            alert('修改資料成功!');
+            _this.bsModalRef.hide();
+            _this.parent.call(_this);
+        }, function (error) { return alert(error); });
+    };
+    ModalContentComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'modal-content',
+            template: "\n      <div class=\"modal-header table-hover\">\n        <h4 class=\"modal-title pull-left\">{{log.Name}}</h4>\n        <button type=\"button\" class=\"close pull-right\" aria-label=\"Close\" (click)=\"bsModalRef.hide()\">\n          <span aria-hidden=\"true\">&times;</span>\n        </button>\n      </div>\n      <div class=\"modal-body\">\n      <table class=\"table table-bordered\">\n      <tr>\n          <td>\n              \u9867\u5BA2\u59D3\u540D\n          </td>\n          <td>\n          <input type=\"string\"\n          [(ngModel)]='Name'\n           />  \n          </td>\n      </tr>\n\n      <tr>\n          <td>\n              \u96FB\u8A71\n          </td>\n          <td>\n          <input type=\"string\"\n          [(ngModel)]='PhoneNumber'\n           />  \n          </td>\n      </tr>\n\n      <tr>\n      <td>\n         Email\n      </td>\n      <td>\n      <input type=\"string\"\n      [(ngModel)]='Email'\n       />  \n      </td>\n      </tr>\n\n      <tr>\n      <td>\n          \u901A\u8A0A\u7D00\u9304\n      </td>\n      <td>\n         <textarea [(ngModel)]='Note' class=\"form-control\" >\n\n         </textarea>\n      </td>\n      </tr>\n      <tr>\n         \n              <td>\n                  <button class=\"btn btn-primary\" (click) = 'savelog()'>\n                     \u5132\u5B58\n                   </button>\n                  \n              </td>\n\n        </tr>\n    </table> \n\n\n      </div>\n      <div class=\"modal-footer\">\n        <button type=\"button\" class=\"btn btn-default\" (click)=\"bsModalRef.hide()\">\u53D6\u6D88</button>\n      </div>\n    "
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ngx_bootstrap_modal_bs_modal_ref_service__["a" /* BsModalRef */], __WEBPACK_IMPORTED_MODULE_2__Services_customerlog_service__["a" /* CustomerlogService */]])
+    ], ModalContentComponent);
+    return ModalContentComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/customerlog.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return customerlog; });
+var customerlog = /** @class */ (function () {
+    function customerlog() {
+        this.RecordTime = Date.now().toString();
+    }
+    return customerlog;
 }());
 
 
@@ -910,7 +1188,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].production) {
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* enableProdMode */])();
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_16" /* enableProdMode */])();
 }
 Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_app_module__["a" /* AppModule */])
     .catch(function (err) { return console.log(err); });
