@@ -17,6 +17,21 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 
 /***/ }),
 
+/***/ "./src/app/Model/EmailMessage.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EmailMessage; });
+var EmailMessage = /** @class */ (function () {
+    function EmailMessage() {
+    }
+    return EmailMessage;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/Services/customerlog.service.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -80,6 +95,7 @@ var CustomerlogService = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("./node_modules/@angular/http/esm5/http.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__("./node_modules/rxjs/_esm5/add/operator/map.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_catch__ = __webpack_require__("./node_modules/rxjs/_esm5/add/operator/catch.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -95,13 +111,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+var httpOptions = {
+    headers: new __WEBPACK_IMPORTED_MODULE_4__angular_common_http__["c" /* HttpHeaders */]({
+        'Content-Type': 'application/json'
+    }),
+    params: null,
+    withCredentials: false
+};
 var EmailService = /** @class */ (function () {
-    function EmailService(http) {
+    function EmailService(http, httpclient) {
         this.http = http;
+        this.httpclient = httpclient;
     }
     EmailService.prototype.sendemail = function (to, subject, message) {
         var web = 'http://leecloud.azurewebsites.net/api/';
-        //var web = 'http://localhost:49740/api/Email';
+        //var web = 'http://localhost:49740/api/';
         var from = "bio.china@msa.hinet.net";
         var webkey = 'adsfasd3w243l2q51230-48-gfd321qm4mndvdcuoisadjq2w3;4;lr8';
         var url = "Email?from=" + from + "&to=" + to + "&subject=" + encodeURIComponent(subject) + "&message=" + encodeURIComponent(message) + "&webkey=" + webkey;
@@ -119,6 +144,14 @@ var EmailService = /** @class */ (function () {
         return this.http.get(urlstring, options)
             .map(this.extractData)
             .catch(this.handleError);
+    };
+    EmailService.prototype.SendEmailMessage = function (message) {
+        var web = 'http://leecloud.azurewebsites.net/api/Email';
+        //var web = 'http://localhost:49740/api/Email';
+        var from = "bio.china@msa.hinet.net";
+        var webkey = 'adsfasd3w243l2q51230-48-gfd321qm4mndvdcuoisadjq2w3;4;lr8';
+        message.ApiKey = webkey;
+        return this.httpclient.post(web, message, httpOptions);
     };
     EmailService.prototype.extractData = function (res) {
         var body = res.json();
@@ -140,7 +173,7 @@ var EmailService = /** @class */ (function () {
     };
     EmailService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */], __WEBPACK_IMPORTED_MODULE_4__angular_common_http__["a" /* HttpClient */]])
     ], EmailService);
     return EmailService;
 }());
@@ -448,6 +481,7 @@ var AppComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__stoneweight_component__ = __webpack_require__("./src/app/stoneweight.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__customerlog_component__ = __webpack_require__("./src/app/customerlog.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__angular_common__ = __webpack_require__("./node_modules/@angular/common/esm5/common.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__emailmodal_emailmodal_component__ = __webpack_require__("./src/app/emailmodal/emailmodal.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -470,6 +504,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 //Components
+
 
 
 
@@ -521,9 +556,9 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_15__cart_component__["a" /* CartComponent */],
                 __WEBPACK_IMPORTED_MODULE_16__stoneweight_component__["a" /* StoneweightComponent */],
                 __WEBPACK_IMPORTED_MODULE_17__customerlog_component__["a" /* CustomerlogComponent */],
-                __WEBPACK_IMPORTED_MODULE_17__customerlog_component__["b" /* ModalContentComponent */]
+                __WEBPACK_IMPORTED_MODULE_17__customerlog_component__["b" /* ModalContentComponent */], __WEBPACK_IMPORTED_MODULE_19__emailmodal_emailmodal_component__["a" /* EmailmodalComponent */]
             ],
-            entryComponents: [__WEBPACK_IMPORTED_MODULE_17__customerlog_component__["b" /* ModalContentComponent */]],
+            entryComponents: [__WEBPACK_IMPORTED_MODULE_17__customerlog_component__["b" /* ModalContentComponent */], __WEBPACK_IMPORTED_MODULE_19__emailmodal_emailmodal_component__["a" /* EmailmodalComponent */]],
             providers: [
                 __WEBPACK_IMPORTED_MODULE_7__Services_product_service__["a" /* ProductService */],
                 __WEBPACK_IMPORTED_MODULE_8__Services_shop_cart_service__["a" /* ShopCartService */],
@@ -686,7 +721,7 @@ module.exports = "div{\r\n    -ms-flex-line-pack: left;\r\n        align-content
 /***/ "./src/app/customerlog.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<table class=\"table table-bordered table-striped\">\r\n    <tr>\r\n        <th>\r\n            顧客姓名\r\n        </th>\r\n        <th>\r\n            電話\r\n        </th>\r\n        <th>\r\n            Email\r\n        </th>\r\n        <th>\r\n            通話紀錄\r\n        </th>\r\n        <th>\r\n            備註 (後續追蹤)\r\n        </th>\r\n        <th>\r\n            時間\r\n        </th>\r\n    </tr>\r\n    \r\n        <tr>\r\n            <td>\r\n                <input type=\"string\"\r\n                [(ngModel)]='Name'\r\n                style=\"width: 6em;\"\r\n                /> \r\n            </td>\r\n            <td>\r\n                <input type=\"string\"\r\n                [(ngModel)]='PhoneNumber'\r\n                style=\"width: 6em;\"\r\n                /> \r\n            </td>\r\n            <td>\r\n                <input type=\"string\"\r\n                [(ngModel)]='Email'  \r\n                /> \r\n            </td>\r\n            <td>\r\n                <textarea [(ngModel)]='Note' class=\"form-control\" >\r\n\r\n                </textarea>\r\n            </td>\r\n            <td  class=\"warning\">\r\n                <textarea [(ngModel)]='Comment' class=\"form-control\" >\r\n\r\n                </textarea>\r\n            </td>\r\n            <td>\r\n                \r\n            </td>\r\n            <td>\r\n                <button class=\"btn btn-primary\" (click) = 'addlog()'>\r\n                    新增\r\n                 </button>\r\n                \r\n            </td>\r\n        </tr>\r\n\r\n        <tbody> \r\n            <tr *ngFor = 'let item of logList'>\r\n                \r\n                <td>{{ item.Name}}</td>\r\n                <td>{{ item.PhoneNumber }}</td>\r\n                <td>{{ item.Email}}</td>\r\n                <td>{{ item.Note}}</td>\r\n                <td>{{ item.Comment}}</td>\r\n                <td>{{ item.RecordTime}}</td>\r\n                <td>\r\n                        <button class=\"btn btn-danger\" (click) = 'DeleteLog(item.RowKey, item.Name)' >\r\n                                刪除\r\n                        </button>\r\n                        <button type=\"button\" class=\"btn btn-info\" (click)=\"openModal(item)\">編輯</button>\r\n                </td>\r\n\r\n            </tr>\r\n        </tbody>\r\n   \r\n</table>\r\n\r\n "
+module.exports = "<table class=\"table table-bordered table-striped\">\r\n    <tr>\r\n        <th>\r\n            顧客姓名\r\n        </th>\r\n        <th>\r\n            電話\r\n        </th>\r\n        <th>\r\n            Email\r\n        </th>\r\n        <th>\r\n            通話紀錄\r\n        </th>\r\n        <th>\r\n            備註 (後續追蹤)\r\n        </th>\r\n        <th>\r\n            時間\r\n        </th>\r\n    </tr>\r\n    \r\n        <tr>\r\n            <td>\r\n                <input type=\"string\"\r\n                [(ngModel)]='Name'\r\n                style=\"width: 6em;\"\r\n                /> \r\n            </td>\r\n            <td>\r\n                <input type=\"string\"\r\n                [(ngModel)]='PhoneNumber'\r\n                style=\"width: 6em;\"\r\n                /> \r\n            </td>\r\n            <td>\r\n                <input type=\"string\"\r\n                [(ngModel)]='Email'  \r\n                /> \r\n            </td>\r\n            <td>\r\n                <textarea [(ngModel)]='Note' class=\"form-control\" >\r\n\r\n                </textarea>\r\n            </td>\r\n            <td  class=\"warning\">\r\n                <textarea [(ngModel)]='Comment' class=\"form-control\" >\r\n\r\n                </textarea>\r\n            </td>\r\n            <td>\r\n                \r\n            </td>\r\n            <td>\r\n                <button class=\"btn btn-primary\" (click) = 'addlog()'>\r\n                    新增\r\n                 </button>\r\n                \r\n            </td>\r\n        </tr>\r\n\r\n        <tbody> \r\n            <tr *ngFor = 'let item of logList'>\r\n                \r\n                <td>{{ item.Name}}</td>\r\n                <td>{{ item.PhoneNumber }}</td>\r\n                <td>{{ item.Email}}\r\n                    <button *ngIf='item.Email' type=\"button\" class=\"btn btn-success\" (click)=\"openEmailModal(item)\">Email</button>\r\n                </td>\r\n                <td>{{ item.Note}}</td>\r\n                <td>{{ item.Comment}}</td>\r\n                <td>{{ item.RecordTime}}</td>\r\n                <td>\r\n                        <button class=\"btn btn-danger\" (click) = 'DeleteLog(item.RowKey, item.Name)' >\r\n                                刪除\r\n                        </button>\r\n                        <button type=\"button\" class=\"btn btn-info\" (click)=\"openModal(item)\">編輯</button>\r\n                      \r\n                </td>\r\n\r\n            </tr>\r\n        </tbody>\r\n   \r\n</table>\r\n\r\n "
 
 /***/ }),
 
@@ -701,6 +736,7 @@ module.exports = "<table class=\"table table-bordered table-striped\">\r\n    <t
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Services_customerlog_service__ = __webpack_require__("./src/app/Services/customerlog.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ngx_bootstrap_modal__ = __webpack_require__("./node_modules/ngx-bootstrap/modal/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ngx_bootstrap_modal_bs_modal_ref_service__ = __webpack_require__("./node_modules/ngx-bootstrap/modal/bs-modal-ref.service.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__emailmodal_emailmodal_component__ = __webpack_require__("./src/app/emailmodal/emailmodal.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -710,6 +746,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -779,6 +816,13 @@ var CustomerlogComponent = /** @class */ (function () {
             parent: this.GetLogList
         };
         this.bsModalRef = this.modalService.show(ModalContentComponent, { initialState: initialState });
+    };
+    CustomerlogComponent.prototype.openEmailModal = function (item) {
+        var initialState = {
+            Email: item.Email,
+            Name: item.Name
+        };
+        this.emailModalRef = this.modalService.show(__WEBPACK_IMPORTED_MODULE_5__emailmodal_emailmodal_component__["a" /* EmailmodalComponent */], { initialState: initialState });
     };
     CustomerlogComponent.prototype.GetLogList = function () {
         var _this = this;
@@ -881,6 +925,81 @@ var customerlog = /** @class */ (function () {
         this.RecordTime = Date.now().toString();
     }
     return customerlog;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/emailmodal/emailmodal.component.css":
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/emailmodal/emailmodal.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"modal-header table-hover\">\n  <h4 class=\"modal-title pull-left\">{{Name}}</h4>\n  <button type=\"button\" class=\"close pull-right\" aria-label=\"Close\" (click)=\"bsModalRef.hide()\">\n    <span aria-hidden=\"true\">&times;</span>\n  </button>\n</div>\n<div class=\"modal-body\">\n<table class=\"table table-bordered\">\n<tr>\n  <td>\n    Email \n  </td>\n  <td>\n    {{Email}}\n  </td>\n</tr>\n\n<tr>\n<td>\n   標題\n</td>\n<td>\n<input type=\"string\"\n[(ngModel)]='Subject'\n />  \n</td>\n</tr>\n\n<tr class=\"info\">\n<td>\n    訊息\n</td>\n<td>\n   <textarea [(ngModel)]='Content' class=\"form-control\" rows=\"5\">\n\n   </textarea>\n</td>\n</tr>\n \n<tr >\n   \n        <td>\n            <button class=\"btn btn-primary\" (click) = 'EmailOut()'>\n               寄出\n             </button>\n            \n        </td>\n\n  </tr>\n</table> \n\n\n</div>\n<div class=\"modal-footer\">\n  <button type=\"button\" class=\"btn btn-default\" (click)=\"bsModalRef.hide()\">取消</button>\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/emailmodal/emailmodal.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EmailmodalComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ngx_bootstrap_modal_bs_modal_ref_service__ = __webpack_require__("./node_modules/ngx-bootstrap/modal/bs-modal-ref.service.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Services_emailservice__ = __webpack_require__("./src/app/Services/emailservice.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Model_EmailMessage__ = __webpack_require__("./src/app/Model/EmailMessage.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var EmailmodalComponent = /** @class */ (function () {
+    function EmailmodalComponent(emailservice, bsModalRef) {
+        this.emailservice = emailservice;
+        this.bsModalRef = bsModalRef;
+        this.emailfrom = 'bio.china@msa.hinet.net';
+    }
+    EmailmodalComponent.prototype.ngOnInit = function () {
+    };
+    EmailmodalComponent.prototype.EmailOut = function () {
+        var _this = this;
+        var newEmail = new __WEBPACK_IMPORTED_MODULE_3__Model_EmailMessage__["a" /* EmailMessage */]();
+        newEmail.FromEmailAddress = this.emailfrom;
+        newEmail.ToEmailAddress = this.Email;
+        newEmail.Name = this.Name;
+        newEmail.Subject = this.Subject;
+        newEmail.Content = this.Content;
+        this.emailservice.SendEmailMessage(newEmail).subscribe(function (res) {
+            alert("郵件-" + _this.Subject + " 已送出");
+            _this.bsModalRef.hide();
+        }, function (error) {
+            alert("郵件-" + _this.Subject + " 已送出.." + error);
+            _this.bsModalRef.hide();
+        });
+    };
+    EmailmodalComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-emailmodal',
+            template: __webpack_require__("./src/app/emailmodal/emailmodal.component.html"),
+            styles: [__webpack_require__("./src/app/emailmodal/emailmodal.component.css")]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__Services_emailservice__["a" /* EmailService */], __WEBPACK_IMPORTED_MODULE_1_ngx_bootstrap_modal_bs_modal_ref_service__["a" /* BsModalRef */]])
+    ], EmailmodalComponent);
+    return EmailmodalComponent;
 }());
 
 
