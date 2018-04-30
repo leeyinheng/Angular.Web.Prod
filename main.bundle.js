@@ -69,6 +69,9 @@ var CustomerlogService = /** @class */ (function () {
     CustomerlogService.prototype.GetAllCustomerLog = function () {
         return this.http.get(this.url);
     };
+    CustomerlogService.prototype.GetAllCustomerLogByKey = function (key) {
+        return this.http.get(this.url + key);
+    };
     CustomerlogService.prototype.DeleteCustomerLog = function (rowkey) {
         return this.http.delete(this.url + rowkey);
     };
@@ -728,7 +731,7 @@ module.exports = "div{\r\n    -ms-flex-line-pack: left;\r\n        align-content
 /***/ "./src/app/customerlog.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<table class=\"table table-bordered table-striped\">\r\n    <tr>\r\n        <th>\r\n            顧客姓名\r\n        </th>\r\n        <th>\r\n            電話\r\n        </th>\r\n        <th>\r\n            Email\r\n        </th>\r\n        <th>\r\n            通話紀錄\r\n        </th>\r\n        <th>\r\n            備註 (後續追蹤)\r\n        </th>\r\n        <th>\r\n            時間\r\n        </th>\r\n    </tr>\r\n    \r\n        <tr>\r\n            <td>\r\n                <input type=\"string\"\r\n                [(ngModel)]='Name'\r\n                style=\"width: 6em;\"\r\n                /> \r\n            </td>\r\n            <td>\r\n                <input type=\"string\"\r\n                [(ngModel)]='PhoneNumber'\r\n                style=\"width: 6em;\"\r\n                /> \r\n            </td>\r\n            <td>\r\n                <input type=\"string\"\r\n                [(ngModel)]='Email'  \r\n                /> \r\n            </td>\r\n            <td>\r\n                <textarea [(ngModel)]='Note' class=\"form-control\" >\r\n\r\n                </textarea>\r\n            </td>\r\n            <td  class=\"warning\">\r\n                <textarea [(ngModel)]='Comment' class=\"form-control\" >\r\n\r\n                </textarea>\r\n            </td>\r\n            <td>\r\n                \r\n            </td>\r\n            <td>\r\n                <button class=\"btn btn-primary\" (click) = 'addlog()'>\r\n                    新增\r\n                 </button>\r\n                \r\n            </td>\r\n        </tr>\r\n\r\n        <tbody> \r\n            <tr *ngFor = 'let item of logList'>\r\n                \r\n                <td>{{ item.Name}}</td>\r\n                <td>{{ item.PhoneNumber }}</td>\r\n                <td>{{ item.Email}}\r\n                    <button *ngIf='item.Email' type=\"button\" class=\"btn btn-success\" (click)=\"openEmailModal(item)\">Email</button>\r\n                </td>\r\n                <td>{{ item.Note}}</td>\r\n                <td>{{ item.Comment}}</td>\r\n                <td>{{ item.RecordTime}}</td>\r\n                <td>\r\n                        <button class=\"btn btn-danger\" (click) = 'DeleteLog(item.RowKey, item.Name)' >\r\n                                刪除\r\n                        </button>\r\n                        <button type=\"button\" class=\"btn btn-info\" (click)=\"openModal(item)\">編輯</button>\r\n                      \r\n                </td>\r\n\r\n            </tr>\r\n        </tbody>\r\n   \r\n</table>\r\n\r\n{{modalMessage}}"
+module.exports = "<div class=\"row\">\r\n    <label>搜尋:</label>\r\n    <input type=\"string\"\r\n    [(ngModel)]='Search'\r\n    style=\"width: 6em;\"\r\n    /> \r\n</div>\r\n<table class=\"table table-bordered table-striped\">\r\n    <tr>\r\n        <th>\r\n            顧客姓名\r\n        </th>\r\n        <th>\r\n            電話\r\n        </th>\r\n        <th>\r\n            Email\r\n        </th>\r\n        <th>\r\n            通話紀錄\r\n        </th>\r\n        <th>\r\n            備註 (後續追蹤)\r\n        </th>\r\n        <th>\r\n            時間\r\n        </th>\r\n    </tr>\r\n    \r\n        <tr>\r\n            <td>\r\n                <input type=\"string\"\r\n                [(ngModel)]='Name'\r\n                style=\"width: 6em;\"\r\n                /> \r\n            </td>\r\n            <td>\r\n                <input type=\"string\"\r\n                [(ngModel)]='PhoneNumber'\r\n                style=\"width: 6em;\"\r\n                /> \r\n            </td>\r\n            <td>\r\n                <input type=\"string\"\r\n                [(ngModel)]='Email'  \r\n                /> \r\n            </td>\r\n            <td>\r\n                <textarea [(ngModel)]='Note' class=\"form-control\" >\r\n\r\n                </textarea>\r\n            </td>\r\n            <td  class=\"warning\">\r\n                <textarea [(ngModel)]='Comment' class=\"form-control\">\r\n\r\n                </textarea>\r\n            </td>\r\n            <td>\r\n                \r\n            </td>\r\n            <td>\r\n                <button class=\"btn btn-primary\" (click) = 'addlog()'>\r\n                    新增\r\n                 </button>\r\n                \r\n            </td>\r\n        </tr>\r\n\r\n        <tbody> \r\n            <tr *ngFor = 'let item of logList'>\r\n                \r\n                <td>{{ item.Name}}</td>\r\n                <td>{{ item.PhoneNumber }}</td>\r\n                <td>{{ item.Email}}\r\n                    <button *ngIf='item.Email' type=\"button\" class=\"btn btn-success\" (click)=\"openEmailModal(item)\">Email</button>\r\n                </td>\r\n                <td>{{ item.Note}}</td>\r\n                <td class=\"warning\">{{ item.Comment}}</td>\r\n                <td>{{ item.RecordTime}}</td>\r\n                <td>\r\n                        <button class=\"btn btn-danger\" (click) = 'DeleteLog(item.RowKey, item.Name)' >\r\n                                刪除\r\n                        </button>\r\n                        <button type=\"button\" class=\"btn btn-info\" (click)=\"openModal(item)\">編輯</button>\r\n                      \r\n                </td>\r\n\r\n            </tr>\r\n        </tbody>\r\n   \r\n</table>\r\n\r\n{{modalMessage}}"
 
 /***/ }),
 
@@ -767,6 +770,17 @@ var CustomerlogComponent = /** @class */ (function () {
     CustomerlogComponent.prototype.ngOnInit = function () {
         this.GetLogList();
     };
+    Object.defineProperty(CustomerlogComponent.prototype, "Search", {
+        get: function () {
+            return this._search;
+        },
+        set: function (value) {
+            this._search = value;
+            this.GetLogListByKey(value);
+        },
+        enumerable: true,
+        configurable: true
+    });
     Object.defineProperty(CustomerlogComponent.prototype, "Name", {
         get: function () {
             return this._name;
@@ -834,6 +848,12 @@ var CustomerlogComponent = /** @class */ (function () {
     CustomerlogComponent.prototype.GetLogList = function () {
         var _this = this;
         this.logservice.GetAllCustomerLog().subscribe(function (list) {
+            _this.logList = list;
+        }, function (error) { return alert(error); });
+    };
+    CustomerlogComponent.prototype.GetLogListByKey = function (key) {
+        var _this = this;
+        this.logservice.GetAllCustomerLogByKey(key).subscribe(function (list) {
             _this.logList = list;
         }, function (error) { return alert(error); });
     };
@@ -948,7 +968,7 @@ module.exports = ""
 /***/ "./src/app/emailmodal/emailmodal.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"modal-header table-hover\">\r\n  <h4 class=\"modal-title pull-left\">{{Name}}</h4>\r\n  <button type=\"button\" class=\"close pull-right\" aria-label=\"Close\" (click)=\"bsModalRef.hide()\">\r\n    <span aria-hidden=\"true\">&times;</span>\r\n  </button>\r\n</div>\r\n<div class=\"modal-body\">\r\n<table class=\"table table-bordered\">\r\n<tr>\r\n  <td>\r\n    Email \r\n  </td>\r\n  <td>\r\n    {{Email}}\r\n  </td>\r\n</tr>\r\n\r\n<tr>\r\n<td>\r\n   標題\r\n</td>\r\n<td>\r\n<input type=\"string\"\r\n[(ngModel)]='Subject'\r\n />  \r\n</td>\r\n</tr>\r\n\r\n<tr class=\"info\">\r\n<td>\r\n    訊息\r\n</td>\r\n<td>\r\n   <textarea [(ngModel)]='Content' class=\"form-control\" rows=\"5\">\r\n\r\n   </textarea>\r\n</td>\r\n</tr>\r\n \r\n<tr >\r\n   \r\n        <td>\r\n            <button class=\"btn btn-primary\" (click) = 'EmailOut()'>\r\n               寄出\r\n             </button>\r\n            \r\n        </td>\r\n\r\n  </tr>\r\n</table> \r\n\r\n\r\n</div>\r\n<div class=\"modal-footer\">\r\n  <button type=\"button\" class=\"btn btn-default\" (click)=\"bsModalRef.hide()\">取消</button>\r\n</div>\r\n"
+module.exports = "<div class=\"modal-header table-hover\">\n  <h4 class=\"modal-title pull-left\">{{Name}}</h4>\n  <button type=\"button\" class=\"close pull-right\" aria-label=\"Close\" (click)=\"bsModalRef.hide()\">\n    <span aria-hidden=\"true\">&times;</span>\n  </button>\n</div>\n<div class=\"modal-body\">\n<table class=\"table table-bordered\">\n<tr>\n  <td>\n    Email \n  </td>\n  <td>\n    {{Email}}\n  </td>\n</tr>\n\n<tr>\n<td>\n   標題\n</td>\n<td>\n<input type=\"string\"\n[(ngModel)]='Subject'\n />  \n</td>\n</tr>\n\n<tr class=\"info\">\n<td>\n    訊息\n</td>\n<td>\n   <textarea [(ngModel)]='Content' class=\"form-control\" rows=\"5\">\n\n   </textarea>\n</td>\n</tr>\n \n<tr >\n   \n        <td>\n            <button class=\"btn btn-primary\" (click) = 'EmailOut()'>\n               寄出\n             </button>\n            \n        </td>\n\n  </tr>\n</table> \n\n\n</div>\n<div class=\"modal-footer\">\n  <button type=\"button\" class=\"btn btn-default\" (click)=\"bsModalRef.hide()\">取消</button>\n</div>\n"
 
 /***/ }),
 
