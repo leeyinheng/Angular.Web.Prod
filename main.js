@@ -1,5 +1,174 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["main"],{
 
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/article/articleform/articleform.component.html":
+/*!******************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/article/articleform/articleform.component.html ***!
+  \******************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"nav navbar-nav navbar-right\">\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"SaveEntity()\">儲存</button> | \n        <button type=\"button\" class=\"btn btn-default\" onclick=\"location.href='#/bccenter';\">返回</button>   \n        <p></p>    \n</div>\n\n<div class=\"body-content\">\n\n        <table class=\"table table-bordered table-striped\">\n                <tbody>\n            \n                    <tr>\n                        <td>\n                            ID:\n                        </td>\n                        <TD>\n                                {{Entity.Id}}\n                        </TD>\n                    </tr>\n                    <tr>\n                        <td>\n                               標題:\n                        </td>\n                        <td>\n                                <input [(ngModel)]=\"Entity.Title\" #ctrl=\"ngModel\" required name=\"title\"  #fullName=\"ngModel\" required> \n                        </td>\n                    </tr>\n                    <tr>\n                        <td>\n                            備註:\n                        </td>\n                        <td>\n                               \n                                <textarea class=\"form-control\" \n                                name=\"comment\"\n                                rows=\"2\"\n                                [(ngModel)]=\"Entity.Comment\"\n                                #message='ngModel'\n                                ></textarea>\n                        </td>\n                    </tr>\n                                     \n               \n                    <tr>\n                        <td colspan=\"2\">\n                            文章圖片上傳:\n                        \n                                <div class=\"center\">\n                                        <ngx-file-drop dropZoneLabel=\"Drop files here\" (onFileDrop)=\"dropped($event)\" \n                                        (onFileOver)=\"fileOver($event)\" (onFileLeave)=\"fileLeave($event)\">\n                                            <ng-template ngx-file-drop-content-tmp let-openFileSelector=\"openFileSelector\">\n                                              拖曳或是選擇要上傳的圖片\n                                              <button type=\"button\" (click)=\"openFileSelector()\">Browse Files</button>\n                                            </ng-template>\n                                        </ngx-file-drop>\n                                       \n                                </div>\n                        </td>\n                    </tr>\n                    <tr>\n                        <td colspan=\"2\">\n                                <ul *ngFor=\"let i of Entity.Pages; let x = index\" class=\"list-group\">\n                                    <li class=\"list-group-item\">\n                                        <img [src]=\"i.Image_Url\"   class=\"img-thumbnail\" > <p></p>\n                                        名稱:<input [(ngModel)]=\"i.Name\" #ctrl=\"ngModel\"  name=\"imagename\" class=\"form-control\"/> <p></p>\n                                        備註: <input [(ngModel)]=\"i.Comment\" #ctrl=\"ngModel\"  name=\"imageComment\" type=\"text\"  class=\"form-control\"/><p></p>\n                                        <button type=\"button\" class=\"btn btn-danger btn-xs\" (click) =\"RemoveImage(x)\">刪除圖片</button>\n                                    </li>\n                                </ul>\n                        </td>\n                    </tr>    \n                </tbody>   \n        </table>\n            \n\n\n\n</div>\n\n    \n    \n  \n     <hr>\n    <div class=\"nav navbar-nav navbar-right\">\n            <button type=\"button\" class=\"btn btn-primary\" (click)=\"SaveEntity()\">儲存</button> | \n            <button type=\"button\" class=\"btn btn-default\" onclick=\"location.href='#/bccenter';\">返回</button>       \n    </div>\n\n   \n\n\n<ngx-spinner\n  bdColor=\"rgba(51,51,51,0.8)\"\n  size=\"medium\"\n  color=\"#fff\"\n  type=\"ball-scale-multiple\"\n>\n  <p style=\"font-size: 20px; color: white\">處理中...</p>\n</ngx-spinner>\n\n \n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/article/articlelist/articlelist.component.html":
+/*!******************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/article/articlelist/articlelist.component.html ***!
+  \******************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<p>articlelist works!</p>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/article/articleshow/articleshow.component.html":
+/*!******************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/article/articleshow/articleshow.component.html ***!
+  \******************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<form>\n  <div class=\"form-group\">\n      <div>\n          <label>選擇文章: </label>\n          <select (change)=\"filterForArticles($event.target.value)\" class=\"form-control\">\n            <option value=\"-1\">--選擇--</option>\n            <option *ngFor=\"let item of List; let i = index\" value={{i}}>\n              {{item.Title}}\n            </option>\n          </select>\n        </div>\n        <br>\n       \n        <carousel  interval=\"0\">\n                <slide *ngFor=\"let item of Entity.Pages\">\n                  <img [src]=\"item.Image_Url\" alt=\"Pages\" style=\"display: block; width: 100%;\">\n                  <div class=\"carousel-caption d-none d-md-block\">\n                    <h3>{{item.Name}}</h3>\n                    <p>{{item.Comment}}</p>\n                  </div>\n                </slide> \n        </carousel>\n        \n\n  </div>\n</form>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/businesscenter/bcform/bcform.component.html":
+/*!***************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/businesscenter/bcform/bcform.component.html ***!
+  \***************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"nav navbar-nav navbar-right\">\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"SaveEntity()\">儲存</button> | \n        <button type=\"button\" class=\"btn btn-default\" onclick=\"location.href='#/bccenter';\">返回</button>   \n        <p></p>    \n</div>\n\n<div class=\"body-content\">\n\n        <table class=\"table table-bordered table-striped\">\n                <tbody>\n            \n                    <tr>\n                        <td>\n                            ID:\n                        </td>\n                        <TD>\n                                {{Entity.Id}}\n                        </TD>\n                    </tr>\n                    <tr>\n                        <td>\n                                商務中心名稱:\n                        </td>\n                        <td>\n                                <input [(ngModel)]=\"Entity.Name\" #ctrl=\"ngModel\" required name=\"entityname\"  #fullName=\"ngModel\" required> \n                        </td>\n                    </tr>\n                    <tr>\n                        <td>\n                            介紹:\n                        </td>\n                        <td>\n                                <!--<input type=\"textarea\" rows=\"4\" [(ngModel)]=\"Entity.Intro\" #ctrl=\"ngModel\" required name=\"Intro\" class=\"form-control\"> -->\n                                <textarea class=\"form-control\" \n                                name=\"intro\"\n                                rows=\"4\"\n                                [(ngModel)]=\"Entity.Intro\"\n                                #message='ngModel'\n                                ></textarea>\n                        </td>\n                    </tr>\n                    <tr>\n                        <td>\n                               營業時間: <button type=\"button\" class=\"btn btn-info\" (click)=\"openBusinessHourModal()\">編輯</button>\n                        </td>\n                        <td>\n                            <div fxLayout=\"column\" fxLayoutAlign=\" none\">\n                                <div fxFlex=\"100\" fxLayout=\"column\" fxLayoutAlign=\"space-around stretch\" fxLayout.xs=\"column\">\n                                  <div *ngFor=\"let i of Entity.BusinessHours\" fxFlex.xs=\"100\" fxFlex.sm=\"50\" fxFlex.md=\"33\" fxFlex.lg=\"33\" fxFlex.xl=\"33\">\n                                      {{i.Day}} : {{i.StartTime}} - {{i.EndTime}}\n                                  </div> \n                                </div>\n                              </div>\n            \n                        </td>\n                    </tr>\n                    <tr>\n                        <td>\n                            電話:\n                        </td>\n                        <td>\n                                <input [(ngModel)]=\"Entity.Phone\" #ctrl=\"ngModel\" name=\"phone\"> \n                        </td>\n                    </tr>\n                    <tr>\n                        <td>\n                            地址:\n                        </td>\n                        <td>\n                                <input [(ngModel)]=\"Entity.Address\" #ctrl=\"ngModel\" name=\"address\" class=\"form-control\"> \n                        </td>\n                    </tr>\n                    <tr>\n                        <td colspan=\"2\">\n                                <table>\n                                        <tr>\n                                                <td>\n                                                        最低價格:\n                                                    </td>\n                                                    <td>\n                                                            <input type=\"number\" [(ngModel)]=\"Entity.MinPrice\" #ctrl=\"ngModel\" name=\"minprice\" class=\"form-control\"> \n                                                    </td>\n                                                    <td>\n                                                          ~\n                                                    </td>\n                                                    <td>\n                                                        最高價格:\n                                                    </td>\n                                                    <td>\n                                                            <input type=\"number\" [(ngModel)]=\"Entity.MaxPrice\" #ctrl=\"ngModel\" name=\"maxprice\" class=\"form-control\"> \n                                                </td>\n                                        </tr>\n                                    </table>\n                                 \n                        </td>\n                      \n                    </tr>\n                    <tr>\n                            <td>\n                                電子郵件:\n                            </td>\n                            <td>\n                                    <input [(ngModel)]=\"Entity.Email\" #ctrl=\"ngModel\" name=\"Email\"> \n                            </td>\n                    </tr>\n                    <tr>\n                            <td>\n                                網站:\n                            </td>\n                            <td>\n                                    <input [(ngModel)]=\"Entity.WebSite\" #ctrl=\"ngModel\" name=\"Website\"> \n                            </td>\n                    </tr>\n                    <tr>\n                            <td>\n                                設備:  <button type=\"button\" class=\"btn btn-info\" (click)=\"openModal()\">編輯</button>\n                            </td>\n                            <td>\n                                      \n                \n                                        <div fxLayout=\"column\" fxLayoutAlign=\" none\">\n                                                <div fxFlex=\"100\" fxLayout=\"row wrap\" fxLayoutAlign=\"space-around stretch\" fxLayout.xs=\"column\">\n                                                  <div *ngFor=\"let i of Entity.Features\" fxFlex.xs=\"100\" fxFlex.sm=\"50\" fxFlex.md=\"33\" fxFlex.lg=\"33\" fxFlex.xl=\"33\">\n                                                       {{i.Name}} <img  [src]=\"i.Image_Url\" style=\"height: 50px; width: 50px;\">\n                                                  </div>\n                                                </div>\n                                        </div>\n                                            \n                                            \n                            </td>\n                        </tr>\n                    <tr>\n                        <td>\n                            座標:\n                        </td>\n                        <td>\n                            <input [(ngModel)]=\"Entity.Coordinates\" #ctrl=\"ngModel\" name=\"Coordinates\"> \n                        </td>\n                    </tr>\n                    <tr>\n                        <td colspan=\"2\">\n                                <google-map\n                                height=\"500px\"\n                                width=\"100%\"\n                                [zoom]=\"zoom\"\n                                [center]=\"center\"\n                                [options]=\"options\"\n                                >\n                                <map-marker\n                                    *ngFor=\"let marker of markers\"\n                                    [position]=\"marker.position\"\n                                    [label]=\"marker.label\"\n                                    [title]=\"marker.title\"\n                                    [options]=\"marker.options\"\n                                    (mapClick)=\"opengooglemap()\"\n                                >\n                                </map-marker>\n                            \n                            \n                                </google-map>\n                        </td>\n                    </tr>\n               \n                    <tr>\n                        <td colspan=\"2\">\n                            圖片:\n                        \n                                <div class=\"center\">\n                                        <ngx-file-drop dropZoneLabel=\"Drop files here\" (onFileDrop)=\"dropped($event)\" \n                                        (onFileOver)=\"fileOver($event)\" (onFileLeave)=\"fileLeave($event)\">\n                                            <ng-template ngx-file-drop-content-tmp let-openFileSelector=\"openFileSelector\">\n                                              拖曳或是選擇要上傳的圖片\n                                              <button type=\"button\" (click)=\"openFileSelector()\">Browse Files</button>\n                                            </ng-template>\n                                        </ngx-file-drop>\n                                       \n                                </div>\n                        </td>\n                    </tr>\n                    <tr>\n                        <td colspan=\"2\">\n                                <ul *ngFor=\"let i of Entity.Images; let x = index\" class=\"list-group\">\n                                    <li class=\"list-group-item\">\n                                        <img [src]=\"i.Image_Url\"   class=\"img-thumbnail\" > <p></p>\n                                        名稱:<input [(ngModel)]=\"i.Name\" #ctrl=\"ngModel\"  name=\"imagename\" class=\"form-control\"/> <p></p>\n                                        備註: <input [(ngModel)]=\"i.Comment\" #ctrl=\"ngModel\"  name=\"imageComment\" type=\"text\"  class=\"form-control\"/><p></p>\n                                        <button type=\"button\" class=\"btn btn-danger btn-xs\" (click) =\"RemoveImage(x)\">Remove</button>\n                                    </li>\n                                </ul>\n                        </td>\n                    </tr>    \n                </tbody>   \n                </table>\n            \n\n\n\n</div>\n\n    \n    \n  \n     <hr>\n    <div class=\"nav navbar-nav navbar-right\">\n            <button type=\"button\" class=\"btn btn-primary\" (click)=\"SaveEntity()\">儲存</button> | \n            <button type=\"button\" class=\"btn btn-default\" onclick=\"location.href='#/bccenter';\">返回</button>       \n    </div>\n\n   \n\n\n<ngx-spinner\n  bdColor=\"rgba(51,51,51,0.8)\"\n  size=\"medium\"\n  color=\"#fff\"\n  type=\"ball-scale-multiple\"\n>\n  <p style=\"font-size: 20px; color: white\">處理中...</p>\n</ngx-spinner>\n\n ");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/businesscenter/bcformmodal/bcformmodal.component.html":
+/*!*************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/businesscenter/bcformmodal/bcformmodal.component.html ***!
+  \*************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"modal-header table-hover\">\n        \n</div>\n          <div class=\"modal-body\">\n\n          <div fxLayout=\"column\" fxLayoutAlign=\" none\">\n            <div fxFlex=\"100\" fxLayout=\"row wrap\" fxLayoutAlign=\"space-around stretch\" fxLayout.xs=\"column\">\n              <div *ngFor=\"let i of list; let x = index\" fxFlex.xs=\"100\" fxFlex.sm=\"50\" fxFlex.md=\"33\" fxFlex.lg=\"33\" fxFlex.xl=\"33\">\n                  <input [(ngModel)]=\"i.Checked\" type=\"checkbox\"/> {{i.Name}} <img  [src]=\"i.Image_Url\" style=\"height: 50px; width: 50px;\">\n              </div>\n            </div>\n          </div>\n                  \n          </div>\n          <div class=\"modal-footer\">\n                 <button type=\"button\" class=\"btn btn-primary\" (click)=\"Save()\">儲存</button>  \n                <button type=\"button\" class=\"btn btn-secondary\" (click)=\"bsModalRef.hide()\">取消</button>\n          </div>\n    ");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/businesscenter/bclist/bclist.component.html":
+/*!***************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/businesscenter/bclist/bclist.component.html ***!
+  \***************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<button type=\"button\" class=\"btn btn-primary\" onclick=\"location.href='#/bcform';\">新增</button>\n<p></p>\n<ng-template #popTemplate> <div [innerHtml]=\"pophtml\"></div></ng-template>\n<table class=\"table table-bordered table-striped\">\n    <tr>\n        <th>\n            ID\n        </th>\n        <th>\n            名稱\n        </th>\n        <th>\n            網站\n        </th>\n        <th>\n            地址\n        </th>\n      \n        <th>\n            \n        </th>\n    </tr>\n    \n       \n        <tbody> \n            <tr *ngFor = 'let item of List ' [tooltip]=\"popTemplate\" (mouseover)='popup(item)'>\n                <td>\n                    {{item.Id}}\n                </td>\n                <td>{{ item.Name}}\n                      \n                </td>\n                <td> <a href= 'https://{{item.WebSite}}' target=\"_blank\"> {{item.WebSite}} </a></td>\n                <td>{{ item.Address}}</td>\n                <td>\n                        <button type=\"button\" class=\"btn btn-info\" (click) = openform(item.Id)>編輯</button>    |\n                        <button type=\"button\" class=\"btn btn-danger\" (click) = delete(item.Id)>刪除</button>\n                </td>\n                \n                \n            </tr>\n        </tbody>\n       \n</table>\n\n\n\n<ngx-spinner\n  bdColor=\"rgba(51,51,51,0.8)\"\n  size=\"medium\"\n  color=\"#fff\"\n  type=\"ball-scale-multiple\"\n>\n  <p style=\"font-size: 20px; color: white\">處理中...</p>\n</ngx-spinner>");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/businesscenter/businesshourmodal/businesshourmodal.component.html":
+/*!*************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/businesscenter/businesshourmodal/businesshourmodal.component.html ***!
+  \*************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"modal-header table-hover\">\n        \n    </div>\n              <div class=\"modal-body\">\n    \n              <div fxLayout=\"column\" fxLayoutAlign=\" none\">\n                <div fxFlex=\"100\" fxLayout=\"column\" fxLayoutAlign=\"space-around stretch\" fxLayout.xs=\"column\">\n                  <div *ngFor=\"let i of list; let x = index\" fxFlex.xs=\"100\" fxFlex.sm=\"50\" fxFlex.md=\"33\" fxFlex.lg=\"33\" fxFlex.xl=\"33\">\n                      {{i.Day}} : <input [(ngModel)]=\"i.StartTime\" #ctrl=\"ngModel\" name=\"strttime\"> -\n                      <input [(ngModel)]=\"i.EndTime\" #ctrl=\"ngModel\" name=\"endtime\"> \n                  </div> \n                </div>\n              </div>\n                      \n              </div>\n              <div class=\"modal-footer\">\n                     <button type=\"button\" class=\"btn btn-primary\" (click)=\"Save()\">儲存</button>  \n                    <button type=\"button\" class=\"btn btn-secondary\" (click)=\"bsModalRef.hide()\">取消</button>\n              </div>\n        \n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/cart.component.html":
+/*!***************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/cart.component.html ***!
+  \***************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<a routerLink=\"/products\" routerLinkActive=\"active\"><img src=\"app/Services/Model/Photos/product.jpg\" alt=\"product Icon\" style=\"width:50px;height:50px;\">返回產品線</a>\r\n<p>\r\n \r\n<h3>數量: {{count}}  總價: {{totalamount}} 運費: {{shipmentfee}}</h3>\r\n \r\n \r\n  <div class='table-responsive'>\r\n            <table class='table table-dark'>\r\n                <thead>\r\n                    <tr>\r\n                        <th>產品</th>\r\n                        <th>數量</th>\r\n                        <th>價格</th>\r\n                        <th></th>\r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr *ngFor='let product of sumuplist'>\r\n                        <td>{{ product.Name}}<img [src]='product.Photo'></td>\r\n                        <td>{{ product.Volume}}</td>\r\n                        <td>{{ product.SellPrice }}</td>  \r\n                        <td><button class=\"btn btn-info\" (click)=\"add(product)\">增加</button>   \r\n                         <button class=\"btn btn-warning\" (click)=\"remove(product)\">減少</button></td>     \r\n                    </tr>\r\n                    <tr *ngIf=\"shipmentfee > 0 && sumuplist.length\">\r\n                        <td>運費</td>\r\n                        <td></td>\r\n                        <td>{{ shipmentfee }}</td>\r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n   </div>\r\n\r\n\r\n     <div class='panel'  *ngIf='sumuplist && sumuplist.length'>\r\n        <div class=\"form-group\">\r\n             <div class=\"form-group\">\r\n                <label>姓名:</label>\r\n                <input type='text' [(ngModel)]='Name' />\r\n            </div>\r\n            <div class=\"form-group\">\r\n                <label>地址:</label>\r\n                <input type='text' [(ngModel)]='Address' size=\"100\" />\r\n            </div>\r\n            <div class=\"form-group\">\r\n                <label>電話:</label>\r\n                <input type='text' [(ngModel)]='Phone' />\r\n            </div>\r\n             <div class=\"form-group\">\r\n                <label>Email:</label>\r\n                <input type='text' [(ngModel)]='Email' size=\"80\"/>\r\n            </div>\r\n             <div class=\"form-group\">\r\n                <label>備註:</label>\r\n                <input type='text' [(ngModel)]='Note' size=\"80\"/>\r\n            </div>\r\n             <h3>數量: {{count}}  總價: {{totalamount}} 運費: {{shipmentfee}}</h3>\r\n             \r\n                 <h5>付款方式(滿兩千免運費)</h5>\r\n                 <input type=\"radio\" [(ngModel)]=\"paymenttype\"  name=\"paymenttype\" value=\"貨到付款\"/>貨到付款 <br>\r\n                 <input type=\"radio\" [(ngModel)]=\"paymenttype\"  name=\"paymenttype\" value=\"信用卡\"/>信用卡(專員會與您聯絡信用卡付費方式) \r\n            \r\n             <p>\r\n             <hr>\r\n             <button class=\"btn btn-primary\" (click)=\"submitorder()\">確認訂購</button>\r\n         </div>\r\n\r\n         \r\n     </div>\r\n\r\n    \r\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/customerlog.component.html":
+/*!**********************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/customerlog.component.html ***!
+  \**********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\r\n\r\n<div class=\"row\">\r\n    <label>搜尋:</label>\r\n    <input type=\"string\"\r\n    [(ngModel)]='Search'\r\n    style=\"width: 6em;\"\r\n    /> \r\n</div>\r\n\r\n<div class=\"loader\" id=\"loader\"></div>\r\n\r\n<table class=\"table table-bordered table-striped\">\r\n    <tr>\r\n        <th>\r\n            顧客姓名\r\n        </th>\r\n        <th>\r\n            電話\r\n        </th>\r\n        <th>\r\n            Email\r\n        </th>\r\n        <th>\r\n            通話紀錄\r\n        </th>\r\n        <th>\r\n            備註 (後續追蹤)\r\n        </th>\r\n        <th>\r\n            時間\r\n        </th>\r\n    </tr>\r\n    \r\n        <tr>\r\n            <td>\r\n                <input type=\"string\"\r\n                [(ngModel)]='Name'\r\n                style=\"width: 6em;\"\r\n                /> \r\n            </td>\r\n            <td>\r\n                <input type=\"string\"\r\n                [(ngModel)]='PhoneNumber'\r\n                style=\"width: 6em;\"\r\n                /> \r\n            </td>\r\n            <td>\r\n                <input type=\"string\"\r\n                [(ngModel)]='Email'  \r\n                /> \r\n            </td>\r\n            <td>\r\n                <textarea [(ngModel)]='Note' class=\"form-control\" >\r\n\r\n                </textarea>\r\n            </td>\r\n            <td  class=\"warning\">\r\n                <textarea [(ngModel)]='Comment' class=\"form-control\">\r\n\r\n                </textarea>\r\n            </td>\r\n            <td>\r\n                \r\n            </td>\r\n            <td>\r\n                <button class=\"btn btn-primary\" (click) = 'addlog()'>\r\n                    新增\r\n                 </button>\r\n                \r\n            </td>\r\n        </tr>\r\n\r\n        <tbody> \r\n            <tr *ngFor = 'let item of logList | paginate: { itemsPerPage: 10, currentPage: p} '>\r\n                \r\n                <td>{{ item.Name}}</td>\r\n                <td>{{ item.PhoneNumber }}</td>\r\n                <td>{{ item.Email}}\r\n                    <button *ngIf='item.Email' type=\"button\" class=\"btn btn-success\" (click)=\"openEmailModal(item)\">Email</button>\r\n                </td>\r\n                <td>{{ item.Note}}</td>\r\n                <td class=\"warning\">{{ item.Comment}}</td>\r\n                <td>{{ item.RecordTime}}</td>\r\n                <td>\r\n                        <button class=\"btn btn-danger\" (click) = 'DeleteLog(item.RowKey, item.Name)' >\r\n                                刪除\r\n                        </button>\r\n                        <button type=\"button\" class=\"btn btn-info\" (click)=\"openModal(item)\">編輯</button>\r\n                      \r\n                </td>\r\n\r\n            </tr>\r\n        </tbody>\r\n        <pagination-controls (pageChange)=\"p = $event\"></pagination-controls>\r\n   \r\n</table>\r\n\r\n{{modalMessage}}");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/emailmodal/emailmodal.component.html":
+/*!********************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/emailmodal/emailmodal.component.html ***!
+  \********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"modal-header table-hover\">\n  <h4 class=\"modal-title pull-left\">{{Name}}</h4>\n  <button type=\"button\" class=\"close pull-right\" aria-label=\"Close\" (click)=\"bsModalRef.hide()\">\n    <span aria-hidden=\"true\">&times;</span>\n  </button>\n</div>\n<div class=\"modal-body\">\n<table class=\"table table-bordered\">\n<tr>\n  <td>\n    Email \n  </td>\n  <td>\n    {{Email}}\n  </td>\n</tr>\n\n<tr>\n<td>\n   標題\n</td>\n<td>\n<input type=\"string\"\n[(ngModel)]='Subject'\n />  \n</td>\n</tr>\n\n<tr class=\"info\">\n<td>\n    訊息\n</td>\n<td>\n   <textarea [(ngModel)]='Content' class=\"form-control\" rows=\"5\">\n\n   </textarea>\n</td>\n</tr>\n \n<tr >\n   \n        <td>\n            <button class=\"btn btn-primary\" (click) = 'EmailOut()'>\n               寄出\n             </button>\n            \n        </td>\n\n  </tr>\n</table> \n\n\n</div>\n<div class=\"modal-footer\">\n  <button type=\"button\" class=\"btn btn-default\" (click)=\"bsModalRef.hide()\">取消</button>\n</div>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/menu.component.html":
+/*!***************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/menu.component.html ***!
+  \***************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<nav>\r\n  menu {{count}}\r\n  <button class=\"delete\"\r\n(click)=\"countShopList()\">carriot</button>\r\n\r\n</nav>\r\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/products.component.html":
+/*!*******************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/products.component.html ***!
+  \*******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<a routerLink=\"/cart\" routerLinkActive=\"active\"><img src=\"/assets/Photos/cart.jpg\" alt=\"cart Icon\" style=\"width:50px;height:50px;\">  購物車(結帳)</a>\r\n<p>\r\n<span class=\"badge\">數量: {{count}} </span>\r\n<span class=\"badge\">總價: {{totalprice}} </span>\r\n<div class=\"grid grid-pad\">\r\n  <div *ngFor=\"let product of products\" class=\"col-1-4\">\r\n    <div class=\"panel panel-default\">\r\n      <div class=\"panel-heading\">\r\n      <span *ngIf=\"product.Promotion\" > <img   src=\"app/Services/Model/Photos/onsale.jpg\" width=\"100\" height=\"100\"> </span> \r\n      <img [src]='product.Photo'> <b> {{product.Name}}</b>\r\n      <h4 class=\"label label-primary\"> 價格: NT {{product.Price}} </h4> &nbsp;   \r\n      <button class=\"btn btn-info\" (click)=\"add(product)\">加入購物車</button> \r\n      </div>\r\n      <div class=\"panel-body\">{{product.Description}}</div>\r\n\r\n    </div>\r\n  </div>\r\n</div>\r\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/stoneweight.component.html":
+/*!**********************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/stoneweight.component.html ***!
+  \**********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<table class=\"table table-bordered table-striped\">\r\n    <tr>\r\n        <th>\r\n            編號\r\n        </th>\r\n        <th>\r\n            空氣重量\r\n        </th>\r\n        <th>\r\n            水中重量\r\n        </th>\r\n        <th>\r\n            物體比重\r\n        </th>\r\n    </tr>\r\n    \r\n        <tr>\r\n            <td>\r\n    \r\n            </td>\r\n            <td>\r\n                <input type=\"number\"\r\n                [(ngModel)]='airweight'\r\n                style=\"width: 6em;\"\r\n                /> \r\n            </td>\r\n            <td>\r\n                <input type=\"number\"\r\n                [(ngModel)]='waterweight'  \r\n                style=\"width: 6em;\"\r\n                /> \r\n            </td>\r\n            <td>\r\n                {{caculateweightrate()}}\r\n            </td>\r\n            <td>\r\n                <button class=\"btn btn-primary\" (click) = 'addintolist()'>\r\n                    新增\r\n                 </button>\r\n            </td>\r\n        </tr>\r\n\r\n    <tbody> \r\n        <tr *ngFor = 'let item of weightList'>\r\n            \r\n            <td>{{ item.id}}</td>\r\n            <td>{{ item.airweight }}</td>\r\n            <td>{{ item.waterweight}}</td>\r\n            <td>{{ item.ratioweight}}</td>\r\n            \r\n        </tr>\r\n    </tbody>\r\n   \r\n\r\n\r\n</table>\r\n\r\n<table *ngIf=\"weightList?.length > 0\">\r\n    <tr>\r\n        <td>\r\n            Email: \r\n        </td>\r\n        <td>\r\n            <input type=\"string\"\r\n            [(ngModel)]='emailaddress'  \r\n            style=\"width: 15em;\"\r\n            /> \r\n        </td>\r\n        <td>\r\n            <span></span>\r\n        </td>\r\n        <td>\r\n            <button class=\"btn btn-info\" (click) = 'emailout()'>\r\n                寄出\r\n             </button>\r\n        </td>\r\n    </tr>\r\n</table>\r\n\r\n\r\n\r\n\r\n");
+
+/***/ }),
+
 /***/ "./src/$$_lazy_route_resource lazy recursive":
 /*!**********************************************************!*\
   !*** ./src/$$_lazy_route_resource lazy namespace object ***!
@@ -11,7 +180,7 @@ function webpackEmptyAsyncContext(req) {
 	// Here Promise.resolve().then() is used instead of new Promise() to prevent
 	// uncaught exception popping up in devtools
 	return Promise.resolve().then(function() {
-		var e = new Error('Cannot find module "' + req + '".');
+		var e = new Error("Cannot find module '" + req + "'");
 		e.code = 'MODULE_NOT_FOUND';
 		throw e;
 	});
@@ -33,6 +202,9 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EmailMessage", function() { return EmailMessage; });
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 var EmailMessage = /** @class */ (function () {
     function EmailMessage() {
     }
@@ -64,6 +236,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 
 
 var httpOptions = {
@@ -94,6 +269,9 @@ var CustomerlogService = /** @class */ (function () {
     CustomerlogService.prototype.UpdateCustomerLog = function (c) {
         return this.http.put(this.url + '5', c, httpOptions);
     };
+    CustomerlogService.ctorParameters = function () { return [
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"] }
+    ]; };
     CustomerlogService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
         __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
@@ -127,6 +305,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -198,6 +379,10 @@ var EmailService = /** @class */ (function () {
         console.error(errMsg);
         return Promise.reject(errMsg);
     };
+    EmailService.ctorParameters = function () { return [
+        { type: _angular_http__WEBPACK_IMPORTED_MODULE_1__["Http"] },
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"] }
+    ]; };
     EmailService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
         __metadata("design:paramtypes", [_angular_http__WEBPACK_IMPORTED_MODULE_1__["Http"], _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"]])
@@ -229,6 +414,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -283,6 +471,9 @@ var ListEmailService = /** @class */ (function () {
         //    ; 
         alert(" 比重結果已送出至 Email 服務已停止使用!! " + this.Email + " 請繼續使用或更新重來");
     };
+    ListEmailService.ctorParameters = function () { return [
+        { type: _Services_emailservice__WEBPACK_IMPORTED_MODULE_1__["EmailService"] }
+    ]; };
     ListEmailService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
         __metadata("design:paramtypes", [_Services_emailservice__WEBPACK_IMPORTED_MODULE_1__["EmailService"]])
@@ -314,6 +505,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 //import { Hero } from './hero';
@@ -347,6 +541,9 @@ var ProductService = /** @class */ (function () {
     ProductService.prototype.getSamples = function () {
         return this.products;
     };
+    ProductService.ctorParameters = function () { return [
+        { type: _angular_http__WEBPACK_IMPORTED_MODULE_1__["Http"] }
+    ]; };
     ProductService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
         __metadata("design:paramtypes", [_angular_http__WEBPACK_IMPORTED_MODULE_1__["Http"]])
@@ -374,6 +571,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 var ShopCartService = /** @class */ (function () {
@@ -485,6 +685,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 
 var AppComponent = /** @class */ (function () {
     function AppComponent() {
@@ -492,9 +695,8 @@ var AppComponent = /** @class */ (function () {
     }
     AppComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            moduleId: module.i,
             selector: 'app-root',
-            template: "\n  <div class=\"container\">\n  <span><img src='../assets/Photos/logo.jpg'/></span> \n  <h1 class=\"lead\"> {{title}}</h1>\n\n  <router-outlet></router-outlet>\n  </div> \n",
+            template: "\n  <div class=\"container\">\n  <span><img src='../assets/Photos/tealogo.jpg' width=20% height=20% /></span>\n  <h1 class=\"lead\"> {{title}}</h1>\n\n  <router-outlet></router-outlet>\n  </div>\n",
         })
     ], AppComponent);
     return AppComponent;
@@ -520,7 +722,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _angular_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/http */ "./node_modules/@angular/http/fesm5/http.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var ngx_bootstrap__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ngx-bootstrap */ "./node_modules/ngx-bootstrap/index.js");
+/* harmony import */ var ngx_bootstrap__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ngx-bootstrap */ "./node_modules/ngx-bootstrap/esm5/ngx-bootstrap.js");
 /* harmony import */ var _Services_product_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Services/product.service */ "./src/app/Services/product.service.ts");
 /* harmony import */ var _Services_shop_cart_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Services/shop-cart.service */ "./src/app/Services/shop-cart.service.ts");
 /* harmony import */ var _Services_emailservice__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./Services/emailservice */ "./src/app/Services/emailservice.ts");
@@ -535,11 +737,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
 /* harmony import */ var _emailmodal_emailmodal_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./emailmodal/emailmodal.component */ "./src/app/emailmodal/emailmodal.component.ts");
 /* harmony import */ var ngx_pagination__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ngx-pagination */ "./node_modules/ngx-pagination/dist/ngx-pagination.js");
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm5/ng-bootstrap.js");
+/* harmony import */ var _businesscenter_businesscenter_module__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./businesscenter/businesscenter.module */ "./src/app/businesscenter/businesscenter.module.ts");
+/* harmony import */ var _article_article_module__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./article/article.module */ "./src/app/article/article.module.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -567,6 +776,10 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
+
+
+
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -578,8 +791,9 @@ var AppModule = /** @class */ (function () {
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClientModule"],
                 _angular_http__WEBPACK_IMPORTED_MODULE_4__["HttpModule"],
                 ngx_pagination__WEBPACK_IMPORTED_MODULE_20__["NgxPaginationModule"],
+                _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_21__["BrowserAnimationsModule"],
+                _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_22__["NgbModule"],
                 ngx_bootstrap__WEBPACK_IMPORTED_MODULE_6__["ModalModule"].forRoot(),
-                //InMemoryWebApiModule.forRoot(InMemoryDataService),
                 _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"].forRoot([
                     {
                         path: '',
@@ -602,7 +816,9 @@ var AppModule = /** @class */ (function () {
                         path: 'customerlog',
                         component: _customerlog_component__WEBPACK_IMPORTED_MODULE_17__["CustomerlogComponent"]
                     }
-                ])
+                ]),
+                _businesscenter_businesscenter_module__WEBPACK_IMPORTED_MODULE_23__["BusinesscenterModule"],
+                _article_article_module__WEBPACK_IMPORTED_MODULE_24__["ArticleModule"]
             ],
             declarations: [
                 _app_component__WEBPACK_IMPORTED_MODULE_12__["AppComponent"],
@@ -633,14 +849,1492 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/cart.component.html":
-/*!*************************************!*\
-  !*** ./src/app/cart.component.html ***!
-  \*************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./src/app/article/article.module.ts":
+/*!*******************************************!*\
+  !*** ./src/app/article/article.module.ts ***!
+  \*******************************************/
+/*! exports provided: ArticleModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = "<a routerLink=\"/products\" routerLinkActive=\"active\"><img src=\"app/Services/Model/Photos/product.jpg\" alt=\"product Icon\" style=\"width:50px;height:50px;\">返回產品線</a>\r\n<p>\r\n \r\n<h3>數量: {{count}}  總價: {{totalamount}} 運費: {{shipmentfee}}</h3>\r\n \r\n \r\n  <div class='table-responsive'>\r\n            <table class='table table-dark'>\r\n                <thead>\r\n                    <tr>\r\n                        <th>產品</th>\r\n                        <th>數量</th>\r\n                        <th>價格</th>\r\n                        <th></th>\r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr *ngFor='let product of sumuplist'>\r\n                        <td>{{ product.Name}}<img [src]='product.Photo'></td>\r\n                        <td>{{ product.Volume}}</td>\r\n                        <td>{{ product.SellPrice }}</td>  \r\n                        <td><button class=\"btn btn-info\" (click)=\"add(product)\">增加</button>   \r\n                         <button class=\"btn btn-warning\" (click)=\"remove(product)\">減少</button></td>     \r\n                    </tr>\r\n                    <tr *ngIf=\"shipmentfee > 0 && sumuplist.length\">\r\n                        <td>運費</td>\r\n                        <td></td>\r\n                        <td>{{ shipmentfee }}</td>\r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n   </div>\r\n\r\n\r\n     <div class='panel'  *ngIf='sumuplist && sumuplist.length'>\r\n        <div class=\"form-group\">\r\n             <div class=\"form-group\">\r\n                <label>姓名:</label>\r\n                <input type='text' [(ngModel)]='Name' />\r\n            </div>\r\n            <div class=\"form-group\">\r\n                <label>地址:</label>\r\n                <input type='text' [(ngModel)]='Address' size=\"100\" />\r\n            </div>\r\n            <div class=\"form-group\">\r\n                <label>電話:</label>\r\n                <input type='text' [(ngModel)]='Phone' />\r\n            </div>\r\n             <div class=\"form-group\">\r\n                <label>Email:</label>\r\n                <input type='text' [(ngModel)]='Email' size=\"80\"/>\r\n            </div>\r\n             <div class=\"form-group\">\r\n                <label>備註:</label>\r\n                <input type='text' [(ngModel)]='Note' size=\"80\"/>\r\n            </div>\r\n             <h3>數量: {{count}}  總價: {{totalamount}} 運費: {{shipmentfee}}</h3>\r\n             \r\n                 <h5>付款方式(滿兩千免運費)</h5>\r\n                 <input type=\"radio\" [(ngModel)]=\"paymenttype\"  name=\"paymenttype\" value=\"貨到付款\"/>貨到付款 <br>\r\n                 <input type=\"radio\" [(ngModel)]=\"paymenttype\"  name=\"paymenttype\" value=\"信用卡\"/>信用卡(專員會與您聯絡信用卡付費方式) \r\n            \r\n             <p>\r\n             <hr>\r\n             <button class=\"btn btn-primary\" (click)=\"submitorder()\">確認訂購</button>\r\n         </div>\r\n\r\n         \r\n     </div>\r\n\r\n    \r\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ArticleModule", function() { return ArticleModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _articleform_articleform_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./articleform/articleform.component */ "./src/app/article/articleform/articleform.component.ts");
+/* harmony import */ var _articlelist_articlelist_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./articlelist/articlelist.component */ "./src/app/article/articlelist/articlelist.component.ts");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var ngx_file_drop__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ngx-file-drop */ "./node_modules/ngx-file-drop/fesm5/ngx-file-drop.js");
+/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ngx-spinner */ "./node_modules/ngx-spinner/fesm5/ngx-spinner.js");
+/* harmony import */ var _angular_flex_layout__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/flex-layout */ "./node_modules/@angular/flex-layout/esm5/flex-layout.es5.js");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm5/ng-bootstrap.js");
+/* harmony import */ var _articleshow_articleshow_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./articleshow/articleshow.component */ "./src/app/article/articleshow/articleshow.component.ts");
+/* harmony import */ var ngx_bootstrap_carousel__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ngx-bootstrap/carousel */ "./node_modules/ngx-bootstrap/carousel/fesm5/ngx-bootstrap-carousel.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var ArticleModule = /** @class */ (function () {
+    function ArticleModule() {
+    }
+    ArticleModule = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
+            declarations: [_articleform_articleform_component__WEBPACK_IMPORTED_MODULE_2__["ArticleformComponent"], _articlelist_articlelist_component__WEBPACK_IMPORTED_MODULE_3__["ArticlelistComponent"], _articleshow_articleshow_component__WEBPACK_IMPORTED_MODULE_12__["ArticleshowComponent"]],
+            imports: [
+                _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormsModule"],
+                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__["BrowserModule"],
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_7__["HttpClientModule"],
+                ngx_file_drop__WEBPACK_IMPORTED_MODULE_8__["NgxFileDropModule"],
+                ngx_spinner__WEBPACK_IMPORTED_MODULE_9__["NgxSpinnerModule"],
+                _angular_flex_layout__WEBPACK_IMPORTED_MODULE_10__["FlexLayoutModule"],
+                _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_11__["NgbModule"],
+                ngx_bootstrap_carousel__WEBPACK_IMPORTED_MODULE_13__["CarouselModule"].forRoot(),
+                _angular_router__WEBPACK_IMPORTED_MODULE_6__["RouterModule"].forChild([
+                    {
+                        path: 'articleform', component: _articleform_articleform_component__WEBPACK_IMPORTED_MODULE_2__["ArticleformComponent"]
+                    },
+                    {
+                        path: 'articlelist', component: _articlelist_articlelist_component__WEBPACK_IMPORTED_MODULE_3__["ArticlelistComponent"]
+                    },
+                    {
+                        path: 'articleform/:id', component: _articleform_articleform_component__WEBPACK_IMPORTED_MODULE_2__["ArticleformComponent"]
+                    },
+                    {
+                        path: 'articleshow', component: _articleshow_articleshow_component__WEBPACK_IMPORTED_MODULE_12__["ArticleshowComponent"]
+                    },
+                    {
+                        path: 'articleshow/:id', component: _articleshow_articleshow_component__WEBPACK_IMPORTED_MODULE_12__["ArticleshowComponent"]
+                    }
+                ])
+            ]
+        })
+    ], ArticleModule);
+    return ArticleModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/article/articleform/articleform.component.css":
+/*!***************************************************************!*\
+  !*** ./src/app/article/articleform/articleform.component.css ***!
+  \***************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FydGljbGUvYXJ0aWNsZWZvcm0vYXJ0aWNsZWZvcm0uY29tcG9uZW50LmNzcyJ9 */");
+
+/***/ }),
+
+/***/ "./src/app/article/articleform/articleform.component.ts":
+/*!**************************************************************!*\
+  !*** ./src/app/article/articleform/articleform.component.ts ***!
+  \**************************************************************/
+/*! exports provided: ArticleformComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ArticleformComponent", function() { return ArticleformComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _model_articlemodel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../model/articlemodel */ "./src/app/article/model/articlemodel.ts");
+/* harmony import */ var _service_service_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../service/service.service */ "./src/app/article/service/service.service.ts");
+/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ngx-spinner */ "./node_modules/ngx-spinner/fesm5/ngx-spinner.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var util__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! util */ "./node_modules/util/util.js");
+/* harmony import */ var util__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(util__WEBPACK_IMPORTED_MODULE_5__);
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+
+
+
+
+var ArticleformComponent = /** @class */ (function () {
+    function ArticleformComponent(service, spinner, route) {
+        this.service = service;
+        this.spinner = spinner;
+        this.route = route;
+        this._entity = new _model_articlemodel__WEBPACK_IMPORTED_MODULE_1__["Article"]();
+        this.files = [];
+        console.log(this.route.snapshot.paramMap.get('id'));
+    }
+    Object.defineProperty(ArticleformComponent.prototype, "Entity", {
+        get: function () {
+            return this._entity;
+        },
+        set: function (value) {
+            this._entity = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    ArticleformComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.spinner.show();
+        var ID = this.route.snapshot.paramMap.get('id');
+        if (Object(util__WEBPACK_IMPORTED_MODULE_5__["isNullOrUndefined"])(ID)) {
+            this.AddNew();
+            this.spinner.hide();
+        }
+        else {
+            this.service.getEntityById(ID).subscribe(function (val) {
+                _this.Entity = val;
+                _this.spinner.hide();
+            }, function (err) {
+                alert('Not Found');
+                _this.spinner.hide();
+            });
+        }
+    };
+    ArticleformComponent.prototype.AddNew = function () {
+        var newEntity = new _model_articlemodel__WEBPACK_IMPORTED_MODULE_1__["Article"]();
+        var now = new Date;
+        var utc_timestamp = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate(), now.getHours(), now.getMinutes(), now.getSeconds(), now.getMilliseconds());
+        newEntity.Id = 'tea' + '-' + utc_timestamp.toString();
+        this.Entity = newEntity;
+    };
+    ArticleformComponent.prototype.SaveEntity = function () {
+        var _this = this;
+        if (Object(util__WEBPACK_IMPORTED_MODULE_5__["isNullOrUndefined"])(this.Entity.Title)) {
+            alert('請輸入名稱');
+            return;
+        }
+        this.spinner.show();
+        this.service.postEntity(this.Entity).subscribe(function (res) {
+            alert('儲存完畢');
+            // if (isNullOrUndefined(this.Entity.Coordinates) !== true) {
+            //  this.addMarker();
+            // }
+            _this.spinner.hide();
+            window.open('#/articlelist', '_self');
+        }, function (err) {
+            alert(err);
+            _this.spinner.hide();
+        });
+    };
+    ArticleformComponent.prototype.dropped = function (files) {
+        var _this = this;
+        this.files = files;
+        var _loop_1 = function (droppedFile) {
+            // Is it a file?
+            if (droppedFile.fileEntry.isFile) {
+                var fileEntry = droppedFile.fileEntry;
+                fileEntry.file(function (file) {
+                    // Here you can access the real file
+                    console.log(droppedFile.relativePath, file);
+                    // You could upload it like this:
+                    var formData = new FormData();
+                    formData.append(file.name, file, droppedFile.relativePath);
+                    _this.spinner.show();
+                    _this.service.postImage(formData).subscribe(function (val) {
+                        var newImage = new _model_articlemodel__WEBPACK_IMPORTED_MODULE_1__["Page"]();
+                        newImage.Name = 'Page';
+                        newImage.Image_Url = val;
+                        if (Object(util__WEBPACK_IMPORTED_MODULE_5__["isNullOrUndefined"])(_this.Entity.Pages)) {
+                            var images = [];
+                            images.push(newImage);
+                            _this.Entity.Pages = images;
+                        }
+                        else {
+                            _this.Entity.Pages.push(newImage);
+                        }
+                        _this.spinner.hide();
+                    });
+                });
+            }
+            else {
+                // It was a directory (empty directories are added, otherwise only files)
+                var fileEntry = droppedFile.fileEntry;
+                console.log(droppedFile.relativePath, fileEntry);
+            }
+        };
+        for (var _i = 0, files_1 = files; _i < files_1.length; _i++) {
+            var droppedFile = files_1[_i];
+            _loop_1(droppedFile);
+        }
+    };
+    ArticleformComponent.prototype.fileOver = function (event) {
+        console.log(event);
+    };
+    ArticleformComponent.prototype.fileLeave = function (event) {
+        console.log(event);
+    };
+    ArticleformComponent.prototype.RemoveImage = function (i) {
+        i++;
+        var orginialItems = this.Entity.Pages;
+        var filterItems = orginialItems.slice(0, i - 1).concat(orginialItems.slice(i, orginialItems.length));
+        this.Entity.Pages = filterItems;
+    };
+    ArticleformComponent.ctorParameters = function () { return [
+        { type: _service_service_service__WEBPACK_IMPORTED_MODULE_2__["ArticleService"] },
+        { type: ngx_spinner__WEBPACK_IMPORTED_MODULE_3__["NgxSpinnerService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"] }
+    ]; };
+    ArticleformComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-articleform',
+            template: __importDefault(__webpack_require__(/*! raw-loader!./articleform.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/article/articleform/articleform.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./articleform.component.css */ "./src/app/article/articleform/articleform.component.css")).default]
+        }),
+        __metadata("design:paramtypes", [_service_service_service__WEBPACK_IMPORTED_MODULE_2__["ArticleService"], ngx_spinner__WEBPACK_IMPORTED_MODULE_3__["NgxSpinnerService"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"]])
+    ], ArticleformComponent);
+    return ArticleformComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/article/articlelist/articlelist.component.css":
+/*!***************************************************************!*\
+  !*** ./src/app/article/articlelist/articlelist.component.css ***!
+  \***************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FydGljbGUvYXJ0aWNsZWxpc3QvYXJ0aWNsZWxpc3QuY29tcG9uZW50LmNzcyJ9 */");
+
+/***/ }),
+
+/***/ "./src/app/article/articlelist/articlelist.component.ts":
+/*!**************************************************************!*\
+  !*** ./src/app/article/articlelist/articlelist.component.ts ***!
+  \**************************************************************/
+/*! exports provided: ArticlelistComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ArticlelistComponent", function() { return ArticlelistComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+var ArticlelistComponent = /** @class */ (function () {
+    function ArticlelistComponent() {
+    }
+    ArticlelistComponent.prototype.ngOnInit = function () {
+    };
+    ArticlelistComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-articlelist',
+            template: __importDefault(__webpack_require__(/*! raw-loader!./articlelist.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/article/articlelist/articlelist.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./articlelist.component.css */ "./src/app/article/articlelist/articlelist.component.css")).default]
+        }),
+        __metadata("design:paramtypes", [])
+    ], ArticlelistComponent);
+    return ArticlelistComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/article/articleshow/articleshow.component.css":
+/*!***************************************************************!*\
+  !*** ./src/app/article/articleshow/articleshow.component.css ***!
+  \***************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FydGljbGUvYXJ0aWNsZXNob3cvYXJ0aWNsZXNob3cuY29tcG9uZW50LmNzcyJ9 */");
+
+/***/ }),
+
+/***/ "./src/app/article/articleshow/articleshow.component.ts":
+/*!**************************************************************!*\
+  !*** ./src/app/article/articleshow/articleshow.component.ts ***!
+  \**************************************************************/
+/*! exports provided: ArticleshowComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ArticleshowComponent", function() { return ArticleshowComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _model_articlemodel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../model/articlemodel */ "./src/app/article/model/articlemodel.ts");
+/* harmony import */ var _service_service_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../service/service.service */ "./src/app/article/service/service.service.ts");
+/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ngx-spinner */ "./node_modules/ngx-spinner/fesm5/ngx-spinner.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var util__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! util */ "./node_modules/util/util.js");
+/* harmony import */ var util__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(util__WEBPACK_IMPORTED_MODULE_5__);
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+
+
+
+
+var ArticleshowComponent = /** @class */ (function () {
+    function ArticleshowComponent(service, spinner, route) {
+        this.service = service;
+        this.spinner = spinner;
+        this.route = route;
+        this._list = [];
+        this._entity = new _model_articlemodel__WEBPACK_IMPORTED_MODULE_1__["Article"]();
+    }
+    Object.defineProperty(ArticleshowComponent.prototype, "List", {
+        get: function () {
+            return this._list;
+        },
+        set: function (value) {
+            this._list = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(ArticleshowComponent.prototype, "Entity", {
+        get: function () {
+            return this._entity;
+        },
+        set: function (value) {
+            this._entity = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    ArticleshowComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.spinner.show();
+        var ID = this.route.snapshot.paramMap.get('id');
+        if (Object(util__WEBPACK_IMPORTED_MODULE_5__["isNullOrUndefined"])(ID)) {
+            this.GetList();
+            this.spinner.hide();
+        }
+        else {
+            this.service.getEntityById(ID).subscribe(function (val) {
+                _this.Entity = val;
+                _this.spinner.hide();
+            }, function (err) {
+                alert('Not Found');
+                _this.spinner.hide();
+            });
+        }
+    };
+    ArticleshowComponent.prototype.GetList = function () {
+        var _this = this;
+        this.service.getList().subscribe(function (val) {
+            _this.List = val;
+            _this.spinner.hide();
+        }, function (err) {
+            alert('Not Found');
+            _this.spinner.hide();
+        });
+    };
+    ArticleshowComponent.prototype.filterForArticles = function (filterVal) {
+        if (filterVal === '-1') {
+        }
+        else {
+            this.Entity = this.List[Number(filterVal)];
+        }
+    };
+    ArticleshowComponent.ctorParameters = function () { return [
+        { type: _service_service_service__WEBPACK_IMPORTED_MODULE_2__["ArticleService"] },
+        { type: ngx_spinner__WEBPACK_IMPORTED_MODULE_3__["NgxSpinnerService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"] }
+    ]; };
+    ArticleshowComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-articleshow',
+            template: __importDefault(__webpack_require__(/*! raw-loader!./articleshow.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/article/articleshow/articleshow.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./articleshow.component.css */ "./src/app/article/articleshow/articleshow.component.css")).default]
+        }),
+        __metadata("design:paramtypes", [_service_service_service__WEBPACK_IMPORTED_MODULE_2__["ArticleService"], ngx_spinner__WEBPACK_IMPORTED_MODULE_3__["NgxSpinnerService"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"]])
+    ], ArticleshowComponent);
+    return ArticleshowComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/article/model/articlemodel.ts":
+/*!***********************************************!*\
+  !*** ./src/app/article/model/articlemodel.ts ***!
+  \***********************************************/
+/*! exports provided: Article, Page */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Article", function() { return Article; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Page", function() { return Page; });
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+var Article = /** @class */ (function () {
+    function Article() {
+    }
+    return Article;
+}());
+
+var Page = /** @class */ (function () {
+    function Page() {
+    }
+    return Page;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/article/service/service.service.ts":
+/*!****************************************************!*\
+  !*** ./src/app/article/service/service.service.ts ***!
+  \****************************************************/
+/*! exports provided: ArticleService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ArticleService", function() { return ArticleService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+var ArticleService = /** @class */ (function () {
+    function ArticleService(http) {
+        this.http = http;
+        this.site = 'https://leecloud.azurewebsites.net/'; // URL to web api
+        this.url = 'api/articleapi/';
+        this.postImgurl = 'api/UploadFileapi/';
+    }
+    ArticleService.prototype.handleError = function (error) {
+        console.error('An error occurred', error);
+        return Promise.reject(error.message || error);
+    };
+    ArticleService.prototype.getList = function () {
+        var url = this.site + this.url;
+        return this.http.get(url);
+    };
+    ArticleService.prototype.getEntityById = function (id) {
+        var url = this.site + this.url + id;
+        return this.http.get(url);
+    };
+    ArticleService.prototype.postEntity = function (entity) {
+        var url = this.site + this.url;
+        return this.http.post(url, entity);
+    };
+    ArticleService.prototype.putEntity = function (entity) {
+        var url = this.site + this.url + entity.Id;
+        this.http.put(url, entity).subscribe(function (val) {
+            console.log('PUT call successful value returned in body', val);
+        }, function (response) {
+            console.log('PUT call in error', response);
+        }, function () {
+            console.log('The PUT observable is now completed.');
+        });
+    };
+    ArticleService.prototype.deleteEntity = function (id) {
+        var url = this.site + this.url + id;
+        return this.http.delete(url);
+    };
+    ArticleService.prototype.postImage = function (file) {
+        var url = this.site + this.postImgurl;
+        // Headers
+        var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
+            ContentType: 'multipart/form-data'
+        });
+        // return  this.http.post(url, file, {headers: headers});
+        return this.http
+            .post(url, file, { headers: headers, responseType: 'text' });
+    };
+    ArticleService.ctorParameters = function () { return [
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"] }
+    ]; };
+    ArticleService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+            providedIn: 'root'
+        }),
+        __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
+    ], ArticleService);
+    return ArticleService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/businesscenter/bcform/bcform.component.css":
+/*!************************************************************!*\
+  !*** ./src/app/businesscenter/bcform/bcform.component.css ***!
+  \************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (".img {\r\n    width: 40%;\r\n    margin-bottom: 10%;\r\n  }\r\n  .container {\r\n    min-height: 50%;\r\n    width: 50%;\r\n  }\r\n  .card-picture {\r\n    width: 23%;\r\n    margin-bottom: 2%;\r\n    \r\n  }\r\n  .search-form {\r\n    width: 90%;\r\n  }\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYnVzaW5lc3NjZW50ZXIvYmNmb3JtL2JjZm9ybS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksVUFBVTtJQUNWLGtCQUFrQjtFQUNwQjtFQUNBO0lBQ0UsZUFBZTtJQUNmLFVBQVU7RUFDWjtFQUNBO0lBQ0UsVUFBVTtJQUNWLGlCQUFpQjs7RUFFbkI7RUFFQTtJQUNFLFVBQVU7RUFDWiIsImZpbGUiOiJzcmMvYXBwL2J1c2luZXNzY2VudGVyL2JjZm9ybS9iY2Zvcm0uY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5pbWcge1xyXG4gICAgd2lkdGg6IDQwJTtcclxuICAgIG1hcmdpbi1ib3R0b206IDEwJTtcclxuICB9XHJcbiAgLmNvbnRhaW5lciB7XHJcbiAgICBtaW4taGVpZ2h0OiA1MCU7XHJcbiAgICB3aWR0aDogNTAlO1xyXG4gIH1cclxuICAuY2FyZC1waWN0dXJlIHtcclxuICAgIHdpZHRoOiAyMyU7XHJcbiAgICBtYXJnaW4tYm90dG9tOiAyJTtcclxuICAgIFxyXG4gIH1cclxuICBcclxuICAuc2VhcmNoLWZvcm0ge1xyXG4gICAgd2lkdGg6IDkwJTtcclxuICB9Il19 */");
+
+/***/ }),
+
+/***/ "./src/app/businesscenter/bcform/bcform.component.ts":
+/*!***********************************************************!*\
+  !*** ./src/app/businesscenter/bcform/bcform.component.ts ***!
+  \***********************************************************/
+/*! exports provided: BcformComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BcformComponent", function() { return BcformComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _model_BusinessCenter__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../model/BusinessCenter */ "./src/app/businesscenter/model/BusinessCenter.ts");
+/* harmony import */ var _service_bcservice_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../service/bcservice.service */ "./src/app/businesscenter/service/bcservice.service.ts");
+/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ngx-spinner */ "./node_modules/ngx-spinner/fesm5/ngx-spinner.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var util__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! util */ "./node_modules/util/util.js");
+/* harmony import */ var util__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(util__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ngx-bootstrap/modal */ "./node_modules/ngx-bootstrap/modal/fesm5/ngx-bootstrap-modal.js");
+/* harmony import */ var _bcformmodal_bcformmodal_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../bcformmodal/bcformmodal.component */ "./src/app/businesscenter/bcformmodal/bcformmodal.component.ts");
+/* harmony import */ var _businesshourmodal_businesshourmodal_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../businesshourmodal/businesshourmodal.component */ "./src/app/businesscenter/businesshourmodal/businesshourmodal.component.ts");
+/* harmony import */ var _angular_google_maps__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/google-maps */ "./node_modules/@angular/google-maps/fesm5/google-maps.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+
+
+
+
+
+
+
+
+var BcformComponent = /** @class */ (function () {
+    // tslint:disable-next-line:max-line-length
+    function BcformComponent(bcservice, spinner, route, modalService) {
+        this.bcservice = bcservice;
+        this.spinner = spinner;
+        this.route = route;
+        this.modalService = modalService;
+        this._entity = new _model_BusinessCenter__WEBPACK_IMPORTED_MODULE_1__["BusinessCenter"]();
+        this.files = [];
+        this.zoom = 14;
+        this.options = {
+            mapTypeId: 'roadmap',
+            zoomControl: true,
+            scrollwheel: false,
+            disableDoubleClickZoom: false,
+            maxZoom: 15,
+            minZoom: 8,
+        };
+        this.markers = [];
+        console.log(this.route.snapshot.paramMap.get('id'));
+    }
+    Object.defineProperty(BcformComponent.prototype, "Entity", {
+        get: function () {
+            return this._entity;
+        },
+        set: function (value) {
+            this._entity = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    BcformComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        /** spinner starts on init */
+        this.spinner.show();
+        var ID = this.route.snapshot.paramMap.get('id');
+        if (Object(util__WEBPACK_IMPORTED_MODULE_5__["isNullOrUndefined"])(ID)) {
+            this.AddNew();
+            this.spinner.hide();
+        }
+        else {
+            this.bcservice.getEntityById(ID).subscribe(function (val) {
+                _this.Entity = val;
+                _this.spinner.hide();
+                if (Object(util__WEBPACK_IMPORTED_MODULE_5__["isNullOrUndefined"])(_this.Entity.Coordinates) !== true) {
+                    _this.addMarker();
+                }
+            }, function (err) {
+                alert('Not Found');
+                _this.spinner.hide();
+            });
+        }
+        if (Object(util__WEBPACK_IMPORTED_MODULE_5__["isNullOrUndefined"])(this.Entity.Coordinates) !== true) {
+            this.addMarker();
+        }
+        else {
+            navigator.geolocation.getCurrentPosition(function (position) {
+                _this.center = {
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude,
+                };
+            });
+        }
+    };
+    /**
+     * name
+     */
+    BcformComponent.prototype.AddNew = function () {
+        var newEntity = new _model_BusinessCenter__WEBPACK_IMPORTED_MODULE_1__["BusinessCenter"]();
+        var now = new Date;
+        var utc_timestamp = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate(), now.getHours(), now.getMinutes(), now.getSeconds(), now.getMilliseconds());
+        newEntity.Id = 'bc' + '-' + utc_timestamp.toString();
+        this.Entity = newEntity;
+    };
+    BcformComponent.prototype.SaveEntity = function () {
+        var _this = this;
+        if (Object(util__WEBPACK_IMPORTED_MODULE_5__["isNullOrUndefined"])(this.Entity.Name) || this.Entity.Name === '') {
+            alert('請輸入名稱欄位');
+            return;
+        }
+        this.spinner.show();
+        this.bcservice.postEntity(this.Entity).subscribe(function (res) {
+            alert('儲存完畢');
+            // if (isNullOrUndefined(this.Entity.Coordinates) !== true) {
+            //  this.addMarker();
+            // }
+            _this.spinner.hide();
+            window.open('#/bccenter');
+        }, function (err) {
+            alert(err);
+            _this.spinner.hide();
+        });
+    };
+    BcformComponent.prototype.dropped = function (files) {
+        var _this = this;
+        this.files = files;
+        var _loop_1 = function (droppedFile) {
+            // Is it a file?
+            if (droppedFile.fileEntry.isFile) {
+                var fileEntry = droppedFile.fileEntry;
+                fileEntry.file(function (file) {
+                    // Here you can access the real file
+                    console.log(droppedFile.relativePath, file);
+                    // You could upload it like this:
+                    var formData = new FormData();
+                    formData.append(file.name, file, droppedFile.relativePath);
+                    _this.spinner.show();
+                    _this.bcservice.postImage(formData).subscribe(function (val) {
+                        var newImage = new _model_BusinessCenter__WEBPACK_IMPORTED_MODULE_1__["BusinessCenterImage"]();
+                        newImage.Name = 'Image';
+                        newImage.Image_Url = val;
+                        if (Object(util__WEBPACK_IMPORTED_MODULE_5__["isNullOrUndefined"])(_this.Entity.Images)) {
+                            var images = [];
+                            images.push(newImage);
+                            _this.Entity.Images = images;
+                        }
+                        else {
+                            _this.Entity.Images.push(newImage);
+                        }
+                        _this.spinner.hide();
+                    });
+                });
+            }
+            else {
+                // It was a directory (empty directories are added, otherwise only files)
+                var fileEntry = droppedFile.fileEntry;
+                console.log(droppedFile.relativePath, fileEntry);
+            }
+        };
+        for (var _i = 0, files_1 = files; _i < files_1.length; _i++) {
+            var droppedFile = files_1[_i];
+            _loop_1(droppedFile);
+        }
+    };
+    BcformComponent.prototype.fileOver = function (event) {
+        console.log(event);
+    };
+    BcformComponent.prototype.fileLeave = function (event) {
+        console.log(event);
+    };
+    BcformComponent.prototype.RemoveImage = function (i) {
+        i++;
+        var orginialItems = this.Entity.Images;
+        var filterItems = orginialItems.slice(0, i - 1).concat(orginialItems.slice(i, orginialItems.length));
+        this.Entity.Images = filterItems;
+    };
+    BcformComponent.prototype.openModal = function () {
+        var initialState = {
+            entity: this.Entity
+        };
+        this.bsModalRef = this.modalService.show(_bcformmodal_bcformmodal_component__WEBPACK_IMPORTED_MODULE_7__["BcformmodalComponent"], { initialState: initialState });
+    };
+    BcformComponent.prototype.openBusinessHourModal = function () {
+        var initialState = {
+            entity: this.Entity
+        };
+        this.bsModalRef = this.modalService.show(_businesshourmodal_businesshourmodal_component__WEBPACK_IMPORTED_MODULE_8__["BusinesshourmodalComponent"], { initialState: initialState });
+    };
+    BcformComponent.prototype.zoomIn = function () {
+        if (this.zoom < this.options.maxZoom) {
+            this.zoom++;
+        }
+    };
+    BcformComponent.prototype.zoomOut = function () {
+        if (this.zoom > this.options.minZoom) {
+            this.zoom--;
+        }
+    };
+    BcformComponent.prototype.addMarker = function () {
+        this.markers = [];
+        var coord = this.Entity.Coordinates.split(',');
+        this.markers.push({
+            position: {
+                lat: Number(coord[0]),
+                lng: Number(coord[1]),
+            },
+            label: {
+                color: 'red',
+                text: this.Entity.Name + (this.markers.length + 1),
+            },
+            title: this.Entity.Name + (this.markers.length + 1),
+            info: 'Marker info ' + (this.markers.length + 1),
+            url: 'https://www.google.com/maps/place/' + this.Entity.Coordinates,
+            options: {
+                animation: google.maps.Animation.DROP
+            }
+        });
+        this.center = {
+            lat: Number(coord[0]),
+            lng: Number(coord[1]),
+        };
+    };
+    BcformComponent.prototype.opengooglemap = function () {
+        var url = 'https://www.google.com/maps/place/' + this.Entity.Coordinates;
+        window.open(url);
+    };
+    BcformComponent.ctorParameters = function () { return [
+        { type: _service_bcservice_service__WEBPACK_IMPORTED_MODULE_2__["BcserviceService"] },
+        { type: ngx_spinner__WEBPACK_IMPORTED_MODULE_3__["NgxSpinnerService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"] },
+        { type: ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_6__["BsModalService"] }
+    ]; };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])(_angular_google_maps__WEBPACK_IMPORTED_MODULE_9__["GoogleMap"], { static: false }),
+        __metadata("design:type", _angular_google_maps__WEBPACK_IMPORTED_MODULE_9__["GoogleMap"])
+    ], BcformComponent.prototype, "map", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])(_angular_google_maps__WEBPACK_IMPORTED_MODULE_9__["MapInfoWindow"], { static: false }),
+        __metadata("design:type", _angular_google_maps__WEBPACK_IMPORTED_MODULE_9__["MapInfoWindow"])
+    ], BcformComponent.prototype, "info", void 0);
+    BcformComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-bcform',
+            template: __importDefault(__webpack_require__(/*! raw-loader!./bcform.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/businesscenter/bcform/bcform.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./bcform.component.css */ "./src/app/businesscenter/bcform/bcform.component.css")).default]
+        }),
+        __metadata("design:paramtypes", [_service_bcservice_service__WEBPACK_IMPORTED_MODULE_2__["BcserviceService"], ngx_spinner__WEBPACK_IMPORTED_MODULE_3__["NgxSpinnerService"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"], ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_6__["BsModalService"]])
+    ], BcformComponent);
+    return BcformComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/businesscenter/bcformmodal/bcformmodal.component.css":
+/*!**********************************************************************!*\
+  !*** ./src/app/businesscenter/bcformmodal/bcformmodal.component.css ***!
+  \**********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2J1c2luZXNzY2VudGVyL2JjZm9ybW1vZGFsL2JjZm9ybW1vZGFsLmNvbXBvbmVudC5jc3MifQ== */");
+
+/***/ }),
+
+/***/ "./src/app/businesscenter/bcformmodal/bcformmodal.component.ts":
+/*!*********************************************************************!*\
+  !*** ./src/app/businesscenter/bcformmodal/bcformmodal.component.ts ***!
+  \*********************************************************************/
+/*! exports provided: BcformmodalComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BcformmodalComponent", function() { return BcformmodalComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ngx-bootstrap/modal */ "./node_modules/ngx-bootstrap/modal/fesm5/ngx-bootstrap-modal.js");
+/* harmony import */ var util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! util */ "./node_modules/util/util.js");
+/* harmony import */ var util__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(util__WEBPACK_IMPORTED_MODULE_2__);
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+
+var BcformmodalComponent = /** @class */ (function () {
+    function BcformmodalComponent(bsModalRef) {
+        this.bsModalRef = bsModalRef;
+        this.list = [{
+                Name: '投影機',
+                Comment: '',
+                Image_Url: 'http://inhub_dev.playplus.solutions/uploads/equipment/image/1/icon01.png',
+                Checked: false
+            },
+            {
+                Name: '螢幕',
+                Comment: '',
+                Image_Url: 'http://inhub_dev.playplus.solutions/uploads/equipment/image/2/icon02.png',
+                Checked: false
+            },
+            {
+                Name: '白板',
+                Comment: 'Comment',
+                Image_Url: 'http://inhub_dev.playplus.solutions/uploads/equipment/image/3/icon03.png',
+                Checked: false
+            },
+            {
+                Name: 'WIFI',
+                Comment: 'Comment',
+                Image_Url: 'http://inhub_dev.playplus.solutions/uploads/equipment/image/4/icon04.png',
+                Checked: false
+            },
+            {
+                Name: '事務機',
+                Comment: 'Comment',
+                Image_Url: 'http://inhub_dev.playplus.solutions/uploads/equipment/image/5/icon05.png',
+                Checked: false
+            },
+            {
+                Name: '咖啡飲料',
+                Comment: 'Comment',
+                Image_Url: 'http://inhub_dev.playplus.solutions/uploads/equipment/image/6/icon06.png',
+                Checked: false
+            },
+            {
+                Name: '桌子',
+                Comment: 'Comment',
+                Image_Url: 'http://inhub_dev.playplus.solutions/uploads/equipment/image/7/icon07.png',
+                Checked: false
+            },
+            {
+                Name: '椅子',
+                Comment: 'Comment',
+                Image_Url: 'http://inhub_dev.playplus.solutions/uploads/equipment/image/8/icon08.png',
+                Checked: false
+            },
+            {
+                Name: '音響喇叭',
+                Comment: 'Comment',
+                Image_Url: 'http://inhub_dev.playplus.solutions/uploads/equipment/image/11/music-player.png',
+                Checked: false
+            },
+            {
+                Name: '麥克風',
+                Comment: 'Comment',
+                Image_Url: 'http://inhub_dev.playplus.solutions/uploads/equipment/image/12/microphone.png',
+                Checked: false
+            }];
+    }
+    BcformmodalComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        if (Object(util__WEBPACK_IMPORTED_MODULE_2__["isNullOrUndefined"])(this.entity.Features) !== true) {
+            this.entity.Features.forEach(function (item) {
+                _this.list.forEach(function (i) {
+                    if (i.Name === item.Name) {
+                        i.Checked = true;
+                    }
+                });
+            });
+        }
+    };
+    BcformmodalComponent.prototype.Save = function () {
+        var newlist = [];
+        this.list.forEach(function (item) {
+            if (item.Checked === true) {
+                newlist.push(item);
+            }
+        });
+        this.entity.Features = newlist;
+        this.bsModalRef.hide();
+    };
+    BcformmodalComponent.ctorParameters = function () { return [
+        { type: ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_1__["BsModalRef"] }
+    ]; };
+    BcformmodalComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-bcformmodal',
+            template: __importDefault(__webpack_require__(/*! raw-loader!./bcformmodal.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/businesscenter/bcformmodal/bcformmodal.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./bcformmodal.component.css */ "./src/app/businesscenter/bcformmodal/bcformmodal.component.css")).default]
+        }),
+        __metadata("design:paramtypes", [ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_1__["BsModalRef"]])
+    ], BcformmodalComponent);
+    return BcformmodalComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/businesscenter/bclist/bclist.component.css":
+/*!************************************************************!*\
+  !*** ./src/app/businesscenter/bclist/bclist.component.css ***!
+  \************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("div span.only-show-on-hover {\r\n    visibility: hidden;\r\n}\r\ndiv:hover span.only-show-on-hover  {\r\n    visibility: visible;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYnVzaW5lc3NjZW50ZXIvYmNsaXN0L2JjbGlzdC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksa0JBQWtCO0FBQ3RCO0FBQ0E7SUFDSSxtQkFBbUI7QUFDdkIiLCJmaWxlIjoic3JjL2FwcC9idXNpbmVzc2NlbnRlci9iY2xpc3QvYmNsaXN0LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJkaXYgc3Bhbi5vbmx5LXNob3ctb24taG92ZXIge1xyXG4gICAgdmlzaWJpbGl0eTogaGlkZGVuO1xyXG59XHJcbmRpdjpob3ZlciBzcGFuLm9ubHktc2hvdy1vbi1ob3ZlciAge1xyXG4gICAgdmlzaWJpbGl0eTogdmlzaWJsZTtcclxufSJdfQ== */");
+
+/***/ }),
+
+/***/ "./src/app/businesscenter/bclist/bclist.component.ts":
+/*!***********************************************************!*\
+  !*** ./src/app/businesscenter/bclist/bclist.component.ts ***!
+  \***********************************************************/
+/*! exports provided: BclistComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BclistComponent", function() { return BclistComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _service_bcservice_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../service/bcservice.service */ "./src/app/businesscenter/service/bcservice.service.ts");
+/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ngx-spinner */ "./node_modules/ngx-spinner/fesm5/ngx-spinner.js");
+/* harmony import */ var ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ngx-bootstrap/modal */ "./node_modules/ngx-bootstrap/modal/fesm5/ngx-bootstrap-modal.js");
+/* harmony import */ var util__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! util */ "./node_modules/util/util.js");
+/* harmony import */ var util__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(util__WEBPACK_IMPORTED_MODULE_4__);
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+
+
+
+var BclistComponent = /** @class */ (function () {
+    function BclistComponent(bcservice, spinner, modalService) {
+        this.bcservice = bcservice;
+        this.spinner = spinner;
+        this.modalService = modalService;
+    }
+    Object.defineProperty(BclistComponent.prototype, "List", {
+        get: function () {
+            return this._list;
+        },
+        set: function (value) {
+            this._list = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    BclistComponent.prototype.ngOnInit = function () {
+        this.GetList();
+    };
+    BclistComponent.prototype.GetList = function () {
+        var _this = this;
+        this.spinner.show();
+        this.bcservice.getList().subscribe(function (list) {
+            _this.List = list;
+            _this.spinner.hide();
+        });
+    };
+    BclistComponent.prototype.openform = function (Id) {
+        window.open('#/bcform/' + Id, '_self');
+    };
+    BclistComponent.prototype.delete = function (Id) {
+        var _this = this;
+        if (confirm('確定刪除 ID: ' + Id + '?')) {
+            this.List.forEach(function (item, index) {
+                if (item.Id === Id) {
+                    _this.List.splice(index, 1);
+                }
+            });
+            this.bcservice.deleteEntity(Id).subscribe(function (res) {
+                console.log(res);
+            }, function (err) {
+                alert(err);
+            });
+        }
+    };
+    BclistComponent.prototype.popup = function (item) {
+        var initialState = {
+            entity: item
+        };
+        var imageurl = '';
+        if (Object(util__WEBPACK_IMPORTED_MODULE_4__["isNullOrUndefined"])(item.Images) !== true) {
+            imageurl = item.Images[0].Image_Url;
+        }
+        this.pophtml = '<talbe> <tr> <td>' + item.Intro + '</td> </tr>';
+        this.pophtml += '<tr><td>' + '<img src=' + imageurl + ' width=90% height=90%> </td></tr>';
+        this.pophtml += '</table>';
+        // this.bsModalRef = this.modalService.show(BcformmodalComponent, {initialState});
+    };
+    BclistComponent.prototype.closepopup = function () {
+        this.bsModalRef.hide();
+    };
+    BclistComponent.ctorParameters = function () { return [
+        { type: _service_bcservice_service__WEBPACK_IMPORTED_MODULE_1__["BcserviceService"] },
+        { type: ngx_spinner__WEBPACK_IMPORTED_MODULE_2__["NgxSpinnerService"] },
+        { type: ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_3__["BsModalService"] }
+    ]; };
+    BclistComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-bclist',
+            template: __importDefault(__webpack_require__(/*! raw-loader!./bclist.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/businesscenter/bclist/bclist.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./bclist.component.css */ "./src/app/businesscenter/bclist/bclist.component.css")).default]
+        }),
+        __metadata("design:paramtypes", [_service_bcservice_service__WEBPACK_IMPORTED_MODULE_1__["BcserviceService"], ngx_spinner__WEBPACK_IMPORTED_MODULE_2__["NgxSpinnerService"],
+            ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_3__["BsModalService"]])
+    ], BclistComponent);
+    return BclistComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/businesscenter/businesscenter.module.ts":
+/*!*********************************************************!*\
+  !*** ./src/app/businesscenter/businesscenter.module.ts ***!
+  \*********************************************************/
+/*! exports provided: BusinesscenterModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BusinesscenterModule", function() { return BusinesscenterModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var ngx_bootstrap__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ngx-bootstrap */ "./node_modules/ngx-bootstrap/esm5/ngx-bootstrap.js");
+/* harmony import */ var _bclist_bclist_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./bclist/bclist.component */ "./src/app/businesscenter/bclist/bclist.component.ts");
+/* harmony import */ var _bcform_bcform_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./bcform/bcform.component */ "./src/app/businesscenter/bcform/bcform.component.ts");
+/* harmony import */ var ngx_file_drop__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ngx-file-drop */ "./node_modules/ngx-file-drop/fesm5/ngx-file-drop.js");
+/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ngx-spinner */ "./node_modules/ngx-spinner/fesm5/ngx-spinner.js");
+/* harmony import */ var _bcformmodal_bcformmodal_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./bcformmodal/bcformmodal.component */ "./src/app/businesscenter/bcformmodal/bcformmodal.component.ts");
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
+/* harmony import */ var _angular_flex_layout__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/flex-layout */ "./node_modules/@angular/flex-layout/esm5/flex-layout.es5.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _businesshourmodal_businesshourmodal_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./businesshourmodal/businesshourmodal.component */ "./src/app/businesscenter/businesshourmodal/businesshourmodal.component.ts");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm5/ng-bootstrap.js");
+/* harmony import */ var _angular_google_maps__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @angular/google-maps */ "./node_modules/@angular/google-maps/fesm5/google-maps.js");
+/* harmony import */ var ngx_bootstrap_tooltip__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ngx-bootstrap/tooltip */ "./node_modules/ngx-bootstrap/tooltip/fesm5/ngx-bootstrap-tooltip.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var BusinesscenterModule = /** @class */ (function () {
+    function BusinesscenterModule() {
+    }
+    BusinesscenterModule = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
+            imports: [
+                _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
+                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClientModule"],
+                ngx_bootstrap__WEBPACK_IMPORTED_MODULE_6__["ModalModule"],
+                ngx_file_drop__WEBPACK_IMPORTED_MODULE_9__["NgxFileDropModule"],
+                ngx_spinner__WEBPACK_IMPORTED_MODULE_10__["NgxSpinnerModule"],
+                _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_12__["BrowserAnimationsModule"],
+                _angular_flex_layout__WEBPACK_IMPORTED_MODULE_13__["FlexLayoutModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_14__["MatToolbarModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_14__["MatCardModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_14__["MatIconModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_14__["MatButtonModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_14__["MatFormFieldModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_14__["MatInputModule"],
+                _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_16__["NgbModule"],
+                _angular_google_maps__WEBPACK_IMPORTED_MODULE_17__["GoogleMapsModule"],
+                ngx_bootstrap_tooltip__WEBPACK_IMPORTED_MODULE_18__["TooltipModule"].forRoot(),
+                _angular_router__WEBPACK_IMPORTED_MODULE_4__["RouterModule"].forChild([
+                    {
+                        path: 'bccenter', component: _bclist_bclist_component__WEBPACK_IMPORTED_MODULE_7__["BclistComponent"]
+                    },
+                    {
+                        path: 'bcform', component: _bcform_bcform_component__WEBPACK_IMPORTED_MODULE_8__["BcformComponent"]
+                    },
+                    {
+                        path: 'bcform/:id', component: _bcform_bcform_component__WEBPACK_IMPORTED_MODULE_8__["BcformComponent"]
+                    }
+                ])
+            ],
+            declarations: [_bclist_bclist_component__WEBPACK_IMPORTED_MODULE_7__["BclistComponent"], _bcform_bcform_component__WEBPACK_IMPORTED_MODULE_8__["BcformComponent"], _bcformmodal_bcformmodal_component__WEBPACK_IMPORTED_MODULE_11__["BcformmodalComponent"], _businesshourmodal_businesshourmodal_component__WEBPACK_IMPORTED_MODULE_15__["BusinesshourmodalComponent"]],
+            entryComponents: [_bcformmodal_bcformmodal_component__WEBPACK_IMPORTED_MODULE_11__["BcformmodalComponent"], _businesshourmodal_businesshourmodal_component__WEBPACK_IMPORTED_MODULE_15__["BusinesshourmodalComponent"]]
+        })
+    ], BusinesscenterModule);
+    return BusinesscenterModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/businesscenter/businesshourmodal/businesshourmodal.component.css":
+/*!**********************************************************************************!*\
+  !*** ./src/app/businesscenter/businesshourmodal/businesshourmodal.component.css ***!
+  \**********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2J1c2luZXNzY2VudGVyL2J1c2luZXNzaG91cm1vZGFsL2J1c2luZXNzaG91cm1vZGFsLmNvbXBvbmVudC5jc3MifQ== */");
+
+/***/ }),
+
+/***/ "./src/app/businesscenter/businesshourmodal/businesshourmodal.component.ts":
+/*!*********************************************************************************!*\
+  !*** ./src/app/businesscenter/businesshourmodal/businesshourmodal.component.ts ***!
+  \*********************************************************************************/
+/*! exports provided: BusinesshourmodalComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BusinesshourmodalComponent", function() { return BusinesshourmodalComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ngx-bootstrap/modal */ "./node_modules/ngx-bootstrap/modal/fesm5/ngx-bootstrap-modal.js");
+/* harmony import */ var util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! util */ "./node_modules/util/util.js");
+/* harmony import */ var util__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(util__WEBPACK_IMPORTED_MODULE_2__);
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+
+var BusinesshourmodalComponent = /** @class */ (function () {
+    function BusinesshourmodalComponent(bsModalRef) {
+        this.bsModalRef = bsModalRef;
+        this.list = [{
+                Day: '星期一',
+                StartTime: '09:00',
+                EndTime: '18:00'
+            },
+            {
+                Day: '星期二',
+                StartTime: '09:00',
+                EndTime: '18:00'
+            },
+            {
+                Day: '星期三',
+                StartTime: '09:00',
+                EndTime: '18:00'
+            },
+            {
+                Day: '星期四',
+                StartTime: '09:00',
+                EndTime: '18:00'
+            },
+            {
+                Day: '星期五',
+                StartTime: '09:00',
+                EndTime: '18:00'
+            },
+            {
+                Day: '星期六',
+                StartTime: '09:00',
+                EndTime: '18:00'
+            },
+            {
+                Day: '星期日',
+                StartTime: '09:00',
+                EndTime: '18:00'
+            }
+        ];
+    }
+    BusinesshourmodalComponent.prototype.ngOnInit = function () {
+        if (Object(util__WEBPACK_IMPORTED_MODULE_2__["isNullOrUndefined"])(this.entity.BusinessHours) !== true) {
+            this.list = this.entity.BusinessHours;
+        }
+    };
+    BusinesshourmodalComponent.prototype.Save = function () {
+        this.entity.BusinessHours = this.list;
+        this.bsModalRef.hide();
+    };
+    BusinesshourmodalComponent.ctorParameters = function () { return [
+        { type: ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_1__["BsModalRef"] }
+    ]; };
+    BusinesshourmodalComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-businesshourmodal',
+            template: __importDefault(__webpack_require__(/*! raw-loader!./businesshourmodal.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/businesscenter/businesshourmodal/businesshourmodal.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./businesshourmodal.component.css */ "./src/app/businesscenter/businesshourmodal/businesshourmodal.component.css")).default]
+        }),
+        __metadata("design:paramtypes", [ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_1__["BsModalRef"]])
+    ], BusinesshourmodalComponent);
+    return BusinesshourmodalComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/businesscenter/model/BusinessCenter.ts":
+/*!********************************************************!*\
+  !*** ./src/app/businesscenter/model/BusinessCenter.ts ***!
+  \********************************************************/
+/*! exports provided: BusinessCenter, BusinessCenterImage, BusinessCenterMeetingRoom, BusinessCenterFeature, BusinessHour */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BusinessCenter", function() { return BusinessCenter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BusinessCenterImage", function() { return BusinessCenterImage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BusinessCenterMeetingRoom", function() { return BusinessCenterMeetingRoom; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BusinessCenterFeature", function() { return BusinessCenterFeature; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BusinessHour", function() { return BusinessHour; });
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+var BusinessCenter = /** @class */ (function () {
+    function BusinessCenter() {
+    }
+    return BusinessCenter;
+}());
+
+var BusinessCenterImage = /** @class */ (function () {
+    function BusinessCenterImage() {
+    }
+    return BusinessCenterImage;
+}());
+
+var BusinessCenterMeetingRoom = /** @class */ (function () {
+    function BusinessCenterMeetingRoom() {
+    }
+    return BusinessCenterMeetingRoom;
+}());
+
+var BusinessCenterFeature = /** @class */ (function () {
+    function BusinessCenterFeature() {
+    }
+    return BusinessCenterFeature;
+}());
+
+var BusinessHour = /** @class */ (function () {
+    function BusinessHour() {
+    }
+    return BusinessHour;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/businesscenter/service/bcservice.service.ts":
+/*!*************************************************************!*\
+  !*** ./src/app/businesscenter/service/bcservice.service.ts ***!
+  \*************************************************************/
+/*! exports provided: BcserviceService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BcserviceService", function() { return BcserviceService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+var BcserviceService = /** @class */ (function () {
+    function BcserviceService(http) {
+        this.http = http;
+        this.site = 'https://leecloud.azurewebsites.net/'; // URL to web api
+        this.url = 'api/businesscenterapi/';
+        this.postImgurl = 'api/UploadFileapi/';
+    }
+    BcserviceService.prototype.handleError = function (error) {
+        console.error('An error occurred', error);
+        return Promise.reject(error.message || error);
+    };
+    BcserviceService.prototype.getList = function () {
+        var url = this.site + this.url;
+        return this.http.get(url);
+    };
+    BcserviceService.prototype.getEntityById = function (id) {
+        var url = this.site + this.url + id;
+        return this.http.get(url);
+    };
+    BcserviceService.prototype.postEntity = function (entity) {
+        var url = this.site + this.url;
+        return this.http.post(url, entity);
+    };
+    BcserviceService.prototype.putEntity = function (entity) {
+        var url = this.site + this.url + entity.Id;
+        this.http.put(url, entity).subscribe(function (val) {
+            console.log('PUT call successful value returned in body', val);
+        }, function (response) {
+            console.log('PUT call in error', response);
+        }, function () {
+            console.log('The PUT observable is now completed.');
+        });
+    };
+    BcserviceService.prototype.deleteEntity = function (id) {
+        var url = this.site + this.url + id;
+        return this.http.delete(url);
+    };
+    BcserviceService.prototype.postImage = function (file) {
+        var url = this.site + this.postImgurl;
+        // Headers
+        var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
+            ContentType: 'multipart/form-data'
+        });
+        // return  this.http.post(url, file, {headers: headers});
+        return this.http
+            .post(url, file, { headers: headers, responseType: 'text' });
+    };
+    BcserviceService.ctorParameters = function () { return [
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"] }
+    ]; };
+    BcserviceService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+            providedIn: 'root'
+        }),
+        __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
+    ], BcserviceService);
+    return BcserviceService;
+}());
+
+
 
 /***/ }),
 
@@ -665,6 +2359,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -762,11 +2459,14 @@ var CartComponent = /** @class */ (function () {
         }
         return true;
     };
+    CartComponent.ctorParameters = function () { return [
+        { type: _Services_shop_cart_service__WEBPACK_IMPORTED_MODULE_1__["ShopCartService"] },
+        { type: _Services_emailservice__WEBPACK_IMPORTED_MODULE_2__["EmailService"] }
+    ]; };
     CartComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            moduleId: module.i,
             selector: 'cart',
-            template: __webpack_require__(/*! ./cart.component.html */ "./src/app/cart.component.html"),
+            template: __importDefault(__webpack_require__(/*! raw-loader!./cart.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/cart.component.html")).default,
         }),
         __metadata("design:paramtypes", [_Services_shop_cart_service__WEBPACK_IMPORTED_MODULE_1__["ShopCartService"],
             _Services_emailservice__WEBPACK_IMPORTED_MODULE_2__["EmailService"]])
@@ -782,21 +2482,12 @@ var CartComponent = /** @class */ (function () {
 /*!*******************************************!*\
   !*** ./src/app/customerlog.component.css ***!
   \*******************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = "div{\r\n    align-content: left;\r\n}\r\n\r\ntable {\r\n    width: 200;\r\n}\r\n\r\nthead{\r\n    color: #337AB7; \r\n    align-content: center;\r\n    \r\n}\r\n\r\nrow td{\r\n    align-content: left;\r\n    text-align: left;\r\n}\r\n\r\n.loader {\r\n  border: 16px solid #f3f3f3;\r\n  border-radius: 50%;\r\n  border-top: 16px solid #3498db;\r\n  width: 120px;\r\n  height: 120px;\r\n  -webkit-animation: spin 2s linear infinite; /* Safari */\r\n  animation: spin 2s linear infinite;\r\n}\r\n\r\n/* Safari */\r\n\r\n@-webkit-keyframes spin {\r\n  0% { -webkit-transform: rotate(0deg); }\r\n  100% { -webkit-transform: rotate(360deg); }\r\n}\r\n\r\n@keyframes spin {\r\n  0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }\r\n  100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }\r\n}\r\n "
-
-/***/ }),
-
-/***/ "./src/app/customerlog.component.html":
-/*!********************************************!*\
-  !*** ./src/app/customerlog.component.html ***!
-  \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "\r\n\r\n<div class=\"row\">\r\n    <label>搜尋:</label>\r\n    <input type=\"string\"\r\n    [(ngModel)]='Search'\r\n    style=\"width: 6em;\"\r\n    /> \r\n</div>\r\n\r\n<div class=\"loader\" id=\"loader\"></div>\r\n\r\n<table class=\"table table-bordered table-striped\">\r\n    <tr>\r\n        <th>\r\n            顧客姓名\r\n        </th>\r\n        <th>\r\n            電話\r\n        </th>\r\n        <th>\r\n            Email\r\n        </th>\r\n        <th>\r\n            通話紀錄\r\n        </th>\r\n        <th>\r\n            備註 (後續追蹤)\r\n        </th>\r\n        <th>\r\n            時間\r\n        </th>\r\n    </tr>\r\n    \r\n        <tr>\r\n            <td>\r\n                <input type=\"string\"\r\n                [(ngModel)]='Name'\r\n                style=\"width: 6em;\"\r\n                /> \r\n            </td>\r\n            <td>\r\n                <input type=\"string\"\r\n                [(ngModel)]='PhoneNumber'\r\n                style=\"width: 6em;\"\r\n                /> \r\n            </td>\r\n            <td>\r\n                <input type=\"string\"\r\n                [(ngModel)]='Email'  \r\n                /> \r\n            </td>\r\n            <td>\r\n                <textarea [(ngModel)]='Note' class=\"form-control\" >\r\n\r\n                </textarea>\r\n            </td>\r\n            <td  class=\"warning\">\r\n                <textarea [(ngModel)]='Comment' class=\"form-control\">\r\n\r\n                </textarea>\r\n            </td>\r\n            <td>\r\n                \r\n            </td>\r\n            <td>\r\n                <button class=\"btn btn-primary\" (click) = 'addlog()'>\r\n                    新增\r\n                 </button>\r\n                \r\n            </td>\r\n        </tr>\r\n\r\n        <tbody> \r\n            <tr *ngFor = 'let item of logList | paginate: { itemsPerPage: 10, currentPage: p} '>\r\n                \r\n                <td>{{ item.Name}}</td>\r\n                <td>{{ item.PhoneNumber }}</td>\r\n                <td>{{ item.Email}}\r\n                    <button *ngIf='item.Email' type=\"button\" class=\"btn btn-success\" (click)=\"openEmailModal(item)\">Email</button>\r\n                </td>\r\n                <td>{{ item.Note}}</td>\r\n                <td class=\"warning\">{{ item.Comment}}</td>\r\n                <td>{{ item.RecordTime}}</td>\r\n                <td>\r\n                        <button class=\"btn btn-danger\" (click) = 'DeleteLog(item.RowKey, item.Name)' >\r\n                                刪除\r\n                        </button>\r\n                        <button type=\"button\" class=\"btn btn-info\" (click)=\"openModal(item)\">編輯</button>\r\n                      \r\n                </td>\r\n\r\n            </tr>\r\n        </tbody>\r\n        <pagination-controls (pageChange)=\"p = $event\"></pagination-controls>\r\n   \r\n</table>\r\n\r\n{{modalMessage}}"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("div{\r\n    align-content: left;\r\n}\r\n\r\ntable {\r\n    width: 200;\r\n}\r\n\r\nthead{\r\n    color: #337AB7; \r\n    align-content: center;\r\n    \r\n}\r\n\r\nrow td{\r\n    align-content: left;\r\n    text-align: left;\r\n}\r\n\r\n.loader {\r\n  border: 16px solid #f3f3f3;\r\n  border-radius: 50%;\r\n  border-top: 16px solid #3498db;\r\n  width: 120px;\r\n  height: 120px;\r\n  -webkit-animation: spin 2s linear infinite; /* Safari */\r\n  animation: spin 2s linear infinite;\r\n}\r\n\r\n/* Safari */\r\n\r\n@-webkit-keyframes spin {\r\n  0% { -webkit-transform: rotate(0deg); }\r\n  100% { -webkit-transform: rotate(360deg); }\r\n}\r\n\r\n@keyframes spin {\r\n  0% { transform: rotate(0deg); }\r\n  100% { transform: rotate(360deg); }\r\n}\r\n \r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY3VzdG9tZXJsb2cuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLG1CQUFtQjtBQUN2Qjs7QUFFQTtJQUNJLFVBQVU7QUFDZDs7QUFFQTtJQUNJLGNBQWM7SUFDZCxxQkFBcUI7O0FBRXpCOztBQUVBO0lBQ0ksbUJBQW1CO0lBQ25CLGdCQUFnQjtBQUNwQjs7QUFJQTtFQUNFLDBCQUEwQjtFQUMxQixrQkFBa0I7RUFDbEIsOEJBQThCO0VBQzlCLFlBQVk7RUFDWixhQUFhO0VBQ2IsMENBQTBDLEVBQUUsV0FBVztFQUN2RCxrQ0FBa0M7QUFDcEM7O0FBRUEsV0FBVzs7QUFDWDtFQUNFLEtBQUssK0JBQStCLEVBQUU7RUFDdEMsT0FBTyxpQ0FBaUMsRUFBRTtBQUM1Qzs7QUFFQTtFQUNFLEtBQUssdUJBQXVCLEVBQUU7RUFDOUIsT0FBTyx5QkFBeUIsRUFBRTtBQUNwQyIsImZpbGUiOiJzcmMvYXBwL2N1c3RvbWVybG9nLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJkaXZ7XHJcbiAgICBhbGlnbi1jb250ZW50OiBsZWZ0O1xyXG59XHJcblxyXG50YWJsZSB7XHJcbiAgICB3aWR0aDogMjAwO1xyXG59XHJcblxyXG50aGVhZHtcclxuICAgIGNvbG9yOiAjMzM3QUI3OyBcclxuICAgIGFsaWduLWNvbnRlbnQ6IGNlbnRlcjtcclxuICAgIFxyXG59XHJcblxyXG5yb3cgdGR7XHJcbiAgICBhbGlnbi1jb250ZW50OiBsZWZ0O1xyXG4gICAgdGV4dC1hbGlnbjogbGVmdDtcclxufVxyXG5cclxuXHJcbiBcclxuLmxvYWRlciB7XHJcbiAgYm9yZGVyOiAxNnB4IHNvbGlkICNmM2YzZjM7XHJcbiAgYm9yZGVyLXJhZGl1czogNTAlO1xyXG4gIGJvcmRlci10b3A6IDE2cHggc29saWQgIzM0OThkYjtcclxuICB3aWR0aDogMTIwcHg7XHJcbiAgaGVpZ2h0OiAxMjBweDtcclxuICAtd2Via2l0LWFuaW1hdGlvbjogc3BpbiAycyBsaW5lYXIgaW5maW5pdGU7IC8qIFNhZmFyaSAqL1xyXG4gIGFuaW1hdGlvbjogc3BpbiAycyBsaW5lYXIgaW5maW5pdGU7XHJcbn1cclxuXHJcbi8qIFNhZmFyaSAqL1xyXG5ALXdlYmtpdC1rZXlmcmFtZXMgc3BpbiB7XHJcbiAgMCUgeyAtd2Via2l0LXRyYW5zZm9ybTogcm90YXRlKDBkZWcpOyB9XHJcbiAgMTAwJSB7IC13ZWJraXQtdHJhbnNmb3JtOiByb3RhdGUoMzYwZGVnKTsgfVxyXG59XHJcblxyXG5Aa2V5ZnJhbWVzIHNwaW4ge1xyXG4gIDAlIHsgdHJhbnNmb3JtOiByb3RhdGUoMGRlZyk7IH1cclxuICAxMDAlIHsgdHJhbnNmb3JtOiByb3RhdGUoMzYwZGVnKTsgfVxyXG59XHJcbiAiXX0= */");
 
 /***/ }),
 
@@ -814,9 +2505,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _customerlog__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./customerlog */ "./src/app/customerlog.ts");
 /* harmony import */ var _Services_customerlog_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Services/customerlog.service */ "./src/app/Services/customerlog.service.ts");
-/* harmony import */ var ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ngx-bootstrap/modal */ "./node_modules/ngx-bootstrap/modal/index.js");
-/* harmony import */ var ngx_bootstrap_modal_bs_modal_ref_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ngx-bootstrap/modal/bs-modal-ref.service */ "./node_modules/ngx-bootstrap/modal/bs-modal-ref.service.js");
-/* harmony import */ var _emailmodal_emailmodal_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./emailmodal/emailmodal.component */ "./src/app/emailmodal/emailmodal.component.ts");
+/* harmony import */ var ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ngx-bootstrap/modal */ "./node_modules/ngx-bootstrap/modal/fesm5/ngx-bootstrap-modal.js");
+/* harmony import */ var _emailmodal_emailmodal_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./emailmodal/emailmodal.component */ "./src/app/emailmodal/emailmodal.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -825,6 +2515,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -914,7 +2607,7 @@ var CustomerlogComponent = /** @class */ (function () {
             log: item,
             parentFunction: this.GetLogList
         };
-        this.emailModalRef = this.modalService.show(_emailmodal_emailmodal_component__WEBPACK_IMPORTED_MODULE_5__["EmailmodalComponent"], { initialState: initialState });
+        this.emailModalRef = this.modalService.show(_emailmodal_emailmodal_component__WEBPACK_IMPORTED_MODULE_4__["EmailmodalComponent"], { initialState: initialState });
     };
     CustomerlogComponent.prototype.GetLogList = function () {
         var _this = this;
@@ -965,11 +2658,14 @@ var CustomerlogComponent = /** @class */ (function () {
         this.Note = '';
         this.Comment = '';
     };
+    CustomerlogComponent.ctorParameters = function () { return [
+        { type: _Services_customerlog_service__WEBPACK_IMPORTED_MODULE_2__["CustomerlogService"] },
+        { type: ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_3__["BsModalService"] }
+    ]; };
     CustomerlogComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            moduleId: module.i,
-            template: __webpack_require__(/*! ./customerlog.component.html */ "./src/app/customerlog.component.html"),
-            styles: [__webpack_require__(/*! ./customerlog.component.css */ "./src/app/customerlog.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./customerlog.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/customerlog.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./customerlog.component.css */ "./src/app/customerlog.component.css")).default]
         }),
         __metadata("design:paramtypes", [_Services_customerlog_service__WEBPACK_IMPORTED_MODULE_2__["CustomerlogService"], ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_3__["BsModalService"]])
     ], CustomerlogComponent);
@@ -1003,12 +2699,16 @@ var ModalContentComponent = /** @class */ (function () {
             _this.parent.call(_this);
         }, function (error) { return alert(error); });
     };
+    ModalContentComponent.ctorParameters = function () { return [
+        { type: ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_3__["BsModalRef"] },
+        { type: _Services_customerlog_service__WEBPACK_IMPORTED_MODULE_2__["CustomerlogService"] }
+    ]; };
     ModalContentComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'modal-content',
             template: "\n      <div class=\"modal-header table-hover\">\n        <h4 class=\"modal-title pull-left\">{{log.Name}}</h4>\n        <button type=\"button\" class=\"close pull-right\" aria-label=\"Close\" (click)=\"bsModalRef.hide()\">\n          <span aria-hidden=\"true\">&times;</span>\n        </button>\n      </div>\n      <div class=\"modal-body\">\n      <table class=\"table table-bordered\">\n      <tr>\n          <td>\n              \u9867\u5BA2\u59D3\u540D\n          </td>\n          <td>\n          <input type=\"string\"\n          [(ngModel)]='Name'\n           />  \n          </td>\n      </tr>\n\n      <tr>\n          <td>\n              \u96FB\u8A71\n          </td>\n          <td>\n          <input type=\"string\"\n          [(ngModel)]='PhoneNumber'\n           />  \n          </td>\n      </tr>\n\n      <tr>\n      <td>\n         Email\n      </td>\n      <td>\n      <input type=\"string\"\n      [(ngModel)]='Email'\n       />  \n      </td>\n      </tr>\n\n      <tr>\n      <td>\n          \u901A\u8A0A\u7D00\u9304\n      </td>\n      <td>\n         <textarea [(ngModel)]='Note' class=\"form-control\" >\n\n         </textarea>\n      </td>\n      </tr>\n      <tr  class=\"warning\" >\n      <td>\n          \u5099\u8A3B(\u5F8C\u7E8C\u9032\u5C55)\n      </td>\n      <td>\n         <textarea [(ngModel)]='Comment' class=\"form-control\"  >\n\n         </textarea>\n      </td>\n      </tr>\n      <tr >\n         \n              <td>\n                  <button class=\"btn btn-primary\" (click) = 'savelog()'>\n                     \u5132\u5B58\n                   </button>\n                  \n              </td>\n\n        </tr>\n    </table> \n\n\n      </div>\n      <div class=\"modal-footer\">\n        <button type=\"button\" class=\"btn btn-default\" (click)=\"bsModalRef.hide()\">\u53D6\u6D88</button>\n      </div>\n    "
         }),
-        __metadata("design:paramtypes", [ngx_bootstrap_modal_bs_modal_ref_service__WEBPACK_IMPORTED_MODULE_4__["BsModalRef"], _Services_customerlog_service__WEBPACK_IMPORTED_MODULE_2__["CustomerlogService"]])
+        __metadata("design:paramtypes", [ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_3__["BsModalRef"], _Services_customerlog_service__WEBPACK_IMPORTED_MODULE_2__["CustomerlogService"]])
     ], ModalContentComponent);
     return ModalContentComponent;
 }());
@@ -1027,6 +2727,9 @@ var ModalContentComponent = /** @class */ (function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "customerlog", function() { return customerlog; });
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 var customerlog = /** @class */ (function () {
     function customerlog() {
         this.RecordTime = Date.now().toString();
@@ -1042,21 +2745,12 @@ var customerlog = /** @class */ (function () {
 /*!*****************************************************!*\
   !*** ./src/app/emailmodal/emailmodal.component.css ***!
   \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/emailmodal/emailmodal.component.html":
-/*!******************************************************!*\
-  !*** ./src/app/emailmodal/emailmodal.component.html ***!
-  \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"modal-header table-hover\">\n  <h4 class=\"modal-title pull-left\">{{Name}}</h4>\n  <button type=\"button\" class=\"close pull-right\" aria-label=\"Close\" (click)=\"bsModalRef.hide()\">\n    <span aria-hidden=\"true\">&times;</span>\n  </button>\n</div>\n<div class=\"modal-body\">\n<table class=\"table table-bordered\">\n<tr>\n  <td>\n    Email \n  </td>\n  <td>\n    {{Email}}\n  </td>\n</tr>\n\n<tr>\n<td>\n   標題\n</td>\n<td>\n<input type=\"string\"\n[(ngModel)]='Subject'\n />  \n</td>\n</tr>\n\n<tr class=\"info\">\n<td>\n    訊息\n</td>\n<td>\n   <textarea [(ngModel)]='Content' class=\"form-control\" rows=\"5\">\n\n   </textarea>\n</td>\n</tr>\n \n<tr >\n   \n        <td>\n            <button class=\"btn btn-primary\" (click) = 'EmailOut()'>\n               寄出\n             </button>\n            \n        </td>\n\n  </tr>\n</table> \n\n\n</div>\n<div class=\"modal-footer\">\n  <button type=\"button\" class=\"btn btn-default\" (click)=\"bsModalRef.hide()\">取消</button>\n</div>\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2VtYWlsbW9kYWwvZW1haWxtb2RhbC5jb21wb25lbnQuY3NzIn0= */");
 
 /***/ }),
 
@@ -1071,7 +2765,7 @@ module.exports = "<div class=\"modal-header table-hover\">\n  <h4 class=\"modal-
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EmailmodalComponent", function() { return EmailmodalComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var ngx_bootstrap_modal_bs_modal_ref_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ngx-bootstrap/modal/bs-modal-ref.service */ "./node_modules/ngx-bootstrap/modal/bs-modal-ref.service.js");
+/* harmony import */ var ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ngx-bootstrap/modal */ "./node_modules/ngx-bootstrap/modal/fesm5/ngx-bootstrap-modal.js");
 /* harmony import */ var _Services_emailservice__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Services/emailservice */ "./src/app/Services/emailservice.ts");
 /* harmony import */ var _Model_EmailMessage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Model/EmailMessage */ "./src/app/Model/EmailMessage.ts");
 /* harmony import */ var _Services_customerlog_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Services/customerlog.service */ "./src/app/Services/customerlog.service.ts");
@@ -1083,6 +2777,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -1134,29 +2831,23 @@ var EmailmodalComponent = /** @class */ (function () {
             _this.bsModalRef.hide();
         }, function (error) { return alert(error); });
     };
+    EmailmodalComponent.ctorParameters = function () { return [
+        { type: _Services_emailservice__WEBPACK_IMPORTED_MODULE_2__["EmailService"] },
+        { type: ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_1__["BsModalRef"] },
+        { type: _Services_customerlog_service__WEBPACK_IMPORTED_MODULE_4__["CustomerlogService"] }
+    ]; };
     EmailmodalComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-emailmodal',
-            template: __webpack_require__(/*! ./emailmodal.component.html */ "./src/app/emailmodal/emailmodal.component.html"),
-            styles: [__webpack_require__(/*! ./emailmodal.component.css */ "./src/app/emailmodal/emailmodal.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./emailmodal.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/emailmodal/emailmodal.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./emailmodal.component.css */ "./src/app/emailmodal/emailmodal.component.css")).default]
         }),
-        __metadata("design:paramtypes", [_Services_emailservice__WEBPACK_IMPORTED_MODULE_2__["EmailService"], ngx_bootstrap_modal_bs_modal_ref_service__WEBPACK_IMPORTED_MODULE_1__["BsModalRef"], _Services_customerlog_service__WEBPACK_IMPORTED_MODULE_4__["CustomerlogService"]])
+        __metadata("design:paramtypes", [_Services_emailservice__WEBPACK_IMPORTED_MODULE_2__["EmailService"], ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_1__["BsModalRef"], _Services_customerlog_service__WEBPACK_IMPORTED_MODULE_4__["CustomerlogService"]])
     ], EmailmodalComponent);
     return EmailmodalComponent;
 }());
 
 
-
-/***/ }),
-
-/***/ "./src/app/menu.component.html":
-/*!*************************************!*\
-  !*** ./src/app/menu.component.html ***!
-  \*************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<nav>\r\n  menu {{count}}\r\n  <button class=\"delete\"\r\n(click)=\"countShopList()\">carriot</button>\r\n\r\n</nav>\r\n"
 
 /***/ }),
 
@@ -1181,6 +2872,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 
 
 var MenuComponent = /** @class */ (function () {
@@ -1193,11 +2887,13 @@ var MenuComponent = /** @class */ (function () {
     MenuComponent.prototype.countShopList = function () {
         this.count = this.shopcartservice.con();
     };
+    MenuComponent.ctorParameters = function () { return [
+        { type: _Services_shop_cart_service__WEBPACK_IMPORTED_MODULE_1__["ShopCartService"] }
+    ]; };
     MenuComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            moduleId: module.i,
             selector: 'menu',
-            template: __webpack_require__(/*! ./menu.component.html */ "./src/app/menu.component.html"),
+            template: __importDefault(__webpack_require__(/*! raw-loader!./menu.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/menu.component.html")).default,
         }),
         __metadata("design:paramtypes", [_Services_shop_cart_service__WEBPACK_IMPORTED_MODULE_1__["ShopCartService"]])
     ], MenuComponent);
@@ -1205,17 +2901,6 @@ var MenuComponent = /** @class */ (function () {
 }());
 
 
-
-/***/ }),
-
-/***/ "./src/app/products.component.html":
-/*!*****************************************!*\
-  !*** ./src/app/products.component.html ***!
-  \*****************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<a routerLink=\"/cart\" routerLinkActive=\"active\"><img src=\"/assets/Photos/cart.jpg\" alt=\"cart Icon\" style=\"width:50px;height:50px;\">  購物車(結帳)</a>\r\n<p>\r\n<span class=\"badge\">數量: {{count}} </span>\r\n<span class=\"badge\">總價: {{totalprice}} </span>\r\n<div class=\"grid grid-pad\">\r\n  <div *ngFor=\"let product of products\" class=\"col-1-4\">\r\n    <div class=\"panel panel-default\">\r\n      <div class=\"panel-heading\">\r\n      <span *ngIf=\"product.Promotion\" > <img   src=\"app/Services/Model/Photos/onsale.jpg\" width=\"100\" height=\"100\"> </span> \r\n      <img [src]='product.Photo'> <b> {{product.Name}}</b>\r\n      <h4 class=\"label label-primary\"> 價格: NT {{product.Price}} </h4> &nbsp;   \r\n      <button class=\"btn btn-info\" (click)=\"add(product)\">加入購物車</button> \r\n      </div>\r\n      <div class=\"panel-body\">{{product.Description}}</div>\r\n\r\n    </div>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -1241,6 +2926,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -1270,11 +2958,15 @@ var ProductsComponent = /** @class */ (function () {
         this.count = this.shopcartservice.con();
         this.totalprice = this.shopcartservice.totalamount();
     };
+    ProductsComponent.ctorParameters = function () { return [
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"] },
+        { type: _Services_product_service__WEBPACK_IMPORTED_MODULE_2__["ProductService"] },
+        { type: _Services_shop_cart_service__WEBPACK_IMPORTED_MODULE_3__["ShopCartService"] }
+    ]; };
     ProductsComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            moduleId: module.i,
             selector: 'products',
-            template: __webpack_require__(/*! ./products.component.html */ "./src/app/products.component.html"),
+            template: __importDefault(__webpack_require__(/*! raw-loader!./products.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/products.component.html")).default,
         }),
         __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"],
             _Services_product_service__WEBPACK_IMPORTED_MODULE_2__["ProductService"],
@@ -1291,21 +2983,12 @@ var ProductsComponent = /** @class */ (function () {
 /*!*******************************************!*\
   !*** ./src/app/stoneweight.component.css ***!
   \*******************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = "div{\r\n    align-content: left;\r\n}\r\n\r\ntable {\r\n    width: 200;\r\n}\r\n\r\nthead{\r\n    color: #337AB7; \r\n    align-content: center;\r\n    \r\n}\r\n\r\nrow td{\r\n    align-content: left;\r\n    text-align: left;\r\n}"
-
-/***/ }),
-
-/***/ "./src/app/stoneweight.component.html":
-/*!********************************************!*\
-  !*** ./src/app/stoneweight.component.html ***!
-  \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<table class=\"table table-bordered table-striped\">\r\n    <tr>\r\n        <th>\r\n            編號\r\n        </th>\r\n        <th>\r\n            空氣重量\r\n        </th>\r\n        <th>\r\n            水中重量\r\n        </th>\r\n        <th>\r\n            物體比重\r\n        </th>\r\n    </tr>\r\n    \r\n        <tr>\r\n            <td>\r\n    \r\n            </td>\r\n            <td>\r\n                <input type=\"number\"\r\n                [(ngModel)]='airweight'\r\n                style=\"width: 6em;\"\r\n                /> \r\n            </td>\r\n            <td>\r\n                <input type=\"number\"\r\n                [(ngModel)]='waterweight'  \r\n                style=\"width: 6em;\"\r\n                /> \r\n            </td>\r\n            <td>\r\n                {{caculateweightrate()}}\r\n            </td>\r\n            <td>\r\n                <button class=\"btn btn-primary\" (click) = 'addintolist()'>\r\n                    新增\r\n                 </button>\r\n            </td>\r\n        </tr>\r\n\r\n    <tbody> \r\n        <tr *ngFor = 'let item of weightList'>\r\n            \r\n            <td>{{ item.id}}</td>\r\n            <td>{{ item.airweight }}</td>\r\n            <td>{{ item.waterweight}}</td>\r\n            <td>{{ item.ratioweight}}</td>\r\n            \r\n        </tr>\r\n    </tbody>\r\n   \r\n\r\n\r\n</table>\r\n\r\n<table *ngIf=\"weightList?.length > 0\">\r\n    <tr>\r\n        <td>\r\n            Email: \r\n        </td>\r\n        <td>\r\n            <input type=\"string\"\r\n            [(ngModel)]='emailaddress'  \r\n            style=\"width: 15em;\"\r\n            /> \r\n        </td>\r\n        <td>\r\n            <span></span>\r\n        </td>\r\n        <td>\r\n            <button class=\"btn btn-info\" (click) = 'emailout()'>\r\n                寄出\r\n             </button>\r\n        </td>\r\n    </tr>\r\n</table>\r\n\r\n\r\n\r\n\r\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("div{\r\n    align-content: left;\r\n}\r\n\r\ntable {\r\n    width: 200;\r\n}\r\n\r\nthead{\r\n    color: #337AB7; \r\n    align-content: center;\r\n    \r\n}\r\n\r\nrow td{\r\n    align-content: left;\r\n    text-align: left;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc3RvbmV3ZWlnaHQuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLG1CQUFtQjtBQUN2Qjs7QUFFQTtJQUNJLFVBQVU7QUFDZDs7QUFFQTtJQUNJLGNBQWM7SUFDZCxxQkFBcUI7O0FBRXpCOztBQUVBO0lBQ0ksbUJBQW1CO0lBQ25CLGdCQUFnQjtBQUNwQiIsImZpbGUiOiJzcmMvYXBwL3N0b25ld2VpZ2h0LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJkaXZ7XHJcbiAgICBhbGlnbi1jb250ZW50OiBsZWZ0O1xyXG59XHJcblxyXG50YWJsZSB7XHJcbiAgICB3aWR0aDogMjAwO1xyXG59XHJcblxyXG50aGVhZHtcclxuICAgIGNvbG9yOiAjMzM3QUI3OyBcclxuICAgIGFsaWduLWNvbnRlbnQ6IGNlbnRlcjtcclxuICAgIFxyXG59XHJcblxyXG5yb3cgdGR7XHJcbiAgICBhbGlnbi1jb250ZW50OiBsZWZ0O1xyXG4gICAgdGV4dC1hbGlnbjogbGVmdDtcclxufSJdfQ== */");
 
 /***/ }),
 
@@ -1330,6 +3013,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -1421,11 +3107,13 @@ var StoneweightComponent = /** @class */ (function () {
             this.ratioweight = '尚未有數值';
         }
     };
+    StoneweightComponent.ctorParameters = function () { return [
+        { type: _Services_list_email_service__WEBPACK_IMPORTED_MODULE_2__["ListEmailService"] }
+    ]; };
     StoneweightComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            moduleId: module.i,
-            template: __webpack_require__(/*! ./stoneweight.component.html */ "./src/app/stoneweight.component.html"),
-            styles: [__webpack_require__(/*! ./stoneweight.component.css */ "./src/app/stoneweight.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./stoneweight.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/stoneweight.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./stoneweight.component.css */ "./src/app/stoneweight.component.css")).default]
         }),
         __metadata("design:paramtypes", [_Services_list_email_service__WEBPACK_IMPORTED_MODULE_2__["ListEmailService"]])
     ], StoneweightComponent);
@@ -1446,6 +3134,9 @@ var StoneweightComponent = /** @class */ (function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "weight", function() { return weight; });
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 var weight = /** @class */ (function () {
     function weight(_id, _air, _water, _ratio) {
         this.id = _id;
@@ -1474,6 +3165,9 @@ __webpack_require__.r(__webpack_exports__);
 // The build system defaults to the dev environment which uses `environment.ts`, but if you do
 // `ng build --env=prod` then `environment.prod.ts` will be used instead.
 // The list of which env maps to which file can be found in `.angular-cli.json`.
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 var environment = {
     production: false
 };
@@ -1494,6 +3188,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser-dynamic */ "./node_modules/@angular/platform-browser-dynamic/fesm5/platform-browser-dynamic.js");
 /* harmony import */ var _app_app_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app/app.module */ "./src/app/app.module.ts");
 /* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./environments/environment */ "./src/environments/environment.ts");
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 
 
 
@@ -1514,7 +3211,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Project\Angular.Web\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Projects\Angular.Web\src\main.ts */"./src/main.ts");
 
 
 /***/ })
