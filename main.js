@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"nav navbar-nav navbar-right\">\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"SaveEntity()\">儲存</button> | \n        <button type=\"button\" class=\"btn btn-default\" onclick=\"location.href='#/bccenter';\">返回</button>   \n        <p></p>    \n</div>\n\n<div class=\"body-content\">\n\n        <table class=\"table table-bordered table-striped\">\n                <tbody>\n            \n                    <tr>\n                        <td>\n                            ID:\n                        </td>\n                        <TD>\n                                {{Entity.Id}}\n                        </TD>\n                    </tr>\n                    <tr>\n                        <td>\n                               標題:\n                        </td>\n                        <td>\n                                <input [(ngModel)]=\"Entity.Title\" #ctrl=\"ngModel\" required name=\"title\"  #fullName=\"ngModel\" required> \n                        </td>\n                    </tr>\n                    <tr>\n                        <td>\n                            備註:\n                        </td>\n                        <td>\n                               \n                                <textarea class=\"form-control\" \n                                name=\"comment\"\n                                rows=\"2\"\n                                [(ngModel)]=\"Entity.Comment\"\n                                #message='ngModel'\n                                ></textarea>\n                        </td>\n                    </tr>\n                                     \n               \n                    <tr>\n                        <td colspan=\"2\">\n                            文章圖片上傳:\n                        \n                                <div class=\"center\">\n                                        <ngx-file-drop dropZoneLabel=\"Drop files here\" (onFileDrop)=\"dropped($event)\" \n                                        (onFileOver)=\"fileOver($event)\" (onFileLeave)=\"fileLeave($event)\">\n                                            <ng-template ngx-file-drop-content-tmp let-openFileSelector=\"openFileSelector\">\n                                              拖曳或是選擇要上傳的圖片\n                                              <button type=\"button\" (click)=\"openFileSelector()\">Browse Files</button>\n                                            </ng-template>\n                                        </ngx-file-drop>\n                                       \n                                </div>\n                        </td>\n                    </tr>\n                    <tr>\n                        <td colspan=\"2\">\n                                <ul *ngFor=\"let i of Entity.Pages; let x = index\" class=\"list-group\">\n                                    <li class=\"list-group-item\">\n                                        <img [src]=\"i.Image_Url\"   class=\"img-thumbnail\" > <p></p>\n                                        名稱:<input [(ngModel)]=\"i.Name\" #ctrl=\"ngModel\"  name=\"imagename\" class=\"form-control\"/> <p></p>\n                                        備註: <input [(ngModel)]=\"i.Comment\" #ctrl=\"ngModel\"  name=\"imageComment\" type=\"text\"  class=\"form-control\"/><p></p>\n                                        <button type=\"button\" class=\"btn btn-danger btn-xs\" (click) =\"RemoveImage(x)\">刪除圖片</button>\n                                    </li>\n                                </ul>\n                        </td>\n                    </tr>    \n                </tbody>   \n        </table>\n            \n\n\n\n</div>\n\n    \n    \n  \n     <hr>\n    <div class=\"nav navbar-nav navbar-right\">\n            <button type=\"button\" class=\"btn btn-primary\" (click)=\"SaveEntity()\">儲存</button> | \n            <button type=\"button\" class=\"btn btn-default\" onclick=\"location.href='#/bccenter';\">返回</button>       \n    </div>\n\n   \n\n\n<ngx-spinner\n  bdColor=\"rgba(51,51,51,0.8)\"\n  size=\"medium\"\n  color=\"#fff\"\n  type=\"ball-scale-multiple\"\n>\n  <p style=\"font-size: 20px; color: white\">處理中...</p>\n</ngx-spinner>\n\n \n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"nav navbar-nav navbar-right\">\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"SaveEntity()\">儲存</button> | \n        <button type=\"button\" class=\"btn btn-default\" onclick=\"location.href='#/articlelist';\">返回</button>   \n        <p></p>    \n</div>\n\n<div class=\"body-content\">\n\n        <table class=\"table table-bordered table-striped\">\n                <tbody>\n            \n                    <tr>\n                        <td>\n                            ID:\n                        </td>\n                        <TD>\n                                {{Entity.Id}}\n                        </TD>\n                    </tr>\n                    <tr>\n                        <td>\n                               標題:\n                        </td>\n                        <td>\n                                <input [(ngModel)]=\"Entity.Title\" #ctrl=\"ngModel\" required name=\"title\"  #fullName=\"ngModel\"  class=\"form-control\"  required> \n                        </td>\n                    </tr>\n                    <tr>\n                        <td>\n                            備註:\n                        </td>\n                        <td>\n                               \n                                <textarea class=\"form-control\" \n                                name=\"comment\"\n                                rows=\"2\"\n                                [(ngModel)]=\"Entity.Comment\"\n                                #message='ngModel'\n                                ></textarea>\n                        </td>\n                    </tr>\n                                     \n               \n                    <tr>\n                        <td colspan=\"2\">\n                            文章圖片上傳:\n                        \n                                <div class=\"center\">\n                                        <ngx-file-drop dropZoneLabel=\"Drop files here\" (onFileDrop)=\"dropped($event)\" \n                                        (onFileOver)=\"fileOver($event)\" (onFileLeave)=\"fileLeave($event)\">\n                                            <ng-template ngx-file-drop-content-tmp let-openFileSelector=\"openFileSelector\">\n                                              拖曳或是選擇要上傳的圖片\n                                              <button type=\"button\" (click)=\"openFileSelector()\">Browse Files</button>\n                                            </ng-template>\n                                        </ngx-file-drop>\n                                       \n                                </div>\n                        </td>\n                    </tr>\n                    <tr>\n                        <td colspan=\"2\">\n                                <ul *ngFor=\"let i of Entity.Pages; let x = index\" class=\"list-group\">\n                                    <li class=\"list-group-item\">\n                                        <img [src]=\"i.Image_Url\"   class=\"img-thumbnail\" > <p></p>\n                                        名稱:<input [(ngModel)]=\"i.Name\" #ctrl=\"ngModel\"  name=\"imagename\" class=\"form-control\"/> <p></p>\n                                        備註: <input [(ngModel)]=\"i.Comment\" #ctrl=\"ngModel\"  name=\"imageComment\" type=\"text\"  class=\"form-control\"/><p></p>\n                                        <button type=\"button\" class=\"btn btn-danger btn-xs\" (click) =\"RemoveImage(x)\">刪除圖片</button>\n                                    </li>\n                                </ul>\n                        </td>\n                    </tr>    \n                </tbody>   \n        </table>\n            \n\n\n\n</div>\n\n    \n    \n  \n     <hr>\n    <div class=\"nav navbar-nav navbar-right\">\n            <button type=\"button\" class=\"btn btn-primary\" (click)=\"SaveEntity()\">儲存</button> | \n            <button type=\"button\" class=\"btn btn-default\" onclick=\"location.href='#/articlelist';\">返回</button>       \n    </div>\n\n   \n\n\n<ngx-spinner\n  bdColor=\"rgba(51,51,51,0.8)\"\n  size=\"medium\"\n  color=\"#fff\"\n  type=\"ball-scale-multiple\"\n>\n  <p style=\"font-size: 20px; color: white\">處理中...</p>\n</ngx-spinner>\n\n \n");
 
 /***/ }),
 
@@ -22,7 +22,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<p>articlelist works!</p>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<button type=\"button\" class=\"btn btn-primary\" onclick=\"location.href='#/articleform';\">新增文章</button>\n\n<div class=\"nav navbar-nav navbar-right\">\n    <button type=\"button\" class=\"btn btn-secondary\" onclick=\"location.href='#/articleshow';\">回到展示介面</button>\n</div>\n<p></p>\n\n<table class=\"table table-bordered table-striped\">\n    <tr>\n        <th>\n            ID\n        </th>\n        <th>\n            文章標題\n        </th>\n        <th>\n            備註\n        </th>    \n        <th>\n            \n        </th>\n    </tr>\n    \n       \n        <tbody> \n            <tr *ngFor = 'let item of List ' >\n                <td>\n                    {{item.Id}}\n                </td>\n                <td>{{ item.Title}}\n                      \n                </td>\n                <td>{{ item.Comment }}</td>\n              \n                <td>\n                        <button type=\"button\" class=\"btn btn-info\" (click) = openform(item.Id)>編輯文章</button>    |\n                        <button type=\"button\" class=\"btn btn-danger\" (click) = delete(item.Id)>刪除文章</button>\n                </td>\n                \n                \n            </tr>\n        </tbody>\n       \n</table>\n\n\n\n<ngx-spinner\n  bdColor=\"rgba(51,51,51,0.8)\"\n  size=\"medium\"\n  color=\"#fff\"\n  type=\"ball-scale-multiple\"\n>\n  <p style=\"font-size: 20px; color: white\">處理中...</p>\n</ngx-spinner>");
 
 /***/ }),
 
@@ -1147,6 +1147,9 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ArticlelistComponent", function() { return ArticlelistComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _service_service_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../service/service.service */ "./src/app/article/service/service.service.ts");
+/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ngx-spinner */ "./node_modules/ngx-spinner/fesm5/ngx-spinner.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1160,18 +1163,67 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
   return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
+
+
+
 var ArticlelistComponent = /** @class */ (function () {
-    function ArticlelistComponent() {
+    function ArticlelistComponent(service, spinner, route) {
+        this.service = service;
+        this.spinner = spinner;
+        this.route = route;
+        this._list = [];
     }
+    Object.defineProperty(ArticlelistComponent.prototype, "List", {
+        get: function () {
+            return this._list;
+        },
+        set: function (value) {
+            this._list = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
     ArticlelistComponent.prototype.ngOnInit = function () {
+        this.GetList();
     };
+    ArticlelistComponent.prototype.GetList = function () {
+        var _this = this;
+        this.spinner.show();
+        this.service.getList().subscribe(function (list) {
+            _this.List = list;
+            _this.spinner.hide();
+        });
+    };
+    ArticlelistComponent.prototype.openform = function (Id) {
+        window.open('#/articleform/' + Id, '_self');
+    };
+    ArticlelistComponent.prototype.delete = function (Id) {
+        var _this = this;
+        if (confirm('確定刪除 ID: ' + Id + '?')) {
+            this.List.forEach(function (item, index) {
+                if (item.Id === Id) {
+                    _this.List.splice(index, 1);
+                }
+            });
+            this.service.deleteEntity(Id).subscribe(function (res) {
+                console.log(res);
+            }, function (err) {
+                alert(err);
+            });
+        }
+    };
+    ArticlelistComponent.ctorParameters = function () { return [
+        { type: _service_service_service__WEBPACK_IMPORTED_MODULE_1__["ArticleService"] },
+        { type: ngx_spinner__WEBPACK_IMPORTED_MODULE_2__["NgxSpinnerService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"] }
+    ]; };
     ArticlelistComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-articlelist',
             template: __importDefault(__webpack_require__(/*! raw-loader!./articlelist.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/article/articlelist/articlelist.component.html")).default,
             styles: [__importDefault(__webpack_require__(/*! ./articlelist.component.css */ "./src/app/article/articlelist/articlelist.component.css")).default]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_service_service_service__WEBPACK_IMPORTED_MODULE_1__["ArticleService"], ngx_spinner__WEBPACK_IMPORTED_MODULE_2__["NgxSpinnerService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"]])
     ], ArticlelistComponent);
     return ArticlelistComponent;
 }());
