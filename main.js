@@ -35,7 +35,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<form>\n  <div class=\"form-group\">\n      <div>\n          <label>選擇文章: </label>\n          <select (change)=\"filterForArticles($event.target.value)\" class=\"form-control\">\n            <option value=\"-1\">--選擇--</option>\n            <option *ngFor=\"let item of List; let i = index\" value={{i}}>\n              {{item.Title}}\n            </option>\n          </select>\n        </div>\n        <br>\n       \n        <carousel  interval=\"0\">\n                <slide *ngFor=\"let item of Entity.Pages\">\n                  <img [src]=\"item.Image_Url\" alt=\"Pages\" style=\"display: block; width: 100%;\">\n                  <div class=\"carousel-caption d-none d-md-block\">\n                    <h3>{{item.Name}}</h3>\n                    <p>{{item.Comment}}</p>\n                  </div>\n                </slide> \n        </carousel>\n        \n\n  </div>\n</form>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<form>\n  <div class=\"form-group\">\n      <div>\n          <label>選擇文章: </label>\n          <select (change)=\"filterForArticles($event.target.value)\" class=\"form-control\">\n            <option value=\"-1\">--選擇--</option>\n            <option *ngFor=\"let item of List; let i = index\" value={{i}}>\n              {{item.Title}} | {{item.Comment}}\n            </option>\n          </select>\n        </div>\n        <br>\n        \n        <carousel  interval=\"0\">\n                <slide *ngFor=\"let item of Entity.Pages\">\n                  <img [src]=\"item.Image_Url\" alt=\"Pages\" style=\"display: block; width: 100%;\">\n                  <div class=\"carousel-caption d-none d-md-block\">\n                    <h3>{{item.Name}}</h3>\n                    <p>{{item.Comment}}</p>\n                  </div>\n                </slide> \n        </carousel>\n        \n\n  </div>\n</form>\n\n<div>\n  推廣網頁QR\n  <a href='https://leecloud.blob.core.windows.net/image/qr.jpg' download=\"TeaQR.jpg\"><img src='https://leecloud.blob.core.windows.net/image/qr.jpg' width=20% height=20% /></a>\n</div>\n");
 
 /***/ }),
 
@@ -1260,8 +1260,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _service_service_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../service/service.service */ "./src/app/article/service/service.service.ts");
 /* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ngx-spinner */ "./node_modules/ngx-spinner/fesm5/ngx-spinner.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var util__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! util */ "./node_modules/util/util.js");
-/* harmony import */ var util__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(util__WEBPACK_IMPORTED_MODULE_5__);
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1274,7 +1272,6 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
   return (mod && mod.__esModule) ? mod : { "default": mod };
 };
-
 
 
 
@@ -1309,25 +1306,11 @@ var ArticleshowComponent = /** @class */ (function () {
         configurable: true
     });
     ArticleshowComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this.spinner.show();
-        var ID = this.route.snapshot.paramMap.get('id');
-        if (Object(util__WEBPACK_IMPORTED_MODULE_5__["isNullOrUndefined"])(ID)) {
-            this.GetList();
-            this.spinner.hide();
-        }
-        else {
-            this.service.getEntityById(ID).subscribe(function (val) {
-                _this.Entity = val;
-                _this.spinner.hide();
-            }, function (err) {
-                alert('Not Found');
-                _this.spinner.hide();
-            });
-        }
+        this.GetList();
     };
     ArticleshowComponent.prototype.GetList = function () {
         var _this = this;
+        this.spinner.show();
         this.service.getList().subscribe(function (val) {
             _this.List = val;
             _this.spinner.hide();
