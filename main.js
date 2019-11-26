@@ -22,7 +22,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n    <span> <img src='../assets/Photos/tealogo.jpg' width=20% height=20% /></span>\r\n    <p></p>\r\n</div>\r\n\r\n<button type=\"button\" class=\"btn btn-primary\" onclick=\"location.href='#/articleform';\">新增文章</button>\r\n\r\n<div class=\"nav navbar-nav navbar-right\">\r\n    <button type=\"button\" class=\"btn btn-secondary\" onclick=\"location.href='#/articleshow';\">回到展示介面</button>\r\n</div>\r\n<p></p>\r\n\r\n<table class=\"table table-bordered table-striped table-hover\">\r\n    <tr>\r\n        <th>\r\n            ID\r\n        </th>\r\n        <th>\r\n            文章標題\r\n        </th>\r\n        <th>\r\n            備註\r\n        </th>    \r\n        <th>\r\n            \r\n        </th>\r\n    </tr>\r\n    \r\n       \r\n        <tbody> \r\n            <tr *ngFor = 'let item of List ' >\r\n                <td>\r\n                    {{item.Id}}\r\n                </td>\r\n                <td>{{ item.Title}}\r\n                      \r\n                </td>\r\n                <td>{{ item.Comment }}</td>\r\n              \r\n                <td>\r\n                        <button type=\"button\" class=\"btn btn-info\" (click) = openform(item.Id)>編輯文章</button>    |\r\n                        <button type=\"button\" class=\"btn btn-danger\" (click) = delete(item.Id)>刪除文章</button>    |\r\n                        <button type=\"button\" class=\"btn btn-dark\" (click) = showarticle(item.Id)>展示文章</button>\r\n                </td>\r\n                \r\n                \r\n            </tr>\r\n        </tbody>\r\n       \r\n</table>\r\n\r\n\r\n\r\n<ngx-spinner\r\n  bdColor=\"rgba(51,51,51,0.8)\"\r\n  size=\"medium\"\r\n  color=\"#fff\"\r\n  type=\"ball-scale-multiple\"\r\n>\r\n  <p style=\"font-size: 20px; color: white\">處理中...</p>\r\n</ngx-spinner>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n    <span> <img src='../assets/Photos/tealogo.jpg' width=20% height=20% /></span>\r\n    <p></p>\r\n</div>\r\n\r\n<button type=\"button\" class=\"btn btn-primary\" onclick=\"location.href='#/articleform';\">新增文章</button>\r\n\r\n<div class=\"nav navbar-nav navbar-right\">\r\n    <button type=\"button\" class=\"btn btn-secondary\" onclick=\"location.href='#/articleshow';\">回到展示介面</button>\r\n</div>\r\n<p></p>\r\n\r\n<table class=\"table table-bordered table-striped\">\r\n    <tr>\r\n        <th>\r\n            ID\r\n        </th>\r\n        <th>\r\n            文章標題\r\n        </th>\r\n        <th>\r\n            備註\r\n        </th>    \r\n        <th>\r\n            \r\n        </th>\r\n    </tr>\r\n    \r\n       \r\n        <tbody> \r\n            <tr *ngFor = 'let item of List ' >\r\n                <td>\r\n                    {{item.Id}}\r\n                </td>\r\n                <td>{{ item.Title}}\r\n                      \r\n                </td>\r\n                <td>{{ item.Comment }}</td>\r\n              \r\n                <td>\r\n                        <button type=\"button\" class=\"btn btn-info\" (click) = openform(item.Id)>編輯文章</button>    |\r\n                        <button type=\"button\" class=\"btn btn-danger\" (click) = delete(item.Id)>刪除文章</button>\r\n                </td>\r\n                \r\n                \r\n            </tr>\r\n        </tbody>\r\n       \r\n</table>\r\n\r\n\r\n\r\n<ngx-spinner\r\n  bdColor=\"rgba(51,51,51,0.8)\"\r\n  size=\"medium\"\r\n  color=\"#fff\"\r\n  type=\"ball-scale-multiple\"\r\n>\r\n  <p style=\"font-size: 20px; color: white\">處理中...</p>\r\n</ngx-spinner>");
 
 /***/ }),
 
@@ -35,7 +35,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<span> <img src='../assets/Photos/tealogo.jpg' width=20% height=20% /></span>\r\n<form>\r\n  <div class=\"form-group\">\r\n      <div> \r\n          <label>選擇文章: </label>\r\n          <select (change)=\"filterForArticles($event.target.value)\" class=\"form-control\">\r\n            <option value=\"-1\">--選擇--</option>\r\n            <option *ngFor=\"let item of List; let i = index\" value={{i}}>\r\n              {{item.Title}} | {{item.Comment}}\r\n            </option>\r\n          </select>\r\n        </div>\r\n        <br>\r\n        \r\n        <carousel  interval=\"0\">\r\n                <slide *ngFor=\"let item of Entity.Pages\">\r\n                  <img [src]=\"item.Image_Url\" alt=\"Pages\" style=\"display: block; width: 100%;\">\r\n                  <div class=\"carousel-caption d-none d-md-block\">\r\n                    <h3>{{item.Name}}</h3>\r\n                    <p>{{item.Comment}}</p>\r\n                  </div>\r\n                </slide> \r\n        </carousel>\r\n        \r\n\r\n  </div>\r\n</form>\r\n\r\n<div>\r\n  推廣網頁QR\r\n  <a href='https://leecloud.blob.core.windows.net/image/qr.jpg' download=\"TeaQR.jpg\"><img src='https://leecloud.blob.core.windows.net/image/qr.jpg' width=20% height=20% /></a>\r\n</div>\r\n\r\n<ngx-spinner\r\n  bdColor=\"rgba(51,51,51,0.8)\"\r\n  size=\"medium\"\r\n  color=\"#fff\"\r\n  type=\"ball-scale-multiple\"\r\n>\r\n  <p style=\"font-size: 20px; color: white\">處理中...</p>\r\n</ngx-spinner>");
+/* harmony default export */ __webpack_exports__["default"] = ("<span> <img src='../assets/Photos/tealogo.jpg' width=20% height=20% /></span>\r\n<form>\r\n  <div class=\"form-group\">\r\n      <div>\r\n          <label>選擇文章: </label>\r\n          <select (change)=\"filterForArticles($event.target.value)\" class=\"form-control\">\r\n            <option value=\"-1\">--選擇--</option>\r\n            <option *ngFor=\"let item of List; let i = index\" value={{i}}>\r\n              {{item.Title}} | {{item.Comment}}\r\n            </option>\r\n          </select>\r\n        </div>\r\n        <br>\r\n        \r\n        <carousel  interval=\"0\">\r\n                <slide *ngFor=\"let item of Entity.Pages\">\r\n                  <img [src]=\"item.Image_Url\" alt=\"Pages\" style=\"display: block; width: 100%;\">\r\n                  <div class=\"carousel-caption d-none d-md-block\">\r\n                    <h3>{{item.Name}}</h3>\r\n                    <p>{{item.Comment}}</p>\r\n                  </div>\r\n                </slide> \r\n        </carousel>\r\n        \r\n\r\n  </div>\r\n</form>\r\n\r\n<div>\r\n  推廣網頁QR\r\n  <a href='https://leecloud.blob.core.windows.net/image/qr.jpg' download=\"TeaQR.jpg\"><img src='https://leecloud.blob.core.windows.net/image/qr.jpg' width=20% height=20% /></a>\r\n</div>\r\n\r\n<ngx-spinner\r\n  bdColor=\"rgba(51,51,51,0.8)\"\r\n  size=\"medium\"\r\n  color=\"#fff\"\r\n  type=\"ball-scale-multiple\"\r\n>\r\n  <p style=\"font-size: 20px; color: white\">處理中...</p>\r\n</ngx-spinner>");
 
 /***/ }),
 
@@ -61,7 +61,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"modal-header table-hover\">\n        \n</div>\n          <div class=\"modal-body\">\n\n          <div fxLayout=\"column\" fxLayoutAlign=\" none\">\n            <div fxFlex=\"100\" fxLayout=\"row wrap\" fxLayoutAlign=\"space-around stretch\" fxLayout.xs=\"column\">\n              <div *ngFor=\"let i of list; let x = index\" fxFlex.xs=\"100\" fxFlex.sm=\"50\" fxFlex.md=\"33\" fxFlex.lg=\"33\" fxFlex.xl=\"33\">\n                  <input [(ngModel)]=\"i.Checked\" type=\"checkbox\"/> {{i.Name}} <img  [src]=\"i.Image_Url\" style=\"height: 50px; width: 50px;\">\n              </div>\n            </div>\n          </div>\n                  \n          </div>\n          <div class=\"modal-footer\">\n                 <button type=\"button\" class=\"btn btn-primary\" (click)=\"Save()\">儲存</button>  \n                <button type=\"button\" class=\"btn btn-secondary\" (click)=\"bsModalRef.hide()\">取消</button>\n          </div>\n    ");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"modal-header table-hover\">\r\n        \r\n</div>\r\n          <div class=\"modal-body\">\r\n\r\n          <div fxLayout=\"column\" fxLayoutAlign=\" none\">\r\n            <div fxFlex=\"100\" fxLayout=\"row wrap\" fxLayoutAlign=\"space-around stretch\" fxLayout.xs=\"column\">\r\n              <div *ngFor=\"let i of list; let x = index\" fxFlex.xs=\"100\" fxFlex.sm=\"50\" fxFlex.md=\"33\" fxFlex.lg=\"33\" fxFlex.xl=\"33\">\r\n                  <input [(ngModel)]=\"i.Checked\" type=\"checkbox\"/> {{i.Name}} <img  [src]=\"i.Image_Url\" style=\"height: 50px; width: 50px;\">\r\n              </div>\r\n            </div>\r\n          </div>\r\n                  \r\n          </div>\r\n          <div class=\"modal-footer\">\r\n                 <button type=\"button\" class=\"btn btn-primary\" (click)=\"Save()\">儲存</button>  \r\n                <button type=\"button\" class=\"btn btn-secondary\" (click)=\"bsModalRef.hide()\">取消</button>\r\n          </div>\r\n    ");
 
 /***/ }),
 
@@ -74,20 +74,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n    <span><img src='../assets/Photos/inhublogo.png' width=10% height=10% /></span>\r\n    <p></p>\r\n</div>\r\n\r\n<button type=\"button\" class=\"btn btn-primary\" onclick=\"location.href='#/bcform';\">新增</button>\r\n<p></p>\r\n<ng-template #popTemplate> <div [innerHtml]=\"pophtml\"></div></ng-template>\r\n<table class=\"table table-bordered table-striped\">\r\n    <tr>\r\n        <th>\r\n            ID\r\n        </th>\r\n        <th>\r\n            名稱\r\n        </th>\r\n        <th>\r\n            網站\r\n        </th>\r\n        <th>\r\n            地址\r\n        </th>\r\n      \r\n        <th>\r\n            \r\n        </th>\r\n    </tr>\r\n    \r\n       \r\n        <tbody> \r\n            <tr *ngFor = 'let item of List ' [tooltip]=\"popTemplate\" (mouseover)='popup(item)'>\r\n                <td>\r\n                    {{item.Id}}\r\n                </td>\r\n                <td>{{ item.Name}}\r\n                      \r\n                </td>\r\n                <td> <a href= 'https://{{item.WebSite}}' target=\"_blank\"> {{item.WebSite}} </a></td>\r\n                <td>{{ item.Address}}</td>\r\n                <td>\r\n                        <button type=\"button\" class=\"btn btn-primary\" (click) = showform(item.Id)>展示</button>    |\r\n                        <button type=\"button\" class=\"btn btn-info\" (click) = openform(item.Id)>編輯</button>    |\r\n                        <button type=\"button\" class=\"btn btn-danger\" (click) = delete(item.Id)>刪除</button>\r\n                </td>\r\n                \r\n                \r\n            </tr>\r\n        </tbody>\r\n       \r\n</table>\r\n\r\n\r\n\r\n<ngx-spinner\r\n  bdColor=\"rgba(51,51,51,0.8)\"\r\n  size=\"medium\"\r\n  color=\"#fff\"\r\n  type=\"ball-scale-multiple\"\r\n>\r\n  <p style=\"font-size: 20px; color: white\">處理中...</p>\r\n</ngx-spinner>");
-
-/***/ }),
-
-/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/businesscenter/bcshow/bcshow.component.html":
-/*!***************************************************************************************************!*\
-  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/businesscenter/bcshow/bcshow.component.html ***!
-  \***************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\r\n<div>\r\n    <span><img src='../assets/Photos/inhublogo.png' width=10% height=10% /></span>\r\n    <p></p>\r\n</div>\r\n\r\n<div class=\"nav navbar-nav navbar-right\">\r\n         <button type=\"button\" class=\"btn btn-default\" onclick=\"location.href='#/bccenter';\">返回</button>   \r\n        <p></p>    \r\n</div>\r\n\r\n<div class=\"body-content\">\r\n\r\n    <table class=\"table table-bordered table-striped\">\r\n            <tbody>\r\n                <tr>\r\n                    <td colspan=\"2\">\r\n                           \r\n                        <carousel>\r\n                                <slide *ngFor=\"let item of Entity.Images\">\r\n                                <img [src]=\"item.Image_Url\" alt=\"Image\" style=\"display: block; width: 100%;\">\r\n                                <div class=\"carousel-caption d-none d-md-block\">\r\n                                    <h3>{{item.Name}}</h3>\r\n                                    <p>{{item.Comment}}</p>\r\n                                </div>\r\n                                </slide> \r\n                        </carousel>\r\n        \r\n\r\n                    </td>\r\n                </tr>\r\n        \r\n                <tr>\r\n                    <td>\r\n                        ID:\r\n                    </td>\r\n                    <TD>\r\n                            {{Entity.Id}}\r\n                    </TD>\r\n                </tr>\r\n                <tr>\r\n                    <td>\r\n                            商務中心名稱:\r\n                    </td>\r\n                    <td>\r\n                        <b><h1 class=\"h4\">{{Entity.Name}} </h1></b>\r\n                    </td>\r\n                </tr>\r\n                <tr>\r\n                    <td>\r\n                        介紹:\r\n                    </td>\r\n                    <td>\r\n                            {{Entity.Intro}} \r\n                    </td>\r\n                </tr>\r\n                <tr>\r\n                    <td>\r\n                           營業時間: \r\n                    </td>\r\n                    <td>\r\n                        <div fxLayout=\"column\" fxLayoutAlign=\" none\">\r\n                            <div fxFlex=\"100\" fxLayout=\"column\" fxLayoutAlign=\"space-around stretch\" fxLayout.xs=\"column\">\r\n                              <div *ngFor=\"let i of Entity.BusinessHours\" fxFlex.xs=\"100\" fxFlex.sm=\"50\" fxFlex.md=\"33\" fxFlex.lg=\"33\" fxFlex.xl=\"33\">\r\n                                  {{i.Day}} : {{i.StartTime}} - {{i.EndTime}}\r\n                              </div> \r\n                            </div>\r\n                          </div>\r\n        \r\n                    </td>\r\n                </tr>\r\n                <tr>\r\n                    <td>\r\n                        電話:\r\n                    </td>\r\n                    <td>\r\n                            {{Entity.Phone}}   \r\n                    </td>\r\n                </tr>\r\n                <tr>\r\n                    <td>\r\n                        地址:\r\n                    </td>\r\n                    <td>\r\n                            {{Entity.Address}}   \r\n                    </td>\r\n                </tr>\r\n                <tr>\r\n                    <td colspan=\"2\">\r\n                            <table>\r\n                                    <tr>\r\n                                            <td>\r\n                                                    最低價格:\r\n                                                </td>\r\n                                                <td>\r\n                                                        {{Entity.MinPrice}}     \r\n                                                </td>\r\n                                                <td>\r\n                                                      ~\r\n                                                </td>\r\n                                                <td>\r\n                                                    最高價格:\r\n                                                </td>\r\n                                                <td>\r\n                                                        {{Entity.MaxPrice}}       \r\n                                                </td>\r\n                                    </tr>\r\n                                </table>\r\n                             \r\n                    </td>\r\n                  \r\n                </tr>\r\n                <tr>\r\n                        <td>\r\n                            電子郵件:\r\n                        </td>\r\n                        <td>\r\n                                {{Entity.Email}}         \r\n                        </td>\r\n                </tr>\r\n                <tr>\r\n                        <td>\r\n                            網站:\r\n                        </td>\r\n                        <td>\r\n                                {{Entity.WebSite}}     \r\n                        </td>\r\n                </tr>\r\n                <tr>\r\n                        <td>\r\n                            設備: \r\n                        </td>\r\n                        <td>\r\n                                  \r\n            \r\n                                    <div fxLayout=\"column\" fxLayoutAlign=\" none\">\r\n                                            <div fxFlex=\"100\" fxLayout=\"row wrap\" fxLayoutAlign=\"space-around stretch\" fxLayout.xs=\"column\">\r\n                                              <div *ngFor=\"let i of Entity.Features\" fxFlex.xs=\"100\" fxFlex.sm=\"50\" fxFlex.md=\"33\" fxFlex.lg=\"33\" fxFlex.xl=\"33\">\r\n                                                   {{i.Name}} <img  [src]=\"i.Image_Url\" style=\"height: 50px; width: 50px;\">\r\n                                              </div>\r\n                                            </div>\r\n                                    </div>\r\n                                        \r\n                                        \r\n                        </td>\r\n                    </tr>\r\n               \r\n                <tr>\r\n                    <td colspan=\"2\">\r\n                            <google-map\r\n                            height=\"500px\"\r\n                            width=\"100%\"\r\n                            [zoom]=\"zoom\"\r\n                            [center]=\"center\"\r\n                            [options]=\"options\"\r\n                            >\r\n                            <map-marker\r\n                                *ngFor=\"let marker of markers\"\r\n                                [position]=\"marker.position\"\r\n                                [label]=\"marker.label\"\r\n                                [title]=\"marker.title\"\r\n                                [options]=\"marker.options\"\r\n                                (mapClick)=\"opengooglemap()\"\r\n                            >\r\n                            </map-marker>\r\n                        \r\n                        \r\n                            </google-map>\r\n                    </td>\r\n                </tr>\r\n           \r\n              \r\n            </tbody>   \r\n            </table>\r\n        \r\n\r\n\r\n\r\n</div>\r\n\r\n\r\n\r\n<ngx-spinner\r\n  bdColor=\"rgba(51,51,51,0.8)\"\r\n  size=\"medium\"\r\n  color=\"#fff\"\r\n  type=\"ball-scale-multiple\"\r\n>\r\n  <p style=\"font-size: 20px; color: white\">處理中...</p>\r\n</ngx-spinner>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n    <span><img src='../assets/Photos/inhublogo.png' width=10% height=10% /></span>\r\n    <p></p>\r\n</div>\r\n\r\n<button type=\"button\" class=\"btn btn-primary\" onclick=\"location.href='#/bcform';\">新增</button>\r\n<p></p>\r\n<ng-template #popTemplate> <div [innerHtml]=\"pophtml\"></div></ng-template>\r\n<table class=\"table table-bordered table-striped\">\r\n    <tr>\r\n        <th>\r\n            ID\r\n        </th>\r\n        <th>\r\n            名稱\r\n        </th>\r\n        <th>\r\n            網站\r\n        </th>\r\n        <th>\r\n            地址\r\n        </th>\r\n      \r\n        <th>\r\n            \r\n        </th>\r\n    </tr>\r\n    \r\n       \r\n        <tbody> \r\n            <tr *ngFor = 'let item of List ' [tooltip]=\"popTemplate\" (mouseover)='popup(item)'>\r\n                <td>\r\n                    {{item.Id}}\r\n                </td>\r\n                <td>{{ item.Name}}\r\n                      \r\n                </td>\r\n                <td> <a href= 'https://{{item.WebSite}}' target=\"_blank\"> {{item.WebSite}} </a></td>\r\n                <td>{{ item.Address}}</td>\r\n                <td>\r\n                        <button type=\"button\" class=\"btn btn-info\" (click) = openform(item.Id)>編輯</button>    |\r\n                        <button type=\"button\" class=\"btn btn-danger\" (click) = delete(item.Id)>刪除</button>\r\n                </td>\r\n                \r\n                \r\n            </tr>\r\n        </tbody>\r\n       \r\n</table>\r\n\r\n\r\n\r\n<ngx-spinner\r\n  bdColor=\"rgba(51,51,51,0.8)\"\r\n  size=\"medium\"\r\n  color=\"#fff\"\r\n  type=\"ball-scale-multiple\"\r\n>\r\n  <p style=\"font-size: 20px; color: white\">處理中...</p>\r\n</ngx-spinner>");
 
 /***/ }),
 
@@ -101,19 +88,6 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("<div class=\"modal-header table-hover\">\r\n        \r\n    </div>\r\n              <div class=\"modal-body\">\r\n    \r\n              <div fxLayout=\"column\" fxLayoutAlign=\" none\">\r\n                <div fxFlex=\"100\" fxLayout=\"column\" fxLayoutAlign=\"space-around stretch\" fxLayout.xs=\"column\">\r\n                  <div *ngFor=\"let i of list; let x = index\" fxFlex.xs=\"100\" fxFlex.sm=\"50\" fxFlex.md=\"33\" fxFlex.lg=\"33\" fxFlex.xl=\"33\">\r\n                      {{i.Day}} : <input [(ngModel)]=\"i.StartTime\" #ctrl=\"ngModel\" name=\"strttime\"> -\r\n                      <input [(ngModel)]=\"i.EndTime\" #ctrl=\"ngModel\" name=\"endtime\"> \r\n                  </div> \r\n                </div>\r\n              </div>\r\n                      \r\n              </div>\r\n              <div class=\"modal-footer\">\r\n                     <button type=\"button\" class=\"btn btn-primary\" (click)=\"Save()\">儲存</button>  \r\n                    <button type=\"button\" class=\"btn btn-secondary\" (click)=\"bsModalRef.hide()\">取消</button>\r\n              </div>\r\n        \r\n");
-
-/***/ }),
-
-/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/businesscenter/requestmodal/requestmodal.component.html":
-/*!***************************************************************************************************************!*\
-  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/businesscenter/requestmodal/requestmodal.component.html ***!
-  \***************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<p>requestmodal works!</p>\n");
 
 /***/ }),
 
@@ -152,7 +126,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"modal-header table-hover\">\n  <h4 class=\"modal-title pull-left\">{{Name}}</h4>\n  <button type=\"button\" class=\"close pull-right\" aria-label=\"Close\" (click)=\"bsModalRef.hide()\">\n    <span aria-hidden=\"true\">&times;</span>\n  </button>\n</div>\n<div class=\"modal-body\">\n<table class=\"table table-bordered\">\n<tr>\n  <td>\n    Email \n  </td>\n  <td>\n    {{Email}}\n  </td>\n</tr>\n\n<tr>\n<td>\n   標題\n</td>\n<td>\n<input type=\"string\"\n[(ngModel)]='Subject'\n />  \n</td>\n</tr>\n\n<tr class=\"info\">\n<td>\n    訊息\n</td>\n<td>\n   <textarea [(ngModel)]='Content' class=\"form-control\" rows=\"5\">\n\n   </textarea>\n</td>\n</tr>\n \n<tr >\n   \n        <td>\n            <button class=\"btn btn-primary\" (click) = 'EmailOut()'>\n               寄出\n             </button>\n            \n        </td>\n\n  </tr>\n</table> \n\n\n</div>\n<div class=\"modal-footer\">\n  <button type=\"button\" class=\"btn btn-default\" (click)=\"bsModalRef.hide()\">取消</button>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"modal-header table-hover\">\r\n  <h4 class=\"modal-title pull-left\">{{Name}}</h4>\r\n  <button type=\"button\" class=\"close pull-right\" aria-label=\"Close\" (click)=\"bsModalRef.hide()\">\r\n    <span aria-hidden=\"true\">&times;</span>\r\n  </button>\r\n</div>\r\n<div class=\"modal-body\">\r\n<table class=\"table table-bordered\">\r\n<tr>\r\n  <td>\r\n    Email \r\n  </td>\r\n  <td>\r\n    {{Email}}\r\n  </td>\r\n</tr>\r\n\r\n<tr>\r\n<td>\r\n   標題\r\n</td>\r\n<td>\r\n<input type=\"string\"\r\n[(ngModel)]='Subject'\r\n />  \r\n</td>\r\n</tr>\r\n\r\n<tr class=\"info\">\r\n<td>\r\n    訊息\r\n</td>\r\n<td>\r\n   <textarea [(ngModel)]='Content' class=\"form-control\" rows=\"5\">\r\n\r\n   </textarea>\r\n</td>\r\n</tr>\r\n \r\n<tr >\r\n   \r\n        <td>\r\n            <button class=\"btn btn-primary\" (click) = 'EmailOut()'>\r\n               寄出\r\n             </button>\r\n            \r\n        </td>\r\n\r\n  </tr>\r\n</table> \r\n\r\n\r\n</div>\r\n<div class=\"modal-footer\">\r\n  <button type=\"button\" class=\"btn btn-default\" (click)=\"bsModalRef.hide()\">取消</button>\r\n</div>\r\n");
 
 /***/ }),
 
@@ -974,7 +948,7 @@ var ArticleModule = /** @class */ (function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9hcnRpY2xlL2FydGljbGVmb3JtL2FydGljbGVmb3JtLmNvbXBvbmVudC5jc3MifQ== */");
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FydGljbGUvYXJ0aWNsZWZvcm0vYXJ0aWNsZWZvcm0uY29tcG9uZW50LmNzcyJ9 */");
 
 /***/ }),
 
@@ -1172,7 +1146,7 @@ var ArticleformComponent = /** @class */ (function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9hcnRpY2xlL2FydGljbGVsaXN0L2FydGljbGVsaXN0LmNvbXBvbmVudC5jc3MifQ== */");
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FydGljbGUvYXJ0aWNsZWxpc3QvYXJ0aWNsZWxpc3QuY29tcG9uZW50LmNzcyJ9 */");
 
 /***/ }),
 
@@ -1237,9 +1211,6 @@ var ArticlelistComponent = /** @class */ (function () {
     ArticlelistComponent.prototype.openform = function (Id) {
         window.open('#/articleform/' + Id, '_self');
     };
-    ArticlelistComponent.prototype.showarticle = function (Id) {
-        window.open('#/articleshow/' + Id, '_blank');
-    };
     ArticlelistComponent.prototype.delete = function (Id) {
         var _this = this;
         if (confirm('確定刪除 ID: ' + Id + '?')) {
@@ -1284,7 +1255,7 @@ var ArticlelistComponent = /** @class */ (function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9hcnRpY2xlL2FydGljbGVzaG93L2FydGljbGVzaG93LmNvbXBvbmVudC5jc3MifQ== */");
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FydGljbGUvYXJ0aWNsZXNob3cvYXJ0aWNsZXNob3cuY29tcG9uZW50LmNzcyJ9 */");
 
 /***/ }),
 
@@ -1303,8 +1274,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _service_service_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../service/service.service */ "./src/app/article/service/service.service.ts");
 /* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ngx-spinner */ "./node_modules/ngx-spinner/fesm5/ngx-spinner.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var util__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! util */ "./node_modules/util/util.js");
-/* harmony import */ var util__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(util__WEBPACK_IMPORTED_MODULE_5__);
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1317,7 +1286,6 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
   return (mod && mod.__esModule) ? mod : { "default": mod };
 };
-
 
 
 
@@ -1352,19 +1320,7 @@ var ArticleshowComponent = /** @class */ (function () {
         configurable: true
     });
     ArticleshowComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        var ID = this.route.snapshot.paramMap.get('id');
         this.GetList();
-        if (Object(util__WEBPACK_IMPORTED_MODULE_5__["isNullOrUndefined"])(ID)) {
-        }
-        else {
-            this.service.getEntityById(ID).subscribe(function (val) {
-                _this.Entity = val;
-            }, function (err) {
-                alert('Not Found');
-                _this.spinner.hide();
-            });
-        }
     };
     ArticleshowComponent.prototype.GetList = function () {
         var _this = this;
@@ -1532,7 +1488,7 @@ var ArticleService = /** @class */ (function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".img {\r\n    width: 40%;\r\n    margin-bottom: 10%;\r\n  }\r\n  .container {\r\n    min-height: 50%;\r\n    width: 50%;\r\n  }\r\n  .card-picture {\r\n    width: 23%;\r\n    margin-bottom: 2%;\r\n    \r\n  }\r\n  .search-form {\r\n    width: 90%;\r\n  }\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImJjZm9ybS9iY2Zvcm0uY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLFVBQVU7SUFDVixrQkFBa0I7RUFDcEI7RUFDQTtJQUNFLGVBQWU7SUFDZixVQUFVO0VBQ1o7RUFDQTtJQUNFLFVBQVU7SUFDVixpQkFBaUI7O0VBRW5CO0VBRUE7SUFDRSxVQUFVO0VBQ1oiLCJmaWxlIjoiYmNmb3JtL2JjZm9ybS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmltZyB7XHJcbiAgICB3aWR0aDogNDAlO1xyXG4gICAgbWFyZ2luLWJvdHRvbTogMTAlO1xyXG4gIH1cclxuICAuY29udGFpbmVyIHtcclxuICAgIG1pbi1oZWlnaHQ6IDUwJTtcclxuICAgIHdpZHRoOiA1MCU7XHJcbiAgfVxyXG4gIC5jYXJkLXBpY3R1cmUge1xyXG4gICAgd2lkdGg6IDIzJTtcclxuICAgIG1hcmdpbi1ib3R0b206IDIlO1xyXG4gICAgXHJcbiAgfVxyXG4gIFxyXG4gIC5zZWFyY2gtZm9ybSB7XHJcbiAgICB3aWR0aDogOTAlO1xyXG4gIH0iXX0= */");
+/* harmony default export */ __webpack_exports__["default"] = (".img {\r\n    width: 40%;\r\n    margin-bottom: 10%;\r\n  }\r\n  .container {\r\n    min-height: 50%;\r\n    width: 50%;\r\n  }\r\n  .card-picture {\r\n    width: 23%;\r\n    margin-bottom: 2%;\r\n    \r\n  }\r\n  .search-form {\r\n    width: 90%;\r\n  }\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYnVzaW5lc3NjZW50ZXIvYmNmb3JtL2JjZm9ybS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksVUFBVTtJQUNWLGtCQUFrQjtFQUNwQjtFQUNBO0lBQ0UsZUFBZTtJQUNmLFVBQVU7RUFDWjtFQUNBO0lBQ0UsVUFBVTtJQUNWLGlCQUFpQjs7RUFFbkI7RUFFQTtJQUNFLFVBQVU7RUFDWiIsImZpbGUiOiJzcmMvYXBwL2J1c2luZXNzY2VudGVyL2JjZm9ybS9iY2Zvcm0uY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5pbWcge1xyXG4gICAgd2lkdGg6IDQwJTtcclxuICAgIG1hcmdpbi1ib3R0b206IDEwJTtcclxuICB9XHJcbiAgLmNvbnRhaW5lciB7XHJcbiAgICBtaW4taGVpZ2h0OiA1MCU7XHJcbiAgICB3aWR0aDogNTAlO1xyXG4gIH1cclxuICAuY2FyZC1waWN0dXJlIHtcclxuICAgIHdpZHRoOiAyMyU7XHJcbiAgICBtYXJnaW4tYm90dG9tOiAyJTtcclxuICAgIFxyXG4gIH1cclxuICBcclxuICAuc2VhcmNoLWZvcm0ge1xyXG4gICAgd2lkdGg6IDkwJTtcclxuICB9Il19 */");
 
 /***/ }),
 
@@ -1813,7 +1769,7 @@ var BcformComponent = /** @class */ (function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJiY2Zvcm1tb2RhbC9iY2Zvcm1tb2RhbC5jb21wb25lbnQuY3NzIn0= */");
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2J1c2luZXNzY2VudGVyL2JjZm9ybW1vZGFsL2JjZm9ybW1vZGFsLmNvbXBvbmVudC5jc3MifQ== */");
 
 /***/ }),
 
@@ -1959,7 +1915,7 @@ var BcformmodalComponent = /** @class */ (function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("div span.only-show-on-hover {\r\n    visibility: hidden;\r\n}\r\ndiv:hover span.only-show-on-hover  {\r\n    visibility: visible;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImJjbGlzdC9iY2xpc3QuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGtCQUFrQjtBQUN0QjtBQUNBO0lBQ0ksbUJBQW1CO0FBQ3ZCIiwiZmlsZSI6ImJjbGlzdC9iY2xpc3QuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbImRpdiBzcGFuLm9ubHktc2hvdy1vbi1ob3ZlciB7XHJcbiAgICB2aXNpYmlsaXR5OiBoaWRkZW47XHJcbn1cclxuZGl2OmhvdmVyIHNwYW4ub25seS1zaG93LW9uLWhvdmVyICB7XHJcbiAgICB2aXNpYmlsaXR5OiB2aXNpYmxlO1xyXG59Il19 */");
+/* harmony default export */ __webpack_exports__["default"] = ("div span.only-show-on-hover {\r\n    visibility: hidden;\r\n}\r\ndiv:hover span.only-show-on-hover  {\r\n    visibility: visible;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYnVzaW5lc3NjZW50ZXIvYmNsaXN0L2JjbGlzdC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksa0JBQWtCO0FBQ3RCO0FBQ0E7SUFDSSxtQkFBbUI7QUFDdkIiLCJmaWxlIjoic3JjL2FwcC9idXNpbmVzc2NlbnRlci9iY2xpc3QvYmNsaXN0LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJkaXYgc3Bhbi5vbmx5LXNob3ctb24taG92ZXIge1xyXG4gICAgdmlzaWJpbGl0eTogaGlkZGVuO1xyXG59XHJcbmRpdjpob3ZlciBzcGFuLm9ubHktc2hvdy1vbi1ob3ZlciAge1xyXG4gICAgdmlzaWJpbGl0eTogdmlzaWJsZTtcclxufSJdfQ== */");
 
 /***/ }),
 
@@ -2026,9 +1982,6 @@ var BclistComponent = /** @class */ (function () {
     BclistComponent.prototype.openform = function (Id) {
         window.open('#/bcform/' + Id, '_self');
     };
-    BclistComponent.prototype.showform = function (Id) {
-        window.open('#/bcshow/' + Id, '_self');
-    };
     BclistComponent.prototype.delete = function (Id) {
         var _this = this;
         if (confirm('確定刪除 ID: ' + Id + '?')) {
@@ -2081,177 +2034,6 @@ var BclistComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/businesscenter/bcshow/bcshow.component.css":
-/*!************************************************************!*\
-  !*** ./src/app/businesscenter/bcshow/bcshow.component.css ***!
-  \************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJiY3Nob3cvYmNzaG93LmNvbXBvbmVudC5jc3MifQ== */");
-
-/***/ }),
-
-/***/ "./src/app/businesscenter/bcshow/bcshow.component.ts":
-/*!***********************************************************!*\
-  !*** ./src/app/businesscenter/bcshow/bcshow.component.ts ***!
-  \***********************************************************/
-/*! exports provided: BcshowComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BcshowComponent", function() { return BcshowComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _model_BusinessCenter__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../model/BusinessCenter */ "./src/app/businesscenter/model/BusinessCenter.ts");
-/* harmony import */ var _service_bcservice_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../service/bcservice.service */ "./src/app/businesscenter/service/bcservice.service.ts");
-/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ngx-spinner */ "./node_modules/ngx-spinner/fesm5/ngx-spinner.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var util__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! util */ "./node_modules/util/util.js");
-/* harmony import */ var util__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(util__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ngx-bootstrap/modal */ "./node_modules/ngx-bootstrap/modal/fesm5/ngx-bootstrap-modal.js");
-/* harmony import */ var _angular_google_maps__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/google-maps */ "./node_modules/@angular/google-maps/fesm5/google-maps.js");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
-  return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-
-
-
-
-
-
-
-
-var BcshowComponent = /** @class */ (function () {
-    function BcshowComponent(bcservice, spinner, route, modalService) {
-        this.bcservice = bcservice;
-        this.spinner = spinner;
-        this.route = route;
-        this.modalService = modalService;
-        this._entity = new _model_BusinessCenter__WEBPACK_IMPORTED_MODULE_1__["BusinessCenter"]();
-        this.zoom = 14;
-        this.options = {
-            mapTypeId: 'roadmap',
-            zoomControl: true,
-            scrollwheel: false,
-            disableDoubleClickZoom: false,
-            maxZoom: 15,
-            minZoom: 8,
-        };
-        this.markers = [];
-        console.log(this.route.snapshot.paramMap.get('id'));
-    }
-    Object.defineProperty(BcshowComponent.prototype, "Entity", {
-        get: function () {
-            return this._entity;
-        },
-        set: function (value) {
-            this._entity = value;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    BcshowComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        /** spinner starts on init */
-        this.spinner.show();
-        var ID = this.route.snapshot.paramMap.get('id');
-        if (Object(util__WEBPACK_IMPORTED_MODULE_5__["isNullOrUndefined"])(ID)) {
-            alert('Wrong BC ID');
-            this.spinner.hide();
-        }
-        else {
-            this.bcservice.getEntityById(ID).subscribe(function (val) {
-                _this.Entity = val;
-                _this.spinner.hide();
-                if (Object(util__WEBPACK_IMPORTED_MODULE_5__["isNullOrUndefined"])(_this.Entity.Coordinates) !== true) {
-                    _this.addMarker();
-                }
-            }, function (err) {
-                alert('Not Found');
-                _this.spinner.hide();
-            });
-        }
-        if (Object(util__WEBPACK_IMPORTED_MODULE_5__["isNullOrUndefined"])(this.Entity.Coordinates) !== true) {
-            this.addMarker();
-        }
-        else {
-            navigator.geolocation.getCurrentPosition(function (position) {
-                _this.center = {
-                    lat: position.coords.latitude,
-                    lng: position.coords.longitude,
-                };
-            });
-        }
-    };
-    BcshowComponent.prototype.addMarker = function () {
-        this.markers = [];
-        var coord = this.Entity.Coordinates.split(',');
-        this.markers.push({
-            position: {
-                lat: Number(coord[0]),
-                lng: Number(coord[1]),
-            },
-            label: {
-                color: 'red',
-                text: this.Entity.Name + (this.markers.length + 1),
-            },
-            title: this.Entity.Name + (this.markers.length + 1),
-            info: 'Marker info ' + (this.markers.length + 1),
-            url: 'https://www.google.com/maps/place/' + this.Entity.Coordinates,
-            options: {
-                animation: google.maps.Animation.DROP
-            }
-        });
-        this.center = {
-            lat: Number(coord[0]),
-            lng: Number(coord[1]),
-        };
-    };
-    BcshowComponent.prototype.opengooglemap = function () {
-        var url = 'https://www.google.com/maps/place/' + this.Entity.Coordinates;
-        window.open(url);
-    };
-    BcshowComponent.ctorParameters = function () { return [
-        { type: _service_bcservice_service__WEBPACK_IMPORTED_MODULE_2__["BcserviceService"] },
-        { type: ngx_spinner__WEBPACK_IMPORTED_MODULE_3__["NgxSpinnerService"] },
-        { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"] },
-        { type: ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_6__["BsModalService"] }
-    ]; };
-    __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])(_angular_google_maps__WEBPACK_IMPORTED_MODULE_7__["GoogleMap"], { static: false }),
-        __metadata("design:type", _angular_google_maps__WEBPACK_IMPORTED_MODULE_7__["GoogleMap"])
-    ], BcshowComponent.prototype, "map", void 0);
-    __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])(_angular_google_maps__WEBPACK_IMPORTED_MODULE_7__["MapInfoWindow"], { static: false }),
-        __metadata("design:type", _angular_google_maps__WEBPACK_IMPORTED_MODULE_7__["MapInfoWindow"])
-    ], BcshowComponent.prototype, "info", void 0);
-    BcshowComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: 'app-bcshow',
-            template: __importDefault(__webpack_require__(/*! raw-loader!./bcshow.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/businesscenter/bcshow/bcshow.component.html")).default,
-            styles: [__importDefault(__webpack_require__(/*! ./bcshow.component.css */ "./src/app/businesscenter/bcshow/bcshow.component.css")).default]
-        }),
-        __metadata("design:paramtypes", [_service_bcservice_service__WEBPACK_IMPORTED_MODULE_2__["BcserviceService"], ngx_spinner__WEBPACK_IMPORTED_MODULE_3__["NgxSpinnerService"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"], ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_6__["BsModalService"]])
-    ], BcshowComponent);
-    return BcshowComponent;
-}());
-
-
-
-/***/ }),
-
 /***/ "./src/app/businesscenter/businesscenter.module.ts":
 /*!*********************************************************!*\
   !*** ./src/app/businesscenter/businesscenter.module.ts ***!
@@ -2281,9 +2063,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm5/ng-bootstrap.js");
 /* harmony import */ var _angular_google_maps__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @angular/google-maps */ "./node_modules/@angular/google-maps/fesm5/google-maps.js");
 /* harmony import */ var ngx_bootstrap_tooltip__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ngx-bootstrap/tooltip */ "./node_modules/ngx-bootstrap/tooltip/fesm5/ngx-bootstrap-tooltip.js");
-/* harmony import */ var _bcshow_bcshow_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./bcshow/bcshow.component */ "./src/app/businesscenter/bcshow/bcshow.component.ts");
-/* harmony import */ var ngx_bootstrap_carousel__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ngx-bootstrap/carousel */ "./node_modules/ngx-bootstrap/carousel/fesm5/ngx-bootstrap-carousel.js");
-/* harmony import */ var _requestmodal_requestmodal_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./requestmodal/requestmodal.component */ "./src/app/businesscenter/requestmodal/requestmodal.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2293,9 +2072,6 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
   return (mod && mod.__esModule) ? mod : { "default": mod };
 };
-
-
-
 
 
 
@@ -2338,7 +2114,6 @@ var BusinesscenterModule = /** @class */ (function () {
                 _angular_material__WEBPACK_IMPORTED_MODULE_14__["MatInputModule"],
                 _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_16__["NgbModule"],
                 _angular_google_maps__WEBPACK_IMPORTED_MODULE_17__["GoogleMapsModule"],
-                ngx_bootstrap_carousel__WEBPACK_IMPORTED_MODULE_20__["CarouselModule"].forRoot(),
                 ngx_bootstrap_tooltip__WEBPACK_IMPORTED_MODULE_18__["TooltipModule"].forRoot(),
                 _angular_router__WEBPACK_IMPORTED_MODULE_4__["RouterModule"].forChild([
                     {
@@ -2349,14 +2124,10 @@ var BusinesscenterModule = /** @class */ (function () {
                     },
                     {
                         path: 'bcform/:id', component: _bcform_bcform_component__WEBPACK_IMPORTED_MODULE_8__["BcformComponent"]
-                    },
-                    {
-                        path: 'bcshow/:id', component: _bcshow_bcshow_component__WEBPACK_IMPORTED_MODULE_19__["BcshowComponent"]
                     }
                 ])
             ],
-            declarations: [_bclist_bclist_component__WEBPACK_IMPORTED_MODULE_7__["BclistComponent"], _bcform_bcform_component__WEBPACK_IMPORTED_MODULE_8__["BcformComponent"], _bcformmodal_bcformmodal_component__WEBPACK_IMPORTED_MODULE_11__["BcformmodalComponent"], _businesshourmodal_businesshourmodal_component__WEBPACK_IMPORTED_MODULE_15__["BusinesshourmodalComponent"],
-                _bcshow_bcshow_component__WEBPACK_IMPORTED_MODULE_19__["BcshowComponent"], _requestmodal_requestmodal_component__WEBPACK_IMPORTED_MODULE_21__["RequestmodalComponent"]],
+            declarations: [_bclist_bclist_component__WEBPACK_IMPORTED_MODULE_7__["BclistComponent"], _bcform_bcform_component__WEBPACK_IMPORTED_MODULE_8__["BcformComponent"], _bcformmodal_bcformmodal_component__WEBPACK_IMPORTED_MODULE_11__["BcformmodalComponent"], _businesshourmodal_businesshourmodal_component__WEBPACK_IMPORTED_MODULE_15__["BusinesshourmodalComponent"]],
             entryComponents: [_bcformmodal_bcformmodal_component__WEBPACK_IMPORTED_MODULE_11__["BcformmodalComponent"], _businesshourmodal_businesshourmodal_component__WEBPACK_IMPORTED_MODULE_15__["BusinesshourmodalComponent"]]
         })
     ], BusinesscenterModule);
@@ -2376,7 +2147,7 @@ var BusinesscenterModule = /** @class */ (function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJidXNpbmVzc2hvdXJtb2RhbC9idXNpbmVzc2hvdXJtb2RhbC5jb21wb25lbnQuY3NzIn0= */");
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2J1c2luZXNzY2VudGVyL2J1c2luZXNzaG91cm1vZGFsL2J1c2luZXNzaG91cm1vZGFsLmNvbXBvbmVudC5jc3MifQ== */");
 
 /***/ }),
 
@@ -2480,7 +2251,7 @@ var BusinesshourmodalComponent = /** @class */ (function () {
 /*!********************************************************!*\
   !*** ./src/app/businesscenter/model/BusinessCenter.ts ***!
   \********************************************************/
-/*! exports provided: BusinessCenter, BusinessCenterImage, BusinessCenterMeetingRoom, BusinessCenterFeature, BusinessHour, Request */
+/*! exports provided: BusinessCenter, BusinessCenterImage, BusinessCenterMeetingRoom, BusinessCenterFeature, BusinessHour */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2490,7 +2261,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BusinessCenterMeetingRoom", function() { return BusinessCenterMeetingRoom; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BusinessCenterFeature", function() { return BusinessCenterFeature; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BusinessHour", function() { return BusinessHour; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Request", function() { return Request; });
 var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
   return (mod && mod.__esModule) ? mod : { "default": mod };
 };
@@ -2522,80 +2292,6 @@ var BusinessHour = /** @class */ (function () {
     function BusinessHour() {
     }
     return BusinessHour;
-}());
-
-var Request = /** @class */ (function () {
-    function Request() {
-    }
-    return Request;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/businesscenter/requestmodal/requestmodal.component.css":
-/*!************************************************************************!*\
-  !*** ./src/app/businesscenter/requestmodal/requestmodal.component.css ***!
-  \************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJyZXF1ZXN0bW9kYWwvcmVxdWVzdG1vZGFsLmNvbXBvbmVudC5jc3MifQ== */");
-
-/***/ }),
-
-/***/ "./src/app/businesscenter/requestmodal/requestmodal.component.ts":
-/*!***********************************************************************!*\
-  !*** ./src/app/businesscenter/requestmodal/requestmodal.component.ts ***!
-  \***********************************************************************/
-/*! exports provided: RequestmodalComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RequestmodalComponent", function() { return RequestmodalComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ngx-bootstrap/modal */ "./node_modules/ngx-bootstrap/modal/fesm5/ngx-bootstrap-modal.js");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
-  return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-
-
-var RequestmodalComponent = /** @class */ (function () {
-    function RequestmodalComponent(bsModalRef) {
-        this.bsModalRef = bsModalRef;
-    }
-    RequestmodalComponent.prototype.ngOnInit = function () {
-    };
-    RequestmodalComponent.prototype.Save = function () {
-        this.bsModalRef.hide();
-    };
-    RequestmodalComponent.prototype.SendEmail = function () {
-    };
-    RequestmodalComponent.ctorParameters = function () { return [
-        { type: ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_1__["BsModalRef"] }
-    ]; };
-    RequestmodalComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: 'app-requestmodal',
-            template: __importDefault(__webpack_require__(/*! raw-loader!./requestmodal.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/businesscenter/requestmodal/requestmodal.component.html")).default,
-            styles: [__importDefault(__webpack_require__(/*! ./requestmodal.component.css */ "./src/app/businesscenter/requestmodal/requestmodal.component.css")).default]
-        }),
-        __metadata("design:paramtypes", [ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_1__["BsModalRef"]])
-    ], RequestmodalComponent);
-    return RequestmodalComponent;
 }());
 
 
@@ -2660,8 +2356,6 @@ var BcserviceService = /** @class */ (function () {
         }, function () {
             console.log('The PUT observable is now completed.');
         });
-    };
-    BcserviceService.prototype.PostRequest = function (req) {
     };
     BcserviceService.prototype.deleteEntity = function (id) {
         var url = this.site + this.url + id;
@@ -2842,7 +2536,7 @@ var CartComponent = /** @class */ (function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("div{\r\n    align-content: left;\r\n}\r\n\r\ntable {\r\n    width: 200;\r\n}\r\n\r\nthead{\r\n    color: #337AB7; \r\n    align-content: center;\r\n    \r\n}\r\n\r\nrow td{\r\n    align-content: left;\r\n    text-align: left;\r\n}\r\n\r\n.loader {\r\n  border: 16px solid #f3f3f3;\r\n  border-radius: 50%;\r\n  border-top: 16px solid #3498db;\r\n  width: 120px;\r\n  height: 120px;\r\n  -webkit-animation: spin 2s linear infinite; /* Safari */\r\n  animation: spin 2s linear infinite;\r\n}\r\n\r\n/* Safari */\r\n\r\n@-webkit-keyframes spin {\r\n  0% { -webkit-transform: rotate(0deg); }\r\n  100% { -webkit-transform: rotate(360deg); }\r\n}\r\n\r\n@keyframes spin {\r\n  0% { transform: rotate(0deg); }\r\n  100% { transform: rotate(360deg); }\r\n}\r\n \r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL2N1c3RvbWVybG9nLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxtQkFBbUI7QUFDdkI7O0FBRUE7SUFDSSxVQUFVO0FBQ2Q7O0FBRUE7SUFDSSxjQUFjO0lBQ2QscUJBQXFCOztBQUV6Qjs7QUFFQTtJQUNJLG1CQUFtQjtJQUNuQixnQkFBZ0I7QUFDcEI7O0FBSUE7RUFDRSwwQkFBMEI7RUFDMUIsa0JBQWtCO0VBQ2xCLDhCQUE4QjtFQUM5QixZQUFZO0VBQ1osYUFBYTtFQUNiLDBDQUEwQyxFQUFFLFdBQVc7RUFDdkQsa0NBQWtDO0FBQ3BDOztBQUVBLFdBQVc7O0FBQ1g7RUFDRSxLQUFLLCtCQUErQixFQUFFO0VBQ3RDLE9BQU8saUNBQWlDLEVBQUU7QUFDNUM7O0FBRUE7RUFDRSxLQUFLLHVCQUF1QixFQUFFO0VBQzlCLE9BQU8seUJBQXlCLEVBQUU7QUFDcEMiLCJmaWxlIjoiLi4vY3VzdG9tZXJsb2cuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbImRpdntcclxuICAgIGFsaWduLWNvbnRlbnQ6IGxlZnQ7XHJcbn1cclxuXHJcbnRhYmxlIHtcclxuICAgIHdpZHRoOiAyMDA7XHJcbn1cclxuXHJcbnRoZWFke1xyXG4gICAgY29sb3I6ICMzMzdBQjc7IFxyXG4gICAgYWxpZ24tY29udGVudDogY2VudGVyO1xyXG4gICAgXHJcbn1cclxuXHJcbnJvdyB0ZHtcclxuICAgIGFsaWduLWNvbnRlbnQ6IGxlZnQ7XHJcbiAgICB0ZXh0LWFsaWduOiBsZWZ0O1xyXG59XHJcblxyXG5cclxuIFxyXG4ubG9hZGVyIHtcclxuICBib3JkZXI6IDE2cHggc29saWQgI2YzZjNmMztcclxuICBib3JkZXItcmFkaXVzOiA1MCU7XHJcbiAgYm9yZGVyLXRvcDogMTZweCBzb2xpZCAjMzQ5OGRiO1xyXG4gIHdpZHRoOiAxMjBweDtcclxuICBoZWlnaHQ6IDEyMHB4O1xyXG4gIC13ZWJraXQtYW5pbWF0aW9uOiBzcGluIDJzIGxpbmVhciBpbmZpbml0ZTsgLyogU2FmYXJpICovXHJcbiAgYW5pbWF0aW9uOiBzcGluIDJzIGxpbmVhciBpbmZpbml0ZTtcclxufVxyXG5cclxuLyogU2FmYXJpICovXHJcbkAtd2Via2l0LWtleWZyYW1lcyBzcGluIHtcclxuICAwJSB7IC13ZWJraXQtdHJhbnNmb3JtOiByb3RhdGUoMGRlZyk7IH1cclxuICAxMDAlIHsgLXdlYmtpdC10cmFuc2Zvcm06IHJvdGF0ZSgzNjBkZWcpOyB9XHJcbn1cclxuXHJcbkBrZXlmcmFtZXMgc3BpbiB7XHJcbiAgMCUgeyB0cmFuc2Zvcm06IHJvdGF0ZSgwZGVnKTsgfVxyXG4gIDEwMCUgeyB0cmFuc2Zvcm06IHJvdGF0ZSgzNjBkZWcpOyB9XHJcbn1cclxuICJdfQ== */");
+/* harmony default export */ __webpack_exports__["default"] = ("div{\r\n    align-content: left;\r\n}\r\n\r\ntable {\r\n    width: 200;\r\n}\r\n\r\nthead{\r\n    color: #337AB7; \r\n    align-content: center;\r\n    \r\n}\r\n\r\nrow td{\r\n    align-content: left;\r\n    text-align: left;\r\n}\r\n\r\n.loader {\r\n  border: 16px solid #f3f3f3;\r\n  border-radius: 50%;\r\n  border-top: 16px solid #3498db;\r\n  width: 120px;\r\n  height: 120px;\r\n  -webkit-animation: spin 2s linear infinite; /* Safari */\r\n  animation: spin 2s linear infinite;\r\n}\r\n\r\n/* Safari */\r\n\r\n@-webkit-keyframes spin {\r\n  0% { -webkit-transform: rotate(0deg); }\r\n  100% { -webkit-transform: rotate(360deg); }\r\n}\r\n\r\n@keyframes spin {\r\n  0% { transform: rotate(0deg); }\r\n  100% { transform: rotate(360deg); }\r\n}\r\n \r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY3VzdG9tZXJsb2cuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLG1CQUFtQjtBQUN2Qjs7QUFFQTtJQUNJLFVBQVU7QUFDZDs7QUFFQTtJQUNJLGNBQWM7SUFDZCxxQkFBcUI7O0FBRXpCOztBQUVBO0lBQ0ksbUJBQW1CO0lBQ25CLGdCQUFnQjtBQUNwQjs7QUFJQTtFQUNFLDBCQUEwQjtFQUMxQixrQkFBa0I7RUFDbEIsOEJBQThCO0VBQzlCLFlBQVk7RUFDWixhQUFhO0VBQ2IsMENBQTBDLEVBQUUsV0FBVztFQUN2RCxrQ0FBa0M7QUFDcEM7O0FBRUEsV0FBVzs7QUFDWDtFQUNFLEtBQUssK0JBQStCLEVBQUU7RUFDdEMsT0FBTyxpQ0FBaUMsRUFBRTtBQUM1Qzs7QUFFQTtFQUNFLEtBQUssdUJBQXVCLEVBQUU7RUFDOUIsT0FBTyx5QkFBeUIsRUFBRTtBQUNwQyIsImZpbGUiOiJzcmMvYXBwL2N1c3RvbWVybG9nLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJkaXZ7XHJcbiAgICBhbGlnbi1jb250ZW50OiBsZWZ0O1xyXG59XHJcblxyXG50YWJsZSB7XHJcbiAgICB3aWR0aDogMjAwO1xyXG59XHJcblxyXG50aGVhZHtcclxuICAgIGNvbG9yOiAjMzM3QUI3OyBcclxuICAgIGFsaWduLWNvbnRlbnQ6IGNlbnRlcjtcclxuICAgIFxyXG59XHJcblxyXG5yb3cgdGR7XHJcbiAgICBhbGlnbi1jb250ZW50OiBsZWZ0O1xyXG4gICAgdGV4dC1hbGlnbjogbGVmdDtcclxufVxyXG5cclxuXHJcbiBcclxuLmxvYWRlciB7XHJcbiAgYm9yZGVyOiAxNnB4IHNvbGlkICNmM2YzZjM7XHJcbiAgYm9yZGVyLXJhZGl1czogNTAlO1xyXG4gIGJvcmRlci10b3A6IDE2cHggc29saWQgIzM0OThkYjtcclxuICB3aWR0aDogMTIwcHg7XHJcbiAgaGVpZ2h0OiAxMjBweDtcclxuICAtd2Via2l0LWFuaW1hdGlvbjogc3BpbiAycyBsaW5lYXIgaW5maW5pdGU7IC8qIFNhZmFyaSAqL1xyXG4gIGFuaW1hdGlvbjogc3BpbiAycyBsaW5lYXIgaW5maW5pdGU7XHJcbn1cclxuXHJcbi8qIFNhZmFyaSAqL1xyXG5ALXdlYmtpdC1rZXlmcmFtZXMgc3BpbiB7XHJcbiAgMCUgeyAtd2Via2l0LXRyYW5zZm9ybTogcm90YXRlKDBkZWcpOyB9XHJcbiAgMTAwJSB7IC13ZWJraXQtdHJhbnNmb3JtOiByb3RhdGUoMzYwZGVnKTsgfVxyXG59XHJcblxyXG5Aa2V5ZnJhbWVzIHNwaW4ge1xyXG4gIDAlIHsgdHJhbnNmb3JtOiByb3RhdGUoMGRlZyk7IH1cclxuICAxMDAlIHsgdHJhbnNmb3JtOiByb3RhdGUoMzYwZGVnKTsgfVxyXG59XHJcbiAiXX0= */");
 
 /***/ }),
 
@@ -3105,7 +2799,7 @@ var customerlog = /** @class */ (function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9lbWFpbG1vZGFsL2VtYWlsbW9kYWwuY29tcG9uZW50LmNzcyJ9 */");
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2VtYWlsbW9kYWwvZW1haWxtb2RhbC5jb21wb25lbnQuY3NzIn0= */");
 
 /***/ }),
 
@@ -3343,7 +3037,7 @@ var ProductsComponent = /** @class */ (function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("div{\r\n    align-content: left;\r\n}\r\n\r\ntable {\r\n    width: 200;\r\n}\r\n\r\nthead{\r\n    color: #337AB7; \r\n    align-content: center;\r\n    \r\n}\r\n\r\nrow td{\r\n    align-content: left;\r\n    text-align: left;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3N0b25ld2VpZ2h0LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxtQkFBbUI7QUFDdkI7O0FBRUE7SUFDSSxVQUFVO0FBQ2Q7O0FBRUE7SUFDSSxjQUFjO0lBQ2QscUJBQXFCOztBQUV6Qjs7QUFFQTtJQUNJLG1CQUFtQjtJQUNuQixnQkFBZ0I7QUFDcEIiLCJmaWxlIjoiLi4vc3RvbmV3ZWlnaHQuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbImRpdntcclxuICAgIGFsaWduLWNvbnRlbnQ6IGxlZnQ7XHJcbn1cclxuXHJcbnRhYmxlIHtcclxuICAgIHdpZHRoOiAyMDA7XHJcbn1cclxuXHJcbnRoZWFke1xyXG4gICAgY29sb3I6ICMzMzdBQjc7IFxyXG4gICAgYWxpZ24tY29udGVudDogY2VudGVyO1xyXG4gICAgXHJcbn1cclxuXHJcbnJvdyB0ZHtcclxuICAgIGFsaWduLWNvbnRlbnQ6IGxlZnQ7XHJcbiAgICB0ZXh0LWFsaWduOiBsZWZ0O1xyXG59Il19 */");
+/* harmony default export */ __webpack_exports__["default"] = ("div{\r\n    align-content: left;\r\n}\r\n\r\ntable {\r\n    width: 200;\r\n}\r\n\r\nthead{\r\n    color: #337AB7; \r\n    align-content: center;\r\n    \r\n}\r\n\r\nrow td{\r\n    align-content: left;\r\n    text-align: left;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc3RvbmV3ZWlnaHQuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLG1CQUFtQjtBQUN2Qjs7QUFFQTtJQUNJLFVBQVU7QUFDZDs7QUFFQTtJQUNJLGNBQWM7SUFDZCxxQkFBcUI7O0FBRXpCOztBQUVBO0lBQ0ksbUJBQW1CO0lBQ25CLGdCQUFnQjtBQUNwQiIsImZpbGUiOiJzcmMvYXBwL3N0b25ld2VpZ2h0LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJkaXZ7XHJcbiAgICBhbGlnbi1jb250ZW50OiBsZWZ0O1xyXG59XHJcblxyXG50YWJsZSB7XHJcbiAgICB3aWR0aDogMjAwO1xyXG59XHJcblxyXG50aGVhZHtcclxuICAgIGNvbG9yOiAjMzM3QUI3OyBcclxuICAgIGFsaWduLWNvbnRlbnQ6IGNlbnRlcjtcclxuICAgIFxyXG59XHJcblxyXG5yb3cgdGR7XHJcbiAgICBhbGlnbi1jb250ZW50OiBsZWZ0O1xyXG4gICAgdGV4dC1hbGlnbjogbGVmdDtcclxufSJdfQ== */");
 
 /***/ }),
 
