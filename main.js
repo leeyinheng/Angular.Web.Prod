@@ -22,7 +22,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n    <span> <img src='../assets/Photos/tealogo.jpg' width=20% height=20% /></span>\r\n    <p></p>\r\n</div>\r\n\r\n<button type=\"button\" class=\"btn btn-primary\" onclick=\"location.href='#/articleform';\">新增文章</button>\r\n\r\n<div class=\"nav navbar-nav navbar-right\">\r\n    <button type=\"button\" class=\"btn btn-secondary\" onclick=\"location.href='#/articleshow';\">回到展示介面</button>\r\n</div>\r\n<p></p>\r\n\r\n<table class=\"table table-bordered table-striped\">\r\n    <tr>\r\n        <th>\r\n            ID\r\n        </th>\r\n        <th>\r\n            文章標題\r\n        </th>\r\n        <th>\r\n            備註\r\n        </th>    \r\n        <th>\r\n            \r\n        </th>\r\n    </tr>\r\n    \r\n       \r\n        <tbody> \r\n            <tr *ngFor = 'let item of List ' >\r\n                <td>\r\n                    {{item.Id}}\r\n                </td>\r\n                <td>{{ item.Title}}\r\n                      \r\n                </td>\r\n                <td>{{ item.Comment }}</td>\r\n              \r\n                <td>\r\n                        <button type=\"button\" class=\"btn btn-info\" (click) = openform(item.Id)>編輯文章</button>    |\r\n                        <button type=\"button\" class=\"btn btn-danger\" (click) = delete(item.Id)>刪除文章</button>\r\n                </td>\r\n                \r\n                \r\n            </tr>\r\n        </tbody>\r\n       \r\n</table>\r\n\r\n\r\n\r\n<ngx-spinner\r\n  bdColor=\"rgba(51,51,51,0.8)\"\r\n  size=\"medium\"\r\n  color=\"#fff\"\r\n  type=\"ball-scale-multiple\"\r\n>\r\n  <p style=\"font-size: 20px; color: white\">處理中...</p>\r\n</ngx-spinner>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n    <span> <img src='../assets/Photos/tealogo.jpg' width=20% height=20% /></span>\r\n    <p></p>\r\n</div>\r\n\r\n<button type=\"button\" class=\"btn btn-primary\" onclick=\"location.href='#/articleform';\">新增文章</button>\r\n\r\n<div class=\"nav navbar-nav navbar-right\">\r\n    <button type=\"button\" class=\"btn btn-secondary\" onclick=\"location.href='#/articleshow';\">回到展示介面</button>\r\n</div>\r\n<p></p>\r\n\r\n<table class=\"table table-bordered table-striped table-hover\">\r\n    <tr>\r\n        <th>\r\n            ID\r\n        </th>\r\n        <th>\r\n            文章標題\r\n        </th>\r\n        <th>\r\n            備註\r\n        </th>    \r\n        <th>\r\n            \r\n        </th>\r\n    </tr>\r\n    \r\n       \r\n        <tbody> \r\n            <tr *ngFor = 'let item of List ' >\r\n                <td>\r\n                    {{item.Id}}\r\n                </td>\r\n                <td>{{ item.Title}}\r\n                      \r\n                </td>\r\n                <td>{{ item.Comment }}</td>\r\n              \r\n                <td>\r\n                        <button type=\"button\" class=\"btn btn-info\" (click) = openform(item.Id)>編輯文章</button>    |\r\n                        <button type=\"button\" class=\"btn btn-danger\" (click) = delete(item.Id)>刪除文章</button>    |\r\n                        <button type=\"button\" class=\"btn btn-dark\" (click) = showarticle(item.Id)>展示文章</button>\r\n                </td>\r\n                \r\n                \r\n            </tr>\r\n        </tbody>\r\n       \r\n</table>\r\n\r\n\r\n\r\n<ngx-spinner\r\n  bdColor=\"rgba(51,51,51,0.8)\"\r\n  size=\"medium\"\r\n  color=\"#fff\"\r\n  type=\"ball-scale-multiple\"\r\n>\r\n  <p style=\"font-size: 20px; color: white\">處理中...</p>\r\n</ngx-spinner>");
 
 /***/ }),
 
@@ -35,7 +35,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<span> <img src='../assets/Photos/tealogo.jpg' width=20% height=20% /></span>\r\n<form>\r\n  <div class=\"form-group\">\r\n      <div>\r\n          <label>選擇文章: </label>\r\n          <select (change)=\"filterForArticles($event.target.value)\" class=\"form-control\">\r\n            <option value=\"-1\">--選擇--</option>\r\n            <option *ngFor=\"let item of List; let i = index\" value={{i}}>\r\n              {{item.Title}} | {{item.Comment}}\r\n            </option>\r\n          </select>\r\n        </div>\r\n        <br>\r\n        \r\n        <carousel  interval=\"0\">\r\n                <slide *ngFor=\"let item of Entity.Pages\">\r\n                  <img [src]=\"item.Image_Url\" alt=\"Pages\" style=\"display: block; width: 100%;\">\r\n                  <div class=\"carousel-caption d-none d-md-block\">\r\n                    <h3>{{item.Name}}</h3>\r\n                    <p>{{item.Comment}}</p>\r\n                  </div>\r\n                </slide> \r\n        </carousel>\r\n        \r\n\r\n  </div>\r\n</form>\r\n\r\n<div>\r\n  推廣網頁QR\r\n  <a href='https://leecloud.blob.core.windows.net/image/qr.jpg' download=\"TeaQR.jpg\"><img src='https://leecloud.blob.core.windows.net/image/qr.jpg' width=20% height=20% /></a>\r\n</div>\r\n\r\n<ngx-spinner\r\n  bdColor=\"rgba(51,51,51,0.8)\"\r\n  size=\"medium\"\r\n  color=\"#fff\"\r\n  type=\"ball-scale-multiple\"\r\n>\r\n  <p style=\"font-size: 20px; color: white\">處理中...</p>\r\n</ngx-spinner>");
+/* harmony default export */ __webpack_exports__["default"] = ("<span> <img src='../assets/Photos/tealogo.jpg' width=20% height=20% /></span>\r\n<form>\r\n  <div class=\"form-group\">\r\n      <div> \r\n          <label>選擇文章: </label>\r\n          <select (change)=\"filterForArticles($event.target.value)\" class=\"form-control\">\r\n            <option value=\"-1\">--選擇--</option>\r\n            <option *ngFor=\"let item of List; let i = index\" value={{i}}>\r\n              {{item.Title}} | {{item.Comment}}\r\n            </option>\r\n          </select>\r\n        </div>\r\n        <br>\r\n        \r\n        <carousel  interval=\"0\">\r\n                <slide *ngFor=\"let item of Entity.Pages\">\r\n                  <img [src]=\"item.Image_Url\" alt=\"Pages\" style=\"display: block; width: 100%;\">\r\n                  <div class=\"carousel-caption d-none d-md-block\">\r\n                    <h3>{{item.Name}}</h3>\r\n                    <p>{{item.Comment}}</p>\r\n                  </div>\r\n                </slide> \r\n        </carousel>\r\n        \r\n\r\n  </div>\r\n</form>\r\n\r\n<div>\r\n  推廣網頁QR\r\n  <a href='https://leecloud.blob.core.windows.net/image/qr.jpg' download=\"TeaQR.jpg\"><img src='https://leecloud.blob.core.windows.net/image/qr.jpg' width=20% height=20% /></a>\r\n</div>\r\n\r\n<ngx-spinner\r\n  bdColor=\"rgba(51,51,51,0.8)\"\r\n  size=\"medium\"\r\n  color=\"#fff\"\r\n  type=\"ball-scale-multiple\"\r\n>\r\n  <p style=\"font-size: 20px; color: white\">處理中...</p>\r\n</ngx-spinner>");
 
 /***/ }),
 
@@ -61,7 +61,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"modal-header table-hover\">\r\n        \r\n</div>\r\n          <div class=\"modal-body\">\r\n\r\n          <div fxLayout=\"column\" fxLayoutAlign=\" none\">\r\n            <div fxFlex=\"100\" fxLayout=\"row wrap\" fxLayoutAlign=\"space-around stretch\" fxLayout.xs=\"column\">\r\n              <div *ngFor=\"let i of list; let x = index\" fxFlex.xs=\"100\" fxFlex.sm=\"50\" fxFlex.md=\"33\" fxFlex.lg=\"33\" fxFlex.xl=\"33\">\r\n                  <input [(ngModel)]=\"i.Checked\" type=\"checkbox\"/> {{i.Name}} <img  [src]=\"i.Image_Url\" style=\"height: 50px; width: 50px;\">\r\n              </div>\r\n            </div>\r\n          </div>\r\n                  \r\n          </div>\r\n          <div class=\"modal-footer\">\r\n                 <button type=\"button\" class=\"btn btn-primary\" (click)=\"Save()\">儲存</button>  \r\n                <button type=\"button\" class=\"btn btn-secondary\" (click)=\"bsModalRef.hide()\">取消</button>\r\n          </div>\r\n    ");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"modal-header table-hover\">\n        \n</div>\n          <div class=\"modal-body\">\n\n          <div fxLayout=\"column\" fxLayoutAlign=\" none\">\n            <div fxFlex=\"100\" fxLayout=\"row wrap\" fxLayoutAlign=\"space-around stretch\" fxLayout.xs=\"column\">\n              <div *ngFor=\"let i of list; let x = index\" fxFlex.xs=\"100\" fxFlex.sm=\"50\" fxFlex.md=\"33\" fxFlex.lg=\"33\" fxFlex.xl=\"33\">\n                  <input [(ngModel)]=\"i.Checked\" type=\"checkbox\"/> {{i.Name}} <img  [src]=\"i.Image_Url\" style=\"height: 50px; width: 50px;\">\n              </div>\n            </div>\n          </div>\n                  \n          </div>\n          <div class=\"modal-footer\">\n                 <button type=\"button\" class=\"btn btn-primary\" (click)=\"Save()\">儲存</button>  \n                <button type=\"button\" class=\"btn btn-secondary\" (click)=\"bsModalRef.hide()\">取消</button>\n          </div>\n    ");
 
 /***/ }),
 
@@ -74,7 +74,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n    <span><img src='../assets/Photos/inhublogo.png' width=10% height=10% /></span>\r\n    <p></p>\r\n</div>\r\n\r\n<button type=\"button\" class=\"btn btn-primary\" onclick=\"location.href='#/bcform';\">新增</button>\r\n<p></p>\r\n<ng-template #popTemplate> <div [innerHtml]=\"pophtml\"></div></ng-template>\r\n<table class=\"table table-bordered table-striped\">\r\n    <tr>\r\n        <th>\r\n            ID\r\n        </th>\r\n        <th>\r\n            名稱\r\n        </th>\r\n        <th>\r\n            網站\r\n        </th>\r\n        <th>\r\n            地址\r\n        </th>\r\n      \r\n        <th>\r\n            \r\n        </th>\r\n    </tr>\r\n    \r\n       \r\n        <tbody> \r\n            <tr *ngFor = 'let item of List ' [tooltip]=\"popTemplate\" (mouseover)='popup(item)'>\r\n                <td>\r\n                    {{item.Id}}\r\n                </td>\r\n                <td>{{ item.Name}}\r\n                      \r\n                </td>\r\n                <td> <a href= 'https://{{item.WebSite}}' target=\"_blank\"> {{item.WebSite}} </a></td>\r\n                <td>{{ item.Address}}</td>\r\n                <td>\r\n                        <button type=\"button\" class=\"btn btn-info\" (click) = openform(item.Id)>編輯</button>    |\r\n                        <button type=\"button\" class=\"btn btn-danger\" (click) = delete(item.Id)>刪除</button>\r\n                </td>\r\n                \r\n                \r\n            </tr>\r\n        </tbody>\r\n       \r\n</table>\r\n\r\n\r\n\r\n<ngx-spinner\r\n  bdColor=\"rgba(51,51,51,0.8)\"\r\n  size=\"medium\"\r\n  color=\"#fff\"\r\n  type=\"ball-scale-multiple\"\r\n>\r\n  <p style=\"font-size: 20px; color: white\">處理中...</p>\r\n</ngx-spinner>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n    <span><img src='../assets/Photos/inhublogo.png' width=10% height=10% /></span>\r\n    <p></p>\r\n</div>\r\n\r\n<button type=\"button\" class=\"btn btn-primary\" onclick=\"location.href='#/bcform';\">新增</button>\r\n<p></p>\r\n<ng-template #popTemplate> <div [innerHtml]=\"pophtml\"></div></ng-template>\r\n<table class=\"table table-bordered table-striped\">\r\n    <tr>\r\n        <th>\r\n            ID\r\n        </th>\r\n        <th>\r\n            名稱\r\n        </th>\r\n        <th>\r\n            網站\r\n        </th>\r\n        <th>\r\n            地址\r\n        </th>\r\n      \r\n        <th>\r\n            \r\n        </th>\r\n    </tr>\r\n    \r\n       \r\n        <tbody> \r\n            <tr *ngFor = 'let item of List ' [tooltip]=\"popTemplate\" (mouseover)='popup(item)'>\r\n                <td>\r\n                    {{item.Id}}\r\n                </td>\r\n                <td>{{ item.Name}}\r\n                      \r\n                </td>\r\n                <td> <a href= 'https://{{item.WebSite}}' target=\"_blank\"> {{item.WebSite}} </a></td>\r\n                <td>{{ item.Address}}</td>\r\n                <td>\r\n                        <button type=\"button\" class=\"btn btn-primary\" (click) = showform(item.Id)>展示</button>    |\r\n                        <button type=\"button\" class=\"btn btn-info\" (click) = openform(item.Id)>編輯</button>    |\r\n                        <button type=\"button\" class=\"btn btn-danger\" (click) = delete(item.Id)>刪除</button>\r\n                </td>\r\n                \r\n                \r\n            </tr>\r\n        </tbody>\r\n       \r\n</table>\r\n\r\n\r\n\r\n<ngx-spinner\r\n  bdColor=\"rgba(51,51,51,0.8)\"\r\n  size=\"medium\"\r\n  color=\"#fff\"\r\n  type=\"ball-scale-multiple\"\r\n>\r\n  <p style=\"font-size: 20px; color: white\">處理中...</p>\r\n</ngx-spinner>");
 
 /***/ }),
 
@@ -87,7 +87,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n<div>\n    <span><img src='../assets/Photos/inhublogo.png' width=10% height=10% /></span>\n    <p></p>\n</div>\n\n<div class=\"nav navbar-nav navbar-right\">\n         <button type=\"button\" class=\"btn btn-default\" onclick=\"location.href='#/bccenter';\">返回</button>   \n        <p></p>    \n</div>\n\n<div class=\"body-content\">\n\n    <table class=\"table table-bordered table-striped\">\n            <tbody>\n                <tr>\n                    <td colspan=\"2\">\n                           \n                        <carousel  interval=\"0\">\n                                <slide *ngFor=\"let item of Entity.Images\">\n                                <img [src]=\"item.Image_Url\" alt=\"Image\" style=\"display: block; width: 100%;\">\n                                <div class=\"carousel-caption d-none d-md-block\">\n                                    <h3>{{item.Name}}</h3>\n                                    <p>{{item.Comment}}</p>\n                                </div>\n                                </slide> \n                        </carousel>\n        \n\n                    </td>\n                </tr>\n        \n                <tr>\n                    <td>\n                        ID:\n                    </td>\n                    <TD>\n                            {{Entity.Id}}\n                    </TD>\n                </tr>\n                <tr>\n                    <td>\n                            商務中心名稱:\n                    </td>\n                    <td>\n                            {{Entity.Name}} \n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        介紹:\n                    </td>\n                    <td>\n                            {{Entity.Intro}} \n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                           營業時間: \n                    </td>\n                    <td>\n                        <div fxLayout=\"column\" fxLayoutAlign=\" none\">\n                            <div fxFlex=\"100\" fxLayout=\"column\" fxLayoutAlign=\"space-around stretch\" fxLayout.xs=\"column\">\n                              <div *ngFor=\"let i of Entity.BusinessHours\" fxFlex.xs=\"100\" fxFlex.sm=\"50\" fxFlex.md=\"33\" fxFlex.lg=\"33\" fxFlex.xl=\"33\">\n                                  {{i.Day}} : {{i.StartTime}} - {{i.EndTime}}\n                              </div> \n                            </div>\n                          </div>\n        \n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        電話:\n                    </td>\n                    <td>\n                            {{Entity.Phone}}   \n                    </td>\n                </tr>\n                <tr>\n                    <td>\n                        地址:\n                    </td>\n                    <td>\n                            {{Entity.Address}}   \n                    </td>\n                </tr>\n                <tr>\n                    <td colspan=\"2\">\n                            <table>\n                                    <tr>\n                                            <td>\n                                                    最低價格:\n                                                </td>\n                                                <td>\n                                                        {{Entity.MinPrice}}     \n                                                </td>\n                                                <td>\n                                                      ~\n                                                </td>\n                                                <td>\n                                                    最高價格:\n                                                </td>\n                                                <td>\n                                                        {{Entity.MaxPrice}}       \n                                                </td>\n                                    </tr>\n                                </table>\n                             \n                    </td>\n                  \n                </tr>\n                <tr>\n                        <td>\n                            電子郵件:\n                        </td>\n                        <td>\n                                {{Entity.Email}}         \n                        </td>\n                </tr>\n                <tr>\n                        <td>\n                            網站:\n                        </td>\n                        <td>\n                                {{Entity.WebSite}}     \n                        </td>\n                </tr>\n                <tr>\n                        <td>\n                            設備: \n                        </td>\n                        <td>\n                                  \n            \n                                    <div fxLayout=\"column\" fxLayoutAlign=\" none\">\n                                            <div fxFlex=\"100\" fxLayout=\"row wrap\" fxLayoutAlign=\"space-around stretch\" fxLayout.xs=\"column\">\n                                              <div *ngFor=\"let i of Entity.Features\" fxFlex.xs=\"100\" fxFlex.sm=\"50\" fxFlex.md=\"33\" fxFlex.lg=\"33\" fxFlex.xl=\"33\">\n                                                   {{i.Name}} <img  [src]=\"i.Image_Url\" style=\"height: 50px; width: 50px;\">\n                                              </div>\n                                            </div>\n                                    </div>\n                                        \n                                        \n                        </td>\n                    </tr>\n               \n                <tr>\n                    <td colspan=\"2\">\n                            <google-map\n                            height=\"500px\"\n                            width=\"100%\"\n                            [zoom]=\"zoom\"\n                            [center]=\"center\"\n                            [options]=\"options\"\n                            >\n                            <map-marker\n                                *ngFor=\"let marker of markers\"\n                                [position]=\"marker.position\"\n                                [label]=\"marker.label\"\n                                [title]=\"marker.title\"\n                                [options]=\"marker.options\"\n                                (mapClick)=\"opengooglemap()\"\n                            >\n                            </map-marker>\n                        \n                        \n                            </google-map>\n                    </td>\n                </tr>\n           \n              \n            </tbody>   \n            </table>\n        \n\n\n\n</div>\n\n\n\n<ngx-spinner\n  bdColor=\"rgba(51,51,51,0.8)\"\n  size=\"medium\"\n  color=\"#fff\"\n  type=\"ball-scale-multiple\"\n>\n  <p style=\"font-size: 20px; color: white\">處理中...</p>\n</ngx-spinner>");
+/* harmony default export */ __webpack_exports__["default"] = ("\r\n<div>\r\n    <span><img src='../assets/Photos/inhublogo.png' width=10% height=10% /></span>\r\n    <p></p>\r\n</div>\r\n\r\n<div class=\"nav navbar-nav navbar-right\">\r\n         <button type=\"button\" class=\"btn btn-default\" onclick=\"location.href='#/bccenter';\">返回</button>   \r\n        <p></p>    \r\n</div>\r\n\r\n<div class=\"body-content\">\r\n\r\n    <table class=\"table table-bordered table-striped\">\r\n            <tbody>\r\n                <tr>\r\n                    <td colspan=\"2\">\r\n                           \r\n                        <carousel>\r\n                                <slide *ngFor=\"let item of Entity.Images\">\r\n                                <img [src]=\"item.Image_Url\" alt=\"Image\" style=\"display: block; width: 100%;\">\r\n                                <div class=\"carousel-caption d-none d-md-block\">\r\n                                    <h3>{{item.Name}}</h3>\r\n                                    <p>{{item.Comment}}</p>\r\n                                </div>\r\n                                </slide> \r\n                        </carousel>\r\n        \r\n\r\n                    </td>\r\n                </tr>\r\n        \r\n                <tr>\r\n                    <td>\r\n                        ID:\r\n                    </td>\r\n                    <TD>\r\n                            {{Entity.Id}}\r\n                    </TD>\r\n                </tr>\r\n                <tr>\r\n                    <td>\r\n                            商務中心名稱:\r\n                    </td>\r\n                    <td>\r\n                        <b><h1 class=\"h4\">{{Entity.Name}} </h1></b>\r\n                    </td>\r\n                </tr>\r\n                <tr>\r\n                    <td>\r\n                        介紹:\r\n                    </td>\r\n                    <td>\r\n                            {{Entity.Intro}} \r\n                    </td>\r\n                </tr>\r\n                <tr>\r\n                    <td>\r\n                           營業時間: \r\n                    </td>\r\n                    <td>\r\n                        <div fxLayout=\"column\" fxLayoutAlign=\" none\">\r\n                            <div fxFlex=\"100\" fxLayout=\"column\" fxLayoutAlign=\"space-around stretch\" fxLayout.xs=\"column\">\r\n                              <div *ngFor=\"let i of Entity.BusinessHours\" fxFlex.xs=\"100\" fxFlex.sm=\"50\" fxFlex.md=\"33\" fxFlex.lg=\"33\" fxFlex.xl=\"33\">\r\n                                  {{i.Day}} : {{i.StartTime}} - {{i.EndTime}}\r\n                              </div> \r\n                            </div>\r\n                          </div>\r\n        \r\n                    </td>\r\n                </tr>\r\n                <tr>\r\n                    <td>\r\n                        電話:\r\n                    </td>\r\n                    <td>\r\n                            {{Entity.Phone}}   \r\n                    </td>\r\n                </tr>\r\n                <tr>\r\n                    <td>\r\n                        地址:\r\n                    </td>\r\n                    <td>\r\n                            {{Entity.Address}}   \r\n                    </td>\r\n                </tr>\r\n                <tr>\r\n                    <td colspan=\"2\">\r\n                            <table>\r\n                                    <tr>\r\n                                            <td>\r\n                                                    最低價格:\r\n                                                </td>\r\n                                                <td>\r\n                                                        {{Entity.MinPrice}}     \r\n                                                </td>\r\n                                                <td>\r\n                                                      ~\r\n                                                </td>\r\n                                                <td>\r\n                                                    最高價格:\r\n                                                </td>\r\n                                                <td>\r\n                                                        {{Entity.MaxPrice}}       \r\n                                                </td>\r\n                                    </tr>\r\n                                </table>\r\n                             \r\n                    </td>\r\n                  \r\n                </tr>\r\n                <tr>\r\n                        <td>\r\n                            電子郵件:\r\n                        </td>\r\n                        <td>\r\n                                {{Entity.Email}}         \r\n                        </td>\r\n                </tr>\r\n                <tr>\r\n                        <td>\r\n                            網站:\r\n                        </td>\r\n                        <td>\r\n                                {{Entity.WebSite}}     \r\n                        </td>\r\n                </tr>\r\n                <tr>\r\n                        <td>\r\n                            設備: \r\n                        </td>\r\n                        <td>\r\n                                  \r\n            \r\n                                    <div fxLayout=\"column\" fxLayoutAlign=\" none\">\r\n                                            <div fxFlex=\"100\" fxLayout=\"row wrap\" fxLayoutAlign=\"space-around stretch\" fxLayout.xs=\"column\">\r\n                                              <div *ngFor=\"let i of Entity.Features\" fxFlex.xs=\"100\" fxFlex.sm=\"50\" fxFlex.md=\"33\" fxFlex.lg=\"33\" fxFlex.xl=\"33\">\r\n                                                   {{i.Name}} <img  [src]=\"i.Image_Url\" style=\"height: 50px; width: 50px;\">\r\n                                              </div>\r\n                                            </div>\r\n                                    </div>\r\n                                        \r\n                                        \r\n                        </td>\r\n                    </tr>\r\n               \r\n                <tr>\r\n                    <td colspan=\"2\">\r\n                            <google-map\r\n                            height=\"500px\"\r\n                            width=\"100%\"\r\n                            [zoom]=\"zoom\"\r\n                            [center]=\"center\"\r\n                            [options]=\"options\"\r\n                            >\r\n                            <map-marker\r\n                                *ngFor=\"let marker of markers\"\r\n                                [position]=\"marker.position\"\r\n                                [label]=\"marker.label\"\r\n                                [title]=\"marker.title\"\r\n                                [options]=\"marker.options\"\r\n                                (mapClick)=\"opengooglemap()\"\r\n                            >\r\n                            </map-marker>\r\n                        \r\n                        \r\n                            </google-map>\r\n                    </td>\r\n                </tr>\r\n           \r\n              \r\n            </tbody>   \r\n            </table>\r\n        \r\n\r\n\r\n\r\n</div>\r\n\r\n\r\n\r\n<ngx-spinner\r\n  bdColor=\"rgba(51,51,51,0.8)\"\r\n  size=\"medium\"\r\n  color=\"#fff\"\r\n  type=\"ball-scale-multiple\"\r\n>\r\n  <p style=\"font-size: 20px; color: white\">處理中...</p>\r\n</ngx-spinner>");
 
 /***/ }),
 
@@ -101,6 +101,19 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("<div class=\"modal-header table-hover\">\r\n        \r\n    </div>\r\n              <div class=\"modal-body\">\r\n    \r\n              <div fxLayout=\"column\" fxLayoutAlign=\" none\">\r\n                <div fxFlex=\"100\" fxLayout=\"column\" fxLayoutAlign=\"space-around stretch\" fxLayout.xs=\"column\">\r\n                  <div *ngFor=\"let i of list; let x = index\" fxFlex.xs=\"100\" fxFlex.sm=\"50\" fxFlex.md=\"33\" fxFlex.lg=\"33\" fxFlex.xl=\"33\">\r\n                      {{i.Day}} : <input [(ngModel)]=\"i.StartTime\" #ctrl=\"ngModel\" name=\"strttime\"> -\r\n                      <input [(ngModel)]=\"i.EndTime\" #ctrl=\"ngModel\" name=\"endtime\"> \r\n                  </div> \r\n                </div>\r\n              </div>\r\n                      \r\n              </div>\r\n              <div class=\"modal-footer\">\r\n                     <button type=\"button\" class=\"btn btn-primary\" (click)=\"Save()\">儲存</button>  \r\n                    <button type=\"button\" class=\"btn btn-secondary\" (click)=\"bsModalRef.hide()\">取消</button>\r\n              </div>\r\n        \r\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/businesscenter/requestmodal/requestmodal.component.html":
+/*!***************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/businesscenter/requestmodal/requestmodal.component.html ***!
+  \***************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<p>requestmodal works!</p>\n");
 
 /***/ }),
 
@@ -139,7 +152,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"modal-header table-hover\">\r\n  <h4 class=\"modal-title pull-left\">{{Name}}</h4>\r\n  <button type=\"button\" class=\"close pull-right\" aria-label=\"Close\" (click)=\"bsModalRef.hide()\">\r\n    <span aria-hidden=\"true\">&times;</span>\r\n  </button>\r\n</div>\r\n<div class=\"modal-body\">\r\n<table class=\"table table-bordered\">\r\n<tr>\r\n  <td>\r\n    Email \r\n  </td>\r\n  <td>\r\n    {{Email}}\r\n  </td>\r\n</tr>\r\n\r\n<tr>\r\n<td>\r\n   標題\r\n</td>\r\n<td>\r\n<input type=\"string\"\r\n[(ngModel)]='Subject'\r\n />  \r\n</td>\r\n</tr>\r\n\r\n<tr class=\"info\">\r\n<td>\r\n    訊息\r\n</td>\r\n<td>\r\n   <textarea [(ngModel)]='Content' class=\"form-control\" rows=\"5\">\r\n\r\n   </textarea>\r\n</td>\r\n</tr>\r\n \r\n<tr >\r\n   \r\n        <td>\r\n            <button class=\"btn btn-primary\" (click) = 'EmailOut()'>\r\n               寄出\r\n             </button>\r\n            \r\n        </td>\r\n\r\n  </tr>\r\n</table> \r\n\r\n\r\n</div>\r\n<div class=\"modal-footer\">\r\n  <button type=\"button\" class=\"btn btn-default\" (click)=\"bsModalRef.hide()\">取消</button>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"modal-header table-hover\">\n  <h4 class=\"modal-title pull-left\">{{Name}}</h4>\n  <button type=\"button\" class=\"close pull-right\" aria-label=\"Close\" (click)=\"bsModalRef.hide()\">\n    <span aria-hidden=\"true\">&times;</span>\n  </button>\n</div>\n<div class=\"modal-body\">\n<table class=\"table table-bordered\">\n<tr>\n  <td>\n    Email \n  </td>\n  <td>\n    {{Email}}\n  </td>\n</tr>\n\n<tr>\n<td>\n   標題\n</td>\n<td>\n<input type=\"string\"\n[(ngModel)]='Subject'\n />  \n</td>\n</tr>\n\n<tr class=\"info\">\n<td>\n    訊息\n</td>\n<td>\n   <textarea [(ngModel)]='Content' class=\"form-control\" rows=\"5\">\n\n   </textarea>\n</td>\n</tr>\n \n<tr >\n   \n        <td>\n            <button class=\"btn btn-primary\" (click) = 'EmailOut()'>\n               寄出\n             </button>\n            \n        </td>\n\n  </tr>\n</table> \n\n\n</div>\n<div class=\"modal-footer\">\n  <button type=\"button\" class=\"btn btn-default\" (click)=\"bsModalRef.hide()\">取消</button>\n</div>\n");
 
 /***/ }),
 
@@ -1224,6 +1237,9 @@ var ArticlelistComponent = /** @class */ (function () {
     ArticlelistComponent.prototype.openform = function (Id) {
         window.open('#/articleform/' + Id, '_self');
     };
+    ArticlelistComponent.prototype.showarticle = function (Id) {
+        window.open('#/articleshow/' + Id, '_blank');
+    };
     ArticlelistComponent.prototype.delete = function (Id) {
         var _this = this;
         if (confirm('確定刪除 ID: ' + Id + '?')) {
@@ -1287,6 +1303,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _service_service_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../service/service.service */ "./src/app/article/service/service.service.ts");
 /* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ngx-spinner */ "./node_modules/ngx-spinner/fesm5/ngx-spinner.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var util__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! util */ "./node_modules/util/util.js");
+/* harmony import */ var util__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(util__WEBPACK_IMPORTED_MODULE_5__);
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1299,6 +1317,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
   return (mod && mod.__esModule) ? mod : { "default": mod };
 };
+
 
 
 
@@ -1333,7 +1352,19 @@ var ArticleshowComponent = /** @class */ (function () {
         configurable: true
     });
     ArticleshowComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        var ID = this.route.snapshot.paramMap.get('id');
         this.GetList();
+        if (Object(util__WEBPACK_IMPORTED_MODULE_5__["isNullOrUndefined"])(ID)) {
+        }
+        else {
+            this.service.getEntityById(ID).subscribe(function (val) {
+                _this.Entity = val;
+            }, function (err) {
+                alert('Not Found');
+                _this.spinner.hide();
+            });
+        }
     };
     ArticleshowComponent.prototype.GetList = function () {
         var _this = this;
@@ -1995,6 +2026,9 @@ var BclistComponent = /** @class */ (function () {
     BclistComponent.prototype.openform = function (Id) {
         window.open('#/bcform/' + Id, '_self');
     };
+    BclistComponent.prototype.showform = function (Id) {
+        window.open('#/bcshow/' + Id, '_self');
+    };
     BclistComponent.prototype.delete = function (Id) {
         var _this = this;
         if (confirm('確定刪除 ID: ' + Id + '?')) {
@@ -2249,6 +2283,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var ngx_bootstrap_tooltip__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ngx-bootstrap/tooltip */ "./node_modules/ngx-bootstrap/tooltip/fesm5/ngx-bootstrap-tooltip.js");
 /* harmony import */ var _bcshow_bcshow_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./bcshow/bcshow.component */ "./src/app/businesscenter/bcshow/bcshow.component.ts");
 /* harmony import */ var ngx_bootstrap_carousel__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ngx-bootstrap/carousel */ "./node_modules/ngx-bootstrap/carousel/fesm5/ngx-bootstrap-carousel.js");
+/* harmony import */ var _requestmodal_requestmodal_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./requestmodal/requestmodal.component */ "./src/app/businesscenter/requestmodal/requestmodal.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2258,6 +2293,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
   return (mod && mod.__esModule) ? mod : { "default": mod };
 };
+
 
 
 
@@ -2319,7 +2355,8 @@ var BusinesscenterModule = /** @class */ (function () {
                     }
                 ])
             ],
-            declarations: [_bclist_bclist_component__WEBPACK_IMPORTED_MODULE_7__["BclistComponent"], _bcform_bcform_component__WEBPACK_IMPORTED_MODULE_8__["BcformComponent"], _bcformmodal_bcformmodal_component__WEBPACK_IMPORTED_MODULE_11__["BcformmodalComponent"], _businesshourmodal_businesshourmodal_component__WEBPACK_IMPORTED_MODULE_15__["BusinesshourmodalComponent"], _bcshow_bcshow_component__WEBPACK_IMPORTED_MODULE_19__["BcshowComponent"]],
+            declarations: [_bclist_bclist_component__WEBPACK_IMPORTED_MODULE_7__["BclistComponent"], _bcform_bcform_component__WEBPACK_IMPORTED_MODULE_8__["BcformComponent"], _bcformmodal_bcformmodal_component__WEBPACK_IMPORTED_MODULE_11__["BcformmodalComponent"], _businesshourmodal_businesshourmodal_component__WEBPACK_IMPORTED_MODULE_15__["BusinesshourmodalComponent"],
+                _bcshow_bcshow_component__WEBPACK_IMPORTED_MODULE_19__["BcshowComponent"], _requestmodal_requestmodal_component__WEBPACK_IMPORTED_MODULE_21__["RequestmodalComponent"]],
             entryComponents: [_bcformmodal_bcformmodal_component__WEBPACK_IMPORTED_MODULE_11__["BcformmodalComponent"], _businesshourmodal_businesshourmodal_component__WEBPACK_IMPORTED_MODULE_15__["BusinesshourmodalComponent"]]
         })
     ], BusinesscenterModule);
@@ -2443,7 +2480,7 @@ var BusinesshourmodalComponent = /** @class */ (function () {
 /*!********************************************************!*\
   !*** ./src/app/businesscenter/model/BusinessCenter.ts ***!
   \********************************************************/
-/*! exports provided: BusinessCenter, BusinessCenterImage, BusinessCenterMeetingRoom, BusinessCenterFeature, BusinessHour */
+/*! exports provided: BusinessCenter, BusinessCenterImage, BusinessCenterMeetingRoom, BusinessCenterFeature, BusinessHour, Request */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2453,6 +2490,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BusinessCenterMeetingRoom", function() { return BusinessCenterMeetingRoom; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BusinessCenterFeature", function() { return BusinessCenterFeature; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BusinessHour", function() { return BusinessHour; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Request", function() { return Request; });
 var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
   return (mod && mod.__esModule) ? mod : { "default": mod };
 };
@@ -2484,6 +2522,80 @@ var BusinessHour = /** @class */ (function () {
     function BusinessHour() {
     }
     return BusinessHour;
+}());
+
+var Request = /** @class */ (function () {
+    function Request() {
+    }
+    return Request;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/businesscenter/requestmodal/requestmodal.component.css":
+/*!************************************************************************!*\
+  !*** ./src/app/businesscenter/requestmodal/requestmodal.component.css ***!
+  \************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJyZXF1ZXN0bW9kYWwvcmVxdWVzdG1vZGFsLmNvbXBvbmVudC5jc3MifQ== */");
+
+/***/ }),
+
+/***/ "./src/app/businesscenter/requestmodal/requestmodal.component.ts":
+/*!***********************************************************************!*\
+  !*** ./src/app/businesscenter/requestmodal/requestmodal.component.ts ***!
+  \***********************************************************************/
+/*! exports provided: RequestmodalComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RequestmodalComponent", function() { return RequestmodalComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ngx-bootstrap/modal */ "./node_modules/ngx-bootstrap/modal/fesm5/ngx-bootstrap-modal.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+var RequestmodalComponent = /** @class */ (function () {
+    function RequestmodalComponent(bsModalRef) {
+        this.bsModalRef = bsModalRef;
+    }
+    RequestmodalComponent.prototype.ngOnInit = function () {
+    };
+    RequestmodalComponent.prototype.Save = function () {
+        this.bsModalRef.hide();
+    };
+    RequestmodalComponent.prototype.SendEmail = function () {
+    };
+    RequestmodalComponent.ctorParameters = function () { return [
+        { type: ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_1__["BsModalRef"] }
+    ]; };
+    RequestmodalComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-requestmodal',
+            template: __importDefault(__webpack_require__(/*! raw-loader!./requestmodal.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/businesscenter/requestmodal/requestmodal.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./requestmodal.component.css */ "./src/app/businesscenter/requestmodal/requestmodal.component.css")).default]
+        }),
+        __metadata("design:paramtypes", [ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_1__["BsModalRef"]])
+    ], RequestmodalComponent);
+    return RequestmodalComponent;
 }());
 
 
@@ -2548,6 +2660,8 @@ var BcserviceService = /** @class */ (function () {
         }, function () {
             console.log('The PUT observable is now completed.');
         });
+    };
+    BcserviceService.prototype.PostRequest = function (req) {
     };
     BcserviceService.prototype.deleteEntity = function (id) {
         var url = this.site + this.url + id;
