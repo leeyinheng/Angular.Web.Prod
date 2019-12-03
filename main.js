@@ -3060,14 +3060,16 @@ var InvlistComponent = /** @class */ (function () {
         });
     };
     InvlistComponent.prototype.showEntity = function (id) {
-        // const cryptstring: string = this.cryptservice.GetTeaProjectManagerKey(id);
-        var cryptstring = this.cryptservice.GetStaticManagerKey();
-        window.open('#/clientinv/' + id + '?key=' + cryptstring, '_self');
+        var cryptId = this.cryptservice.encrypt(id + '|' + 'manager');
+        this.sendEncodeUrl(cryptId);
     };
     InvlistComponent.prototype.showUserEntity = function (id) {
-        //const cryptstring: string = this.cryptservice.GetTeaProejctUserKey(id);
-        var cryptstring = this.cryptservice.GetStaticUserKey();
-        window.open('#/clientinv/' + id + '?key=' + cryptstring + '&eqr=zdsr3342123sazxfasfsda3DSdkfdkjf2334tx' + Date.UTC.toString(), '_self');
+        var cryptId = this.cryptservice.encrypt(id + '|' + 'user');
+        this.sendEncodeUrl(cryptId);
+    };
+    InvlistComponent.prototype.sendEncodeUrl = function (url) {
+        var encodeurl = encodeURI(url);
+        window.open('#/clientinv/888?key=' + encodeurl, '_self');
     };
     InvlistComponent.ctorParameters = function () { return [
         { type: ngx_spinner__WEBPACK_IMPORTED_MODULE_1__["NgxSpinnerService"] },
@@ -3220,11 +3222,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ngx-spinner */ "./node_modules/ngx-spinner/fesm5/ngx-spinner.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! util */ "./node_modules/util/util.js");
-/* harmony import */ var util__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(util__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _invservice_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../invservice.service */ "./src/app/clientinventory/invservice.service.ts");
-/* harmony import */ var _model_projectinventory__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../model/projectinventory */ "./src/app/clientinventory/model/projectinventory.ts");
-/* harmony import */ var _services_cryptservice_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../services/cryptservice.service */ "./src/app/clientinventory/services/cryptservice.service.ts");
+/* harmony import */ var _invservice_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../invservice.service */ "./src/app/clientinventory/invservice.service.ts");
+/* harmony import */ var _model_projectinventory__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../model/projectinventory */ "./src/app/clientinventory/model/projectinventory.ts");
+/* harmony import */ var _services_cryptservice_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../services/cryptservice.service */ "./src/app/clientinventory/services/cryptservice.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3243,7 +3243,6 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 
 
 
-
 var InvshowComponent = /** @class */ (function () {
     function InvshowComponent(spinner, route, service, cryptservice) {
         this.spinner = spinner;
@@ -3251,7 +3250,7 @@ var InvshowComponent = /** @class */ (function () {
         this.service = service;
         this.cryptservice = cryptservice;
         this.IsManager = false;
-        this._entity = new _model_projectinventory__WEBPACK_IMPORTED_MODULE_5__["ClientInventory"]();
+        this._entity = new _model_projectinventory__WEBPACK_IMPORTED_MODULE_4__["ClientInventory"]();
         this._stock_sum = 0;
         this._return_sum = 0;
         this._notreturn_sum = 0;
@@ -3297,13 +3296,10 @@ var InvshowComponent = /** @class */ (function () {
         configurable: true
     });
     InvshowComponent.prototype.ngOnInit = function () {
-        var ID = this.route.snapshot.paramMap.get('id');
-        var Key = this.route.snapshot.queryParamMap.get("key").trim();
-        if (Object(util__WEBPACK_IMPORTED_MODULE_3__["isNullOrUndefined"])(Key)) {
-            alert('無權限閱讀 請洽詢管理員');
-            return;
-        }
-        var role = this.cryptservice.IdentifyTeaProejctLogIn(Key);
+        var EncryptID = decodeURI(this.route.snapshot.queryParamMap.get('key'));
+        var IDstring = this.cryptservice.decrypt(EncryptID);
+        var ID = IDstring.split('|')[0];
+        var role = IDstring.split('|')[1];
         switch (role) {
             case 'manager': {
                 this.IsManager = true;
@@ -3313,7 +3309,7 @@ var InvshowComponent = /** @class */ (function () {
                 this.IsManager = false;
                 break;
             }
-            case 'not allow': {
+            default: {
                 alert('無權限進入');
                 return;
             }
@@ -3368,8 +3364,8 @@ var InvshowComponent = /** @class */ (function () {
     InvshowComponent.ctorParameters = function () { return [
         { type: ngx_spinner__WEBPACK_IMPORTED_MODULE_1__["NgxSpinnerService"] },
         { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] },
-        { type: _invservice_service__WEBPACK_IMPORTED_MODULE_4__["InvserviceService"] },
-        { type: _services_cryptservice_service__WEBPACK_IMPORTED_MODULE_6__["CryptserviceService"] }
+        { type: _invservice_service__WEBPACK_IMPORTED_MODULE_3__["InvserviceService"] },
+        { type: _services_cryptservice_service__WEBPACK_IMPORTED_MODULE_5__["CryptserviceService"] }
     ]; };
     InvshowComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -3377,7 +3373,7 @@ var InvshowComponent = /** @class */ (function () {
             template: __importDefault(__webpack_require__(/*! raw-loader!./invshow.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/clientinventory/invshow/invshow.component.html")).default,
             styles: [__importDefault(__webpack_require__(/*! ./invshow.component.css */ "./src/app/clientinventory/invshow/invshow.component.css")).default]
         }),
-        __metadata("design:paramtypes", [ngx_spinner__WEBPACK_IMPORTED_MODULE_1__["NgxSpinnerService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"], _invservice_service__WEBPACK_IMPORTED_MODULE_4__["InvserviceService"], _services_cryptservice_service__WEBPACK_IMPORTED_MODULE_6__["CryptserviceService"]])
+        __metadata("design:paramtypes", [ngx_spinner__WEBPACK_IMPORTED_MODULE_1__["NgxSpinnerService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"], _invservice_service__WEBPACK_IMPORTED_MODULE_3__["InvserviceService"], _services_cryptservice_service__WEBPACK_IMPORTED_MODULE_5__["CryptserviceService"]])
     ], InvshowComponent);
     return InvshowComponent;
 }());
