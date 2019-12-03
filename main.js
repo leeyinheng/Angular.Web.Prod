@@ -130,6 +130,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/clientinventory/invlist/invlist.component.html":
+/*!******************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/clientinventory/invlist/invlist.component.html ***!
+  \******************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div>\n        <span> <img src='../assets/Photos/tealogo.jpg' width=20% height=20% /></span>\n        <p></p>\n    </div>\n    \n    <h1>所有客戶庫存表</h1>   \n\n    <div class=\"form form-row\">\n        <label>搜尋:</label>\n        <input type=\"string\" placeholder=\"編號或名稱\" class=\"form form-control\"\n        [(ngModel)]='Search'\n        style=\"width: 8em;\"\n        /> \n    </div>\n    <p></p>\n    <table class=\"table table-bordered table-striped table-hover\">\n        <tr>\n            <th>\n                客戶編號\n            </th>\n            <th>\n                客戶名稱\n            </th>\n            <th>\n                地址\n            </th>    \n            <th>\n                電話\n            </th>\n        </tr>\n        \n           \n            <tbody> \n                <tr *ngFor = 'let item of list' >\n                    <td>\n                        {{item.ClientId}}\n                    </td>\n                    <td>{{ item.ClientName}}\n                          \n                    </td>\n                    <td>{{ item.Address}}</td>\n                    <td>\n                        {{item.Phone}}\n                    </td>\n                  \n                    <td>\n                        <button type=\"button\" class=\"btn btn-dark\" (click) = showEntity(item.ClientId)>展示庫藏內容</button>\n                    </td>\n                </tr>\n            </tbody>\n           \n    </table>\n    \n    \n    \n    <ngx-spinner\n      bdColor=\"rgba(51,51,51,0.8)\"\n      size=\"medium\"\n      color=\"#fff\"\n      type=\"ball-scale-multiple\"\n    >\n      <p style=\"font-size: 20px; color: white\">處理中...</p>\n    </ngx-spinner>");
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/clientinventory/invshow/invshow.component.html":
 /*!******************************************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/clientinventory/invshow/invshow.component.html ***!
@@ -139,7 +152,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<span> <img src='../assets/Photos/tealogo.jpg' width=20% height=20% /></span>\n<form>\n  <div class=\"form-group\">\n        <table class=\"table table-bordered table-striped\">\n                <tbody>\n  \n                    <tr>\n                        <td>\n                            客戶編號:\n                        </td>\n                        <TD>\n                                {{Entity.ClientId}}\n                        </TD>\n                    </tr>\n                    <tr>\n                        <td>\n                               客戶名稱:\n                        </td>\n                        <td>\n                            <b><h1 class=\"h4\">{{Entity.ClientName}} </h1></b>\n                        </td>\n                    </tr>\n                    <tr>\n                        <td>\n                            地址:\n                        </td>\n                        <td>\n                                {{Entity.Address}} \n                        </td>\n                    </tr>\n                    <tr>\n                        <td>\n                            電話:\n                        </td>\n                        <td>\n                            {{Entity.Phone}}\n                        </td>\n                </tbody>   \n        </table>\n\n        <table class=\"table table-bordered table-striped table-hover\">\n                <tr>\n                    <th>\n                       產品編號\n                    </th>\n                    <th>\n                        產品名稱\n                    </th>\n                    <th>\n                        庫存\n                    </th>    \n                    <th>\n                        單位\n                    </th>\n                </tr>\n                \n                   \n                    <tbody> \n                        <tr *ngFor = 'let item of Entity.Inventories' >\n                            <td>\n                                {{item.ProductId}}\n                            </td>\n                            <td>\n                                {{ item.ProductName}}  \n                            </td>\n                            <td>{{ item.Stock }}</td>\n                          \n                            <td>\n                                {{ item.Unit }}  \n                            </td>\n                        </tr>\n                    </tbody>\n                   \n            </table>\n            \n        <h2>近六月溫度資料</h2>\n        <carousel  interval=\"0\">\n                <slide *ngFor=\"let item of images\">\n                  <img [src]=\"item.ImageUrl\" alt=\"Pages\" style=\"display: block; width: 100%;\">\n                  <div class=\"carousel-caption d-none d-md-block\">\n                  </div>\n                </slide> \n        </carousel>\n        \n\n  </div>\n</form>\n\n \n\n<ngx-spinner\n  bdColor=\"rgba(51,51,51,0.8)\"\n  size=\"medium\"\n  color=\"#fff\"\n  type=\"ball-scale-multiple\"\n>\n  <p style=\"font-size: 20px; color: white\">處理中...</p>\n</ngx-spinner>");
+/* harmony default export */ __webpack_exports__["default"] = ("<span> <img src='../assets/Photos/tealogo.jpg' width=20% height=20% /></span>\n<p></p>\n<span> <img src='../assets/Photos/title2.jpg' width=100% height=100% /></span>\n<p></p>\n<form>\n  <div class=\"form-group\">\n        <table class=\"table table-bordered table-striped\">\n                <tbody>\n  \n                    <tr>\n                        <td>\n                            客戶編號:\n                        </td>\n                        <TD>\n                                {{Entity.ClientId}}\n                        </TD>\n                    </tr>\n                    <tr>\n                        <td>\n                               客戶名稱:\n                        </td>\n                        <td>\n                            <b><h1 class=\"h4\">{{Entity.ClientName}} </h1></b>\n                        </td>\n                    </tr>\n                    <tr>\n                        <td>\n                            地址:\n                        </td>\n                        <td>\n                                {{Entity.Address}} \n                        </td>\n                    </tr>\n                    <tr>\n                        <td>\n                            電話:\n                        </td>\n                        <td>\n                            {{Entity.Phone}}\n                        </td>\n                </tbody>   \n        </table>\n\n        <table class=\"table table-bordered table-striped table-hover\">\n                <tr>\n                    <th>\n                       產品編號\n                    </th>\n                    <th>\n                        產品名稱\n                    </th>\n                    <th>\n                        庫存\n                    </th>    \n                    <th>\n                        單位\n                    </th>\n                </tr>\n                \n                   \n                    <tbody> \n                        <tr *ngFor = 'let item of Entity.Inventories' >\n                            <td>\n                                {{item.ProductId}}\n                            </td>\n                            <td>\n                                {{ item.ProductName}}  \n                            </td>\n                            <td>{{ item.Stock }}</td>\n                          \n                            <td>\n                                {{ item.Unit }}  \n                            </td>\n                        </tr>\n                    </tbody>\n                   \n            </table>\n            \n        <h2>近六月溫度資料</h2>\n        <carousel  interval=\"0\">\n                <slide *ngFor=\"let item of images\">\n                  <img [src]=\"item.ImageUrl\" alt=\"Pages\" style=\"display: block; width: 100%;\">\n                  <div class=\"carousel-caption d-none d-md-block\">\n                  </div>\n                </slide> \n        </carousel>\n        \n\n  </div>\n</form>\n\n \n\n<ngx-spinner\n  bdColor=\"rgba(51,51,51,0.8)\"\n  size=\"medium\"\n  color=\"#fff\"\n  type=\"ball-scale-multiple\"\n>\n  <p style=\"font-size: 20px; color: white\">處理中...</p>\n</ngx-spinner>");
 
 /***/ }),
 
@@ -780,20 +793,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Services_emailservice__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./Services/emailservice */ "./src/app/Services/emailservice.ts");
 /* harmony import */ var _Services_list_email_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./Services/list-email.service */ "./src/app/Services/list-email.service.ts");
 /* harmony import */ var _Services_customerlog_service__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./Services/customerlog.service */ "./src/app/Services/customerlog.service.ts");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _products_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./products.component */ "./src/app/products.component.ts");
-/* harmony import */ var _menu_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./menu.component */ "./src/app/menu.component.ts");
-/* harmony import */ var _cart_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./cart.component */ "./src/app/cart.component.ts");
-/* harmony import */ var _stoneweight_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./stoneweight.component */ "./src/app/stoneweight.component.ts");
-/* harmony import */ var _customerlog_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./customerlog.component */ "./src/app/customerlog.component.ts");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
-/* harmony import */ var _emailmodal_emailmodal_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./emailmodal/emailmodal.component */ "./src/app/emailmodal/emailmodal.component.ts");
-/* harmony import */ var ngx_pagination__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ngx-pagination */ "./node_modules/ngx-pagination/dist/ngx-pagination.js");
-/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
-/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm5/ng-bootstrap.js");
-/* harmony import */ var _businesscenter_businesscenter_module__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./businesscenter/businesscenter.module */ "./src/app/businesscenter/businesscenter.module.ts");
-/* harmony import */ var _article_article_module__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./article/article.module */ "./src/app/article/article.module.ts");
-/* harmony import */ var _clientinventory_clientinventory_module__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./clientinventory/clientinventory.module */ "./src/app/clientinventory/clientinventory.module.ts");
+/* harmony import */ var _clientinventory_invservice_service__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./clientinventory/invservice.service */ "./src/app/clientinventory/invservice.service.ts");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _products_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./products.component */ "./src/app/products.component.ts");
+/* harmony import */ var _menu_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./menu.component */ "./src/app/menu.component.ts");
+/* harmony import */ var _cart_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./cart.component */ "./src/app/cart.component.ts");
+/* harmony import */ var _stoneweight_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./stoneweight.component */ "./src/app/stoneweight.component.ts");
+/* harmony import */ var _customerlog_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./customerlog.component */ "./src/app/customerlog.component.ts");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _emailmodal_emailmodal_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./emailmodal/emailmodal.component */ "./src/app/emailmodal/emailmodal.component.ts");
+/* harmony import */ var ngx_pagination__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ngx-pagination */ "./node_modules/ngx-pagination/dist/ngx-pagination.js");
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm5/ng-bootstrap.js");
+/* harmony import */ var _businesscenter_businesscenter_module__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./businesscenter/businesscenter.module */ "./src/app/businesscenter/businesscenter.module.ts");
+/* harmony import */ var _article_article_module__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./article/article.module */ "./src/app/article/article.module.ts");
+/* harmony import */ var _clientinventory_clientinventory_module__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./clientinventory/clientinventory.module */ "./src/app/clientinventory/clientinventory.module.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -813,6 +827,7 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 //import './rxjs-extensions';
 //import { InMemoryDataService }  from './in-memory-data.service';
 //Services
+
 
 
 
@@ -844,9 +859,9 @@ var AppModule = /** @class */ (function () {
                 _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClientModule"],
                 _angular_http__WEBPACK_IMPORTED_MODULE_4__["HttpModule"],
-                ngx_pagination__WEBPACK_IMPORTED_MODULE_20__["NgxPaginationModule"],
-                _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_21__["BrowserAnimationsModule"],
-                _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_22__["NgbModule"],
+                ngx_pagination__WEBPACK_IMPORTED_MODULE_21__["NgxPaginationModule"],
+                _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_22__["BrowserAnimationsModule"],
+                _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_23__["NgbModule"],
                 ngx_bootstrap__WEBPACK_IMPORTED_MODULE_6__["ModalModule"].forRoot(),
                 _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"].forRoot([
                     {
@@ -856,36 +871,36 @@ var AppModule = /** @class */ (function () {
                     },
                     {
                         path: 'products',
-                        component: _products_component__WEBPACK_IMPORTED_MODULE_13__["ProductsComponent"]
+                        component: _products_component__WEBPACK_IMPORTED_MODULE_14__["ProductsComponent"]
                     },
                     {
                         path: 'cart',
-                        component: _cart_component__WEBPACK_IMPORTED_MODULE_15__["CartComponent"]
+                        component: _cart_component__WEBPACK_IMPORTED_MODULE_16__["CartComponent"]
                     },
                     {
                         path: 'stoneweight',
-                        component: _stoneweight_component__WEBPACK_IMPORTED_MODULE_16__["StoneweightComponent"]
+                        component: _stoneweight_component__WEBPACK_IMPORTED_MODULE_17__["StoneweightComponent"]
                     },
                     {
                         path: 'customerlog',
-                        component: _customerlog_component__WEBPACK_IMPORTED_MODULE_17__["CustomerlogComponent"]
+                        component: _customerlog_component__WEBPACK_IMPORTED_MODULE_18__["CustomerlogComponent"]
                     }
                 ]),
-                _businesscenter_businesscenter_module__WEBPACK_IMPORTED_MODULE_23__["BusinesscenterModule"],
-                _article_article_module__WEBPACK_IMPORTED_MODULE_24__["ArticleModule"],
-                _clientinventory_clientinventory_module__WEBPACK_IMPORTED_MODULE_25__["ClientinventoryModule"]
+                _businesscenter_businesscenter_module__WEBPACK_IMPORTED_MODULE_24__["BusinesscenterModule"],
+                _article_article_module__WEBPACK_IMPORTED_MODULE_25__["ArticleModule"],
+                _clientinventory_clientinventory_module__WEBPACK_IMPORTED_MODULE_26__["ClientinventoryModule"]
             ],
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_12__["AppComponent"],
-                _products_component__WEBPACK_IMPORTED_MODULE_13__["ProductsComponent"],
-                _menu_component__WEBPACK_IMPORTED_MODULE_14__["MenuComponent"],
-                _cart_component__WEBPACK_IMPORTED_MODULE_15__["CartComponent"],
-                _stoneweight_component__WEBPACK_IMPORTED_MODULE_16__["StoneweightComponent"],
-                _customerlog_component__WEBPACK_IMPORTED_MODULE_17__["CustomerlogComponent"],
-                _customerlog_component__WEBPACK_IMPORTED_MODULE_17__["ModalContentComponent"],
-                _emailmodal_emailmodal_component__WEBPACK_IMPORTED_MODULE_19__["EmailmodalComponent"]
+                _app_component__WEBPACK_IMPORTED_MODULE_13__["AppComponent"],
+                _products_component__WEBPACK_IMPORTED_MODULE_14__["ProductsComponent"],
+                _menu_component__WEBPACK_IMPORTED_MODULE_15__["MenuComponent"],
+                _cart_component__WEBPACK_IMPORTED_MODULE_16__["CartComponent"],
+                _stoneweight_component__WEBPACK_IMPORTED_MODULE_17__["StoneweightComponent"],
+                _customerlog_component__WEBPACK_IMPORTED_MODULE_18__["CustomerlogComponent"],
+                _customerlog_component__WEBPACK_IMPORTED_MODULE_18__["ModalContentComponent"],
+                _emailmodal_emailmodal_component__WEBPACK_IMPORTED_MODULE_20__["EmailmodalComponent"]
             ],
-            entryComponents: [_customerlog_component__WEBPACK_IMPORTED_MODULE_17__["ModalContentComponent"], _emailmodal_emailmodal_component__WEBPACK_IMPORTED_MODULE_19__["EmailmodalComponent"]],
+            entryComponents: [_customerlog_component__WEBPACK_IMPORTED_MODULE_18__["ModalContentComponent"], _emailmodal_emailmodal_component__WEBPACK_IMPORTED_MODULE_20__["EmailmodalComponent"]],
             providers: [
                 _Services_product_service__WEBPACK_IMPORTED_MODULE_7__["ProductService"],
                 _Services_shop_cart_service__WEBPACK_IMPORTED_MODULE_8__["ShopCartService"],
@@ -893,9 +908,10 @@ var AppModule = /** @class */ (function () {
                 _Services_list_email_service__WEBPACK_IMPORTED_MODULE_10__["ListEmailService"],
                 _Services_customerlog_service__WEBPACK_IMPORTED_MODULE_11__["CustomerlogService"],
                 ngx_bootstrap__WEBPACK_IMPORTED_MODULE_6__["BsModalService"],
-                { provide: _angular_common__WEBPACK_IMPORTED_MODULE_18__["LocationStrategy"], useClass: _angular_common__WEBPACK_IMPORTED_MODULE_18__["HashLocationStrategy"] }
+                _clientinventory_invservice_service__WEBPACK_IMPORTED_MODULE_12__["InvserviceService"],
+                { provide: _angular_common__WEBPACK_IMPORTED_MODULE_19__["LocationStrategy"], useClass: _angular_common__WEBPACK_IMPORTED_MODULE_19__["HashLocationStrategy"] }
             ],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_12__["AppComponent"]]
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_13__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -1004,7 +1020,7 @@ var ArticleModule = /** @class */ (function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9hcnRpY2xlL2FydGljbGVmb3JtL2FydGljbGVmb3JtLmNvbXBvbmVudC5jc3MifQ== */");
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FydGljbGUvYXJ0aWNsZWZvcm0vYXJ0aWNsZWZvcm0uY29tcG9uZW50LmNzcyJ9 */");
 
 /***/ }),
 
@@ -1202,7 +1218,7 @@ var ArticleformComponent = /** @class */ (function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9hcnRpY2xlL2FydGljbGVsaXN0L2FydGljbGVsaXN0LmNvbXBvbmVudC5jc3MifQ== */");
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FydGljbGUvYXJ0aWNsZWxpc3QvYXJ0aWNsZWxpc3QuY29tcG9uZW50LmNzcyJ9 */");
 
 /***/ }),
 
@@ -1314,7 +1330,7 @@ var ArticlelistComponent = /** @class */ (function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9hcnRpY2xlL2FydGljbGVzaG93L2FydGljbGVzaG93LmNvbXBvbmVudC5jc3MifQ== */");
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FydGljbGUvYXJ0aWNsZXNob3cvYXJ0aWNsZXNob3cuY29tcG9uZW50LmNzcyJ9 */");
 
 /***/ }),
 
@@ -1564,7 +1580,7 @@ var ArticleService = /** @class */ (function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".img {\r\n    width: 40%;\r\n    margin-bottom: 10%;\r\n  }\r\n  .container {\r\n    min-height: 50%;\r\n    width: 50%;\r\n  }\r\n  .card-picture {\r\n    width: 23%;\r\n    margin-bottom: 2%;\r\n    \r\n  }\r\n  .search-form {\r\n    width: 90%;\r\n  }\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL2J1c2luZXNzY2VudGVyL2JjZm9ybS9iY2Zvcm0uY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLFVBQVU7SUFDVixrQkFBa0I7RUFDcEI7RUFDQTtJQUNFLGVBQWU7SUFDZixVQUFVO0VBQ1o7RUFDQTtJQUNFLFVBQVU7SUFDVixpQkFBaUI7O0VBRW5CO0VBRUE7SUFDRSxVQUFVO0VBQ1oiLCJmaWxlIjoiLi4vYnVzaW5lc3NjZW50ZXIvYmNmb3JtL2JjZm9ybS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmltZyB7XHJcbiAgICB3aWR0aDogNDAlO1xyXG4gICAgbWFyZ2luLWJvdHRvbTogMTAlO1xyXG4gIH1cclxuICAuY29udGFpbmVyIHtcclxuICAgIG1pbi1oZWlnaHQ6IDUwJTtcclxuICAgIHdpZHRoOiA1MCU7XHJcbiAgfVxyXG4gIC5jYXJkLXBpY3R1cmUge1xyXG4gICAgd2lkdGg6IDIzJTtcclxuICAgIG1hcmdpbi1ib3R0b206IDIlO1xyXG4gICAgXHJcbiAgfVxyXG4gIFxyXG4gIC5zZWFyY2gtZm9ybSB7XHJcbiAgICB3aWR0aDogOTAlO1xyXG4gIH0iXX0= */");
+/* harmony default export */ __webpack_exports__["default"] = (".img {\r\n    width: 40%;\r\n    margin-bottom: 10%;\r\n  }\r\n  .container {\r\n    min-height: 50%;\r\n    width: 50%;\r\n  }\r\n  .card-picture {\r\n    width: 23%;\r\n    margin-bottom: 2%;\r\n    \r\n  }\r\n  .search-form {\r\n    width: 90%;\r\n  }\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYnVzaW5lc3NjZW50ZXIvYmNmb3JtL2JjZm9ybS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksVUFBVTtJQUNWLGtCQUFrQjtFQUNwQjtFQUNBO0lBQ0UsZUFBZTtJQUNmLFVBQVU7RUFDWjtFQUNBO0lBQ0UsVUFBVTtJQUNWLGlCQUFpQjs7RUFFbkI7RUFFQTtJQUNFLFVBQVU7RUFDWiIsImZpbGUiOiJzcmMvYXBwL2J1c2luZXNzY2VudGVyL2JjZm9ybS9iY2Zvcm0uY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5pbWcge1xyXG4gICAgd2lkdGg6IDQwJTtcclxuICAgIG1hcmdpbi1ib3R0b206IDEwJTtcclxuICB9XHJcbiAgLmNvbnRhaW5lciB7XHJcbiAgICBtaW4taGVpZ2h0OiA1MCU7XHJcbiAgICB3aWR0aDogNTAlO1xyXG4gIH1cclxuICAuY2FyZC1waWN0dXJlIHtcclxuICAgIHdpZHRoOiAyMyU7XHJcbiAgICBtYXJnaW4tYm90dG9tOiAyJTtcclxuICAgIFxyXG4gIH1cclxuICBcclxuICAuc2VhcmNoLWZvcm0ge1xyXG4gICAgd2lkdGg6IDkwJTtcclxuICB9Il19 */");
 
 /***/ }),
 
@@ -1845,7 +1861,7 @@ var BcformComponent = /** @class */ (function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9idXNpbmVzc2NlbnRlci9iY2Zvcm1tb2RhbC9iY2Zvcm1tb2RhbC5jb21wb25lbnQuY3NzIn0= */");
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2J1c2luZXNzY2VudGVyL2JjZm9ybW1vZGFsL2JjZm9ybW1vZGFsLmNvbXBvbmVudC5jc3MifQ== */");
 
 /***/ }),
 
@@ -1991,7 +2007,7 @@ var BcformmodalComponent = /** @class */ (function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("div span.only-show-on-hover {\r\n    visibility: hidden;\r\n}\r\ndiv:hover span.only-show-on-hover  {\r\n    visibility: visible;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL2J1c2luZXNzY2VudGVyL2JjbGlzdC9iY2xpc3QuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGtCQUFrQjtBQUN0QjtBQUNBO0lBQ0ksbUJBQW1CO0FBQ3ZCIiwiZmlsZSI6Ii4uL2J1c2luZXNzY2VudGVyL2JjbGlzdC9iY2xpc3QuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbImRpdiBzcGFuLm9ubHktc2hvdy1vbi1ob3ZlciB7XHJcbiAgICB2aXNpYmlsaXR5OiBoaWRkZW47XHJcbn1cclxuZGl2OmhvdmVyIHNwYW4ub25seS1zaG93LW9uLWhvdmVyICB7XHJcbiAgICB2aXNpYmlsaXR5OiB2aXNpYmxlO1xyXG59Il19 */");
+/* harmony default export */ __webpack_exports__["default"] = ("div span.only-show-on-hover {\r\n    visibility: hidden;\r\n}\r\ndiv:hover span.only-show-on-hover  {\r\n    visibility: visible;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYnVzaW5lc3NjZW50ZXIvYmNsaXN0L2JjbGlzdC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksa0JBQWtCO0FBQ3RCO0FBQ0E7SUFDSSxtQkFBbUI7QUFDdkIiLCJmaWxlIjoic3JjL2FwcC9idXNpbmVzc2NlbnRlci9iY2xpc3QvYmNsaXN0LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJkaXYgc3Bhbi5vbmx5LXNob3ctb24taG92ZXIge1xyXG4gICAgdmlzaWJpbGl0eTogaGlkZGVuO1xyXG59XHJcbmRpdjpob3ZlciBzcGFuLm9ubHktc2hvdy1vbi1ob3ZlciAge1xyXG4gICAgdmlzaWJpbGl0eTogdmlzaWJsZTtcclxufSJdfQ== */");
 
 /***/ }),
 
@@ -2122,7 +2138,7 @@ var BclistComponent = /** @class */ (function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9idXNpbmVzc2NlbnRlci9iY3Nob3cvYmNzaG93LmNvbXBvbmVudC5jc3MifQ== */");
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2J1c2luZXNzY2VudGVyL2Jjc2hvdy9iY3Nob3cuY29tcG9uZW50LmNzcyJ9 */");
 
 /***/ }),
 
@@ -2408,7 +2424,7 @@ var BusinesscenterModule = /** @class */ (function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9idXNpbmVzc2NlbnRlci9idXNpbmVzc2hvdXJtb2RhbC9idXNpbmVzc2hvdXJtb2RhbC5jb21wb25lbnQuY3NzIn0= */");
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2J1c2luZXNzY2VudGVyL2J1c2luZXNzaG91cm1vZGFsL2J1c2luZXNzaG91cm1vZGFsLmNvbXBvbmVudC5jc3MifQ== */");
 
 /***/ }),
 
@@ -2575,7 +2591,7 @@ var Request = /** @class */ (function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9idXNpbmVzc2NlbnRlci9yZXF1ZXN0bW9kYWwvcmVxdWVzdG1vZGFsLmNvbXBvbmVudC5jc3MifQ== */");
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2J1c2luZXNzY2VudGVyL3JlcXVlc3Rtb2RhbC9yZXF1ZXN0bW9kYWwuY29tcG9uZW50LmNzcyJ9 */");
 
 /***/ }),
 
@@ -2887,6 +2903,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_flex_layout__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/flex-layout */ "./node_modules/@angular/flex-layout/esm5/flex-layout.es5.js");
 /* harmony import */ var _invshow_invshow_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./invshow/invshow.component */ "./src/app/clientinventory/invshow/invshow.component.ts");
 /* harmony import */ var ngx_bootstrap_carousel__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ngx-bootstrap/carousel */ "./node_modules/ngx-bootstrap/carousel/fesm5/ngx-bootstrap-carousel.js");
+/* harmony import */ var _invlist_invlist_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./invlist/invlist.component */ "./src/app/clientinventory/invlist/invlist.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2908,12 +2925,13 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 
 
 
+
 var ClientinventoryModule = /** @class */ (function () {
     function ClientinventoryModule() {
     }
     ClientinventoryModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
-            declarations: [_invupload_invupload_component__WEBPACK_IMPORTED_MODULE_3__["InvuploadComponent"], _invshow_invshow_component__WEBPACK_IMPORTED_MODULE_10__["InvshowComponent"]],
+            declarations: [_invupload_invupload_component__WEBPACK_IMPORTED_MODULE_3__["InvuploadComponent"], _invshow_invshow_component__WEBPACK_IMPORTED_MODULE_10__["InvshowComponent"], _invlist_invlist_component__WEBPACK_IMPORTED_MODULE_12__["InvlistComponent"]],
             imports: [
                 _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -2929,12 +2947,131 @@ var ClientinventoryModule = /** @class */ (function () {
                     },
                     {
                         path: 'clientinv/:id', component: _invshow_invshow_component__WEBPACK_IMPORTED_MODULE_10__["InvshowComponent"]
+                    },
+                    {
+                        path: 'clientlist', component: _invlist_invlist_component__WEBPACK_IMPORTED_MODULE_12__["InvlistComponent"]
                     }
                 ])
-            ]
+            ],
+            providers: []
         })
     ], ClientinventoryModule);
     return ClientinventoryModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/clientinventory/invlist/invlist.component.css":
+/*!***************************************************************!*\
+  !*** ./src/app/clientinventory/invlist/invlist.component.css ***!
+  \***************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NsaWVudGludmVudG9yeS9pbnZsaXN0L2ludmxpc3QuY29tcG9uZW50LmNzcyJ9 */");
+
+/***/ }),
+
+/***/ "./src/app/clientinventory/invlist/invlist.component.ts":
+/*!**************************************************************!*\
+  !*** ./src/app/clientinventory/invlist/invlist.component.ts ***!
+  \**************************************************************/
+/*! exports provided: InvlistComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "InvlistComponent", function() { return InvlistComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ngx-spinner */ "./node_modules/ngx-spinner/fesm5/ngx-spinner.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _invservice_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../invservice.service */ "./src/app/clientinventory/invservice.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+
+
+var InvlistComponent = /** @class */ (function () {
+    function InvlistComponent(spinner, route, service) {
+        this.spinner = spinner;
+        this.route = route;
+        this.service = service;
+    }
+    Object.defineProperty(InvlistComponent.prototype, "Search", {
+        get: function () {
+            return this._search;
+        },
+        set: function (value) {
+            this._search = value;
+            this.FilterList(value);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    InvlistComponent.prototype.ngOnInit = function () {
+        this.GetList();
+    };
+    InvlistComponent.prototype.FilterList = function (filter) {
+        if (filter === '' || filter === undefined) {
+            this.list = this.templist;
+        }
+        else {
+            this.list = this.templist.filter(function (x) { return x.ClientId.includes(filter) || x.ClientName.includes(filter); });
+        }
+    };
+    InvlistComponent.prototype.GetList = function () {
+        var _this = this;
+        this.spinner.show();
+        this.service.currentMessage.subscribe(function (val) {
+            if (val.length === 0) {
+                _this.service.getList().subscribe(function (vals) {
+                    _this.list = vals;
+                    _this.service.changeMessage(vals);
+                    _this.templist = _this.list;
+                    _this.spinner.hide();
+                }, function (err) {
+                    alert('Not Found or Error');
+                    _this.spinner.hide();
+                });
+            }
+            else {
+                _this.list = val;
+                _this.spinner.hide();
+            }
+        });
+    };
+    InvlistComponent.prototype.showEntity = function (id) {
+        window.open('#/clientinv/' + id, '_self');
+    };
+    InvlistComponent.ctorParameters = function () { return [
+        { type: ngx_spinner__WEBPACK_IMPORTED_MODULE_1__["NgxSpinnerService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] },
+        { type: _invservice_service__WEBPACK_IMPORTED_MODULE_3__["InvserviceService"] }
+    ]; };
+    InvlistComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-invlist',
+            template: __importDefault(__webpack_require__(/*! raw-loader!./invlist.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/clientinventory/invlist/invlist.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./invlist.component.css */ "./src/app/clientinventory/invlist/invlist.component.css")).default]
+        }),
+        __metadata("design:paramtypes", [ngx_spinner__WEBPACK_IMPORTED_MODULE_1__["NgxSpinnerService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"], _invservice_service__WEBPACK_IMPORTED_MODULE_3__["InvserviceService"]])
+    ], InvlistComponent);
+    return InvlistComponent;
 }());
 
 
@@ -2953,6 +3090,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "InvserviceService", function() { return InvserviceService; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2967,6 +3105,7 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 };
 
 
+
 var InvserviceService = /** @class */ (function () {
     function InvserviceService(http) {
         this.http = http;
@@ -2978,7 +3117,23 @@ var InvserviceService = /** @class */ (function () {
         this.getEntityUrl = 'api/ClientInventoryApi/client/';
         this.getImagesUrl = 'api/ClientInventoryApi/temp/6';
         this.getListUrl = 'api/ClientInventoryApi/';
+        this._list = [];
+        this.messageSource = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](this.list);
+        this.currentMessage = this.messageSource.asObservable();
     }
+    Object.defineProperty(InvserviceService.prototype, "list", {
+        get: function () {
+            return this._list;
+        },
+        set: function (value) {
+            this._list = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    InvserviceService.prototype.changeMessage = function (message) {
+        this.messageSource.next(message);
+    };
     InvserviceService.prototype.postFile = function (file) {
         var url = this.site + this.postFileurl;
         // Headers
@@ -3004,7 +3159,7 @@ var InvserviceService = /** @class */ (function () {
         return this.http.get(url);
     };
     InvserviceService.prototype.getList = function () {
-        var url = this.site + this.getEntityUrl;
+        var url = this.site + this.getListUrl;
         return this.http.get(url);
     };
     InvserviceService.prototype.getImages = function () {
@@ -3036,7 +3191,7 @@ var InvserviceService = /** @class */ (function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJpbnZzaG93L2ludnNob3cuY29tcG9uZW50LmNzcyJ9 */");
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NsaWVudGludmVudG9yeS9pbnZzaG93L2ludnNob3cuY29tcG9uZW50LmNzcyJ9 */");
 
 /***/ }),
 
@@ -3097,12 +3252,20 @@ var InvshowComponent = /** @class */ (function () {
     InvshowComponent.prototype.GetEntity = function (ID) {
         var _this = this;
         this.spinner.show();
-        this.service.getEntityById(ID).subscribe(function (val) {
-            _this.Entity = val;
-            _this.spinner.hide();
-        }, function (err) {
-            alert('Not Found');
-            _this.spinner.hide();
+        this.service.currentMessage.subscribe(function (val) {
+            if (val.length === 0) {
+                _this.service.getEntityById(ID).subscribe(function (value) {
+                    _this.Entity = value;
+                    _this.spinner.hide();
+                }, function (err) {
+                    alert('無此客戶或發生錯誤');
+                    _this.spinner.hide();
+                });
+            }
+            else {
+                _this.Entity = val.find(function (x) { return x.ClientId === ID; });
+                _this.spinner.hide();
+            }
         });
     };
     InvshowComponent.prototype.GetProjectImages = function () {
@@ -3142,7 +3305,7 @@ var InvshowComponent = /** @class */ (function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJpbnZ1cGxvYWQvaW52dXBsb2FkLmNvbXBvbmVudC5jc3MifQ== */");
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NsaWVudGludmVudG9yeS9pbnZ1cGxvYWQvaW52dXBsb2FkLmNvbXBvbmVudC5jc3MifQ== */");
 
 /***/ }),
 
@@ -3323,7 +3486,7 @@ var ProjectImages = /** @class */ (function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("div{\r\n    align-content: left;\r\n}\r\n\r\ntable {\r\n    width: 200;\r\n}\r\n\r\nthead{\r\n    color: #337AB7; \r\n    align-content: center;\r\n    \r\n}\r\n\r\nrow td{\r\n    align-content: left;\r\n    text-align: left;\r\n}\r\n\r\n.loader {\r\n  border: 16px solid #f3f3f3;\r\n  border-radius: 50%;\r\n  border-top: 16px solid #3498db;\r\n  width: 120px;\r\n  height: 120px;\r\n  -webkit-animation: spin 2s linear infinite; /* Safari */\r\n  animation: spin 2s linear infinite;\r\n}\r\n\r\n/* Safari */\r\n\r\n@-webkit-keyframes spin {\r\n  0% { -webkit-transform: rotate(0deg); }\r\n  100% { -webkit-transform: rotate(360deg); }\r\n}\r\n\r\n@keyframes spin {\r\n  0% { transform: rotate(0deg); }\r\n  100% { transform: rotate(360deg); }\r\n}\r\n \r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL2N1c3RvbWVybG9nLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxtQkFBbUI7QUFDdkI7O0FBRUE7SUFDSSxVQUFVO0FBQ2Q7O0FBRUE7SUFDSSxjQUFjO0lBQ2QscUJBQXFCOztBQUV6Qjs7QUFFQTtJQUNJLG1CQUFtQjtJQUNuQixnQkFBZ0I7QUFDcEI7O0FBSUE7RUFDRSwwQkFBMEI7RUFDMUIsa0JBQWtCO0VBQ2xCLDhCQUE4QjtFQUM5QixZQUFZO0VBQ1osYUFBYTtFQUNiLDBDQUEwQyxFQUFFLFdBQVc7RUFDdkQsa0NBQWtDO0FBQ3BDOztBQUVBLFdBQVc7O0FBQ1g7RUFDRSxLQUFLLCtCQUErQixFQUFFO0VBQ3RDLE9BQU8saUNBQWlDLEVBQUU7QUFDNUM7O0FBRUE7RUFDRSxLQUFLLHVCQUF1QixFQUFFO0VBQzlCLE9BQU8seUJBQXlCLEVBQUU7QUFDcEMiLCJmaWxlIjoiLi4vY3VzdG9tZXJsb2cuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbImRpdntcclxuICAgIGFsaWduLWNvbnRlbnQ6IGxlZnQ7XHJcbn1cclxuXHJcbnRhYmxlIHtcclxuICAgIHdpZHRoOiAyMDA7XHJcbn1cclxuXHJcbnRoZWFke1xyXG4gICAgY29sb3I6ICMzMzdBQjc7IFxyXG4gICAgYWxpZ24tY29udGVudDogY2VudGVyO1xyXG4gICAgXHJcbn1cclxuXHJcbnJvdyB0ZHtcclxuICAgIGFsaWduLWNvbnRlbnQ6IGxlZnQ7XHJcbiAgICB0ZXh0LWFsaWduOiBsZWZ0O1xyXG59XHJcblxyXG5cclxuIFxyXG4ubG9hZGVyIHtcclxuICBib3JkZXI6IDE2cHggc29saWQgI2YzZjNmMztcclxuICBib3JkZXItcmFkaXVzOiA1MCU7XHJcbiAgYm9yZGVyLXRvcDogMTZweCBzb2xpZCAjMzQ5OGRiO1xyXG4gIHdpZHRoOiAxMjBweDtcclxuICBoZWlnaHQ6IDEyMHB4O1xyXG4gIC13ZWJraXQtYW5pbWF0aW9uOiBzcGluIDJzIGxpbmVhciBpbmZpbml0ZTsgLyogU2FmYXJpICovXHJcbiAgYW5pbWF0aW9uOiBzcGluIDJzIGxpbmVhciBpbmZpbml0ZTtcclxufVxyXG5cclxuLyogU2FmYXJpICovXHJcbkAtd2Via2l0LWtleWZyYW1lcyBzcGluIHtcclxuICAwJSB7IC13ZWJraXQtdHJhbnNmb3JtOiByb3RhdGUoMGRlZyk7IH1cclxuICAxMDAlIHsgLXdlYmtpdC10cmFuc2Zvcm06IHJvdGF0ZSgzNjBkZWcpOyB9XHJcbn1cclxuXHJcbkBrZXlmcmFtZXMgc3BpbiB7XHJcbiAgMCUgeyB0cmFuc2Zvcm06IHJvdGF0ZSgwZGVnKTsgfVxyXG4gIDEwMCUgeyB0cmFuc2Zvcm06IHJvdGF0ZSgzNjBkZWcpOyB9XHJcbn1cclxuICJdfQ== */");
+/* harmony default export */ __webpack_exports__["default"] = ("div{\r\n    align-content: left;\r\n}\r\n\r\ntable {\r\n    width: 200;\r\n}\r\n\r\nthead{\r\n    color: #337AB7; \r\n    align-content: center;\r\n    \r\n}\r\n\r\nrow td{\r\n    align-content: left;\r\n    text-align: left;\r\n}\r\n\r\n.loader {\r\n  border: 16px solid #f3f3f3;\r\n  border-radius: 50%;\r\n  border-top: 16px solid #3498db;\r\n  width: 120px;\r\n  height: 120px;\r\n  -webkit-animation: spin 2s linear infinite; /* Safari */\r\n  animation: spin 2s linear infinite;\r\n}\r\n\r\n/* Safari */\r\n\r\n@-webkit-keyframes spin {\r\n  0% { -webkit-transform: rotate(0deg); }\r\n  100% { -webkit-transform: rotate(360deg); }\r\n}\r\n\r\n@keyframes spin {\r\n  0% { transform: rotate(0deg); }\r\n  100% { transform: rotate(360deg); }\r\n}\r\n \r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY3VzdG9tZXJsb2cuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLG1CQUFtQjtBQUN2Qjs7QUFFQTtJQUNJLFVBQVU7QUFDZDs7QUFFQTtJQUNJLGNBQWM7SUFDZCxxQkFBcUI7O0FBRXpCOztBQUVBO0lBQ0ksbUJBQW1CO0lBQ25CLGdCQUFnQjtBQUNwQjs7QUFJQTtFQUNFLDBCQUEwQjtFQUMxQixrQkFBa0I7RUFDbEIsOEJBQThCO0VBQzlCLFlBQVk7RUFDWixhQUFhO0VBQ2IsMENBQTBDLEVBQUUsV0FBVztFQUN2RCxrQ0FBa0M7QUFDcEM7O0FBRUEsV0FBVzs7QUFDWDtFQUNFLEtBQUssK0JBQStCLEVBQUU7RUFDdEMsT0FBTyxpQ0FBaUMsRUFBRTtBQUM1Qzs7QUFFQTtFQUNFLEtBQUssdUJBQXVCLEVBQUU7RUFDOUIsT0FBTyx5QkFBeUIsRUFBRTtBQUNwQyIsImZpbGUiOiJzcmMvYXBwL2N1c3RvbWVybG9nLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJkaXZ7XHJcbiAgICBhbGlnbi1jb250ZW50OiBsZWZ0O1xyXG59XHJcblxyXG50YWJsZSB7XHJcbiAgICB3aWR0aDogMjAwO1xyXG59XHJcblxyXG50aGVhZHtcclxuICAgIGNvbG9yOiAjMzM3QUI3OyBcclxuICAgIGFsaWduLWNvbnRlbnQ6IGNlbnRlcjtcclxuICAgIFxyXG59XHJcblxyXG5yb3cgdGR7XHJcbiAgICBhbGlnbi1jb250ZW50OiBsZWZ0O1xyXG4gICAgdGV4dC1hbGlnbjogbGVmdDtcclxufVxyXG5cclxuXHJcbiBcclxuLmxvYWRlciB7XHJcbiAgYm9yZGVyOiAxNnB4IHNvbGlkICNmM2YzZjM7XHJcbiAgYm9yZGVyLXJhZGl1czogNTAlO1xyXG4gIGJvcmRlci10b3A6IDE2cHggc29saWQgIzM0OThkYjtcclxuICB3aWR0aDogMTIwcHg7XHJcbiAgaGVpZ2h0OiAxMjBweDtcclxuICAtd2Via2l0LWFuaW1hdGlvbjogc3BpbiAycyBsaW5lYXIgaW5maW5pdGU7IC8qIFNhZmFyaSAqL1xyXG4gIGFuaW1hdGlvbjogc3BpbiAycyBsaW5lYXIgaW5maW5pdGU7XHJcbn1cclxuXHJcbi8qIFNhZmFyaSAqL1xyXG5ALXdlYmtpdC1rZXlmcmFtZXMgc3BpbiB7XHJcbiAgMCUgeyAtd2Via2l0LXRyYW5zZm9ybTogcm90YXRlKDBkZWcpOyB9XHJcbiAgMTAwJSB7IC13ZWJraXQtdHJhbnNmb3JtOiByb3RhdGUoMzYwZGVnKTsgfVxyXG59XHJcblxyXG5Aa2V5ZnJhbWVzIHNwaW4ge1xyXG4gIDAlIHsgdHJhbnNmb3JtOiByb3RhdGUoMGRlZyk7IH1cclxuICAxMDAlIHsgdHJhbnNmb3JtOiByb3RhdGUoMzYwZGVnKTsgfVxyXG59XHJcbiAiXX0= */");
 
 /***/ }),
 
@@ -3586,7 +3749,7 @@ var customerlog = /** @class */ (function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9lbWFpbG1vZGFsL2VtYWlsbW9kYWwuY29tcG9uZW50LmNzcyJ9 */");
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2VtYWlsbW9kYWwvZW1haWxtb2RhbC5jb21wb25lbnQuY3NzIn0= */");
 
 /***/ }),
 
@@ -3824,7 +3987,7 @@ var ProductsComponent = /** @class */ (function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("div{\r\n    align-content: left;\r\n}\r\n\r\ntable {\r\n    width: 200;\r\n}\r\n\r\nthead{\r\n    color: #337AB7; \r\n    align-content: center;\r\n    \r\n}\r\n\r\nrow td{\r\n    align-content: left;\r\n    text-align: left;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3N0b25ld2VpZ2h0LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxtQkFBbUI7QUFDdkI7O0FBRUE7SUFDSSxVQUFVO0FBQ2Q7O0FBRUE7SUFDSSxjQUFjO0lBQ2QscUJBQXFCOztBQUV6Qjs7QUFFQTtJQUNJLG1CQUFtQjtJQUNuQixnQkFBZ0I7QUFDcEIiLCJmaWxlIjoiLi4vc3RvbmV3ZWlnaHQuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbImRpdntcclxuICAgIGFsaWduLWNvbnRlbnQ6IGxlZnQ7XHJcbn1cclxuXHJcbnRhYmxlIHtcclxuICAgIHdpZHRoOiAyMDA7XHJcbn1cclxuXHJcbnRoZWFke1xyXG4gICAgY29sb3I6ICMzMzdBQjc7IFxyXG4gICAgYWxpZ24tY29udGVudDogY2VudGVyO1xyXG4gICAgXHJcbn1cclxuXHJcbnJvdyB0ZHtcclxuICAgIGFsaWduLWNvbnRlbnQ6IGxlZnQ7XHJcbiAgICB0ZXh0LWFsaWduOiBsZWZ0O1xyXG59Il19 */");
+/* harmony default export */ __webpack_exports__["default"] = ("div{\r\n    align-content: left;\r\n}\r\n\r\ntable {\r\n    width: 200;\r\n}\r\n\r\nthead{\r\n    color: #337AB7; \r\n    align-content: center;\r\n    \r\n}\r\n\r\nrow td{\r\n    align-content: left;\r\n    text-align: left;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc3RvbmV3ZWlnaHQuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLG1CQUFtQjtBQUN2Qjs7QUFFQTtJQUNJLFVBQVU7QUFDZDs7QUFFQTtJQUNJLGNBQWM7SUFDZCxxQkFBcUI7O0FBRXpCOztBQUVBO0lBQ0ksbUJBQW1CO0lBQ25CLGdCQUFnQjtBQUNwQiIsImZpbGUiOiJzcmMvYXBwL3N0b25ld2VpZ2h0LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJkaXZ7XHJcbiAgICBhbGlnbi1jb250ZW50OiBsZWZ0O1xyXG59XHJcblxyXG50YWJsZSB7XHJcbiAgICB3aWR0aDogMjAwO1xyXG59XHJcblxyXG50aGVhZHtcclxuICAgIGNvbG9yOiAjMzM3QUI3OyBcclxuICAgIGFsaWduLWNvbnRlbnQ6IGNlbnRlcjtcclxuICAgIFxyXG59XHJcblxyXG5yb3cgdGR7XHJcbiAgICBhbGlnbi1jb250ZW50OiBsZWZ0O1xyXG4gICAgdGV4dC1hbGlnbjogbGVmdDtcclxufSJdfQ== */");
 
 /***/ }),
 
