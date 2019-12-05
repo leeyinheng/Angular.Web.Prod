@@ -139,7 +139,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n        <span> <img src='../assets/Photos/tealogo.jpg' width=20% height=20% /></span>\r\n        <p></p>\r\n    </div>\r\n    \r\n    <h1>所有客戶庫存表</h1>   \r\n\r\n    <div class=\"form form-row\">\r\n        <label>搜尋:</label>\r\n        <input type=\"string\" placeholder=\"編號或名稱\" class=\"form form-control\"\r\n        [(ngModel)]='Search'\r\n        style=\"width: 8em;\"\r\n        /> \r\n    </div>\r\n    <p></p>\r\n    <table class=\"table table-bordered table-striped table-hover\">\r\n        <tr>\r\n            <th>\r\n                客戶編號\r\n            </th>\r\n            <th>\r\n                客戶名稱\r\n            </th>\r\n            <th>\r\n                地址\r\n            </th>    \r\n            <th>\r\n                電話\r\n            </th>\r\n        </tr>\r\n        \r\n           \r\n            <tbody> \r\n                <tr *ngFor = 'let item of list' >\r\n                    <td>\r\n                        {{item.ClientId}}\r\n                    </td>\r\n                    <td>{{ item.ClientName}}\r\n                          \r\n                    </td>\r\n                    <td>{{ item.Address}}</td>\r\n                    <td>\r\n                        {{item.Phone}}\r\n                    </td>\r\n                  \r\n                    <td>\r\n                        <button type=\"button\" class=\"btn btn-dark\" (click) = showEntity(item.ClientId)>庫藏內容</button> |\r\n                        <button type=\"button\" class=\"btn btn-info\" (click) = showUserEntity(item.ClientId)>藏家展示頁面</button>\r\n                    </td>\r\n                </tr>\r\n            </tbody>\r\n           \r\n    </table>\r\n    \r\n    \r\n    \r\n    <ngx-spinner\r\n      bdColor=\"rgba(51,51,51,0.8)\"\r\n      size=\"medium\"\r\n      color=\"#fff\"\r\n      type=\"ball-scale-multiple\"\r\n    >\r\n      <p style=\"font-size: 20px; color: white\">處理中...</p>\r\n    </ngx-spinner>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n        <span> <img src='../assets/Photos/tealogo.jpg' width=20% height=20% /></span>\r\n        <p></p>\r\n    </div>\r\n    \r\n    <h1>所有客戶庫存表</h1>   \r\n    <div>\r\n            <button type=\"button\" class=\"btn btn-success\" onclick=\"location.href='#/teaportal';\">返回管理頁面</button>   \r\n            <p></p>\r\n    </div>\r\n    <div class=\"form form-row\">\r\n        <label>搜尋:</label>\r\n        <input type=\"string\" placeholder=\"編號或名稱\" class=\"form form-control\"\r\n        [(ngModel)]='Search'\r\n        style=\"width: 8em;\"\r\n        /> \r\n    </div>\r\n    <p></p>\r\n    <table class=\"table table-bordered table-striped table-hover\">\r\n        <tr>\r\n            <th>\r\n                客戶編號\r\n            </th>\r\n            <th>\r\n                客戶名稱\r\n            </th>\r\n            <th>\r\n                地址\r\n            </th>    \r\n            <th>\r\n                電話\r\n            </th>\r\n            <th>\r\n\r\n            </th>\r\n        </tr>\r\n        \r\n           \r\n            <tbody> \r\n                <tr *ngFor = 'let item of list' >\r\n                    <td>\r\n                        {{item.ClientId}}\r\n                    </td>\r\n                    <td>{{ item.ClientName}}\r\n                          \r\n                    </td>\r\n                    <td>{{ item.Address}}</td>\r\n                    <td>\r\n                        {{item.Phone}}\r\n                    </td>\r\n                  \r\n                    <td>\r\n                        <button type=\"button\" class=\"btn btn-dark\" (click) = showEntity(item.ClientId)>庫藏內容</button> |\r\n                        <button type=\"button\" class=\"btn btn-info\" (click) = showUserEntity(item.ClientId)>藏家展示頁面</button>\r\n                    </td>\r\n                </tr>\r\n            </tbody>\r\n           \r\n    </table>\r\n    \r\n    <div>\r\n            <button type=\"button\" class=\"btn btn-success\" onclick=\"location.href='#/teaportal';\">返回管理頁面</button>   \r\n            <p></p>\r\n    </div>\r\n    \r\n    <ngx-spinner\r\n      bdColor=\"rgba(51,51,51,0.8)\"\r\n      size=\"medium\"\r\n      color=\"#fff\"\r\n      type=\"ball-scale-multiple\"\r\n    >\r\n      <p style=\"font-size: 20px; color: white\">處理中...</p>\r\n    </ngx-spinner>");
 
 /***/ }),
 
@@ -152,7 +152,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<span> <img src='../assets/Photos/tealogo.jpg' width=20% height=20% /></span>\r\n<p></p>\r\n<span> <img src='../assets/Photos/title2.jpg' width=100% height=100% /></span>\r\n<p></p>\r\n<form>\r\n  <div class=\"form-group\">\r\n        <table class=\"table table-bordered table-striped\">\r\n                <tbody>\r\n  \r\n                    <tr>\r\n                        \r\n                        <td>\r\n                            客戶編號:\r\n                        </td>\r\n                        <TD>\r\n                                {{Entity.ClientId}}\r\n                        </TD>\r\n                    </tr>\r\n                    <tr>\r\n                        <td>\r\n                               客戶名稱:\r\n                        </td>\r\n                        <td>\r\n                            <b><h1 class=\"h4\">{{Entity.ClientName}} </h1></b>\r\n                        </td>\r\n                    </tr>\r\n                    <tr>\r\n                        <td>\r\n                            地址:\r\n                        </td>\r\n                        <td>\r\n                                {{Entity.Address}} \r\n                        </td>\r\n                    </tr>\r\n                    <tr>\r\n                        <td>\r\n                            電話:\r\n                        </td>\r\n                        <td>\r\n                            {{Entity.Phone}}\r\n                        </td>\r\n                </tbody>   \r\n        </table>\r\n        <div *ngIf=\"IsManager\">\r\n            <table class=\"table table-bordered table-striped table-hover\" style=\"background: skyblue;\">\r\n                <tr>\r\n                    <th>\r\n                        序號\r\n                    </th>\r\n                    <th>\r\n                       產品編號\r\n                    </th>\r\n                    <th>\r\n                        產品名稱\r\n                    </th> \r\n                    <th>\r\n                        借/寄庫量\r\n                    </th>    \r\n                    <th>\r\n                        單位\r\n                    </th>\r\n                    <th>\r\n                        已歸還量\r\n                    </th>\r\n                    <th>\r\n                        未歸還量\r\n                    </th>\r\n                </tr>\r\n                \r\n                   \r\n                    <tbody> \r\n                        <tr *ngFor = 'let item of Entity.Inventories; let x = index  ' >\r\n                            <td>\r\n                                {{ x  + 1 }}\r\n                            </td>\r\n                            <td>\r\n                                {{item.ProductId}}\r\n                            </td>\r\n                            <td>\r\n                                {{ item.ProductName}}  \r\n                            </td>\r\n                            <td>{{ item.Stock }}</td>\r\n                          \r\n                            <td>\r\n                                {{ item.Unit }}  \r\n                            </td>\r\n                            <td>\r\n                                {{ item.Return}}\r\n                            </td>\r\n                            <td>\r\n                                {{ item.NotReturn}}\r\n                            </td>\r\n                            \r\n                        </tr>\r\n                    </tbody>\r\n                   \r\n            </table>\r\n        </div>\r\n        <div *ngIf=\"!IsManager\">\r\n            <table class=\"table table-bordered table-striped table-hover\">\r\n                <tr>\r\n                    <th>\r\n                        序號\r\n                    </th>\r\n                    <th>\r\n                       產品編號\r\n                    </th>\r\n                    <th>\r\n                        產品名稱\r\n                    </th>\r\n                    <th>\r\n                        借/寄庫量\r\n                    </th>    \r\n                    <th>\r\n                        單位\r\n                    </th>\r\n                    <th>\r\n                        已歸還量\r\n                    </th>\r\n                    <th>\r\n                        未歸還量\r\n                    </th>\r\n                </tr>\r\n                \r\n                   \r\n                    <tbody> \r\n                        <tr *ngFor = 'let item of userInvertories; let x = index;' >\r\n                            <td>\r\n                                {{ x  + 1 }}\r\n                            </td>\r\n                            <td>\r\n                                {{item.ProductId}}\r\n                            </td>\r\n                            <td>\r\n                                {{ item.ProductName}}  \r\n                            </td>\r\n                            <td>{{ item.Stock }}</td>\r\n                          \r\n                            <td>\r\n                                {{ item.Unit }}  \r\n                            </td>\r\n                            <td>\r\n                                {{ item.Return}}\r\n                            </td>\r\n                            <td>\r\n                                {{ item.NotReturn}}\r\n                            </td>\r\n                            \r\n                        </tr>\r\n                    </tbody>\r\n                    <tfoot>\r\n                            <tr>\r\n                              <td>總計</td>\r\n                              <td>\r\n                                     \r\n                                </td>\r\n                                <td>\r\n                                    \r\n                                </td>\r\n                                <td>\r\n                                    {{ stock_sum }}\r\n\r\n                                </td>\r\n                              \r\n                                <td>\r\n                                   \r\n                                </td>\r\n                                <td>\r\n                                    {{ return_sum}}\r\n                                </td>\r\n                                <td>\r\n                                    {{ notreturn_sum }}\r\n                                </td>\r\n                            </tr>\r\n                          </tfoot>\r\n                   \r\n            </table>\r\n        </div>\r\n       \r\n            \r\n        <h2>近六月溫度資料</h2>\r\n        <carousel  interval=\"0\">\r\n                <slide *ngFor=\"let item of images\">\r\n                  <img [src]=\"item.ImageUrl\" alt=\"Pages\" style=\"display: block; width: 100%;\">\r\n                  <div class=\"carousel-caption d-none d-md-block\">\r\n                  </div>\r\n                </slide> \r\n        </carousel>\r\n        \r\n\r\n  </div>\r\n</form>\r\n\r\n \r\n\r\n<ngx-spinner\r\n  bdColor=\"rgba(51,51,51,0.8)\"\r\n  size=\"medium\"\r\n  color=\"#fff\"\r\n  type=\"ball-scale-multiple\"\r\n>\r\n  <p style=\"font-size: 20px; color: white\">處理中...</p>\r\n</ngx-spinner>");
+/* harmony default export */ __webpack_exports__["default"] = ("<span> <img src='../assets/Photos/tealogo.jpg' width=20% height=20% /></span>\r\n<p></p>\r\n<span> <img src='../assets/Photos/title2.jpg' width=100% height=100% /></span>\r\n<p></p>\r\n<form>\r\n    <div *ngIf=\"IsManager\">\r\n           <button type=\"button\" class=\"btn btn-info\" onclick=\"location.href='#/clientlist';\">返回列表</button>   \r\n           <p></p>\r\n   </div>\r\n      \r\n  <div class=\"form-group\">\r\n        <table class=\"table table-bordered table-striped\">\r\n                <tbody>\r\n  \r\n                    <tr>\r\n                        \r\n                        <td>\r\n                            客戶編號:\r\n                        </td>\r\n                        <TD>\r\n                                {{Entity.ClientId}}\r\n                        </TD>\r\n                    </tr>\r\n                    <tr>\r\n                        <td>\r\n                               客戶名稱:\r\n                        </td>\r\n                        <td>\r\n                            <b><h1 class=\"h4\">{{Entity.ClientName}} </h1></b>\r\n                        </td>\r\n                    </tr>\r\n                    <tr>\r\n                        <td>\r\n                            地址:\r\n                        </td>\r\n                        <td>\r\n                                {{Entity.Address}} \r\n                        </td>\r\n                    </tr>\r\n                    <tr>\r\n                        <td>\r\n                            電話:\r\n                        </td>\r\n                        <td>\r\n                            {{Entity.Phone}}\r\n                        </td>\r\n                </tbody>   \r\n        </table>\r\n        <div *ngIf=\"IsManager\">\r\n            <table class=\"table table-bordered table-striped table-hover\" style=\"background: lightblue;\">\r\n                <tr>\r\n                    <th>\r\n                        序號\r\n                    </th>\r\n                    <th>\r\n                       產品編號\r\n                    </th>\r\n                    <th>\r\n                        產品名稱\r\n                    </th> \r\n                    <th>\r\n                        借/寄庫量\r\n                    </th>    \r\n                    <th>\r\n                        單位\r\n                    </th>\r\n                    <th>\r\n                        已歸還量\r\n                    </th>\r\n                    <th>\r\n                        未歸還量\r\n                    </th>\r\n                </tr>\r\n                \r\n                   \r\n                    <tbody> \r\n                        <tr *ngFor = 'let item of Entity.Inventories; let x = index  ' >\r\n                            <td>\r\n                                {{ x  + 1 }}\r\n                            </td>\r\n                            <td>\r\n                                {{item.ProductId}}\r\n                            </td>\r\n                            <td>\r\n                                {{ item.ProductName}}  \r\n                            </td>\r\n                            <td>{{ item.Stock }}</td>\r\n                          \r\n                            <td>\r\n                                {{ item.Unit }}  \r\n                            </td>\r\n                            <td>\r\n                                {{ item.Return}}\r\n                            </td>\r\n                            <td>\r\n                                {{ item.NotReturn}}\r\n                            </td>\r\n                            \r\n                        </tr>\r\n                    </tbody>\r\n                   \r\n            </table>\r\n        </div>\r\n        <div *ngIf=\"!IsManager\">\r\n            <table class=\"table table-bordered table-striped table-hover\">\r\n                <tr>\r\n                    <th>\r\n                        序號\r\n                    </th>\r\n                    <th>\r\n                       產品編號\r\n                    </th>\r\n                    <th>\r\n                        產品名稱\r\n                    </th>\r\n                    <th>\r\n                        借/寄庫量\r\n                    </th>    \r\n                    <th>\r\n                        單位\r\n                    </th>\r\n                    <th>\r\n                        已歸還量\r\n                    </th>\r\n                    <th>\r\n                        未歸還量\r\n                    </th>\r\n                </tr>\r\n                \r\n                   \r\n                    <tbody> \r\n                        <tr *ngFor = 'let item of userInvertories; let x = index;' >\r\n                            <td>\r\n                                {{ x  + 1 }}\r\n                            </td>\r\n                            <td>\r\n                                {{item.ProductId}}\r\n                            </td>\r\n                            <td>\r\n                                {{ item.ProductName}}  \r\n                            </td>\r\n                            <td>{{ item.Stock }}</td>\r\n                          \r\n                            <td>\r\n                                {{ item.Unit }}  \r\n                            </td>\r\n                            <td>\r\n                                {{ item.Return}}\r\n                            </td>\r\n                            <td>\r\n                                {{ item.NotReturn}}\r\n                            </td>\r\n                            \r\n                        </tr>\r\n                    </tbody>\r\n                    <tfoot>\r\n                            <tr>\r\n                              <td>總計</td>\r\n                              <td>\r\n                                     \r\n                                </td>\r\n                                <td>\r\n                                    \r\n                                </td>\r\n                                <td>\r\n                                    {{ stock_sum }}\r\n\r\n                                </td>\r\n                              \r\n                                <td>\r\n                                   \r\n                                </td>\r\n                                <td>\r\n                                    {{ return_sum}}\r\n                                </td>\r\n                                <td>\r\n                                    {{ notreturn_sum }}\r\n                                </td>\r\n                            </tr>\r\n                          </tfoot>\r\n                   \r\n            </table>\r\n        </div>\r\n       \r\n            \r\n        <h2>近六月溫度資料</h2>\r\n        <carousel  interval=\"0\">\r\n                <slide *ngFor=\"let item of images\">\r\n                  <img [src]=\"item.ImageUrl\" alt=\"Pages\" style=\"display: block; width: 100%;\">\r\n                  <div class=\"carousel-caption d-none d-md-block\">\r\n                  </div>\r\n                </slide> \r\n        </carousel>\r\n        \r\n        <div *ngIf=\"IsManager\">\r\n            <p></p>\r\n                <button type=\"button\" class=\"btn btn-info\" onclick=\"location.href='#/clientlist';\">返回列表</button>   \r\n                <p></p>\r\n        </div>\r\n  </div>\r\n</form>\r\n\r\n \r\n\r\n<ngx-spinner\r\n  bdColor=\"rgba(51,51,51,0.8)\"\r\n  size=\"medium\"\r\n  color=\"#fff\"\r\n  type=\"ball-scale-multiple\"\r\n>\r\n  <p style=\"font-size: 20px; color: white\">處理中...</p>\r\n</ngx-spinner>");
 
 /***/ }),
 
@@ -165,7 +165,33 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (" \n<div>\n        <span> <img src='../assets/Photos/tealogo.jpg' width=20% height=20% /></span>\n        <p></p>\n</div>\n\n<h1>上傳普洱茶倉儲Excel檔案(.xlsx):</h1>\n\n<div class=\"body-content\">\n        <div class=\"center\">\n                <ngx-file-drop dropZoneLabel=\"Drop files here\" (onFileDrop)=\"dropped($event)\" accept=\".xlsx\"\n                (onFileOver)=\"fileOver($event)\" (onFileLeave)=\"fileLeave($event)\">\n                    <ng-template ngx-file-drop-content-tmp let-openFileSelector=\"openFileSelector\">\n                      拖曳或是選擇要上傳的Excel檔案(請確定格式正確)\n                      <button type=\"button\" (click)=\"openFileSelector()\">Browse Files</button>\n                    </ng-template>\n                    \n                </ngx-file-drop>\n               \n        </div>\n</div>\n<hr>\n<h1>上傳普洱茶倉儲溫度紀錄照片(.jpg):</h1>\n<div class=\"body-content\">\n        <div class=\"center\">\n                <ngx-file-drop dropZoneLabel=\"Drop files here\" (onFileDrop)=\"dropped2($event)\" \n                (onFileOver)=\"fileOver($event)\" (onFileLeave)=\"fileLeave($event)\">\n                    <ng-template ngx-file-drop-content-tmp let-openFileSelector=\"openFileSelector\">\n                      拖曳或是選擇要上傳的照片(請勿超過4MB)\n                      <button type=\"button\" (click)=\"openFileSelector()\">Browse Files</button>\n                    </ng-template>\n                    \n                </ngx-file-drop>\n               \n        </div>\n</div>\n                        \n\n\n\n<ngx-spinner\n  bdColor=\"rgba(51,51,51,0.8)\"\n  size=\"medium\"\n  color=\"#fff\"\n  type=\"ball-scale-multiple\"\n>\n  <p style=\"font-size: 20px; color: white\">處理中...</p>\n</ngx-spinner>\n");
+/* harmony default export */ __webpack_exports__["default"] = (" \n<div>\n        <span> <img src='../assets/Photos/tealogo.jpg' width=20% height=20% /></span>\n        <p></p>\n</div>\n\n<h1>上傳普洱茶倉儲Excel檔案(.xlsx):</h1>\n<div>\n      <button type=\"button\" class=\"btn btn-success\" onclick=\"location.href='#/teaportal';\">返回管理頁面</button>   \n      <p></p>\n</div>\n\n<div class=\"body-content\">\n        <div class=\"center\">\n                <ngx-file-drop dropZoneLabel=\"Drop files here\" (onFileDrop)=\"dropped($event)\" accept=\".xlsx\"\n                (onFileOver)=\"fileOver($event)\" (onFileLeave)=\"fileLeave($event)\">\n                    <ng-template ngx-file-drop-content-tmp let-openFileSelector=\"openFileSelector\">\n                      拖曳或是選擇要上傳的Excel檔案(請確定格式正確)\n                      <button type=\"button\" (click)=\"openFileSelector()\">Browse Files</button>\n                    </ng-template>\n                    \n                </ngx-file-drop>\n               \n        </div>\n</div>\n<hr>\n<h1>上傳普洱茶倉儲溫度紀錄照片(.jpg):</h1>\n<div class=\"body-content\">\n        <div class=\"center\">\n                <ngx-file-drop dropZoneLabel=\"Drop files here\" (onFileDrop)=\"dropped2($event)\" \n                (onFileOver)=\"fileOver($event)\" (onFileLeave)=\"fileLeave($event)\">\n                    <ng-template ngx-file-drop-content-tmp let-openFileSelector=\"openFileSelector\">\n                      拖曳或是選擇要上傳的照片(請勿超過4MB)\n                      <button type=\"button\" (click)=\"openFileSelector()\">Browse Files</button>\n                    </ng-template>\n                    \n                </ngx-file-drop>\n               \n        </div>\n</div>\n                        \n\n\n\n<ngx-spinner\n  bdColor=\"rgba(51,51,51,0.8)\"\n  size=\"medium\"\n  color=\"#fff\"\n  type=\"ball-scale-multiple\"\n>\n  <p style=\"font-size: 20px; color: white\">處理中...</p>\n</ngx-spinner>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/clientinventory/login/login.component.html":
+/*!**************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/clientinventory/login/login.component.html ***!
+  \**************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<span> <img src='../assets/Photos/tealogo.jpg' width=20% height=20% /></span>\n<p></p>\n<span> <img src='../assets/Photos/title2.jpg' width=100% height=100% /></span>\n<p></p>\n\n<div>\n    <mat-card class=\"example-card\">\n        <mat-card-header>\n          <mat-card-title>管理員登入</mat-card-title>\n        </mat-card-header>\n        <mat-card-content>\n          <form class=\"example-form\">\n            <table class=\"example-full-width\" cellspacing=\"0\">\n              <tr>\n                <td>\n                  <mat-form-field class=\"example-full-width\">\n                  <input matInput placeholder=\"Username\" [(ngModel)]=\"username\" name=\"username\" required>\n                  </mat-form-field>\n                </td>\n              </tr>\n              <tr>\n              <td><mat-form-field class=\"example-full-width\">\n                <input matInput placeholder=\"Password\" [(ngModel)]=\"password\"type=\"password\" name=\"password\" required>\n              </mat-form-field></td>\n            </tr></table>\n          </form>\n          <mat-spinner [style.display]=\"showSpinner ? 'block' : 'none'\"></mat-spinner>\n        </mat-card-content>\n        <mat-card-actions>\n          <button mat-raised-button (click)=\"login()\" color=\"primary\">登入</button>\n        </mat-card-actions>\n      </mat-card>\n</div>\n\n  ");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/clientinventory/portal/portal.component.html":
+/*!****************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/clientinventory/portal/portal.component.html ***!
+  \****************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<span> <img src='../assets/Photos/tealogo.jpg' width=20% height=20% /></span>\n<p></p>\n<span> <img src='../assets/Photos/title2.jpg' width=100% height=100% /></span>\n<p></p>\n\n<div style=\"text-align:center;\">\n        <h1>普洱茶倉系統管理頁面</h1>\n</div>\n\n\n<table class=\"table table-primary table-responsive\">  \n<tr>\n    <td>\n          <button class=\"button\"  onclick=\"location.href='#/clientlist';\"><i class=\"fa fa-folder\" ></i> 庫存列表 </button>\n    </td>\n   \n</tr>\n<tr>\n        <td>\n             \n                <button class=\"button\" onclick=\"location.href='#/uploadinvfile';\"><i class=\"fa fa-bars\"></i> 上傳檔案</button>\n        </td>\n</tr>\n\n\n</table>");
 
 /***/ }),
 
@@ -2904,6 +2930,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _invshow_invshow_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./invshow/invshow.component */ "./src/app/clientinventory/invshow/invshow.component.ts");
 /* harmony import */ var ngx_bootstrap_carousel__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ngx-bootstrap/carousel */ "./node_modules/ngx-bootstrap/carousel/fesm5/ngx-bootstrap-carousel.js");
 /* harmony import */ var _invlist_invlist_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./invlist/invlist.component */ "./src/app/clientinventory/invlist/invlist.component.ts");
+/* harmony import */ var _services_cryptservice_service__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./services/cryptservice.service */ "./src/app/clientinventory/services/cryptservice.service.ts");
+/* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./login/login.component */ "./src/app/clientinventory/login/login.component.ts");
+/* harmony import */ var _core_material_module__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../core/material.module */ "./src/app/core/material.module.ts");
+/* harmony import */ var _portal_portal_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./portal/portal.component */ "./src/app/clientinventory/portal/portal.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2926,12 +2956,16 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 
 
 
+
+
+
+
 var ClientinventoryModule = /** @class */ (function () {
     function ClientinventoryModule() {
     }
     ClientinventoryModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
-            declarations: [_invupload_invupload_component__WEBPACK_IMPORTED_MODULE_3__["InvuploadComponent"], _invshow_invshow_component__WEBPACK_IMPORTED_MODULE_10__["InvshowComponent"], _invlist_invlist_component__WEBPACK_IMPORTED_MODULE_12__["InvlistComponent"]],
+            declarations: [_invupload_invupload_component__WEBPACK_IMPORTED_MODULE_3__["InvuploadComponent"], _invshow_invshow_component__WEBPACK_IMPORTED_MODULE_10__["InvshowComponent"], _invlist_invlist_component__WEBPACK_IMPORTED_MODULE_12__["InvlistComponent"], _login_login_component__WEBPACK_IMPORTED_MODULE_14__["LoginComponent"], _portal_portal_component__WEBPACK_IMPORTED_MODULE_16__["PortalComponent"]],
             imports: [
                 _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -2940,6 +2974,7 @@ var ClientinventoryModule = /** @class */ (function () {
                 ngx_spinner__WEBPACK_IMPORTED_MODULE_8__["NgxSpinnerModule"],
                 _angular_flex_layout__WEBPACK_IMPORTED_MODULE_9__["FlexLayoutModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"],
+                _core_material_module__WEBPACK_IMPORTED_MODULE_15__["CustomMaterialModule"],
                 ngx_bootstrap_carousel__WEBPACK_IMPORTED_MODULE_11__["CarouselModule"].forRoot(),
                 _angular_router__WEBPACK_IMPORTED_MODULE_5__["RouterModule"].forChild([
                     {
@@ -2950,10 +2985,16 @@ var ClientinventoryModule = /** @class */ (function () {
                     },
                     {
                         path: 'clientlist', component: _invlist_invlist_component__WEBPACK_IMPORTED_MODULE_12__["InvlistComponent"]
+                    },
+                    {
+                        path: 'login', component: _login_login_component__WEBPACK_IMPORTED_MODULE_14__["LoginComponent"]
+                    },
+                    {
+                        path: 'teaportal', component: _portal_portal_component__WEBPACK_IMPORTED_MODULE_16__["PortalComponent"]
                     }
                 ])
             ],
-            providers: []
+            providers: [_services_cryptservice_service__WEBPACK_IMPORTED_MODULE_13__["CryptserviceService"]]
         })
     ], ClientinventoryModule);
     return ClientinventoryModule;
@@ -2991,6 +3032,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _invservice_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../invservice.service */ "./src/app/clientinventory/invservice.service.ts");
 /* harmony import */ var _services_cryptservice_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../services/cryptservice.service */ "./src/app/clientinventory/services/cryptservice.service.ts");
+/* harmony import */ var _services_authservice_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../services/authservice.service */ "./src/app/clientinventory/services/authservice.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3008,12 +3050,16 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 
 
 
+
+
 var InvlistComponent = /** @class */ (function () {
-    function InvlistComponent(spinner, route, service, cryptservice) {
+    function InvlistComponent(spinner, route, service, cryptservice, authservice, router) {
         this.spinner = spinner;
         this.route = route;
         this.service = service;
         this.cryptservice = cryptservice;
+        this.authservice = authservice;
+        this.router = router;
     }
     Object.defineProperty(InvlistComponent.prototype, "Search", {
         get: function () {
@@ -3027,7 +3073,16 @@ var InvlistComponent = /** @class */ (function () {
         configurable: true
     });
     InvlistComponent.prototype.ngOnInit = function () {
-        this.GetList();
+        var _this = this;
+        this.authservice.checktoken().subscribe(function (val) {
+            if (val === 'OK') {
+                _this.GetList();
+            }
+            else {
+                alert('權限不足或失效 請重新登入');
+                _this.router.navigate(["login"]);
+            }
+        });
     };
     InvlistComponent.prototype.FilterList = function (filter) {
         if (filter === '' || filter === undefined) {
@@ -3074,7 +3129,9 @@ var InvlistComponent = /** @class */ (function () {
         { type: ngx_spinner__WEBPACK_IMPORTED_MODULE_1__["NgxSpinnerService"] },
         { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] },
         { type: _invservice_service__WEBPACK_IMPORTED_MODULE_3__["InvserviceService"] },
-        { type: _services_cryptservice_service__WEBPACK_IMPORTED_MODULE_4__["CryptserviceService"] }
+        { type: _services_cryptservice_service__WEBPACK_IMPORTED_MODULE_4__["CryptserviceService"] },
+        { type: _services_authservice_service__WEBPACK_IMPORTED_MODULE_5__["AuthserviceService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] }
     ]; };
     InvlistComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -3082,7 +3139,8 @@ var InvlistComponent = /** @class */ (function () {
             template: __importDefault(__webpack_require__(/*! raw-loader!./invlist.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/clientinventory/invlist/invlist.component.html")).default,
             styles: [__importDefault(__webpack_require__(/*! ./invlist.component.css */ "./src/app/clientinventory/invlist/invlist.component.css")).default]
         }),
-        __metadata("design:paramtypes", [ngx_spinner__WEBPACK_IMPORTED_MODULE_1__["NgxSpinnerService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"], _invservice_service__WEBPACK_IMPORTED_MODULE_3__["InvserviceService"], _services_cryptservice_service__WEBPACK_IMPORTED_MODULE_4__["CryptserviceService"]])
+        __metadata("design:paramtypes", [ngx_spinner__WEBPACK_IMPORTED_MODULE_1__["NgxSpinnerService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"],
+            _invservice_service__WEBPACK_IMPORTED_MODULE_3__["InvserviceService"], _services_cryptservice_service__WEBPACK_IMPORTED_MODULE_4__["CryptserviceService"], _services_authservice_service__WEBPACK_IMPORTED_MODULE_5__["AuthserviceService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
     ], InvlistComponent);
     return InvlistComponent;
 }());
@@ -3224,6 +3282,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _invservice_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../invservice.service */ "./src/app/clientinventory/invservice.service.ts");
 /* harmony import */ var _model_projectinventory__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../model/projectinventory */ "./src/app/clientinventory/model/projectinventory.ts");
 /* harmony import */ var _services_cryptservice_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../services/cryptservice.service */ "./src/app/clientinventory/services/cryptservice.service.ts");
+/* harmony import */ var _services_authservice_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../services/authservice.service */ "./src/app/clientinventory/services/authservice.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3242,12 +3301,16 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 
 
 
+
+
 var InvshowComponent = /** @class */ (function () {
-    function InvshowComponent(spinner, route, service, cryptservice) {
+    function InvshowComponent(spinner, route, service, cryptservice, authservice, router) {
         this.spinner = spinner;
         this.route = route;
         this.service = service;
         this.cryptservice = cryptservice;
+        this.authservice = authservice;
+        this.router = router;
         this.IsManager = false;
         this._entity = new _model_projectinventory__WEBPACK_IMPORTED_MODULE_4__["ClientInventory"]();
         this._stock_sum = 0;
@@ -3295,6 +3358,7 @@ var InvshowComponent = /** @class */ (function () {
         configurable: true
     });
     InvshowComponent.prototype.ngOnInit = function () {
+        var _this = this;
         var EncryptID = this.route.snapshot.queryParamMap.get('key');
         var IDstring = this.cryptservice.decrypt(EncryptID);
         var ID = IDstring.split('|')[0];
@@ -3302,6 +3366,12 @@ var InvshowComponent = /** @class */ (function () {
         switch (role) {
             case 'manager': {
                 this.IsManager = true;
+                this.authservice.checktoken().subscribe(function (val) {
+                    if (val !== 'OK') {
+                        alert('權限不足或失效 請重新登入');
+                        _this.router.navigate(["login"]);
+                    }
+                });
                 break;
             }
             case 'user': {
@@ -3364,7 +3434,9 @@ var InvshowComponent = /** @class */ (function () {
         { type: ngx_spinner__WEBPACK_IMPORTED_MODULE_1__["NgxSpinnerService"] },
         { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] },
         { type: _invservice_service__WEBPACK_IMPORTED_MODULE_3__["InvserviceService"] },
-        { type: _services_cryptservice_service__WEBPACK_IMPORTED_MODULE_5__["CryptserviceService"] }
+        { type: _services_cryptservice_service__WEBPACK_IMPORTED_MODULE_5__["CryptserviceService"] },
+        { type: _services_authservice_service__WEBPACK_IMPORTED_MODULE_6__["AuthserviceService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] }
     ]; };
     InvshowComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -3373,7 +3445,8 @@ var InvshowComponent = /** @class */ (function () {
             styles: [__importDefault(__webpack_require__(/*! ./invshow.component.css */ "./src/app/clientinventory/invshow/invshow.component.css")).default]
         }),
         __metadata("design:paramtypes", [ngx_spinner__WEBPACK_IMPORTED_MODULE_1__["NgxSpinnerService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"],
-            _invservice_service__WEBPACK_IMPORTED_MODULE_3__["InvserviceService"], _services_cryptservice_service__WEBPACK_IMPORTED_MODULE_5__["CryptserviceService"]])
+            _invservice_service__WEBPACK_IMPORTED_MODULE_3__["InvserviceService"], _services_cryptservice_service__WEBPACK_IMPORTED_MODULE_5__["CryptserviceService"],
+            _services_authservice_service__WEBPACK_IMPORTED_MODULE_6__["AuthserviceService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
     ], InvshowComponent);
     return InvshowComponent;
 }());
@@ -3526,6 +3599,92 @@ var InvuploadComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/clientinventory/login/login.component.css":
+/*!***********************************************************!*\
+  !*** ./src/app/clientinventory/login/login.component.css ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("body {\r\n    background-image: url(\"/src/assets/Photos/teabackground.jpg\");\r\n    background-color: #cccccc;\r\n   }\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY2xpZW50aW52ZW50b3J5L2xvZ2luL2xvZ2luLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSw2REFBNkQ7SUFDN0QseUJBQXlCO0dBQzFCIiwiZmlsZSI6InNyYy9hcHAvY2xpZW50aW52ZW50b3J5L2xvZ2luL2xvZ2luLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJib2R5IHtcclxuICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybChcIi9zcmMvYXNzZXRzL1Bob3Rvcy90ZWFiYWNrZ3JvdW5kLmpwZ1wiKTtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICNjY2NjY2M7XHJcbiAgIH0iXX0= */");
+
+/***/ }),
+
+/***/ "./src/app/clientinventory/login/login.component.ts":
+/*!**********************************************************!*\
+  !*** ./src/app/clientinventory/login/login.component.ts ***!
+  \**********************************************************/
+/*! exports provided: LoginComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginComponent", function() { return LoginComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _services_authservice_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services/authservice.service */ "./src/app/clientinventory/services/authservice.service.ts");
+/* harmony import */ var _model_user__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../model/user */ "./src/app/clientinventory/model/user.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+
+
+var LoginComponent = /** @class */ (function () {
+    function LoginComponent(router, service) {
+        this.router = router;
+        this.service = service;
+    }
+    LoginComponent.prototype.ngOnInit = function () {
+    };
+    LoginComponent.prototype.login = function () {
+        var _this = this;
+        var user = new _model_user__WEBPACK_IMPORTED_MODULE_3__["LogInUser"]();
+        user.ID = this.username;
+        user.Password = this.password;
+        this.service.authUser(user).subscribe(function (res) {
+            if (res === 'Fail') {
+                alert("登入錯誤 請重新登入");
+            }
+            else {
+                _this.service.updatetoken(res);
+                _this.router.navigate(["teaportal"]);
+            }
+        }, function (err) {
+            alert('內部錯誤');
+        });
+    };
+    LoginComponent.ctorParameters = function () { return [
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"] },
+        { type: _services_authservice_service__WEBPACK_IMPORTED_MODULE_2__["AuthserviceService"] }
+    ]; };
+    LoginComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-login',
+            template: __importDefault(__webpack_require__(/*! raw-loader!./login.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/clientinventory/login/login.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./login.component.css */ "./src/app/clientinventory/login/login.component.css")).default]
+        }),
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"], _services_authservice_service__WEBPACK_IMPORTED_MODULE_2__["AuthserviceService"]])
+    ], LoginComponent);
+    return LoginComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/clientinventory/model/projectinventory.ts":
 /*!***********************************************************!*\
   !*** ./src/app/clientinventory/model/projectinventory.ts ***!
@@ -3557,6 +3716,185 @@ var ProjectImages = /** @class */ (function () {
     function ProjectImages() {
     }
     return ProjectImages;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/clientinventory/model/user.ts":
+/*!***********************************************!*\
+  !*** ./src/app/clientinventory/model/user.ts ***!
+  \***********************************************/
+/*! exports provided: LogInUser */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LogInUser", function() { return LogInUser; });
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+var LogInUser = /** @class */ (function () {
+    function LogInUser() {
+    }
+    return LogInUser;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/clientinventory/portal/portal.component.css":
+/*!*************************************************************!*\
+  !*** ./src/app/clientinventory/portal/portal.component.css ***!
+  \*************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("/* Style buttons */\r\n.btn {\r\n    background-color: DodgerBlue; /* Blue background */\r\n    border: none; /* Remove borders */\r\n    color: white; /* White text */\r\n    padding: 12px 16px; /* Some padding */\r\n    font-size: 16px; /* Set a font size */\r\n    cursor: pointer; /* Mouse pointer on hover */\r\n  }\r\n/* Darker background on mouse-over */\r\n.btn:hover {\r\n    background-color: RoyalBlue;\r\n  }\r\n.button {\r\n    padding: 15px 25px;\r\n    font-size: 24px;\r\n    text-align: center;\r\n    cursor: pointer;\r\n    outline: none;\r\n    color: #fff;\r\n    background-color: #4CAF50;\r\n    border: none;\r\n    border-radius: 15px;\r\n    box-shadow: 0 9px #999;\r\n  }\r\n.button:hover {background-color: #3e8e41}\r\n.button:active {\r\n    background-color: #3e8e41;\r\n    box-shadow: 0 5px #666;\r\n    transform: translateY(4px);\r\n  }\r\ntable {\r\n    border-collapse: collapse;\r\n    border-spacing: 4;\r\n    width: 100%;\r\n    border: 1px solid #ddd;\r\n  }\r\n/* Style table headers and table data */\r\nth, td {\r\n    text-align: center;\r\n    padding: 16px;\r\n  }\r\nth:first-child, td:first-child {\r\n    text-align: left;\r\n  }\r\n/* Zebra-striped table rows */\r\ntr:nth-child(even) {\r\n    background-color: #f2f2f2\r\n  }\r\n.fa-check {\r\n    color: green;\r\n  }\r\n.fa-remove {\r\n    color: red;\r\n  }\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY2xpZW50aW52ZW50b3J5L3BvcnRhbC9wb3J0YWwuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxrQkFBa0I7QUFDbEI7SUFDSSw0QkFBNEIsRUFBRSxvQkFBb0I7SUFDbEQsWUFBWSxFQUFFLG1CQUFtQjtJQUNqQyxZQUFZLEVBQUUsZUFBZTtJQUM3QixrQkFBa0IsRUFBRSxpQkFBaUI7SUFDckMsZUFBZSxFQUFFLG9CQUFvQjtJQUNyQyxlQUFlLEVBQUUsMkJBQTJCO0VBQzlDO0FBRUEsb0NBQW9DO0FBQ3BDO0lBQ0UsMkJBQTJCO0VBQzdCO0FBRUE7SUFDRSxrQkFBa0I7SUFDbEIsZUFBZTtJQUNmLGtCQUFrQjtJQUNsQixlQUFlO0lBQ2YsYUFBYTtJQUNiLFdBQVc7SUFDWCx5QkFBeUI7SUFDekIsWUFBWTtJQUNaLG1CQUFtQjtJQUNuQixzQkFBc0I7RUFDeEI7QUFFQSxlQUFlLHlCQUF5QjtBQUV4QztJQUNFLHlCQUF5QjtJQUN6QixzQkFBc0I7SUFDdEIsMEJBQTBCO0VBQzVCO0FBR0E7SUFDRSx5QkFBeUI7SUFDekIsaUJBQWlCO0lBQ2pCLFdBQVc7SUFDWCxzQkFBc0I7RUFDeEI7QUFFQSx1Q0FBdUM7QUFDdkM7SUFDRSxrQkFBa0I7SUFDbEIsYUFBYTtFQUNmO0FBRUE7SUFDRSxnQkFBZ0I7RUFDbEI7QUFFQSw2QkFBNkI7QUFDN0I7SUFDRTtFQUNGO0FBRUE7SUFDRSxZQUFZO0VBQ2Q7QUFFQTtJQUNFLFVBQVU7RUFDWiIsImZpbGUiOiJzcmMvYXBwL2NsaWVudGludmVudG9yeS9wb3J0YWwvcG9ydGFsLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIvKiBTdHlsZSBidXR0b25zICovXHJcbi5idG4ge1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogRG9kZ2VyQmx1ZTsgLyogQmx1ZSBiYWNrZ3JvdW5kICovXHJcbiAgICBib3JkZXI6IG5vbmU7IC8qIFJlbW92ZSBib3JkZXJzICovXHJcbiAgICBjb2xvcjogd2hpdGU7IC8qIFdoaXRlIHRleHQgKi9cclxuICAgIHBhZGRpbmc6IDEycHggMTZweDsgLyogU29tZSBwYWRkaW5nICovXHJcbiAgICBmb250LXNpemU6IDE2cHg7IC8qIFNldCBhIGZvbnQgc2l6ZSAqL1xyXG4gICAgY3Vyc29yOiBwb2ludGVyOyAvKiBNb3VzZSBwb2ludGVyIG9uIGhvdmVyICovXHJcbiAgfVxyXG4gIFxyXG4gIC8qIERhcmtlciBiYWNrZ3JvdW5kIG9uIG1vdXNlLW92ZXIgKi9cclxuICAuYnRuOmhvdmVyIHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IFJveWFsQmx1ZTtcclxuICB9XHJcblxyXG4gIC5idXR0b24ge1xyXG4gICAgcGFkZGluZzogMTVweCAyNXB4O1xyXG4gICAgZm9udC1zaXplOiAyNHB4O1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gICAgY3Vyc29yOiBwb2ludGVyO1xyXG4gICAgb3V0bGluZTogbm9uZTtcclxuICAgIGNvbG9yOiAjZmZmO1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogIzRDQUY1MDtcclxuICAgIGJvcmRlcjogbm9uZTtcclxuICAgIGJvcmRlci1yYWRpdXM6IDE1cHg7XHJcbiAgICBib3gtc2hhZG93OiAwIDlweCAjOTk5O1xyXG4gIH1cclxuICBcclxuICAuYnV0dG9uOmhvdmVyIHtiYWNrZ3JvdW5kLWNvbG9yOiAjM2U4ZTQxfVxyXG4gIFxyXG4gIC5idXR0b246YWN0aXZlIHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICMzZThlNDE7XHJcbiAgICBib3gtc2hhZG93OiAwIDVweCAjNjY2O1xyXG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKDRweCk7XHJcbiAgfVxyXG5cclxuXHJcbiAgdGFibGUge1xyXG4gICAgYm9yZGVyLWNvbGxhcHNlOiBjb2xsYXBzZTtcclxuICAgIGJvcmRlci1zcGFjaW5nOiA0O1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgICBib3JkZXI6IDFweCBzb2xpZCAjZGRkO1xyXG4gIH1cclxuICBcclxuICAvKiBTdHlsZSB0YWJsZSBoZWFkZXJzIGFuZCB0YWJsZSBkYXRhICovXHJcbiAgdGgsIHRkIHtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICAgIHBhZGRpbmc6IDE2cHg7XHJcbiAgfVxyXG4gIFxyXG4gIHRoOmZpcnN0LWNoaWxkLCB0ZDpmaXJzdC1jaGlsZCB7XHJcbiAgICB0ZXh0LWFsaWduOiBsZWZ0O1xyXG4gIH1cclxuICBcclxuICAvKiBaZWJyYS1zdHJpcGVkIHRhYmxlIHJvd3MgKi9cclxuICB0cjpudGgtY2hpbGQoZXZlbikge1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2YyZjJmMlxyXG4gIH1cclxuICBcclxuICAuZmEtY2hlY2sge1xyXG4gICAgY29sb3I6IGdyZWVuO1xyXG4gIH1cclxuICBcclxuICAuZmEtcmVtb3ZlIHtcclxuICAgIGNvbG9yOiByZWQ7XHJcbiAgfSJdfQ== */");
+
+/***/ }),
+
+/***/ "./src/app/clientinventory/portal/portal.component.ts":
+/*!************************************************************!*\
+  !*** ./src/app/clientinventory/portal/portal.component.ts ***!
+  \************************************************************/
+/*! exports provided: PortalComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PortalComponent", function() { return PortalComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_authservice_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../services/authservice.service */ "./src/app/clientinventory/services/authservice.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+
+var PortalComponent = /** @class */ (function () {
+    function PortalComponent(authservice, router) {
+        this.authservice = authservice;
+        this.router = router;
+    }
+    PortalComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.authservice.checktoken().subscribe(function (val) {
+            if (val === 'OK') {
+                console.log("log in on " + Date.now.toString());
+            }
+            else {
+                alert('權限不足或失效 請重新登入');
+                _this.router.navigate(["login"]);
+            }
+        });
+    };
+    PortalComponent.ctorParameters = function () { return [
+        { type: _services_authservice_service__WEBPACK_IMPORTED_MODULE_1__["AuthserviceService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] }
+    ]; };
+    PortalComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-portal',
+            template: __importDefault(__webpack_require__(/*! raw-loader!./portal.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/clientinventory/portal/portal.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./portal.component.css */ "./src/app/clientinventory/portal/portal.component.css")).default]
+        }),
+        __metadata("design:paramtypes", [_services_authservice_service__WEBPACK_IMPORTED_MODULE_1__["AuthserviceService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
+    ], PortalComponent);
+    return PortalComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/clientinventory/services/authservice.service.ts":
+/*!*****************************************************************!*\
+  !*** ./src/app/clientinventory/services/authservice.service.ts ***!
+  \*****************************************************************/
+/*! exports provided: AuthserviceService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AuthserviceService", function() { return AuthserviceService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+
+var AuthserviceService = /** @class */ (function () {
+    function AuthserviceService(http) {
+        this.http = http;
+        this.site = 'https://leecloud.azurewebsites.net/'; // URL to web api
+        //private site = 'https://localhost:44347/';
+        this.url = 'api/LoginApi/';
+        this.urlchecktoken = 'api/LoginApi/CheckToken';
+        this.token = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]('');
+        this.currenttoken = this.token.asObservable();
+    }
+    AuthserviceService.prototype.updatetoken = function (message) {
+        this.token.next(message);
+        localStorage.setItem('token', message);
+    };
+    AuthserviceService.prototype.authUser = function (user) {
+        var url = this.site + this.url;
+        // Headers
+        var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
+            ContentType: 'application/json'
+        });
+        // return  this.http.post(url, file, {headers: headers});
+        return this.http
+            .post(url, user, { headers: headers, responseType: 'text' });
+    };
+    AuthserviceService.prototype.checktoken = function () {
+        var currenttoken = localStorage.getItem('token');
+        // alert(currenttoken);
+        var url = this.site + this.urlchecktoken;
+        // Headers
+        var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
+            ContentType: 'application/json'
+        });
+        return this.http
+            .post(url, currenttoken, { headers: headers, responseType: 'text' });
+    };
+    AuthserviceService.ctorParameters = function () { return [
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"] }
+    ]; };
+    AuthserviceService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+            providedIn: 'root'
+        }),
+        __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
+    ], AuthserviceService);
+    return AuthserviceService;
 }());
 
 
@@ -3609,6 +3947,69 @@ var CryptserviceService = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], CryptserviceService);
     return CryptserviceService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/core/material.module.ts":
+/*!*****************************************!*\
+  !*** ./src/app/core/material.module.ts ***!
+  \*****************************************/
+/*! exports provided: CustomMaterialModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CustomMaterialModule", function() { return CustomMaterialModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+
+var CustomMaterialModule = /** @class */ (function () {
+    function CustomMaterialModule() {
+    }
+    CustomMaterialModule = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
+            imports: [
+                _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatToolbarModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatButtonModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatCardModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatInputModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialogModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatTableModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatMenuModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatIconModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatProgressSpinnerModule"]
+            ],
+            exports: [
+                _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatToolbarModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatButtonModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatCardModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatInputModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialogModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatTableModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatMenuModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatIconModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatProgressSpinnerModule"]
+            ],
+        })
+    ], CustomMaterialModule);
+    return CustomMaterialModule;
 }());
 
 
