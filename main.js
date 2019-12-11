@@ -165,7 +165,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (" \n<div>\n        <span> <img src='../assets/Photos/tealogo.jpg' width=20% height=20% /></span>\n        <p></p>\n</div>\n\n<h1>上傳普洱茶倉儲Excel檔案(.xlsx):</h1>\n<div>\n      <button type=\"button\" class=\"btn btn-success\" onclick=\"location.href='#/teaportal';\">返回管理頁面</button>   \n      <p></p>\n</div>\n\n<div class=\"body-content\">\n        <div class=\"center\">\n                <ngx-file-drop dropZoneLabel=\"Drop files here\" (onFileDrop)=\"dropped($event)\" accept=\".xlsx\"\n                (onFileOver)=\"fileOver($event)\" (onFileLeave)=\"fileLeave($event)\">\n                    <ng-template ngx-file-drop-content-tmp let-openFileSelector=\"openFileSelector\">\n                      拖曳或是選擇要上傳的Excel檔案(請確定格式正確)\n                      <button type=\"button\" (click)=\"openFileSelector()\">Browse Files</button>\n                    </ng-template>\n                    \n                </ngx-file-drop>\n               \n        </div>\n</div>\n<hr>\n<h1>上傳普洱茶倉儲溫度紀錄照片(.jpg):</h1>\n<div class=\"body-content\">\n        <div class=\"center\">\n                <ngx-file-drop dropZoneLabel=\"Drop files here\" (onFileDrop)=\"dropped2($event)\" \n                (onFileOver)=\"fileOver($event)\" (onFileLeave)=\"fileLeave($event)\">\n                    <ng-template ngx-file-drop-content-tmp let-openFileSelector=\"openFileSelector\">\n                      拖曳或是選擇要上傳的照片(請勿超過4MB)\n                      <button type=\"button\" (click)=\"openFileSelector()\">Browse Files</button>\n                    </ng-template>\n                    \n                </ngx-file-drop>\n               \n        </div>\n</div>\n                        \n\n\n\n<ngx-spinner\n  bdColor=\"rgba(51,51,51,0.8)\"\n  size=\"medium\"\n  color=\"#fff\"\n  type=\"ball-scale-multiple\"\n>\n  <p style=\"font-size: 20px; color: white\">處理中...</p>\n</ngx-spinner>\n");
+/* harmony default export */ __webpack_exports__["default"] = (" \n<div>\n        <span> <img src='../assets/Photos/tealogo.jpg' width=20% height=20% /></span>\n        <p></p>\n</div>\n\n<div>\n      <button type=\"button\" class=\"btn btn-success\" onclick=\"location.href='#/teaportal';\">返回管理頁面</button>   \n      <p></p>\n</div>\n\n<h2>上傳普洱茶倉儲Excel檔案(.xlsx):(部分更新:適用於少部分藏家更新 其他藏家資料不更動)</h2>\n\n<div class=\"body-content\">\n        <div class=\"center\">\n                <ngx-file-drop dropZoneLabel=\"Drop files here\" (onFileDrop)=\"dropped3($event)\" accept=\".xlsx\"\n                (onFileOver)=\"fileOver($event)\" (onFileLeave)=\"fileLeave($event)\">\n                    <ng-template ngx-file-drop-content-tmp let-openFileSelector=\"openFileSelector\">\n                      拖曳或是選擇要上傳的Excel檔案 => 部分更新 (請確定格式正確)\n                      <button type=\"button\" (click)=\"openFileSelector()\">Browse Files</button>\n                    </ng-template>\n                    \n                </ngx-file-drop>\n               \n        </div>\n</div>\n<hr>\n\n<h2>上傳普洱茶倉儲Excel檔案(.xlsx):(全部更新:將會覆蓋掉之前紀錄 重新更新資料庫)</h2>\n\n<div class=\"body-content\">\n        <div class=\"center\">\n                <ngx-file-drop dropZoneLabel=\"Drop files here\" (onFileDrop)=\"dropped($event)\" accept=\".xlsx\"\n                (onFileOver)=\"fileOver($event)\" (onFileLeave)=\"fileLeave($event)\">\n                    <ng-template ngx-file-drop-content-tmp let-openFileSelector=\"openFileSelector\">\n                      拖曳或是選擇要上傳的Excel檔案 => 全部更新 (請確定格式正確)\n                      <button type=\"button\" (click)=\"openFileSelector()\">Browse Files</button>\n                    </ng-template>\n                    \n                </ngx-file-drop>\n               \n        </div>\n</div>\n<hr>\n<h2>上傳普洱茶倉儲溫度紀錄照片(.jpg):</h2>\n<div class=\"body-content\">\n        <div class=\"center\">\n                <ngx-file-drop dropZoneLabel=\"Drop files here\" (onFileDrop)=\"dropped2($event)\" \n                (onFileOver)=\"fileOver($event)\" (onFileLeave)=\"fileLeave($event)\">\n                    <ng-template ngx-file-drop-content-tmp let-openFileSelector=\"openFileSelector\">\n                      拖曳或是選擇要上傳的照片(請勿超過4MB)\n                      <button type=\"button\" (click)=\"openFileSelector()\">Browse Files</button>\n                    </ng-template>\n                    \n                </ngx-file-drop>\n               \n        </div>\n</div>\n                        \n\n\n\n<ngx-spinner\n  bdColor=\"rgba(51,51,51,0.8)\"\n  size=\"medium\"\n  color=\"#fff\"\n  type=\"ball-scale-multiple\"\n>\n  <p style=\"font-size: 20px; color: white\">處理中...</p>\n</ngx-spinner>\n");
 
 /***/ }),
 
@@ -178,7 +178,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<span> <img src='../assets/Photos/tealogo.jpg' width=20% height=20% /></span>\n<p></p>\n<span> <img src='../assets/Photos/title2.jpg' width=100% height=100% /></span>\n<p></p>\n\n<div>\n    <mat-card class=\"example-card\">\n        <mat-card-header>\n          <mat-card-title>管理員登入</mat-card-title>\n        </mat-card-header>\n        <mat-card-content>\n          <form class=\"example-form\">\n            <table class=\"example-full-width\" cellspacing=\"0\">\n              <tr>\n                <td>\n                  <mat-form-field class=\"example-full-width\">\n                  <input matInput placeholder=\"Username\" [(ngModel)]=\"username\" name=\"username\" required>\n                  </mat-form-field>\n                </td>\n              </tr>\n              <tr>\n              <td><mat-form-field class=\"example-full-width\">\n                <input matInput placeholder=\"Password\" [(ngModel)]=\"password\"type=\"password\" name=\"password\" required>\n              </mat-form-field></td>\n            </tr></table>\n          </form>\n          <mat-spinner [style.display]=\"showSpinner ? 'block' : 'none'\"></mat-spinner>\n        </mat-card-content>\n        <mat-card-actions>\n          <button mat-raised-button (click)=\"login()\" color=\"primary\">登入</button>\n        </mat-card-actions>\n      </mat-card>\n</div>\n\n  ");
+/* harmony default export */ __webpack_exports__["default"] = ("<span> <img src='../assets/Photos/tealogo.jpg' width=20% height=20% /></span>\n<p></p>\n<span> <img src='../assets/Photos/title2.jpg' width=100% height=100% /></span>\n<p></p>\n\n<div>\n    <mat-card class=\"example-card\">\n        <mat-card-header>\n          <mat-card-title>管理員登入</mat-card-title>\n        </mat-card-header>\n        <mat-card-content>\n          <form class=\"example-form\">\n            <table class=\"example-full-width\" cellspacing=\"0\">\n              <tr>\n                <td>\n                  <mat-form-field class=\"example-full-width\">\n                  <input matInput placeholder=\"Username\" [(ngModel)]=\"username\" name=\"username\" required>\n                  </mat-form-field>\n                </td>\n              </tr>\n              <tr>\n              <td><mat-form-field class=\"example-full-width\">\n                <input matInput placeholder=\"Password\" [(ngModel)]=\"password\"type=\"password\" name=\"password\" required>\n              </mat-form-field></td>\n            </tr></table>\n          </form>\n          <mat-spinner [style.display]=\"showSpinner ? 'block' : 'none'\"></mat-spinner>\n        </mat-card-content>\n        <mat-card-actions>\n          <button mat-raised-button (click)=\"login()\" color=\"primary\">登入</button>\n        </mat-card-actions>\n      </mat-card>\n</div>\n\n  \n\n<ngx-spinner\n  bdColor=\"rgba(51,51,51,0.8)\"\n  size=\"medium\"\n  color=\"#fff\"\n  type=\"ball-scale-multiple\"\n>\n  <p style=\"font-size: 20px; color: white\">驗證登入中...</p>\n</ngx-spinner>");
 
 /***/ }),
 
@@ -3240,6 +3240,7 @@ var InvserviceService = /** @class */ (function () {
         // private site = 'https://localhost:44347/';
         this.url = 'api/articleapi/';
         this.postFileurl = 'api/UploadExcelApi/';
+        this.postPartialFileUrl = 'api/UploadPartialExcelApi/';
         this.postUpdateTimeUrl = 'api/ClientInventoryApi/';
         this.postTempImageUrl = 'api/UploadTempApi/';
         this.getEntityUrl = 'api/ClientInventoryApi/client/';
@@ -3272,6 +3273,13 @@ var InvserviceService = /** @class */ (function () {
         // return  this.http.post(url, file, {headers: headers});
         return this.http
             .post(url, file, { headers: headers, responseType: 'text' });
+    };
+    InvserviceService.prototype.postPartialFile = function (file) {
+        var url = this.site + this.postPartialFileUrl;
+        var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
+            ContentType: 'multipart/form-data'
+        });
+        return this.http.post(url, file, { headers: headers, responseType: 'text' });
     };
     InvserviceService.prototype.postTempImage = function (file) {
         var url = this.site + this.postTempImageUrl;
@@ -3667,6 +3675,42 @@ var InvuploadComponent = /** @class */ (function () {
             _loop_2(droppedFile);
         }
     };
+    InvuploadComponent.prototype.dropped3 = function (files) {
+        var _this = this;
+        this.files = files;
+        var _loop_3 = function (droppedFile) {
+            // Is it a file?
+            if (droppedFile.fileEntry.isFile) {
+                var fileEntry = droppedFile.fileEntry;
+                fileEntry.file(function (file) {
+                    // Here you can access the real file
+                    console.log(droppedFile.relativePath, file);
+                    // You could upload it like this:
+                    var formData = new FormData();
+                    formData.append(file.name, file, droppedFile.relativePath);
+                    _this.spinner.show();
+                    _this.service.postPartialFile(formData).subscribe(function (val) {
+                        alert(val);
+                        _this.spinner.hide();
+                        _this.service.updateTime().subscribe(function (res) {
+                            console.log(res);
+                        });
+                    });
+                });
+            }
+            else {
+                // It was a directory (empty directories are added, otherwise only files)
+                var fileEntry = droppedFile.fileEntry;
+                console.log(droppedFile.relativePath, fileEntry);
+                this_3.spinner.hide();
+            }
+        };
+        var this_3 = this;
+        for (var _i = 0, files_3 = files; _i < files_3.length; _i++) {
+            var droppedFile = files_3[_i];
+            _loop_3(droppedFile);
+        }
+    };
     InvuploadComponent.prototype.fileOver = function (event) {
         console.log(event);
     };
@@ -3723,6 +3767,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _core_shared_service_authservice_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../../core/shared/service/authservice.service */ "./src/app/core/shared/service/authservice.service.ts");
 /* harmony import */ var _core_shared_model_user__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../core/shared/model/user */ "./src/app/core/shared/model/user.ts");
+/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ngx-spinner */ "./node_modules/ngx-spinner/fesm5/ngx-spinner.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3739,15 +3784,18 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 
 
 
+
 var LoginComponent = /** @class */ (function () {
-    function LoginComponent(router, service) {
+    function LoginComponent(router, service, spinner) {
         this.router = router;
         this.service = service;
+        this.spinner = spinner;
     }
     LoginComponent.prototype.ngOnInit = function () {
     };
     LoginComponent.prototype.login = function () {
         var _this = this;
+        this.spinner.show();
         var user = new _core_shared_model_user__WEBPACK_IMPORTED_MODULE_3__["AppUser"]();
         var datestring = new Date().toLocaleString();
         user.UserID = this.username;
@@ -3760,15 +3808,18 @@ var LoginComponent = /** @class */ (function () {
             localStorage.setItem('user', res.Name);
             localStorage.setItem('logintime', datestring);
             _this.service.updatetoken(res.Token);
+            _this.spinner.hide();
             _this.router.navigate(['teaportal']);
         }, function (err) {
             alert('登入錯誤 請重新登入');
             _this.service.deletetoken();
+            _this.spinner.hide();
         });
     };
     LoginComponent.ctorParameters = function () { return [
         { type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"] },
-        { type: _core_shared_service_authservice_service__WEBPACK_IMPORTED_MODULE_2__["AuthserviceService"] }
+        { type: _core_shared_service_authservice_service__WEBPACK_IMPORTED_MODULE_2__["AuthserviceService"] },
+        { type: ngx_spinner__WEBPACK_IMPORTED_MODULE_4__["NgxSpinnerService"] }
     ]; };
     LoginComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -3776,7 +3827,7 @@ var LoginComponent = /** @class */ (function () {
             template: __importDefault(__webpack_require__(/*! raw-loader!./login.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/clientinventory/login/login.component.html")).default,
             styles: [__importDefault(__webpack_require__(/*! ./login.component.css */ "./src/app/clientinventory/login/login.component.css")).default]
         }),
-        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"], _core_shared_service_authservice_service__WEBPACK_IMPORTED_MODULE_2__["AuthserviceService"]])
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"], _core_shared_service_authservice_service__WEBPACK_IMPORTED_MODULE_2__["AuthserviceService"], ngx_spinner__WEBPACK_IMPORTED_MODULE_4__["NgxSpinnerService"]])
     ], LoginComponent);
     return LoginComponent;
 }());
