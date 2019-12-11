@@ -139,7 +139,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n        <span> <img src='../assets/Photos/tealogo.jpg' width=20% height=20% /></span>\r\n        <p></p>\r\n    </div>\r\n    \r\n    <h1>所有客戶庫存表</h1>   \r\n    <div>\r\n            <button type=\"button\" class=\"btn btn-success\" onclick=\"location.href='#/teaportal';\">返回管理頁面</button>   \r\n            <p></p>\r\n    </div>\r\n    <div class=\"form form-row\">\r\n        <label>搜尋:</label>\r\n        <input type=\"string\" placeholder=\"編號或名稱\" class=\"form form-control\"\r\n        [(ngModel)]='Search'\r\n        style=\"width: 8em;\"\r\n        /> \r\n    </div>\r\n    <p></p>\r\n    <table class=\"table table-bordered table-striped table-hover\">\r\n        <tr>\r\n            <th>\r\n                客戶編號\r\n            </th>\r\n            <th>\r\n                客戶名稱\r\n            </th>\r\n            <th>\r\n                地址\r\n            </th>    \r\n            <th>\r\n                電話\r\n            </th>\r\n            <th>\r\n\r\n            </th>\r\n        </tr>\r\n        \r\n           \r\n            <tbody> \r\n                <tr *ngFor = 'let item of list' >\r\n                    <td>\r\n                        {{item.ClientId}}\r\n                    </td>\r\n                    <td>{{ item.ClientName}}\r\n                          \r\n                    </td>\r\n                    <td>{{ item.Address}}</td>\r\n                    <td>\r\n                        {{item.Phone}}\r\n                    </td>\r\n                  \r\n                    <td>\r\n                        <button type=\"button\" class=\"btn btn-success\" (click) = showEntity(item.ClientId)>庫藏內容</button> |\r\n                        <button type=\"button\" class=\"btn btn-info\" (click) = showUserEntity(item.ClientId)>藏家展示頁面</button>\r\n                    </td>\r\n                </tr>\r\n            </tbody>\r\n           \r\n    </table>\r\n    \r\n    <div>\r\n            <button type=\"button\" class=\"btn btn-success\" onclick=\"location.href='#/teaportal';\">返回管理頁面</button>   \r\n            <p></p>\r\n    </div>\r\n    \r\n    <ngx-spinner\r\n      bdColor=\"rgba(51,51,51,0.8)\"\r\n      size=\"medium\"\r\n      color=\"#fff\"\r\n      type=\"ball-scale-multiple\"\r\n    >\r\n      <p style=\"font-size: 20px; color: white\">處理中...</p>\r\n    </ngx-spinner>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n        <span> <img src='../assets/Photos/tealogo.jpg' width=20% height=20% /></span>\r\n        <p></p>\r\n    </div>\r\n    \r\n    <h1>所有客戶庫存表</h1>   \r\n    <div>\r\n            <button type=\"button\" class=\"btn btn-success\" onclick=\"location.href='#/teaportal';\">返回管理頁面</button>   \r\n            <p></p>\r\n    </div>\r\n    <div class=\"form form-row\">\r\n        <label>搜尋:</label>\r\n        <input type=\"string\" placeholder=\"編號或名稱\" class=\"form form-control\"\r\n        [(ngModel)]='Search'\r\n        style=\"width: 8em;\"\r\n        /> \r\n    </div>\r\n    <p></p>\r\n    <table class=\"table table-bordered table-striped table-hover\">\r\n        <tr>\r\n            <th>\r\n                客戶編號\r\n            </th>\r\n            <th>\r\n                客戶名稱\r\n            </th>\r\n            <th>\r\n                地址\r\n            </th>    \r\n            <th>\r\n                電話\r\n            </th>\r\n            <th>\r\n\r\n            </th>\r\n        </tr>\r\n        \r\n           \r\n            <tbody> \r\n                <tr *ngFor = 'let item of list' >\r\n                    <td>\r\n                        {{item.ClientId}}\r\n                    </td>\r\n                    <td>{{ item.ClientName}}\r\n                          \r\n                    </td>\r\n                    <td>{{ item.Address}}</td>\r\n                    <td>\r\n                        {{item.Phone}}\r\n                    </td>\r\n                  \r\n                    <td>\r\n                        <button type=\"button\" class=\"btn btn-sm btn-success\" (click) = showEntity(item.ClientId)>庫藏內容</button> |\r\n                        <button type=\"button\" class=\"btn btn-sm btn-info\" (click) = showUserEntity(item.ClientId)>藏家頁面</button> |\r\n                        <button type=\"button\" class=\"btn btn-sm btn-warning\" (click) = copyEncodeUrl(item)>複製藏家連結{{item.Message}}</button>\r\n                    </td>\r\n                </tr>\r\n            </tbody>\r\n           \r\n    </table>\r\n    \r\n    <div>\r\n            <button type=\"button\" class=\"btn btn-success\" onclick=\"location.href='#/teaportal';\">返回管理頁面</button>   \r\n            <p></p>\r\n    </div>\r\n    \r\n    <ngx-spinner\r\n      bdColor=\"rgba(51,51,51,0.8)\"\r\n      size=\"medium\"\r\n      color=\"#fff\"\r\n      type=\"ball-scale-multiple\"\r\n    >\r\n      <p style=\"font-size: 20px; color: white\">處理中...</p>\r\n    </ngx-spinner>");
 
 /***/ }),
 
@@ -2971,6 +2971,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _core_material_module__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../core/material.module */ "./src/app/core/material.module.ts");
 /* harmony import */ var _portal_portal_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./portal/portal.component */ "./src/app/clientinventory/portal/portal.component.ts");
 /* harmony import */ var _core_shared_shared_module__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../core/shared/shared.module */ "./src/app/core/shared/shared.module.ts");
+/* harmony import */ var ngx_clipboard__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ngx-clipboard */ "./node_modules/ngx-clipboard/fesm5/ngx-clipboard.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2980,6 +2981,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
   return (mod && mod.__esModule) ? mod : { "default": mod };
 };
+
 
 
 
@@ -3012,6 +3014,7 @@ var ClientinventoryModule = /** @class */ (function () {
                 _angular_flex_layout__WEBPACK_IMPORTED_MODULE_9__["FlexLayoutModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"],
                 _core_material_module__WEBPACK_IMPORTED_MODULE_14__["CustomMaterialModule"],
+                ngx_clipboard__WEBPACK_IMPORTED_MODULE_17__["ClipboardModule"],
                 _core_shared_shared_module__WEBPACK_IMPORTED_MODULE_16__["SharedModule"].forRoot(),
                 ngx_bootstrap_carousel__WEBPACK_IMPORTED_MODULE_11__["CarouselModule"].forRoot(),
                 _angular_router__WEBPACK_IMPORTED_MODULE_5__["RouterModule"].forChild([
@@ -3071,6 +3074,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _invservice_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../invservice.service */ "./src/app/clientinventory/invservice.service.ts");
 /* harmony import */ var _core_shared_service_cryptservice_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../../core/shared/service/cryptservice.service */ "./src/app/core/shared/service/cryptservice.service.ts");
 /* harmony import */ var _core_shared_service_authservice_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../../core/shared/service/authservice.service */ "./src/app/core/shared/service/authservice.service.ts");
+/* harmony import */ var ngx_clipboard__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ngx-clipboard */ "./node_modules/ngx-clipboard/fesm5/ngx-clipboard.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3090,14 +3094,16 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 
 
 
+
 var InvlistComponent = /** @class */ (function () {
-    function InvlistComponent(spinner, route, service, cryptservice, authservice, router) {
+    function InvlistComponent(spinner, route, service, cryptservice, authservice, router, clipboardservice) {
         this.spinner = spinner;
         this.route = route;
         this.service = service;
         this.cryptservice = cryptservice;
         this.authservice = authservice;
         this.router = router;
+        this.clipboardservice = clipboardservice;
     }
     Object.defineProperty(InvlistComponent.prototype, "Search", {
         get: function () {
@@ -3163,13 +3169,24 @@ var InvlistComponent = /** @class */ (function () {
     InvlistComponent.prototype.sendEncodeUrl = function (url) {
         window.open('#/clientinv/888?key=' + url, '_self');
     };
+    InvlistComponent.prototype.copyEncodeUrl = function (item) {
+        var cryptId = this.cryptservice.encrypt(item.ClientId + '|' + 'user');
+        var copyurl = 'http://biotaiwan.azurewebsites.net/#/clientinv/888?key=' + cryptId;
+        this.clipboardservice.copyFromContent(copyurl);
+        this.resetMessages();
+        item.Message = '(已複製)';
+    };
+    InvlistComponent.prototype.resetMessages = function () {
+        this.list.forEach(function (item) { return item.Message = ''; });
+    };
     InvlistComponent.ctorParameters = function () { return [
         { type: ngx_spinner__WEBPACK_IMPORTED_MODULE_1__["NgxSpinnerService"] },
         { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] },
         { type: _invservice_service__WEBPACK_IMPORTED_MODULE_3__["InvserviceService"] },
         { type: _core_shared_service_cryptservice_service__WEBPACK_IMPORTED_MODULE_4__["CryptserviceService"] },
         { type: _core_shared_service_authservice_service__WEBPACK_IMPORTED_MODULE_5__["AuthserviceService"] },
-        { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] }
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
+        { type: ngx_clipboard__WEBPACK_IMPORTED_MODULE_6__["ClipboardService"] }
     ]; };
     InvlistComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -3179,7 +3196,7 @@ var InvlistComponent = /** @class */ (function () {
         }),
         __metadata("design:paramtypes", [ngx_spinner__WEBPACK_IMPORTED_MODULE_1__["NgxSpinnerService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"],
             _invservice_service__WEBPACK_IMPORTED_MODULE_3__["InvserviceService"], _core_shared_service_cryptservice_service__WEBPACK_IMPORTED_MODULE_4__["CryptserviceService"],
-            _core_shared_service_authservice_service__WEBPACK_IMPORTED_MODULE_5__["AuthserviceService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
+            _core_shared_service_authservice_service__WEBPACK_IMPORTED_MODULE_5__["AuthserviceService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], ngx_clipboard__WEBPACK_IMPORTED_MODULE_6__["ClipboardService"]])
     ], InvlistComponent);
     return InvlistComponent;
 }());
@@ -3786,6 +3803,16 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 var ClientInventory = /** @class */ (function () {
     function ClientInventory() {
     }
+    Object.defineProperty(ClientInventory.prototype, "Message", {
+        get: function () {
+            return this._message;
+        },
+        set: function (value) {
+            this._message = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
     return ClientInventory;
 }());
 
