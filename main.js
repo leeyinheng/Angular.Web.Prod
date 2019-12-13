@@ -130,6 +130,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/clientinventory/adimage/adimage.component.html":
+/*!******************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/clientinventory/adimage/adimage.component.html ***!
+  \******************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div>\n  <span> <img src='../assets/Photos/tealogo.jpg' width=20% height=20% /></span>\n  <p></p>\n</div>\n\n<h1> 藏家頁面廣告管理系統</h1>\n\n\n<div class=\"d-flex\">\n  <div>\n          <button type=\"button\" class=\"btn btn-success\" onclick=\"location.href='#/teaportal';\">返回管理頁面</button>\n  </div>\n  <div class=\"ml-auto\">\n           <button type=\"button\" class=\"btn btn-primary\" (click)=\"SaveEntity()\">儲存</button>\n  </div>\n</div>\n<p></p>\n\n\n  <div class=\"center\">\n    <ngx-file-drop dropZoneLabel=\"Drop files here\" (onFileDrop)=\"dropped($event)\"\n    (onFileOver)=\"fileOver($event)\" (onFileLeave)=\"fileLeave($event)\">\n        <ng-template ngx-file-drop-content-tmp let-openFileSelector=\"openFileSelector\">\n          拖曳或是選擇要上傳的圖片(必須小於4mb)\n          <button type=\"button\" (click)=\"openFileSelector()\">Browse Files</button>\n        </ng-template>\n    </ngx-file-drop>\n</div>\n\n<table class=\"table table-borderless table-striped\">\n   <tbody>\n\n  <tr>\n      <td colspan=\"2\">\n              <ul *ngFor=\"let i of list; let x = index\" class=\"list-group\">\n                  <li class=\"list-group-item\">\n                      <img [src]=\"i.Image_Url\"   class=\"img-thumbnail\" > <p></p>\n                      名稱:<input [(ngModel)]=\"i.Name\" #ctrl=\"ngModel\"  name=\"imagename\" class=\"form-control\"/> <p></p>\n                      備註: <input [(ngModel)]=\"i.Comment\" #ctrl=\"ngModel\"  name=\"imageComment\" type=\"text\"  class=\"form-control\"/><p></p>\n                      圖片連結: <input [(ngModel)]=\"i.Target_Url\" #ctrl=\"ngModel\"  name=\"targeturl\" type=\"text\"  class=\"form-control\"/><p></p>\n                      <button type=\"button\" class=\"btn btn-danger btn-xs\" (click) =\"RemoveImage(x)\">刪除圖片</button>\n                  </li>\n              </ul>\n      </td>\n  </tr>\n   </tbody>\n</table>\n\n\n\n\n<ngx-spinner\n  bdColor=\"rgba(51,51,51,0.8)\"\n  size=\"medium\"\n  color=\"#fff\"\n  type=\"ball-scale-multiple\"\n>\n  <p style=\"font-size: 20px; color: white\">處理中...</p>\n</ngx-spinner>\n");
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/clientinventory/invlist/invlist.component.html":
 /*!******************************************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/clientinventory/invlist/invlist.component.html ***!
@@ -152,7 +165,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<span> <img src='../assets/Photos/tealogo.jpg' width=20% height=20% /></span>\r\n<p></p>\r\n<span> <img src='../assets/Photos/title2.jpg' width=100% height=100% /></span>\r\n<p></p>\r\n<form>\r\n    <div *ngIf=\"IsManager\">\r\n           <button type=\"button\" class=\"btn btn-info\" onclick=\"location.href='#/clientlist';\">返回列表</button>   \r\n           <p></p>\r\n   </div>\r\n      \r\n  <div class=\"form-group\">\r\n        <table class=\"table table-bordered table-striped\">\r\n                <tbody>\r\n  \r\n                    <tr>\r\n                        \r\n                        <td>\r\n                            客戶編號:\r\n                        </td>\r\n                        <TD>\r\n                                {{Entity.ClientId}}\r\n                        </TD>\r\n                    </tr>\r\n                    <tr>\r\n                        <td>\r\n                               客戶名稱:\r\n                        </td>\r\n                        <td>\r\n                            <b><h1 class=\"h4\">{{Entity.ClientName}} </h1></b>\r\n                        </td>\r\n                    </tr>\r\n                    <tr>\r\n                        <td>\r\n                            地址:\r\n                        </td>\r\n                        <td>\r\n                                {{Entity.Address}} \r\n                        </td>\r\n                    </tr>\r\n                    <tr>\r\n                        <td>\r\n                            電話:\r\n                        </td>\r\n                        <td>\r\n                            {{Entity.Phone}}\r\n                        </td>\r\n                </tbody>   \r\n        </table>\r\n        <div *ngIf=\"IsManager\">\r\n            <table class=\"table table-bordered table-striped table-hover\">\r\n                <tr>\r\n                    <th>\r\n                        序號\r\n                    </th>\r\n                    <th>\r\n                       產品編號\r\n                    </th>\r\n                    <th>\r\n                        產品名稱\r\n                    </th> \r\n                    <th>\r\n                        入庫數量\r\n                    </th>    \r\n                    <th>\r\n                        單位\r\n                    </th>\r\n                    <th>\r\n                        出庫數量\r\n                    </th>\r\n                    <th>\r\n                        庫存量\r\n                  </th>\r\n                </tr>\r\n                \r\n                   \r\n                    <tbody> \r\n                        <tr *ngFor = 'let item of Entity.Inventories; let x = index  ' >\r\n                            <td>\r\n                                {{ x  + 1 }}\r\n                            </td>\r\n                            <td>\r\n                                {{item.ProductId}}\r\n                            </td>\r\n                            <td>\r\n                                {{ item.ProductName}}  \r\n                            </td>\r\n                            <td>{{ item.Stock }}</td>\r\n                          \r\n                            <td>\r\n                                {{ item.Unit }}  \r\n                            </td>\r\n                            <td>\r\n                                {{ item.Return}}\r\n                            </td>\r\n                            <td>\r\n                                {{ item.NotReturn}}\r\n                            </td>\r\n                            \r\n                        </tr>\r\n                    </tbody>\r\n                    <tfoot>\r\n                            <tr>\r\n                              <td>總計</td>\r\n                              <td>\r\n                                     \r\n                                </td>\r\n                                <td>\r\n                                    \r\n                                </td>\r\n                                <td>\r\n                                    {{ stock_sum }}\r\n\r\n                                </td>\r\n                              \r\n                                <td>\r\n                                   \r\n                                </td>\r\n                                <td>\r\n                                    {{ return_sum}}\r\n                                </td>\r\n                                <td>\r\n                                    {{ notreturn_sum }}\r\n                                </td>\r\n                            </tr>\r\n                    </tfoot>\r\n                   \r\n            </table>\r\n        </div>\r\n        <div *ngIf=\"!IsManager\">\r\n            <table class=\"table table-bordered table-striped table-hover\">\r\n                <tr>\r\n                        <th>\r\n                                序號\r\n                            </th>\r\n                            <th>\r\n                               產品編號\r\n                            </th>\r\n                            <th>\r\n                                產品名稱\r\n                            </th> \r\n                            <th>\r\n                                入庫數量\r\n                            </th>    \r\n                            <th>\r\n                                單位\r\n                            </th>\r\n                            <th>\r\n                                出庫數量\r\n                            </th>\r\n                            <th>\r\n                                庫存量\r\n                          </th>\r\n                </tr>\r\n                \r\n                   \r\n                    <tbody> \r\n                        <tr *ngFor = 'let item of userInvertories; let x = index;' >\r\n                            <td>\r\n                                {{ x  + 1 }}\r\n                            </td>\r\n                            <td>\r\n                                {{item.ProductId}}\r\n                            </td>\r\n                            <td>\r\n                                {{ item.ProductName}}  \r\n                            </td>\r\n                            <td>{{ item.Stock }}</td>\r\n                          \r\n                            <td>\r\n                                {{ item.Unit }}  \r\n                            </td>\r\n                            <td>\r\n                                {{ item.Return}}\r\n                            </td>\r\n                            <td>\r\n                                {{ item.NotReturn}}\r\n                            </td>\r\n                            \r\n                        </tr>\r\n                    </tbody>\r\n                    <tfoot>\r\n                            <tr>\r\n                              <td>總計</td>\r\n                              <td>\r\n                                     \r\n                                </td>\r\n                                <td>\r\n                                    \r\n                                </td>\r\n                                <td>\r\n                                    {{ stock_sum }}\r\n\r\n                                </td>\r\n                              \r\n                                <td>\r\n                                   \r\n                                </td>\r\n                                <td>\r\n                                    {{ return_sum}}\r\n                                </td>\r\n                                <td>\r\n                                    {{ notreturn_sum }}\r\n                                </td>\r\n                            </tr>\r\n                          </tfoot>\r\n                   \r\n            </table>\r\n        </div>\r\n       \r\n            \r\n        <h2>近六月溫度資料</h2>\r\n        <carousel  interval=\"0\">\r\n                <slide *ngFor=\"let item of images\">\r\n                  <img [src]=\"item.ImageUrl\" alt=\"Pages\" style=\"display: block; width: 100%;\">\r\n                  <div class=\"carousel-caption d-none d-md-block\">\r\n                  </div>\r\n                </slide> \r\n        </carousel>\r\n        \r\n        <div *ngIf=\"IsManager\">\r\n            <p></p>\r\n                <button type=\"button\" class=\"btn btn-info\" onclick=\"location.href='#/clientlist';\">返回列表</button>   \r\n                <p></p>\r\n        </div>\r\n  </div>\r\n</form>\r\n\r\n \r\n\r\n<ngx-spinner\r\n  bdColor=\"rgba(51,51,51,0.8)\"\r\n  size=\"medium\"\r\n  color=\"#fff\"\r\n  type=\"ball-scale-multiple\"\r\n>\r\n  <p style=\"font-size: 20px; color: white\">處理中...</p>\r\n</ngx-spinner>");
+/* harmony default export */ __webpack_exports__["default"] = ("<span> <img src='../assets/Photos/tealogo.jpg' width=20% height=20% /></span>\r\n<p></p>\r\n\r\n\r\n<carousel  >\r\n  <slide *ngFor=\"let item of AdImages\">\r\n    <a [href] = \"item.Target_Url\" target=\"_blank\">\r\n\r\n    <img [src]=\"item.Image_Url\" alt=\"Pages\" style=\"display: block; width: 100%;\">\r\n    <div class=\"carousel-caption d-none d-md-block\" style=\"color: black;\">\r\n        <h3>{{item.Name}}</h3>\r\n        <p>{{item.Comment}}</p>\r\n      </div>\r\n\r\n      </a>\r\n  </slide>\r\n</carousel>\r\n<p></p>\r\n<form>\r\n    <div *ngIf=\"IsManager\">\r\n           <button type=\"button\" class=\"btn btn-info\" onclick=\"location.href='#/clientlist';\">返回列表</button>\r\n           <p></p>\r\n   </div>\r\n\r\n  <div class=\"form-group\">\r\n        <table class=\"table table-bordered table-striped\">\r\n                <tbody>\r\n\r\n                    <tr>\r\n\r\n                        <td>\r\n                            客戶編號:\r\n                        </td>\r\n                        <TD>\r\n                                {{Entity.ClientId}}\r\n                        </TD>\r\n                    </tr>\r\n                    <tr>\r\n                        <td>\r\n                               客戶名稱:\r\n                        </td>\r\n                        <td>\r\n                            <b><h1 class=\"h4\">{{Entity.ClientName}} </h1></b>\r\n                        </td>\r\n                    </tr>\r\n                    <tr>\r\n                        <td>\r\n                            地址:\r\n                        </td>\r\n                        <td>\r\n                                {{Entity.Address}}\r\n                        </td>\r\n                    </tr>\r\n                    <tr>\r\n                        <td>\r\n                            電話:\r\n                        </td>\r\n                        <td>\r\n                            {{Entity.Phone}}\r\n                        </td>\r\n                </tbody>\r\n        </table>\r\n        <div *ngIf=\"IsManager\">\r\n            <table class=\"table table-bordered table-striped table-hover\">\r\n                <tr>\r\n                    <th>\r\n                        序號\r\n                    </th>\r\n                    <th>\r\n                       產品編號\r\n                    </th>\r\n                    <th>\r\n                        產品名稱\r\n                    </th>\r\n                    <th>\r\n                        入庫數量\r\n                    </th>\r\n                    <th>\r\n                        單位\r\n                    </th>\r\n                    <th>\r\n                        出庫數量\r\n                    </th>\r\n                    <th>\r\n                        庫存量\r\n                  </th>\r\n                </tr>\r\n\r\n\r\n                    <tbody>\r\n                        <tr *ngFor = 'let item of Entity.Inventories; let x = index  ' >\r\n                            <td>\r\n                                {{ x  + 1 }}\r\n                            </td>\r\n                            <td>\r\n                                {{item.ProductId}}\r\n                            </td>\r\n                            <td>\r\n                                {{ item.ProductName}}\r\n                            </td>\r\n                            <td>{{ item.Stock }}</td>\r\n\r\n                            <td>\r\n                                {{ item.Unit }}\r\n                            </td>\r\n                            <td>\r\n                                {{ item.Return}}\r\n                            </td>\r\n                            <td>\r\n                                {{ item.NotReturn}}\r\n                            </td>\r\n\r\n                        </tr>\r\n                    </tbody>\r\n                    <tfoot>\r\n                            <tr>\r\n                              <td>總計</td>\r\n                              <td>\r\n\r\n                                </td>\r\n                                <td>\r\n\r\n                                </td>\r\n                                <td>\r\n                                    {{ stock_sum }}\r\n\r\n                                </td>\r\n\r\n                                <td>\r\n\r\n                                </td>\r\n                                <td>\r\n                                    {{ return_sum}}\r\n                                </td>\r\n                                <td>\r\n                                    {{ notreturn_sum }}\r\n                                </td>\r\n                            </tr>\r\n                    </tfoot>\r\n\r\n            </table>\r\n        </div>\r\n        <div *ngIf=\"!IsManager\">\r\n            <table class=\"table table-bordered table-striped table-hover\">\r\n                <tr>\r\n                        <th>\r\n                                序號\r\n                            </th>\r\n                            <th>\r\n                               產品編號\r\n                            </th>\r\n                            <th>\r\n                                產品名稱\r\n                            </th>\r\n                            <th>\r\n                                入庫數量\r\n                            </th>\r\n                            <th>\r\n                                單位\r\n                            </th>\r\n                            <th>\r\n                                出庫數量\r\n                            </th>\r\n                            <th>\r\n                                庫存量\r\n                          </th>\r\n                </tr>\r\n\r\n\r\n                    <tbody>\r\n                        <tr *ngFor = 'let item of userInvertories; let x = index;' >\r\n                            <td>\r\n                                {{ x  + 1 }}\r\n                            </td>\r\n                            <td>\r\n                                {{item.ProductId}}\r\n                            </td>\r\n                            <td>\r\n                                {{ item.ProductName}}\r\n                            </td>\r\n                            <td>{{ item.Stock }}</td>\r\n\r\n                            <td>\r\n                                {{ item.Unit }}\r\n                            </td>\r\n                            <td>\r\n                                {{ item.Return}}\r\n                            </td>\r\n                            <td>\r\n                                {{ item.NotReturn}}\r\n                            </td>\r\n\r\n                        </tr>\r\n                    </tbody>\r\n                    <tfoot>\r\n                            <tr>\r\n                              <td>總計</td>\r\n                              <td>\r\n\r\n                                </td>\r\n                                <td>\r\n\r\n                                </td>\r\n                                <td>\r\n                                    {{ stock_sum }}\r\n\r\n                                </td>\r\n\r\n                                <td>\r\n\r\n                                </td>\r\n                                <td>\r\n                                    {{ return_sum}}\r\n                                </td>\r\n                                <td>\r\n                                    {{ notreturn_sum }}\r\n                                </td>\r\n                            </tr>\r\n                          </tfoot>\r\n\r\n            </table>\r\n        </div>\r\n\r\n\r\n        <h2>近六月溫度資料</h2>\r\n        <carousel  interval=\"0\">\r\n                <slide *ngFor=\"let item of images\">\r\n                  <img [src]=\"item.ImageUrl\" alt=\"Pages\" style=\"display: block; width: 100%;\">\r\n                  <div class=\"carousel-caption d-none d-md-block\">\r\n                  </div>\r\n                </slide>\r\n        </carousel>\r\n\r\n        <div *ngIf=\"IsManager\">\r\n            <p></p>\r\n                <button type=\"button\" class=\"btn btn-info\" onclick=\"location.href='#/clientlist';\">返回列表</button>\r\n                <p></p>\r\n        </div>\r\n  </div>\r\n</form>\r\n\r\n\r\n\r\n<ngx-spinner\r\n  bdColor=\"rgba(51,51,51,0.8)\"\r\n  size=\"medium\"\r\n  color=\"#fff\"\r\n  type=\"ball-scale-multiple\"\r\n>\r\n  <p style=\"font-size: 20px; color: white\">處理中...</p>\r\n</ngx-spinner>\r\n");
 
 /***/ }),
 
@@ -191,7 +204,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<span> <img src='../assets/Photos/tealogo.jpg' width=20% height=20% /></span>\n<p></p>\n<span> <img src='../assets/Photos/title2.jpg' width=100% height=100% /></span>\n<p></p>\n\n<div style=\"text-align:center;\">\n        <h2>普洱茶倉系統管理頁面</h2> <h3>(登入者:{{User}} , 登入時間: {{LogInTime}})   <button mat-raised-button (click)=\"logout()\" color=\"primary\">登出</button> </h3> \n</div>\n\n\n\n<div class=\"container\"  >\n        <div id=\"rcorners1a\" >\n                        <div class=\"row\" id =\"frontbackground\" >\n                                        <h3>庫存系統</h3> \n                                 </div>\n                                 <div class=\"row\"   id =\"frontbackground\"  >\n                                   <div class=\"col\">\n                                                 <button class=\"button\"  onclick=\"location.href='#/clientlist';  \"><i class=\"fa fa-address-book\" ></i> 庫存列表 </button>\n                                   </div>\n                                   <div class=\"col\">\n                                                 <button class=\"button\" onclick=\"location.href='#/uploadinvfile';\"><i class=\"fa fa-cloud-upload\"></i> 上傳檔案 (更新時間: {{LastUpdateTime}})</button>\n                                   </div>\n                                 </div>\n                                 <div class=\"row\"   id =\"frontbackground\" >\n                                         <hr>\n                        </div>\n        </div>\n        <div id=\"rcorners1a\">\n                        <div class=\"row\" style=\"background-color:lightcyan;\">\n                                        <h3>推廣文章系統</h3>\n                                </div>\n                                <div class=\"row\" style=\"background-color:lightcyan;\" >\n                                  <div class=\"col\">\n                                        <button class=\"button\"  onclick=\"window.open('#/articleshow', '_blank'); \"><i class=\"fa fa-book\" ></i> 推廣文章連結 </button>\n                                  </div>\n                                  <div class=\"col\">\n                                         <button class=\"button\"  onclick=\"location.href='#/articlelist';\"><i class=\"fa fa-cloud-upload\" ></i>推廣文章管理 </button>\n                                  </div>\n                                </div>\n                                <div class=\"row\" style=\"background-color:lightcyan;\">\n                                                <hr>\n                        </div>\n\n        </div>\n     \n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<span> <img src='../assets/Photos/tealogo.jpg' width=20% height=20% /></span>\n<p></p>\n<span> <img src='../assets/Photos/title2.jpg' width=100% height=100% /></span>\n<p></p>\n\n<div style=\"text-align:center;\">\n        <h2>普洱茶倉系統管理頁面</h2> <h3>(登入者:{{User}} , 登入時間: {{LogInTime}})   <button mat-raised-button (click)=\"logout()\" color=\"primary\">登出</button> </h3>\n</div>\n\n\n\n<div class=\"container\"  >\n        <div id=\"rcorners1a\" >\n                        <div class=\"row\" id =\"frontbackground\" >\n                                        <h3>庫存系統</h3>\n                                 </div>\n                                 <div class=\"row\"   id =\"frontbackground\"  >\n                                   <div class=\"col\">\n                                                 <button class=\"button\"  onclick=\"location.href='#/clientlist';  \"><i class=\"fa fa-address-book\" ></i> 庫存列表 </button>\n                                   </div>\n                                   <div class=\"col\">\n                                                 <button class=\"button\" onclick=\"location.href='#/uploadinvfile';\"><i class=\"fa fa-cloud-upload\"></i> 上傳檔案 (更新時間: {{LastUpdateTime}})</button>\n                                   </div>\n                                 </div>\n                                 <div class=\"row\"   id =\"frontbackground\" >\n                                         <hr>\n                        </div>\n        </div>\n        <div id=\"rcorners1a\">\n                        <div class=\"row\" style=\"background-color:lightcyan;\">\n                                        <h3>推廣系統</h3>\n                                </div>\n                                <div class=\"row\" style=\"background-color:lightcyan;\" >\n                                  <div class=\"col\">\n                                        <button class=\"button\"  onclick=\"window.open('#/articleshow', '_blank'); \"><i class=\"fa fa-book\" ></i> 推廣文章連結 </button>\n                                  </div>\n                                  <div class=\"col\">\n                                         <button class=\"button\"  onclick=\"location.href='#/articlelist';\"><i class=\"fa fa-cloud-upload\" ></i>推廣文章管理 </button>\n                                  </div>\n                                  <div class=\"col\">\n                                    <button class=\"button\"  onclick=\"location.href='#/adimage';\"><i class=\"fa fa-cloud-upload\" ></i>藏家頁面廣告管理 </button>\n                                 </div>\n                                </div>\n                                <div class=\"row\" style=\"background-color:lightcyan;\">\n                                                <hr>\n                                 </div>\n\n        </div>\n\n</div>\n");
 
 /***/ }),
 
@@ -2944,6 +2957,178 @@ var CartComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/clientinventory/adimage/adimage.component.css":
+/*!***************************************************************!*\
+  !*** ./src/app/clientinventory/adimage/adimage.component.css ***!
+  \***************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NsaWVudGludmVudG9yeS9hZGltYWdlL2FkaW1hZ2UuY29tcG9uZW50LmNzcyJ9 */");
+
+/***/ }),
+
+/***/ "./src/app/clientinventory/adimage/adimage.component.ts":
+/*!**************************************************************!*\
+  !*** ./src/app/clientinventory/adimage/adimage.component.ts ***!
+  \**************************************************************/
+/*! exports provided: AdimageComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdimageComponent", function() { return AdimageComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _core_shared_model_ImageLink__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../core/shared/model/ImageLink */ "./src/app/core/shared/model/ImageLink.ts");
+/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ngx-spinner */ "./node_modules/ngx-spinner/fesm5/ngx-spinner.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var util__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! util */ "./node_modules/util/util.js");
+/* harmony import */ var util__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(util__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _core_shared_service_authservice_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../../core/shared/service/authservice.service */ "./src/app/core/shared/service/authservice.service.ts");
+/* harmony import */ var _core_shared_service_postservice_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./../../core/shared/service/postservice.service */ "./src/app/core/shared/service/postservice.service.ts");
+/* harmony import */ var _invservice_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../invservice.service */ "./src/app/clientinventory/invservice.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+
+
+
+
+
+
+
+var AdimageComponent = /** @class */ (function () {
+    function AdimageComponent(spinner, route, authservice, router, postservice, service) {
+        this.spinner = spinner;
+        this.route = route;
+        this.authservice = authservice;
+        this.router = router;
+        this.postservice = postservice;
+        this.service = service;
+        this.files = [];
+        this.list = [];
+    }
+    AdimageComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.authservice.checktoken().subscribe(function (val) {
+            if (val !== 'OK') {
+                alert('權限不足或失效 請重新登入');
+                _this.router.navigate(['login']);
+            }
+        });
+        this.spinner.show();
+        this.service.getAdImages().subscribe(function (res) {
+            if (!Object(util__WEBPACK_IMPORTED_MODULE_4__["isNullOrUndefined"])(res)) {
+                _this.list = res;
+            }
+            _this.spinner.hide();
+        }, function (error) {
+            alert('內部錯誤');
+            _this.spinner.hide();
+        });
+    };
+    AdimageComponent.prototype.SaveEntity = function () {
+        var _this = this;
+        this.spinner.show();
+        this.service.postAdImages(this.list).subscribe(function (res) {
+            alert('儲存完畢');
+            _this.spinner.hide();
+            window.open('#/teaportal', '_self');
+        }, function (err) {
+            alert(err);
+            _this.spinner.hide();
+        });
+    };
+    AdimageComponent.prototype.dropped = function (files) {
+        var _this = this;
+        this.files = files;
+        var _loop_1 = function (droppedFile) {
+            // Is it a file?
+            if (droppedFile.fileEntry.isFile) {
+                var fileEntry = droppedFile.fileEntry;
+                fileEntry.file(function (file) {
+                    // Here you can access the real file
+                    console.log(droppedFile.relativePath, file);
+                    if (file.size > 4194304) {
+                        alert(file.name + ' 已經大於4mb,請縮小後再上傳');
+                        return;
+                    }
+                    // You could upload it like this:
+                    var formData = new FormData();
+                    formData.append(file.name, file, droppedFile.relativePath);
+                    _this.spinner.show();
+                    _this.postservice.postImage(formData).subscribe(function (val) {
+                        var newImage = new _core_shared_model_ImageLink__WEBPACK_IMPORTED_MODULE_1__["ImageLink"]();
+                        newImage.Name = 'Title';
+                        newImage.Image_Url = val;
+                        _this.list.push(newImage);
+                        _this.spinner.hide();
+                    });
+                });
+            }
+            else {
+                // It was a directory (empty directories are added, otherwise only files)
+                var fileEntry = droppedFile.fileEntry;
+                console.log(droppedFile.relativePath, fileEntry);
+            }
+        };
+        for (var _i = 0, files_1 = files; _i < files_1.length; _i++) {
+            var droppedFile = files_1[_i];
+            _loop_1(droppedFile);
+        }
+    };
+    AdimageComponent.prototype.fileOver = function (event) {
+        console.log(event);
+    };
+    AdimageComponent.prototype.fileLeave = function (event) {
+        console.log(event);
+    };
+    AdimageComponent.prototype.RemoveImage = function (i) {
+        i++;
+        var orginialItems = this.list;
+        var filterItems = orginialItems.slice(0, i - 1).concat(orginialItems.slice(i, orginialItems.length));
+        this.list = filterItems;
+    };
+    AdimageComponent.ctorParameters = function () { return [
+        { type: ngx_spinner__WEBPACK_IMPORTED_MODULE_2__["NgxSpinnerService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"] },
+        { type: _core_shared_service_authservice_service__WEBPACK_IMPORTED_MODULE_5__["AuthserviceService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
+        { type: _core_shared_service_postservice_service__WEBPACK_IMPORTED_MODULE_6__["PostFileService"] },
+        { type: _invservice_service__WEBPACK_IMPORTED_MODULE_7__["InvserviceService"] }
+    ]; };
+    AdimageComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-adimage',
+            template: __importDefault(__webpack_require__(/*! raw-loader!./adimage.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/clientinventory/adimage/adimage.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./adimage.component.css */ "./src/app/clientinventory/adimage/adimage.component.css")).default]
+        }),
+        __metadata("design:paramtypes", [ngx_spinner__WEBPACK_IMPORTED_MODULE_2__["NgxSpinnerService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"],
+            _core_shared_service_authservice_service__WEBPACK_IMPORTED_MODULE_5__["AuthserviceService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _core_shared_service_postservice_service__WEBPACK_IMPORTED_MODULE_6__["PostFileService"],
+            _invservice_service__WEBPACK_IMPORTED_MODULE_7__["InvserviceService"]])
+    ], AdimageComponent);
+    return AdimageComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/clientinventory/clientinventory.module.ts":
 /*!***********************************************************!*\
   !*** ./src/app/clientinventory/clientinventory.module.ts ***!
@@ -2972,6 +3157,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _portal_portal_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./portal/portal.component */ "./src/app/clientinventory/portal/portal.component.ts");
 /* harmony import */ var _core_shared_shared_module__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../core/shared/shared.module */ "./src/app/core/shared/shared.module.ts");
 /* harmony import */ var ngx_clipboard__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ngx-clipboard */ "./node_modules/ngx-clipboard/fesm5/ngx-clipboard.js");
+/* harmony import */ var _adimage_adimage_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./adimage/adimage.component */ "./src/app/clientinventory/adimage/adimage.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2999,12 +3185,13 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 
 
 
+
 var ClientinventoryModule = /** @class */ (function () {
     function ClientinventoryModule() {
     }
     ClientinventoryModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
-            declarations: [_invupload_invupload_component__WEBPACK_IMPORTED_MODULE_3__["InvuploadComponent"], _invshow_invshow_component__WEBPACK_IMPORTED_MODULE_10__["InvshowComponent"], _invlist_invlist_component__WEBPACK_IMPORTED_MODULE_12__["InvlistComponent"], _login_login_component__WEBPACK_IMPORTED_MODULE_13__["LoginComponent"], _portal_portal_component__WEBPACK_IMPORTED_MODULE_15__["PortalComponent"]],
+            declarations: [_invupload_invupload_component__WEBPACK_IMPORTED_MODULE_3__["InvuploadComponent"], _invshow_invshow_component__WEBPACK_IMPORTED_MODULE_10__["InvshowComponent"], _invlist_invlist_component__WEBPACK_IMPORTED_MODULE_12__["InvlistComponent"], _login_login_component__WEBPACK_IMPORTED_MODULE_13__["LoginComponent"], _portal_portal_component__WEBPACK_IMPORTED_MODULE_15__["PortalComponent"], _adimage_adimage_component__WEBPACK_IMPORTED_MODULE_18__["AdimageComponent"]],
             imports: [
                 _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -3032,6 +3219,9 @@ var ClientinventoryModule = /** @class */ (function () {
                     },
                     {
                         path: 'teaportal', component: _portal_portal_component__WEBPACK_IMPORTED_MODULE_15__["PortalComponent"]
+                    },
+                    {
+                        path: 'adimage', component: _adimage_adimage_component__WEBPACK_IMPORTED_MODULE_18__["AdimageComponent"]
                     }
                 ])
             ],
@@ -3247,6 +3437,7 @@ var InvserviceService = /** @class */ (function () {
         this.getImagesUrl = 'api/ClientInventoryApi/temp/6';
         this.getListUrl = 'api/ClientInventoryApi/';
         this.getLastUpdateUrl = 'api/ClientInventoryApi/LastUpdate/888';
+        this.adImagesUrl = 'api/ClientInventoryApi/AdImages/888';
         this._list = [];
         this.messageSource = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](this.list);
         this.currentMessage = this.messageSource.asObservable();
@@ -3311,6 +3502,20 @@ var InvserviceService = /** @class */ (function () {
     InvserviceService.prototype.getLastUpdateTime = function () {
         var url = this.site + this.getLastUpdateUrl;
         return this.http.get(url);
+    };
+    InvserviceService.prototype.getAdImages = function () {
+        var url = this.site + this.adImagesUrl;
+        return this.http.get(url);
+    };
+    InvserviceService.prototype.postAdImages = function (adimages) {
+        var url = this.site + this.adImagesUrl;
+        // Headers
+        var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
+            ContentType: 'multipart/form-data'
+        });
+        // return  this.http.post(url, file, {headers: headers});
+        return this.http
+            .post(url, adimages, { headers: headers, responseType: 'text' });
     };
     InvserviceService.ctorParameters = function () { return [
         { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"] }
@@ -3460,6 +3665,7 @@ var InvshowComponent = /** @class */ (function () {
         }
         this.GetEntity(ID);
         this.GetProjectImages();
+        this.GetAdImages();
     };
     InvshowComponent.prototype.GetEntity = function (ID) {
         var _this = this;
@@ -3513,6 +3719,12 @@ var InvshowComponent = /** @class */ (function () {
                 }
             });
         }
+    };
+    InvshowComponent.prototype.GetAdImages = function () {
+        var _this = this;
+        this.service.getAdImages().subscribe(function (res) {
+            _this.AdImages = res;
+        });
     };
     InvshowComponent.ctorParameters = function () { return [
         { type: ngx_spinner__WEBPACK_IMPORTED_MODULE_1__["NgxSpinnerService"] },
@@ -4033,6 +4245,29 @@ var CustomMaterialModule = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/core/shared/model/ImageLink.ts":
+/*!************************************************!*\
+  !*** ./src/app/core/shared/model/ImageLink.ts ***!
+  \************************************************/
+/*! exports provided: ImageLink */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ImageLink", function() { return ImageLink; });
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+var ImageLink = /** @class */ (function () {
+    function ImageLink() {
+    }
+    return ImageLink;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/core/shared/model/user.ts":
 /*!*******************************************!*\
   !*** ./src/app/core/shared/model/user.ts ***!
@@ -4202,6 +4437,63 @@ var CryptserviceService = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/core/shared/service/postservice.service.ts":
+/*!************************************************************!*\
+  !*** ./src/app/core/shared/service/postservice.service.ts ***!
+  \************************************************************/
+/*! exports provided: PostFileService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PostFileService", function() { return PostFileService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+var PostFileService = /** @class */ (function () {
+    function PostFileService(http) {
+        this.http = http;
+        this.site = 'https://leecloud.azurewebsites.net/';
+        this.postImgurl = 'api/UploadFileapi/';
+    }
+    PostFileService.prototype.postImage = function (file) {
+        var url = this.site + this.postImgurl;
+        // Headers
+        var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
+            ContentType: 'multipart/form-data'
+        });
+        return this.http
+            .post(url, file, { headers: headers, responseType: 'text' });
+    };
+    PostFileService.ctorParameters = function () { return [
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"] }
+    ]; };
+    PostFileService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+            providedIn: 'root'
+        }),
+        __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
+    ], PostFileService);
+    return PostFileService;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/core/shared/shared.module.ts":
 /*!**********************************************!*\
   !*** ./src/app/core/shared/shared.module.ts ***!
@@ -4216,6 +4508,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
 /* harmony import */ var _service_authservice_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./service/authservice.service */ "./src/app/core/shared/service/authservice.service.ts");
 /* harmony import */ var _service_cryptservice_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./service/cryptservice.service */ "./src/app/core/shared/service/cryptservice.service.ts");
+/* harmony import */ var _service_postservice_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./service/postservice.service */ "./src/app/core/shared/service/postservice.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4229,6 +4522,7 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 
 
 
+
 var SharedModule = /** @class */ (function () {
     function SharedModule() {
     }
@@ -4236,7 +4530,7 @@ var SharedModule = /** @class */ (function () {
     SharedModule.forRoot = function () {
         return {
             ngModule: SharedModule_1,
-            providers: [_service_authservice_service__WEBPACK_IMPORTED_MODULE_2__["AuthserviceService"], _service_cryptservice_service__WEBPACK_IMPORTED_MODULE_3__["CryptserviceService"]]
+            providers: [_service_authservice_service__WEBPACK_IMPORTED_MODULE_2__["AuthserviceService"], _service_cryptservice_service__WEBPACK_IMPORTED_MODULE_3__["CryptserviceService"], _service_postservice_service__WEBPACK_IMPORTED_MODULE_4__["PostFileService"]]
         };
     };
     var SharedModule_1;
