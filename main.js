@@ -39,6 +39,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/article/auction/auction.component.html":
+/*!**********************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/article/auction/auction.component.html ***!
+  \**********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<span> <img src='../assets/Photos/tealogo.jpg' width=20% height=20% /></span>\n\n<h4> 2019 正德秋拍 結果</h4>\n\n<igx-carousel style=\"width:100%\">\n  <igx-slide>\n       <img src='./../../../assets/Photos/627p.gif'/>\n  </igx-slide>\n  <igx-slide>\n    <img src='./../../../assets/Photos/628p.gif'/>\n  </igx-slide>\n  <igx-slide>\n    <img src='./../../../assets/Photos/630p.gif'/>\n  </igx-slide>\n  <igx-slide>\n    <img src='./../../../assets/Photos/632p.gif'/>\n  </igx-slide>\n  <igx-slide>\n    <img src='./../../../assets/Photos/633p.gif'/>\n  </igx-slide>\n  <igx-slide>\n    <img src='./../../../assets/Photos/635p.gif'/>\n  </igx-slide>\n  <igx-slide>\n    <img src='./../../../assets/Photos/637p.gif'/>\n  </igx-slide>\n  <igx-slide>\n    <img src='./../../../assets/Photos/638p.gif'/>\n  </igx-slide>\n  <igx-slide>\n    <img src='./../../../assets/Photos/639p.gif'/>\n  </igx-slide>\n  <igx-slide>\n    <img src='./../../../assets/Photos/640p.gif'/>\n  </igx-slide>\n  <igx-slide>\n    <img src='./../../../assets/Photos/641p.gif'/>\n  </igx-slide>\n  <igx-slide>\n    <img src='./../../../assets/Photos/643p.gif'/>\n  </igx-slide>\n  <igx-slide>\n    <img src='./../../../assets/Photos/645p.gif'/>\n  </igx-slide>\n  <igx-slide>\n    <img src='./../../../assets/Photos/646p.gif'/>\n  </igx-slide>\n  <igx-slide>\n    <img src='./../../../assets/Photos/647p.gif'/>\n  </igx-slide>\n  <igx-slide>\n    <img src='./../../../assets/Photos/648p.gif'/>\n  </igx-slide>\n  <igx-slide>\n    <img src='./../../../assets/Photos/649p.gif'/>\n  </igx-slide>\n  <igx-slide>\n    <img src='./../../../assets/Photos/650p.gif'/>\n  </igx-slide>\n  <igx-slide>\n    <img src='./../../../assets/Photos/651p.gif'/>\n  </igx-slide>\n  <igx-slide>\n    <img src='./../../../assets/Photos/652p.gif'/>\n  </igx-slide>\n  <igx-slide>\n    <img src='./../../../assets/Photos/653p.gif'/>\n  </igx-slide>\n  <igx-slide>\n    <img src='./../../../assets/Photos/655p.gif'/>\n  </igx-slide>\n  <igx-slide>\n    <img src='./../../../assets/Photos/656p.gif'/>\n  </igx-slide>\n  <igx-slide>\n    <img src='./../../../assets/Photos/657p.gif'/>\n  </igx-slide>\n  <igx-slide>\n    <img src='./../../../assets/Photos/658p.gif'/>\n  </igx-slide>\n  <igx-slide>\n    <img src='./../../../assets/Photos/659p.gif'/>\n  </igx-slide>\n  <igx-slide>\n    <img src='./../../../assets/Photos/660p.gif'/>\n  </igx-slide>\n  <igx-slide>\n    <img src='./../../../assets/Photos/661p.gif'/>\n  </igx-slide>\n  <igx-slide>\n    <img src='./../../../assets/Photos/662p.gif'/>\n  </igx-slide>\n  <igx-slide>\n    <img src='./../../../assets/Photos/663p.gif'/>\n  </igx-slide>\n  <igx-slide>\n    <img src='./../../../assets/Photos/665p.gif'/>\n  </igx-slide>\n\n</igx-carousel>\n\n\n");
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/businesscenter/bcform/bcform.component.html":
 /*!***************************************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/businesscenter/bcform/bcform.component.html ***!
@@ -231,6 +244,32 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("<div class=\"modal-header table-hover\">\n  <h4 class=\"modal-title pull-left\">{{Name}}</h4>\n  <button type=\"button\" class=\"close pull-right\" aria-label=\"Close\" (click)=\"bsModalRef.hide()\">\n    <span aria-hidden=\"true\">&times;</span>\n  </button>\n</div>\n<div class=\"modal-body\">\n<table class=\"table table-bordered\">\n<tr>\n  <td>\n    Email \n  </td>\n  <td>\n    {{Email}}\n  </td>\n</tr>\n\n<tr>\n<td>\n   標題\n</td>\n<td>\n<input type=\"string\"\n[(ngModel)]='Subject'\n />  \n</td>\n</tr>\n\n<tr class=\"info\">\n<td>\n    訊息\n</td>\n<td>\n   <textarea [(ngModel)]='Content' class=\"form-control\" rows=\"5\">\n\n   </textarea>\n</td>\n</tr>\n \n<tr >\n   \n        <td>\n            <button class=\"btn btn-primary\" (click) = 'EmailOut()'>\n               寄出\n             </button>\n            \n        </td>\n\n  </tr>\n</table> \n\n\n</div>\n<div class=\"modal-footer\">\n  <button type=\"button\" class=\"btn btn-default\" (click)=\"bsModalRef.hide()\">取消</button>\n</div>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/health/healthview/healthview.component.html":
+/*!***************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/health/healthview/healthview.component.html ***!
+  \***************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div>\n\n  <select (change)=\"filterForArticles($event.target.value)\" class=\"form-control\">\n    <option value=\"-1\">--選擇--</option>\n    <option *ngFor=\"let item of List; let i = index\" value={{i}}>\n      {{item.ClientName}}\n    </option>\n  </select>\n</div>\n\n<div *ngIf= \"Entity.ClientId\">\n\n  <table class=\"table table-bordered table-striped\">\n    <tbody>\n\n        <tr>\n\n            <td>\n                   編號:\n            </td>\n            <Td>\n                    {{Entity.ClientId}}\n            </Td>\n        </tr>\n        <tr>\n            <td>\n                   名稱:\n            </td>\n            <td>\n                <b><h1 class=\"h4\">{{Entity.ClientName}} </h1></b>\n            </td>\n        </tr>\n        <tr>\n            <td>\n                地址:\n            </td>\n            <td>\n                    {{Entity.Address}}\n            </td>\n        </tr>\n        <tr>\n            <td>\n                電話:\n            </td>\n            <td>\n                {{Entity.Phone}}\n            </td>\n        </tr>\n        <tr>\n          <td>\n            身高:\n          </td>\n          <td>\n            {{Entity.Info.Height}}\n          </td>\n        </tr>\n        <tr>\n          <td>\n            備註:\n          </td>\n          <td>\n            {{Entity.Info.Note}}\n          </td>\n        </tr>\n    </tbody>\n  </table>\n\n  <table class=\"table table-bordered table-striped\">\n\n      <tbody>\n        <th>\n          時間\n        </th>\n        <th>\n          體重(KG)\n        </th>\n        <th>\n          步數\n        </th>\n        <th>\n          血壓\n        </th>\n        <th>\n          餐飲\n        </th>\n        <th>\n          <button type=\"button\" class=\"btn btn-primary\" (click) = \"openModal()\">新增紀錄</button>\n        </th>\n        <tr *ngFor = 'let item of Entity.InfoHistory' >\n            <td>\n                {{item.DateTime}}\n            </td>\n            <td>{{ item.Weight}}\n\n            </td>\n            <td>{{ item.WalkSteps }}</td>\n\n            <td>\n                <table>\n                  <th>\n                    收縮壓\n                  </th>\n                  <th>\n                    舒張壓\n                  </th>\n                  <th>\n                    脈搏\n                  </th>\n                  <th>\n                    時間\n                  </th>\n                  <tbody class=\"table table-bordered table-striped\">\n                    <tr *ngFor = \"let blood of item.BloodPressures\">\n                      <td> {{blood.BloodHigh}}</td>\n                      <td> {{blood.BloodLow}}</td>\n                      <td> {{blood.Pulse}}</td>\n                      <td> {{blood.DateTime}}</td>\n                    </tr>\n                  </tbody>\n                </table>\n            </td>\n            <td>\n              <table>\n                <th>\n                  餐飲\n                </th>\n                <th>\n                  照片\n                </th>\n                <th>\n                  時間\n                </th>\n                <tbody class=\"table table-bordered table-striped\">\n                  <tr *ngFor = \"let meal of item.Meals\">\n                    <td> {{meal.Name}}</td>\n                    <td> <img [src] = \"meal.ImageLink\" style=\"width: 50%;\"/> </td>\n                    <td>  {{meal.DateTime}}</td>\n                  </tr>\n                </tbody>\n              </table>\n            </td>\n\n            <td>\n                   <div class=\"btn-group\">\n                        <button type=\"button\" class=\"btn btn-sm btn-success\" (click) = openform(item.Id)>編輯</button>    |\n                        <button type=\"button\" class=\"btn btn-sm btn-danger\" (click) = delete(item.Id)>刪除</button>\n                   </div>\n            </td>\n\n        </tr>\n\n\n  </table>\n\n</div>\n\n\n\n<ngx-spinner\n  bdColor=\"rgba(51,51,51,0.8)\"\n  size=\"medium\"\n  color=\"#fff\"\n  type=\"ball-scale-multiple\"\n>\n  <p style=\"font-size: 20px; color: white\">處理中...</p>\n</ngx-spinner>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/health/healthviewmodal/healthviewmodal.component.html":
+/*!*************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/health/healthviewmodal/healthviewmodal.component.html ***!
+  \*************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"modal-header table-hover\">\n    <h4 class=\"modal-title pull-left\">{{History.DateTime}}</h4>\n</div>\n    <div class=\"modal-body\">\n      <table class=\"table table-bordered\">\n        <tr>\n            <td>\n                每日步數\n            </td>\n            <td>\n            <input type=\"number\"\n            [(ngModel)]='History.WalkSteps'\n             />\n            </td>\n        </tr>\n\n        <tr>\n            <td>\n                體重(kg)\n            </td>\n            <td>\n            <input type=\"number\"\n            [(ngModel)]='History.Weight'\n             />\n            </td>\n        </tr>\n\n        <tr>\n        <td>\n           血壓    <button type=\"button\" class=\"btn btn-sm btn-danger\" (click) = newblood();>新增</button>\n        </td>\n        <td>\n          <table>\n            <th>\n              收縮壓\n            </th>\n            <th>\n              舒張壓\n            </th>\n            <th>\n              脈搏\n            </th>\n            <th>\n              時間\n            </th>\n            <tbody class=\"table table-bordered table-striped\">\n              <tr *ngFor = \"let blood of History.BloodPressures\">\n                <td>  <input type=\"number\"\n                  [(ngModel)]='blood.BloodHigh'\n                   />  </td>\n                <td>\n                  <input type=\"number\"\n                  [(ngModel)]='blood.BloodLow'\n                  />\n\n                </td>\n                <td>\n                  <input type=\"number\"\n                  [(ngModel)]='blood.Pulse'\n                  />\n\n                </td>\n                <td>\n                  {{blood.DateTime}}\n                </td>\n              </tr>\n            </tbody>\n          </table>\n\n\n        </td>\n        </tr>\n\n        <tr>\n        <td>\n            其他事項\n        </td>\n        <td>\n           <textarea [(ngModel)]='History.Comment' class=\"form-control\" >\n\n           </textarea>\n        </td>\n        </tr>\n\n        <tr >\n\n                <td>\n                    <button class=\"btn btn-primary\" (click) = 'savelog()'>\n                       儲存\n                     </button>\n\n                </td>\n\n          </tr>\n      </table>\n\n\n\n\n    </div>\n          <div class=\"modal-footer\">\n                 <button type=\"button\" class=\"btn btn-primary\" (click)=\"Save()\">儲存</button>\n                <button type=\"button\" class=\"btn btn-secondary\" (click)=\"bsModalRef.hide()\">取消</button>\n          </div>\n\n\n");
 
 /***/ }),
 
@@ -848,6 +887,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _businesscenter_businesscenter_module__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./businesscenter/businesscenter.module */ "./src/app/businesscenter/businesscenter.module.ts");
 /* harmony import */ var _article_article_module__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./article/article.module */ "./src/app/article/article.module.ts");
 /* harmony import */ var _clientinventory_clientinventory_module__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./clientinventory/clientinventory.module */ "./src/app/clientinventory/clientinventory.module.ts");
+/* harmony import */ var _health_health_module__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./health/health.module */ "./src/app/health/health.module.ts");
+/* harmony import */ var igniteui_angular__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! igniteui-angular */ "./node_modules/igniteui-angular/fesm5/igniteui-angular.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -875,6 +916,8 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 
 
 //Components
+
+
 
 
 
@@ -930,7 +973,9 @@ var AppModule = /** @class */ (function () {
                 ]),
                 _businesscenter_businesscenter_module__WEBPACK_IMPORTED_MODULE_25__["BusinesscenterModule"],
                 _article_article_module__WEBPACK_IMPORTED_MODULE_26__["ArticleModule"],
-                _clientinventory_clientinventory_module__WEBPACK_IMPORTED_MODULE_27__["ClientinventoryModule"]
+                _clientinventory_clientinventory_module__WEBPACK_IMPORTED_MODULE_27__["ClientinventoryModule"],
+                _health_health_module__WEBPACK_IMPORTED_MODULE_28__["HealthModule"],
+                igniteui_angular__WEBPACK_IMPORTED_MODULE_29__["IgxCarouselModule"]
             ],
             declarations: [
                 _app_component__WEBPACK_IMPORTED_MODULE_14__["AppComponent"],
@@ -988,6 +1033,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _articleshow_articleshow_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./articleshow/articleshow.component */ "./src/app/article/articleshow/articleshow.component.ts");
 /* harmony import */ var ngx_bootstrap_carousel__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ngx-bootstrap/carousel */ "./node_modules/ngx-bootstrap/carousel/fesm5/ngx-bootstrap-carousel.js");
 /* harmony import */ var _core_shared_shared_module__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../core/shared/shared.module */ "./src/app/core/shared/shared.module.ts");
+/* harmony import */ var _auction_auction_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./auction/auction.component */ "./src/app/article/auction/auction.component.ts");
+/* harmony import */ var igniteui_angular__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! igniteui-angular */ "./node_modules/igniteui-angular/fesm5/igniteui-angular.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1012,12 +1059,14 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 
 
 
+
+
 var ArticleModule = /** @class */ (function () {
     function ArticleModule() {
     }
     ArticleModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
-            declarations: [_articleform_articleform_component__WEBPACK_IMPORTED_MODULE_2__["ArticleformComponent"], _articlelist_articlelist_component__WEBPACK_IMPORTED_MODULE_3__["ArticlelistComponent"], _articleshow_articleshow_component__WEBPACK_IMPORTED_MODULE_12__["ArticleshowComponent"]],
+            declarations: [_articleform_articleform_component__WEBPACK_IMPORTED_MODULE_2__["ArticleformComponent"], _articlelist_articlelist_component__WEBPACK_IMPORTED_MODULE_3__["ArticlelistComponent"], _articleshow_articleshow_component__WEBPACK_IMPORTED_MODULE_12__["ArticleshowComponent"], _auction_auction_component__WEBPACK_IMPORTED_MODULE_15__["AuctionComponent"]],
             imports: [
                 _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormsModule"],
@@ -1028,6 +1077,7 @@ var ArticleModule = /** @class */ (function () {
                 _angular_flex_layout__WEBPACK_IMPORTED_MODULE_10__["FlexLayoutModule"],
                 _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_11__["NgbModule"],
                 _core_shared_shared_module__WEBPACK_IMPORTED_MODULE_14__["SharedModule"],
+                igniteui_angular__WEBPACK_IMPORTED_MODULE_16__["IgxCarouselModule"],
                 ngx_bootstrap_carousel__WEBPACK_IMPORTED_MODULE_13__["CarouselModule"].forRoot(),
                 _angular_router__WEBPACK_IMPORTED_MODULE_6__["RouterModule"].forChild([
                     {
@@ -1044,6 +1094,9 @@ var ArticleModule = /** @class */ (function () {
                     },
                     {
                         path: 'articleshow/:id', component: _articleshow_articleshow_component__WEBPACK_IMPORTED_MODULE_12__["ArticleshowComponent"]
+                    },
+                    {
+                        path: 'auction', component: _auction_auction_component__WEBPACK_IMPORTED_MODULE_15__["AuctionComponent"]
                     }
                 ])
             ]
@@ -1522,6 +1575,63 @@ var ArticleshowComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [_service_service_service__WEBPACK_IMPORTED_MODULE_2__["ArticleService"], ngx_spinner__WEBPACK_IMPORTED_MODULE_3__["NgxSpinnerService"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"]])
     ], ArticleshowComponent);
     return ArticleshowComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/article/auction/auction.component.css":
+/*!*******************************************************!*\
+  !*** ./src/app/article/auction/auction.component.css ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (".igx-carousel__inner {\r\n  width: 90%;\r\n  text-align: center;\r\n}\r\na > igx-icon > span{\r\n  color: #e41c77;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXJ0aWNsZS9hdWN0aW9uL2F1Y3Rpb24uY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLFVBQVU7RUFDVixrQkFBa0I7QUFDcEI7QUFDQTtFQUNFLGNBQWM7QUFDaEIiLCJmaWxlIjoic3JjL2FwcC9hcnRpY2xlL2F1Y3Rpb24vYXVjdGlvbi5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmlneC1jYXJvdXNlbF9faW5uZXIge1xyXG4gIHdpZHRoOiA5MCU7XHJcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG59XHJcbmEgPiBpZ3gtaWNvbiA+IHNwYW57XHJcbiAgY29sb3I6ICNlNDFjNzc7XHJcbn1cclxuIl19 */");
+
+/***/ }),
+
+/***/ "./src/app/article/auction/auction.component.ts":
+/*!******************************************************!*\
+  !*** ./src/app/article/auction/auction.component.ts ***!
+  \******************************************************/
+/*! exports provided: AuctionComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AuctionComponent", function() { return AuctionComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+var AuctionComponent = /** @class */ (function () {
+    function AuctionComponent() {
+    }
+    AuctionComponent.prototype.ngOnInit = function () {
+    };
+    AuctionComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-auction',
+            template: __importDefault(__webpack_require__(/*! raw-loader!./auction.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/article/auction/auction.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./auction.component.css */ "./src/app/article/auction/auction.component.css")).default]
+        }),
+        __metadata("design:paramtypes", [])
+    ], AuctionComponent);
+    return AuctionComponent;
 }());
 
 
@@ -4354,6 +4464,78 @@ var AppUser = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/core/shared/model/userinfo.ts":
+/*!***********************************************!*\
+  !*** ./src/app/core/shared/model/userinfo.ts ***!
+  \***********************************************/
+/*! exports provided: UserInfo, HealthInfo, HealthHistory, BloodPressure, Meal */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UserInfo", function() { return UserInfo; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HealthInfo", function() { return HealthInfo; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HealthHistory", function() { return HealthHistory; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BloodPressure", function() { return BloodPressure; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Meal", function() { return Meal; });
+var __extends = (undefined && undefined.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+// tslint:disable-next-line:class-name
+var baseClient = /** @class */ (function () {
+    function baseClient() {
+    }
+    return baseClient;
+}());
+var UserInfo = /** @class */ (function (_super) {
+    __extends(UserInfo, _super);
+    function UserInfo() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    return UserInfo;
+}(baseClient));
+
+var HealthInfo = /** @class */ (function () {
+    function HealthInfo() {
+    }
+    return HealthInfo;
+}());
+
+var HealthHistory = /** @class */ (function () {
+    function HealthHistory() {
+    }
+    return HealthHistory;
+}());
+
+var BloodPressure = /** @class */ (function () {
+    function BloodPressure() {
+    }
+    return BloodPressure;
+}());
+
+var Meal = /** @class */ (function () {
+    function Meal() {
+    }
+    return Meal;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/core/shared/service/authservice.service.ts":
 /*!************************************************************!*\
   !*** ./src/app/core/shared/service/authservice.service.ts ***!
@@ -4978,6 +5160,380 @@ var EmailmodalComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/health/health.module.ts":
+/*!*****************************************!*\
+  !*** ./src/app/health/health.module.ts ***!
+  \*****************************************/
+/*! exports provided: HealthModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HealthModule", function() { return HealthModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _healthview_healthview_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./healthview/healthview.component */ "./src/app/health/healthview/healthview.component.ts");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var ngx_file_drop__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ngx-file-drop */ "./node_modules/ngx-file-drop/fesm5/ngx-file-drop.js");
+/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ngx-spinner */ "./node_modules/ngx-spinner/fesm5/ngx-spinner.js");
+/* harmony import */ var _angular_flex_layout__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/flex-layout */ "./node_modules/@angular/flex-layout/esm5/flex-layout.es5.js");
+/* harmony import */ var ngx_bootstrap__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ngx-bootstrap */ "./node_modules/ngx-bootstrap/esm5/ngx-bootstrap.js");
+/* harmony import */ var _healthviewmodal_healthviewmodal_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./healthviewmodal/healthviewmodal.component */ "./src/app/health/healthviewmodal/healthviewmodal.component.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+
+
+
+
+
+
+
+
+
+
+var HealthModule = /** @class */ (function () {
+    function HealthModule() {
+    }
+    HealthModule = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
+            declarations: [_healthview_healthview_component__WEBPACK_IMPORTED_MODULE_2__["HealthviewComponent"], _healthviewmodal_healthviewmodal_component__WEBPACK_IMPORTED_MODULE_11__["HealthviewmodalComponent"]],
+            imports: [
+                _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
+                ngx_bootstrap__WEBPACK_IMPORTED_MODULE_10__["ModalModule"],
+                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["BrowserModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"],
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_6__["HttpClientModule"],
+                ngx_file_drop__WEBPACK_IMPORTED_MODULE_7__["NgxFileDropModule"],
+                ngx_spinner__WEBPACK_IMPORTED_MODULE_8__["NgxSpinnerModule"],
+                _angular_flex_layout__WEBPACK_IMPORTED_MODULE_9__["FlexLayoutModule"],
+                _angular_router__WEBPACK_IMPORTED_MODULE_5__["RouterModule"].forChild([
+                    {
+                        path: 'health', component: _healthview_healthview_component__WEBPACK_IMPORTED_MODULE_2__["HealthviewComponent"]
+                    },
+                ])
+            ],
+            entryComponents: [_healthviewmodal_healthviewmodal_component__WEBPACK_IMPORTED_MODULE_11__["HealthviewmodalComponent"]]
+        })
+    ], HealthModule);
+    return HealthModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/health/healthview/healthview.component.css":
+/*!************************************************************!*\
+  !*** ./src/app/health/healthview/healthview.component.css ***!
+  \************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2hlYWx0aC9oZWFsdGh2aWV3L2hlYWx0aHZpZXcuY29tcG9uZW50LmNzcyJ9 */");
+
+/***/ }),
+
+/***/ "./src/app/health/healthview/healthview.component.ts":
+/*!***********************************************************!*\
+  !*** ./src/app/health/healthview/healthview.component.ts ***!
+  \***********************************************************/
+/*! exports provided: HealthviewComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HealthviewComponent", function() { return HealthviewComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ngx-spinner */ "./node_modules/ngx-spinner/fesm5/ngx-spinner.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _core_shared_model_userinfo__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../core/shared/model/userinfo */ "./src/app/core/shared/model/userinfo.ts");
+/* harmony import */ var _service_healthservice_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../service/healthservice.service */ "./src/app/health/service/healthservice.service.ts");
+/* harmony import */ var ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ngx-bootstrap/modal */ "./node_modules/ngx-bootstrap/modal/fesm5/ngx-bootstrap-modal.js");
+/* harmony import */ var _healthviewmodal_healthviewmodal_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../healthviewmodal/healthviewmodal.component */ "./src/app/health/healthviewmodal/healthviewmodal.component.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+
+
+
+
+
+var HealthviewComponent = /** @class */ (function () {
+    function HealthviewComponent(service, spinner, route, modalService) {
+        this.service = service;
+        this.spinner = spinner;
+        this.route = route;
+        this.modalService = modalService;
+        this._list = [];
+        this._entity = new _core_shared_model_userinfo__WEBPACK_IMPORTED_MODULE_3__["UserInfo"]();
+    }
+    Object.defineProperty(HealthviewComponent.prototype, "List", {
+        get: function () {
+            return this._list;
+        },
+        set: function (value) {
+            this._list = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(HealthviewComponent.prototype, "Entity", {
+        get: function () {
+            return this._entity;
+        },
+        set: function (value) {
+            this._entity = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    HealthviewComponent.prototype.ngOnInit = function () {
+        this.GetList();
+    };
+    HealthviewComponent.prototype.GetList = function () {
+        var _this = this;
+        this.spinner.show();
+        this.service.getList().subscribe(function (val) {
+            _this.List = val;
+            _this.spinner.hide();
+        }, function (err) {
+            alert('Not Found');
+            _this.spinner.hide();
+        });
+    };
+    HealthviewComponent.prototype.addHealthHistory = function () {
+        var newEntity = new _core_shared_model_userinfo__WEBPACK_IMPORTED_MODULE_3__["HealthHistory"]();
+        var now = new Date;
+        newEntity.DateTime = now.getFullYear().toString() + '/' + now.getMonth().toPrecision() + '/' + now.getDate().toString();
+        this.Entity.InfoHistory.push(newEntity);
+    };
+    HealthviewComponent.prototype.filterForArticles = function (filterVal) {
+        if (filterVal === '-1') {
+        }
+        else {
+            this.Entity = this.List[Number(filterVal)];
+        }
+    };
+    HealthviewComponent.prototype.openModal = function () {
+        var newEntity = new _core_shared_model_userinfo__WEBPACK_IMPORTED_MODULE_3__["HealthHistory"]();
+        var now = new Date;
+        newEntity.DateTime = now.getFullYear().toString() + '/' + now.getMonth().toPrecision() + '/' + now.getDate().toString();
+        newEntity.WalkSteps = 0;
+        newEntity.Weight = 60;
+        newEntity.BloodPressures = [];
+        newEntity.Meals = [];
+        var initialState = {
+            Entity: this.Entity,
+            History: newEntity
+        };
+        this.bsModalRef = this.modalService.show(_healthviewmodal_healthviewmodal_component__WEBPACK_IMPORTED_MODULE_6__["HealthviewmodalComponent"], { initialState: initialState });
+    };
+    HealthviewComponent.ctorParameters = function () { return [
+        { type: _service_healthservice_service__WEBPACK_IMPORTED_MODULE_4__["HealthserviceService"] },
+        { type: ngx_spinner__WEBPACK_IMPORTED_MODULE_1__["NgxSpinnerService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] },
+        { type: ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_5__["BsModalService"] }
+    ]; };
+    HealthviewComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-healthview',
+            template: __importDefault(__webpack_require__(/*! raw-loader!./healthview.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/health/healthview/healthview.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./healthview.component.css */ "./src/app/health/healthview/healthview.component.css")).default]
+        }),
+        __metadata("design:paramtypes", [_service_healthservice_service__WEBPACK_IMPORTED_MODULE_4__["HealthserviceService"], ngx_spinner__WEBPACK_IMPORTED_MODULE_1__["NgxSpinnerService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"], ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_5__["BsModalService"]])
+    ], HealthviewComponent);
+    return HealthviewComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/health/healthviewmodal/healthviewmodal.component.css":
+/*!**********************************************************************!*\
+  !*** ./src/app/health/healthviewmodal/healthviewmodal.component.css ***!
+  \**********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2hlYWx0aC9oZWFsdGh2aWV3bW9kYWwvaGVhbHRodmlld21vZGFsLmNvbXBvbmVudC5jc3MifQ== */");
+
+/***/ }),
+
+/***/ "./src/app/health/healthviewmodal/healthviewmodal.component.ts":
+/*!*********************************************************************!*\
+  !*** ./src/app/health/healthviewmodal/healthviewmodal.component.ts ***!
+  \*********************************************************************/
+/*! exports provided: HealthviewmodalComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HealthviewmodalComponent", function() { return HealthviewmodalComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _core_shared_model_userinfo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../core/shared/model/userinfo */ "./src/app/core/shared/model/userinfo.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+var HealthviewmodalComponent = /** @class */ (function () {
+    function HealthviewmodalComponent() {
+        this._entity = new _core_shared_model_userinfo__WEBPACK_IMPORTED_MODULE_1__["UserInfo"]();
+    }
+    Object.defineProperty(HealthviewmodalComponent.prototype, "Entity", {
+        get: function () {
+            return this._entity;
+        },
+        set: function (value) {
+            this._entity = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    HealthviewmodalComponent.prototype.ngOnInit = function () {
+    };
+    HealthviewmodalComponent.prototype.newblood = function () {
+        var newblood = new _core_shared_model_userinfo__WEBPACK_IMPORTED_MODULE_1__["BloodPressure"]();
+        var now = new Date;
+        newblood.DateTime = now.getFullYear().toString() + '/' + now.getMonth().toPrecision() + '/' + now.getDate().toString();
+        this.History.BloodPressures.push(newblood);
+    };
+    HealthviewmodalComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-healthviewmodal',
+            template: __importDefault(__webpack_require__(/*! raw-loader!./healthviewmodal.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/health/healthviewmodal/healthviewmodal.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./healthviewmodal.component.css */ "./src/app/health/healthviewmodal/healthviewmodal.component.css")).default]
+        }),
+        __metadata("design:paramtypes", [])
+    ], HealthviewmodalComponent);
+    return HealthviewmodalComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/health/service/healthservice.service.ts":
+/*!*********************************************************!*\
+  !*** ./src/app/health/service/healthservice.service.ts ***!
+  \*********************************************************/
+/*! exports provided: HealthserviceService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HealthserviceService", function() { return HealthserviceService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+var HealthserviceService = /** @class */ (function () {
+    function HealthserviceService(http) {
+        this.http = http;
+        this.site = 'https://leecloud.azurewebsites.net/'; // URL to web api
+        this.url = 'api/healthapi/';
+        this.postImgurl = 'api/UploadFileapi/';
+    }
+    HealthserviceService.prototype.getList = function () {
+        var url = this.site + this.url;
+        return this.http.get(url);
+    };
+    HealthserviceService.prototype.getEntityById = function (id) {
+        var url = this.site + this.url + id;
+        return this.http.get(url);
+    };
+    HealthserviceService.prototype.postEntity = function (entity) {
+        var url = this.site + this.url;
+        return this.http.post(url, entity);
+    };
+    HealthserviceService.prototype.putEntity = function (entity) {
+        var url = this.site + this.url + entity.ClientId;
+        return this.http.put(url, entity);
+    };
+    HealthserviceService.prototype.deleteEntity = function (id) {
+        var url = this.site + this.url + id;
+        return this.http.delete(url);
+    };
+    HealthserviceService.prototype.deleteEntityHistory = function (id, key) {
+        var url = this.site + this.url + id + '?key=' + key;
+        return this.http.delete(url);
+    };
+    HealthserviceService.prototype.postImage = function (file) {
+        var url = this.site + this.postImgurl;
+        // Headers
+        var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
+            ContentType: 'multipart/form-data'
+        });
+        // return  this.http.post(url, file, {headers: headers});
+        return this.http
+            .post(url, file, { headers: headers, responseType: 'text' });
+    };
+    HealthserviceService.ctorParameters = function () { return [
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"] }
+    ]; };
+    HealthserviceService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+            providedIn: 'root'
+        }),
+        __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
+    ], HealthserviceService);
+    return HealthserviceService;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/menu.component.ts":
 /*!***********************************!*\
   !*** ./src/app/menu.component.ts ***!
@@ -5311,10 +5867,12 @@ var environment = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser-dynamic */ "./node_modules/@angular/platform-browser-dynamic/fesm5/platform-browser-dynamic.js");
-/* harmony import */ var _app_app_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app/app.module */ "./src/app/app.module.ts");
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./environments/environment */ "./src/environments/environment.ts");
+/* harmony import */ var hammerjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! hammerjs */ "./node_modules/hammerjs/hammer.js");
+/* harmony import */ var hammerjs__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(hammerjs__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/platform-browser-dynamic */ "./node_modules/@angular/platform-browser-dynamic/fesm5/platform-browser-dynamic.js");
+/* harmony import */ var _app_app_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app/app.module */ "./src/app/app.module.ts");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./environments/environment */ "./src/environments/environment.ts");
 var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
   return (mod && mod.__esModule) ? mod : { "default": mod };
 };
@@ -5322,10 +5880,11 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 
 
 
-if (_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].production) {
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["enableProdMode"])();
+
+if (_environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].production) {
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["enableProdMode"])();
 }
-Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformBrowserDynamic"])().bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_2__["AppModule"])
+Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_2__["platformBrowserDynamic"])().bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_3__["AppModule"])
     .catch(function (err) { return console.log(err); });
 
 
