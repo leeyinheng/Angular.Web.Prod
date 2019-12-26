@@ -152,7 +152,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div>\n  <span> <img src='../assets/Photos/tealogo.jpg' width=20% height=20% /></span>\n  <p></p>\n</div>\n\n<h1> 藏家頁面廣告管理系統</h1>\n\n\n<div class=\"d-flex\">\n  <div>\n          <button type=\"button\" class=\"btn btn-success\" onclick=\"location.href='#/teaportal';\">返回管理頁面</button>\n  </div>\n  <div class=\"ml-auto\">\n           <button type=\"button\" class=\"btn btn-primary\" (click)=\"SaveEntity()\">儲存</button>\n  </div>\n</div>\n<p></p>\n\n\n  <div class=\"center\">\n    <ngx-file-drop dropZoneLabel=\"Drop files here\" (onFileDrop)=\"dropped($event)\"\n    (onFileOver)=\"fileOver($event)\" (onFileLeave)=\"fileLeave($event)\">\n        <ng-template ngx-file-drop-content-tmp let-openFileSelector=\"openFileSelector\">\n          拖曳或是選擇要上傳的圖片(必須小於4mb)\n          <button type=\"button\" (click)=\"openFileSelector()\">Browse Files</button>\n        </ng-template>\n    </ngx-file-drop>\n</div>\n\n<table class=\"table table-borderless table-striped\">\n   <tbody>\n\n  <tr>\n      <td colspan=\"2\">\n              <ul *ngFor=\"let i of list; let x = index\" class=\"list-group\">\n                  <li class=\"list-group-item\">\n                      <img [src]=\"i.Image_Url\"   class=\"img-thumbnail\" > <p></p>\n                      名稱:<input [(ngModel)]=\"i.Name\" #ctrl=\"ngModel\"  name=\"imagename\" class=\"form-control\"/> <p></p>\n                      備註: <input [(ngModel)]=\"i.Comment\" #ctrl=\"ngModel\"  name=\"imageComment\" type=\"text\"  class=\"form-control\"/><p></p>\n                      圖片連結: <input [(ngModel)]=\"i.Target_Url\" #ctrl=\"ngModel\"  name=\"targeturl\" type=\"text\"  class=\"form-control\"/><p></p>\n                      <button type=\"button\" class=\"btn btn-danger btn-xs\" (click) =\"RemoveImage(x)\">刪除圖片</button>\n                  </li>\n              </ul>\n      </td>\n  </tr>\n   </tbody>\n</table>\n\n<hr>\n\n<h1> 廣告連結管理</h1>\n<table class=\"table table-borderless table-striped\">\n  <tbody>\n <tr>\n   <td>\n    <button type=\"button\" class=\"btn btn-primary btn-xs\" (click) =\"AddNewTextLink()\">新增廣告連結</button>\n   </td>\n   <td>\n    <button type=\"button\" class=\"btn btn-success btn-xs\" (click) =\"SaveTextLinks()\">儲存廣告連結</button>\n   </td>\n </tr>\n <tr>\n     <td colspan=\"2\">\n             <ul *ngFor=\"let i of textLInks; let x = index\" class=\"list-group\">\n                 <li class=\"list-group-item\">\n                     廣告連結名稱:<input [(ngModel)]=\"i.Name\" #ctrl=\"ngModel\"  name=\"imagename\" class=\"form-control\"/> <p></p>\n                     連結(url): <input [(ngModel)]=\"i.Target_Url\" #ctrl=\"ngModel\"  name=\"targeturl\" type=\"text\"  class=\"form-control\"/><p></p>\n                     <button type=\"button\" class=\"btn btn-danger btn-xs\" (click) =\"RemoveTextLink(x)\">刪除廣告連結</button>\n                 </li>\n             </ul>\n     </td>\n </tr>\n\n  </tbody>\n</table>\n\n\n\n\n\n<ngx-spinner\n  bdColor=\"rgba(51,51,51,0.8)\"\n  size=\"medium\"\n  color=\"#fff\"\n  type=\"ball-scale-multiple\"\n>\n  <p style=\"font-size: 20px; color: white\">處理中...</p>\n</ngx-spinner>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div>\n  <span> <img src='../assets/Photos/tealogo.jpg' width=20% height=20% /></span>\n  <p></p>\n</div>\n\n<h1> 藏家頁面廣告管理系統</h1>\n\n\n<div class=\"d-flex\">\n  <div>\n          <button type=\"button\" class=\"btn btn-success\" onclick=\"location.href='#/teaportal';\">返回管理頁面</button>\n  </div>\n  <div class=\"ml-auto\">\n           <button type=\"button\" class=\"btn btn-primary\" (click)=\"SaveEntity()\">儲存廣告圖片連結</button>\n  </div>\n</div>\n<p></p>\n\n\n  <div class=\"center\">\n    <ngx-file-drop dropZoneLabel=\"Drop files here\" (onFileDrop)=\"dropped($event)\"\n    (onFileOver)=\"fileOver($event)\" (onFileLeave)=\"fileLeave($event)\">\n        <ng-template ngx-file-drop-content-tmp let-openFileSelector=\"openFileSelector\">\n          拖曳或是選擇要上傳的圖片(必須小於4mb)\n          <button type=\"button\" (click)=\"openFileSelector()\">Browse Files</button>\n        </ng-template>\n    </ngx-file-drop>\n</div>\n\n<table class=\"table table-borderless table-striped\">\n   <tbody>\n\n  <tr>\n      <td colspan=\"2\">\n\n\n              <div>\n                <bs-sortable\n                  [(ngModel)]=\"list\"\n                  [itemTemplate]=\"itemTemplateImage\"\n                  itemClass=\"sortable-item\"\n                  itemActiveClass=\"sortable-item-active\"\n                  placeholderItem=\"Drag here\"\n                  placeholderClass=\"placeholderStyle\"\n                  wrapperClass=\"sortable-wrapper\"\n                ></bs-sortable>\n              </div>\n      </td>\n  </tr>\n   </tbody>\n</table>\n\n<hr>\n\n<h1> 廣告連結管理</h1>\n\n\n\n<table class=\"table table-borderless table-striped\">\n  <tbody>\n <tr>\n   <td>\n    <button type=\"button\" class=\"btn btn-primary btn-xs\" (click) =\"AddNewTextLink()\">新增廣告連結</button>\n   </td>\n   <td>\n    <button type=\"button\" class=\"btn btn-success btn-xs\" (click) =\"SaveTextLinks()\">儲存廣告連結</button>\n   </td>\n </tr>\n <tr>\n     <td colspan=\"2\">\n\n\n\n              <div>\n                <bs-sortable\n                  [(ngModel)]=\"textLInks\"\n                  [itemTemplate]=\"itemTemplate\"\n                  itemClass=\"sortable-item\"\n                  itemActiveClass=\"sortable-item-active\"\n                  placeholderItem=\"Drag here\"\n                  placeholderClass=\"placeholderStyle\"\n                  wrapperClass=\"sortable-wrapper\"\n                ></bs-sortable>\n              </div>\n\n\n     </td>\n\n\n </tr>\n\n  </tbody>\n</table>\n\n\n\n<ng-template #itemTemplateImage let-item=\"item\" let-index=\"index\">\n\n  <div class=\"row\"  style=\"border-style:solid; border-width: thin; border-color: lightblue;\">\n\n    <img [src]=\"item.value.Image_Url\"   class=\"img-thumbnail\" > <p></p>\n    名稱:<input [(ngModel)]=\"item.value.Name\" #ctrl=\"ngModel\"  name=\"imagename\" class=\"form-control\"/> <p></p>\n    備註: <input [(ngModel)]=\"item.value.Comment\" #ctrl=\"ngModel\"  name=\"imageComment\" type=\"text\"  class=\"form-control\"/><p></p>\n    圖片連結: <input [(ngModel)]=\"item.value.Target_Url\" #ctrl=\"ngModel\"  name=\"targeturl\" type=\"text\"  class=\"form-control\"/><p></p>\n    <button type=\"button\" class=\"btn btn-danger btn-xs\" (click) =\"RemoveImage(index)\">刪除圖片</button>\n\n  </div>\n\n  <p></p>\n\n</ng-template>\n\n\n\n\n<ng-template #itemTemplate let-item=\"item\" let-index=\"index\">\n\n  <div style=\"border-style:solid; border-width: thin;\">\n    廣告連結名稱:<input [(ngModel)]=\"item.value.Name\" #ctrl=\"ngModel\"  name=\"imagename\" class=\"form-control\"/> <p></p>\n    連結(url): <input [(ngModel)]=\"item.value.Target_Url\" #ctrl=\"ngModel\"  name=\"targeturl\" type=\"text\"  class=\"form-control\"/><p></p>\n    <button type=\"button\" class=\"btn btn-danger btn-xs\" (click) =\"RemoveTextLink(index)\">刪除廣告連結</button>\n\n  </div>\n\n  <p></p>\n\n</ng-template>\n\n\n\n\n<ngx-spinner\n  bdColor=\"rgba(51,51,51,0.8)\"\n  size=\"medium\"\n  color=\"#fff\"\n  type=\"ball-scale-multiple\"\n>\n  <p style=\"font-size: 20px; color: white\">處理中...</p>\n</ngx-spinner>\n");
 
 /***/ }),
 
@@ -3130,8 +3130,18 @@ var AdimageComponent = /** @class */ (function () {
         this.service = service;
         this.files = [];
         this.list = [];
-        this.textLInks = [];
+        this._textLInks = [];
     }
+    Object.defineProperty(AdimageComponent.prototype, "textLInks", {
+        get: function () {
+            return this._textLInks;
+        },
+        set: function (value) {
+            this._textLInks = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
     AdimageComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.authservice.checktoken().subscribe(function (val) {
@@ -3164,9 +3174,9 @@ var AdimageComponent = /** @class */ (function () {
         var _this = this;
         this.spinner.show();
         this.service.postAdImages(this.list).subscribe(function (res) {
-            alert('儲存完畢');
+            alert('廣告圖片連結儲存完畢');
             _this.spinner.hide();
-            window.open('#/teaportal', '_self');
+            // window.open('#/teaportal', '_self');
         }, function (err) {
             alert(err);
             _this.spinner.hide();
@@ -3194,7 +3204,9 @@ var AdimageComponent = /** @class */ (function () {
                         var newImage = new _core_shared_model_ImageLink__WEBPACK_IMPORTED_MODULE_1__["ImageLink"]();
                         newImage.Name = 'Title';
                         newImage.Image_Url = val;
-                        _this.list.push(newImage);
+                        var orginialItems = _this.list;
+                        orginialItems.push(newImage);
+                        _this.list = orginialItems.filter(function (x) { return x.Image_Url !== ''; }); // workaround wtih sorttable refresh
                         _this.spinner.hide();
                     });
                 });
@@ -3232,7 +3244,9 @@ var AdimageComponent = /** @class */ (function () {
         var textlink = new _core_shared_model_ImageLink__WEBPACK_IMPORTED_MODULE_1__["ImageLink"]();
         textlink.Name = '廣告文案';
         textlink.Target_Url = '連結 url';
-        this.textLInks.push(textlink);
+        var orginialItems = this.textLInks;
+        orginialItems.push(textlink);
+        this.textLInks = orginialItems.filter(function (x) { return x.Name !== ''; }); // workaround wtih sorttable refresh
     };
     AdimageComponent.prototype.SaveTextLinks = function () {
         var _this = this;
@@ -3302,6 +3316,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _core_shared_shared_module__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../core/shared/shared.module */ "./src/app/core/shared/shared.module.ts");
 /* harmony import */ var ngx_clipboard__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ngx-clipboard */ "./node_modules/ngx-clipboard/fesm5/ngx-clipboard.js");
 /* harmony import */ var _adimage_adimage_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./adimage/adimage.component */ "./src/app/clientinventory/adimage/adimage.component.ts");
+/* harmony import */ var ngx_bootstrap__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ngx-bootstrap */ "./node_modules/ngx-bootstrap/esm5/ngx-bootstrap.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3311,6 +3326,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
   return (mod && mod.__esModule) ? mod : { "default": mod };
 };
+
 
 
 
@@ -3348,6 +3364,7 @@ var ClientinventoryModule = /** @class */ (function () {
                 ngx_clipboard__WEBPACK_IMPORTED_MODULE_17__["ClipboardModule"],
                 _core_shared_shared_module__WEBPACK_IMPORTED_MODULE_16__["SharedModule"].forRoot(),
                 ngx_bootstrap_carousel__WEBPACK_IMPORTED_MODULE_11__["CarouselModule"].forRoot(),
+                ngx_bootstrap__WEBPACK_IMPORTED_MODULE_19__["SortableModule"].forRoot(),
                 _angular_router__WEBPACK_IMPORTED_MODULE_5__["RouterModule"].forChild([
                     {
                         path: 'uploadinvfile', component: _invupload_invupload_component__WEBPACK_IMPORTED_MODULE_3__["InvuploadComponent"]
