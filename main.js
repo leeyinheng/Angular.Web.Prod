@@ -5624,7 +5624,7 @@ var HealthserviceService = /** @class */ (function () {
         this.site = 'https://leecloud.azurewebsites.net/'; // URL to web api
         // private site = 'https://localhost:44347/';  // URL to web api
         this.url = 'api/healthapi/';
-        this.postImgurl = 'api/UploadFileapi/';
+        this.postImgurl = 'api/UploadWebPhotoapi/';
     }
     HealthserviceService.prototype.getList = function () {
         var url = this.site + this.url;
