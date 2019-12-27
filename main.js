@@ -256,7 +256,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div>\n\n  <select (change)=\"filterForArticles($event.target.value)\" class=\"form-control\">\n    <option value=\"-1\">--選擇--</option>\n    <option *ngFor=\"let item of List; let i = index\" value={{i}}>\n      {{item.ClientName}}\n    </option>\n  </select>\n</div>\n\n<div *ngIf= \"Entity.ClientId\">\n\n  <table class=\"table table-bordered table-striped\">\n    <tbody>\n\n        <tr>\n\n            <td>\n                   編號:\n            </td>\n            <Td>\n                    {{Entity.ClientId}}\n            </Td>\n        </tr>\n        <tr>\n            <td>\n                   名稱:\n            </td>\n            <td>\n                <b><h1 class=\"h4\">{{Entity.ClientName}} </h1></b>\n            </td>\n        </tr>\n        <tr>\n            <td>\n                地址:\n            </td>\n            <td>\n                    {{Entity.Address}}\n            </td>\n        </tr>\n        <tr>\n            <td>\n                電話:\n            </td>\n            <td>\n                {{Entity.Phone}}\n            </td>\n        </tr>\n        <tr>\n          <td>\n            身高:\n          </td>\n          <td>\n            {{Entity.Info.Height}}\n          </td>\n        </tr>\n        <tr>\n          <td>\n            備註:\n          </td>\n          <td>\n            {{Entity.Info.Note}}\n          </td>\n        </tr>\n    </tbody>\n  </table>\n\n  <table class=\"table table-bordered table-striped\">\n\n      <tbody>\n        <th>\n          時間\n        </th>\n        <th>\n          體重(KG)\n        </th>\n        <th>\n          步數\n        </th>\n        <th>\n          血壓\n        </th>\n        <th>\n          餐飲\n        </th>\n        <th>\n          <button type=\"button\" class=\"btn btn-primary\" (click) = \"openModal()\">新增紀錄</button>\n        </th>\n        <tr *ngFor = 'let item of Entity.InfoHistory' >\n            <td>\n                {{item.DateTime}}\n            </td>\n            <td>{{ item.Weight}}\n\n            </td>\n            <td>{{ item.WalkSteps }}</td>\n\n            <td>\n                <table>\n                  <th>\n                    收縮壓\n                  </th>\n                  <th>\n                    舒張壓\n                  </th>\n                  <th>\n                    脈搏\n                  </th>\n                  <th>\n                    時間\n                  </th>\n                  <tbody class=\"table table-bordered table-striped\">\n                    <tr *ngFor = \"let blood of item.BloodPressures\">\n                      <td> {{blood.BloodHigh}}</td>\n                      <td> {{blood.BloodLow}}</td>\n                      <td> {{blood.Pulse}}</td>\n                      <td> {{blood.DateTime}}</td>\n                    </tr>\n                  </tbody>\n                </table>\n            </td>\n            <td>\n              <table>\n                <th>\n                  餐飲\n                </th>\n                <th>\n                  照片\n                </th>\n                <th>\n                  時間\n                </th>\n                <tbody class=\"table table-bordered table-striped\">\n                  <tr *ngFor = \"let meal of item.Meals\">\n                    <td> {{meal.Name}}</td>\n                    <td> <img [src] = \"meal.ImageLink\" style=\"width: 50%;\"/> </td>\n                    <td>  {{meal.DateTime}}</td>\n                  </tr>\n                </tbody>\n              </table>\n            </td>\n\n            <td>\n                   <div class=\"btn-group\">\n                        <button type=\"button\" class=\"btn btn-sm btn-success\" (click) = openform(item.Id)>編輯</button>    |\n                        <button type=\"button\" class=\"btn btn-sm btn-danger\" (click) = delete(item.Id)>刪除</button>\n                   </div>\n            </td>\n\n        </tr>\n\n\n  </table>\n\n</div>\n\n\n\n<ngx-spinner\n  bdColor=\"rgba(51,51,51,0.8)\"\n  size=\"medium\"\n  color=\"#fff\"\n  type=\"ball-scale-multiple\"\n>\n  <p style=\"font-size: 20px; color: white\">處理中...</p>\n</ngx-spinner>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n\r\n  <select (change)=\"filterForArticles($event.target.value)\" class=\"form-control\">\r\n    <option value=\"-1\">--選擇--</option>\r\n    <option *ngFor=\"let item of List; let i = index\" value={{i}}>\r\n      {{item.ClientName}}\r\n    </option>\r\n  </select>\r\n</div>\r\n\r\n<p></p>\r\n\r\n<div *ngIf= \"Entity.ClientId\">\r\n\r\n  <table class=\"table table-bordered table-striped\">\r\n    <tbody>\r\n\r\n        <tr>\r\n\r\n            <td>\r\n                   編號:\r\n            </td>\r\n            <Td>\r\n                    {{Entity.ClientId}}\r\n            </Td>\r\n        </tr>\r\n        <tr>\r\n            <td>\r\n                   名稱:\r\n            </td>\r\n            <td>\r\n                <b>{{Entity.ClientName}} </b>\r\n            </td>\r\n        </tr>\r\n        <tr>\r\n            <td>\r\n                地址:\r\n            </td>\r\n            <td>\r\n                    {{Entity.Address}}\r\n            </td>\r\n        </tr>\r\n        <tr>\r\n            <td>\r\n                電話:\r\n            </td>\r\n            <td>\r\n                {{Entity.Phone}}\r\n            </td>\r\n        </tr>\r\n        <tr>\r\n          <td>\r\n            身高:\r\n          </td>\r\n          <td>\r\n            {{Entity.Info.Height}}\r\n          </td>\r\n        </tr>\r\n        <tr>\r\n          <td>\r\n            備註:\r\n          </td>\r\n          <td>\r\n            {{Entity.Info.Note}}\r\n          </td>\r\n        </tr>\r\n    </tbody>\r\n  </table>\r\n  <button type=\"button\" class=\"btn btn-lg btn-primary\" (click) = save()>儲存紀錄</button>\r\n  <p></p>\r\n  <table class=\"table table-bordered table-striped\">\r\n\r\n      <tbody>\r\n        <th>\r\n          時間\r\n        </th>\r\n        <th>\r\n          體重(KG)\r\n        </th>\r\n        <th>\r\n          步數\r\n        </th>\r\n        <th>\r\n          血壓\r\n        </th>\r\n        <th>\r\n          餐飲\r\n        </th>\r\n        <th>\r\n          <button type=\"button\" class=\"btn btn-success\" (click) = \"openModal()\">新增紀錄</button>\r\n        </th>\r\n        <tr *ngFor = 'let item of Entity.InfoHistory; let x = index' >\r\n            <td>\r\n                {{item.DateTime}}\r\n            </td>\r\n            <td>{{ item.Weight}}\r\n\r\n            </td>\r\n            <td>{{ item.WalkSteps }}</td>\r\n\r\n            <td>\r\n                <table>\r\n                  <th>\r\n                    收縮壓\r\n                  </th>\r\n                  <th>\r\n                    舒張壓\r\n                  </th>\r\n                  <th>\r\n                    脈搏\r\n                  </th>\r\n                  <th>\r\n                    時間\r\n                  </th>\r\n                  <tbody class=\"table table-bordered table-striped\">\r\n                    <tr *ngFor = \"let blood of item.BloodPressures\">\r\n                      <td> {{blood.BloodHigh}}</td>\r\n                      <td> {{blood.BloodLow}}</td>\r\n                      <td> {{blood.Pulse}}</td>\r\n                      <td> {{blood.DateTime}}</td>\r\n                    </tr>\r\n                  </tbody>\r\n                </table>\r\n            </td>\r\n            <td>\r\n              <table>\r\n                <th>\r\n                  餐飲\r\n                </th>\r\n                <th>\r\n                  照片\r\n                </th>\r\n                <th>\r\n                  時間\r\n                </th>\r\n                <tbody class=\"table table-bordered table-striped\">\r\n                  <tr *ngFor = \"let meal of item.Meals\">\r\n                    <td> {{meal.Name}}</td>\r\n                    <td> <img [src] = \"meal.ImageLink\" style=\"width: 50%;\"/> </td>\r\n                    <td>  {{meal.DateTime}}</td>\r\n                  </tr>\r\n                </tbody>\r\n              </table>\r\n            </td>\r\n\r\n            <td>\r\n                   <div class=\"btn-group\">\r\n                        <button type=\"button\" class=\"btn btn-sm btn-warning\" (click) = editform(x)>編輯</button>    |\r\n                        <button type=\"button\" class=\"btn btn-sm btn-danger\" (click) = delete(x)>刪除</button>\r\n                   </div>\r\n            </td>\r\n\r\n        </tr>\r\n\r\n\r\n  </table>\r\n\r\n</div>\r\n\r\n\r\n\r\n<ngx-spinner\r\n  bdColor=\"rgba(51,51,51,0.8)\"\r\n  size=\"medium\"\r\n  color=\"#fff\"\r\n  type=\"ball-scale-multiple\"\r\n>\r\n  <p style=\"font-size: 20px; color: white\">處理中...</p>\r\n</ngx-spinner>\r\n");
 
 /***/ }),
 
@@ -269,7 +269,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"modal-header table-hover\">\n    <h4 class=\"modal-title pull-left\">{{History.DateTime}}</h4>\n</div>\n    <div class=\"modal-body\">\n      <table class=\"table table-bordered\">\n        <tr>\n            <td>\n                每日步數\n            </td>\n            <td>\n            <input type=\"number\"\n            [(ngModel)]='History.WalkSteps'\n             />\n            </td>\n        </tr>\n\n        <tr>\n            <td>\n                體重(kg)\n            </td>\n            <td>\n            <input type=\"number\"\n            [(ngModel)]='History.Weight'\n             />\n            </td>\n        </tr>\n\n        <tr>\n        <td>\n           血壓    <button type=\"button\" class=\"btn btn-sm btn-danger\" (click) = newblood();>新增</button>\n        </td>\n        <td>\n          <table>\n            <th>\n              收縮壓\n            </th>\n            <th>\n              舒張壓\n            </th>\n            <th>\n              脈搏\n            </th>\n            <th>\n              時間\n            </th>\n            <tbody class=\"table table-bordered table-striped\">\n              <tr *ngFor = \"let blood of History.BloodPressures\">\n                <td>  <input type=\"number\"\n                  [(ngModel)]='blood.BloodHigh'\n                   />  </td>\n                <td>\n                  <input type=\"number\"\n                  [(ngModel)]='blood.BloodLow'\n                  />\n\n                </td>\n                <td>\n                  <input type=\"number\"\n                  [(ngModel)]='blood.Pulse'\n                  />\n\n                </td>\n                <td>\n                  {{blood.DateTime}}\n                </td>\n              </tr>\n            </tbody>\n          </table>\n\n\n        </td>\n        </tr>\n\n        <tr>\n        <td>\n            其他事項\n        </td>\n        <td>\n           <textarea [(ngModel)]='History.Comment' class=\"form-control\" >\n\n           </textarea>\n        </td>\n        </tr>\n\n        <tr >\n\n                <td>\n                    <button class=\"btn btn-primary\" (click) = 'savelog()'>\n                       儲存\n                     </button>\n\n                </td>\n\n          </tr>\n      </table>\n\n\n\n\n    </div>\n          <div class=\"modal-footer\">\n                 <button type=\"button\" class=\"btn btn-primary\" (click)=\"Save()\">儲存</button>\n                <button type=\"button\" class=\"btn btn-secondary\" (click)=\"bsModalRef.hide()\">取消</button>\n          </div>\n\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("\n\n    <div class=\"modal-header table-hover\">\n        <h4 class=\"modal-title pull-left\">{{History.DateTime}}</h4>\n    </div>\n        <div class=\"modal-body\">\n          <table class=\"table table-bordered\">\n            <tr>\n                <td>\n                    每日步數\n                </td>\n                <td>\n                <input type=\"number\"\n                [(ngModel)]='History.WalkSteps'\n                 />\n                </td>\n            </tr>\n\n            <tr>\n                <td>\n                    體重(kg)\n                </td>\n                <td>\n                <input type=\"number\"\n                [(ngModel)]='History.Weight'\n                 />\n                </td>\n            </tr>\n\n            <tr>\n            <td>\n               血壓    <button type=\"button\" class=\"btn btn-sm btn-danger\" (click) = newblood();>新增</button>\n            </td>\n            <td>\n              <table>\n                <th>\n                  收縮壓\n                </th>\n                <th>\n                  舒張壓\n                </th>\n                <th>\n                  脈搏\n                </th>\n                <th>\n                  時間\n                </th>\n                <tbody class=\"table table-bordered table-striped\">\n                  <tr *ngFor = \"let blood of History.BloodPressures; let x = index\">\n                    <td>  <input type=\"number\"\n                      [(ngModel)]='blood.BloodHigh' style=\"width: 50%;\"\n                       />  </td>\n                    <td>\n                      <input type=\"number\"\n                      [(ngModel)]='blood.BloodLow'  style=\"width: 50%;\"\n                      />\n                    </td>\n                    <td>\n                      <input type=\"number\"\n                      [(ngModel)]='blood.Pulse'  style=\"width: 50%;\"\n                      />\n\n                    </td>\n                    <td>\n                      {{blood.DateTime}}\n                    </td>\n                    <td>\n                      <button type=\"button\" class=\"btn btn-sm btn-danger\" (click)=\"removeblood(x)\">刪除</button>\n                    </td>\n                  </tr>\n                </tbody>\n              </table>\n\n\n            </td>\n            </tr>\n            <tr>\n              <td colspan=\"2\">\n                餐飲\n                <div class=\"center\">\n                  <ngx-file-drop dropZoneLabel=\"Drop files here\" (onFileDrop)=\"dropped($event)\"\n                  (onFileOver)=\"fileOver($event)\" (onFileLeave)=\"fileLeave($event)\">\n                      <ng-template ngx-file-drop-content-tmp let-openFileSelector=\"openFileSelector\">\n                        拖曳或是選擇要上傳的餐飲圖片(必須小於4mb)\n                        <button type=\"button\" (click)=\"openFileSelector()\">Browse Files</button>\n                      </ng-template>\n                  </ngx-file-drop>\n                  </div>\n              </td>\n            </tr>\n            <tr>\n              <td colspan=\"2\">\n                <table>\n                  <th>\n                    照片\n                  </th>\n                  <th>\n                    餐食\n                  </th>\n                  <th>\n                    時間\n                  </th>\n                <tbody class=\"table table-bordered table-striped\">\n                  <tr *ngFor = \"let meal of History.Meals; let x = index\">\n                    <td style=\"width: 50%;\">  <img [src] = \"meal.ImageLink\"/></td>\n                    <td>\n                      <input type=\"string\"\n                      [(ngModel)]='meal.Name'  style=\"width: 90%;\"\n                      />\n                    </td>\n                    <td>\n                      {{meal.DateTime}}\n                    </td>\n                    <td>\n                      <button type=\"button\" class=\"btn btn-sm btn-danger\" (click)=\"removeMeal(x)\">刪除</button>\n                    </td>\n                  </tr>\n                </tbody>\n              </table>\n              </td>\n            </tr>\n            <tr>\n            <td>\n                其他事項\n            </td>\n            <td>\n               <textarea [(ngModel)]='History.Comment' class=\"form-control\" >\n\n               </textarea>\n            </td>\n            </tr>\n\n          </table>\n        </div>\n              <div class=\"modal-footer\">\n                     <button type=\"button\" class=\"btn btn-primary\" (click)=\"save()\">儲存</button>\n                    <button type=\"button\" class=\"btn btn-secondary\" (click)=\"bsModalRef.hide()\">取消</button>\n              </div>\n\n\n\n\n\n\n");
 
 /***/ }),
 
@@ -5306,6 +5306,7 @@ var HealthviewComponent = /** @class */ (function () {
         this.spinner = spinner;
         this.route = route;
         this.modalService = modalService;
+        this.refresh = false;
         this._list = [];
         this._entity = new _core_shared_model_userinfo__WEBPACK_IMPORTED_MODULE_3__["UserInfo"]();
     }
@@ -5359,16 +5360,59 @@ var HealthviewComponent = /** @class */ (function () {
     HealthviewComponent.prototype.openModal = function () {
         var newEntity = new _core_shared_model_userinfo__WEBPACK_IMPORTED_MODULE_3__["HealthHistory"]();
         var now = new Date;
-        newEntity.DateTime = now.getFullYear().toString() + '/' + now.getMonth().toPrecision() + '/' + now.getDate().toString();
-        newEntity.WalkSteps = 0;
-        newEntity.Weight = 60;
+        newEntity.DateTime = now.getFullYear().toString() + '/' + (now.getMonth() + 1).toString() + '/' + now.getDate().toString();
+        newEntity.WalkSteps = 7000;
+        newEntity.Weight = 75;
         newEntity.BloodPressures = [];
         newEntity.Meals = [];
         var initialState = {
             Entity: this.Entity,
-            History: newEntity
+            History: newEntity,
+            Mode: 'Add'
         };
         this.bsModalRef = this.modalService.show(_healthviewmodal_healthviewmodal_component__WEBPACK_IMPORTED_MODULE_6__["HealthviewmodalComponent"], { initialState: initialState });
+        this.bsModalRef.setClass('modal-lg');
+    };
+    HealthviewComponent.prototype.editform = function (i) {
+        this.refresh = true;
+        var initialState = {
+            Entity: this.Entity,
+            History: this.Entity.InfoHistory[i],
+            Mode: 'Edit'
+        };
+        this.bsModalRef = this.modalService.show(_healthviewmodal_healthviewmodal_component__WEBPACK_IMPORTED_MODULE_6__["HealthviewmodalComponent"], { initialState: initialState });
+        this.bsModalRef.setClass('modal-lg');
+    };
+    HealthviewComponent.prototype.delete = function (i) {
+        this.refresh = true;
+        i++;
+        var orginialItems = this.Entity.InfoHistory;
+        var filterItems = orginialItems.slice(0, i - 1).concat(orginialItems.slice(i, orginialItems.length));
+        this.Entity.InfoHistory = filterItems;
+    };
+    HealthviewComponent.prototype.save = function () {
+        var _this = this;
+        this.spinner.show();
+        if (this.refresh === true) {
+            this.service.postRefreshEntity(this.Entity).subscribe(function (x) {
+                alert('更新完成');
+                _this.refresh = false;
+                _this.spinner.hide();
+            }, function (err) {
+                alert('Error');
+                _this.spinner.hide();
+            });
+        }
+        else {
+            this.service.postEntity(this.Entity).subscribe(function (x) {
+                alert('新增完成');
+                _this.refresh = false;
+                _this.spinner.hide();
+            }, function (err) {
+                alert('Error');
+                _this.spinner.hide();
+            });
+        }
     };
     HealthviewComponent.ctorParameters = function () { return [
         { type: _service_healthservice_service__WEBPACK_IMPORTED_MODULE_4__["HealthserviceService"] },
@@ -5417,6 +5461,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HealthviewmodalComponent", function() { return HealthviewmodalComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _core_shared_model_userinfo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../core/shared/model/userinfo */ "./src/app/core/shared/model/userinfo.ts");
+/* harmony import */ var ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ngx-bootstrap/modal */ "./node_modules/ngx-bootstrap/modal/fesm5/ngx-bootstrap-modal.js");
+/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ngx-spinner */ "./node_modules/ngx-spinner/fesm5/ngx-spinner.js");
+/* harmony import */ var _service_healthservice_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../service/healthservice.service */ "./src/app/health/service/healthservice.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -5431,9 +5478,17 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 };
 
 
+
+
+
 var HealthviewmodalComponent = /** @class */ (function () {
-    function HealthviewmodalComponent() {
+    function HealthviewmodalComponent(bsModalRef, spinner, service) {
+        this.bsModalRef = bsModalRef;
+        this.spinner = spinner;
+        this.service = service;
         this._entity = new _core_shared_model_userinfo__WEBPACK_IMPORTED_MODULE_1__["UserInfo"]();
+        this.Mode = 'Add';
+        this.files = [];
     }
     Object.defineProperty(HealthviewmodalComponent.prototype, "Entity", {
         get: function () {
@@ -5450,16 +5505,85 @@ var HealthviewmodalComponent = /** @class */ (function () {
     HealthviewmodalComponent.prototype.newblood = function () {
         var newblood = new _core_shared_model_userinfo__WEBPACK_IMPORTED_MODULE_1__["BloodPressure"]();
         var now = new Date;
-        newblood.DateTime = now.getFullYear().toString() + '/' + now.getMonth().toPrecision() + '/' + now.getDate().toString();
+        newblood.DateTime = now.getFullYear().toString() + '/' + (now.getMonth() + 1).toString() + '/'
+            + now.getDate().toString() + ' ' + now.getHours().toString() + ':' + now.getMinutes().toString();
         this.History.BloodPressures.push(newblood);
     };
+    HealthviewmodalComponent.prototype.removeblood = function (i) {
+        i++;
+        var orginialItems = this.History.BloodPressures;
+        var filterItems = orginialItems.slice(0, i - 1).concat(orginialItems.slice(i, orginialItems.length));
+        this.History.BloodPressures = filterItems;
+    };
+    HealthviewmodalComponent.prototype.removeMeal = function (i) {
+        i++;
+        var orginialItems = this.History.Meals;
+        var filterItems = orginialItems.slice(0, i - 1).concat(orginialItems.slice(i, orginialItems.length));
+        this.History.Meals = filterItems;
+    };
+    HealthviewmodalComponent.prototype.save = function () {
+        if (this.Mode === 'Add') {
+            this.Entity.InfoHistory.unshift(this.History);
+        }
+        this.bsModalRef.hide();
+    };
+    HealthviewmodalComponent.prototype.dropped = function (files) {
+        var _this = this;
+        this.files = files;
+        var _loop_1 = function (droppedFile) {
+            // Is it a file?
+            if (droppedFile.fileEntry.isFile) {
+                var fileEntry = droppedFile.fileEntry;
+                fileEntry.file(function (file) {
+                    // Here you can access the real file
+                    console.log(droppedFile.relativePath, file);
+                    if (file.size > 4194304) {
+                        alert(file.name + ' 已經大於4mb,請縮小後再上傳');
+                        return;
+                    }
+                    // You could upload it like this:
+                    var formData = new FormData();
+                    formData.append(file.name, file, droppedFile.relativePath);
+                    _this.spinner.show();
+                    _this.service.postImage(formData).subscribe(function (val) {
+                        var newImage = new _core_shared_model_userinfo__WEBPACK_IMPORTED_MODULE_1__["Meal"]();
+                        newImage.Name = 'Meal';
+                        newImage.ImageLink = val;
+                        newImage.DateTime = new Date().toLocaleString();
+                        _this.History.Meals.unshift(newImage);
+                        _this.spinner.hide();
+                    });
+                });
+            }
+            else {
+                // It was a directory (empty directories are added, otherwise only files)
+                var fileEntry = droppedFile.fileEntry;
+                console.log(droppedFile.relativePath, fileEntry);
+            }
+        };
+        for (var _i = 0, files_1 = files; _i < files_1.length; _i++) {
+            var droppedFile = files_1[_i];
+            _loop_1(droppedFile);
+        }
+    };
+    HealthviewmodalComponent.prototype.fileOver = function (event) {
+        console.log(event);
+    };
+    HealthviewmodalComponent.prototype.fileLeave = function (event) {
+        console.log(event);
+    };
+    HealthviewmodalComponent.ctorParameters = function () { return [
+        { type: ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_2__["BsModalRef"] },
+        { type: ngx_spinner__WEBPACK_IMPORTED_MODULE_3__["NgxSpinnerService"] },
+        { type: _service_healthservice_service__WEBPACK_IMPORTED_MODULE_4__["HealthserviceService"] }
+    ]; };
     HealthviewmodalComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-healthviewmodal',
             template: __importDefault(__webpack_require__(/*! raw-loader!./healthviewmodal.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/health/healthviewmodal/healthviewmodal.component.html")).default,
             styles: [__importDefault(__webpack_require__(/*! ./healthviewmodal.component.css */ "./src/app/health/healthviewmodal/healthviewmodal.component.css")).default]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_2__["BsModalRef"], ngx_spinner__WEBPACK_IMPORTED_MODULE_3__["NgxSpinnerService"], _service_healthservice_service__WEBPACK_IMPORTED_MODULE_4__["HealthserviceService"]])
     ], HealthviewmodalComponent);
     return HealthviewmodalComponent;
 }());
@@ -5498,6 +5622,7 @@ var HealthserviceService = /** @class */ (function () {
     function HealthserviceService(http) {
         this.http = http;
         this.site = 'https://leecloud.azurewebsites.net/'; // URL to web api
+        // private site = 'https://localhost:44347/';  // URL to web api
         this.url = 'api/healthapi/';
         this.postImgurl = 'api/UploadFileapi/';
     }
@@ -5511,6 +5636,10 @@ var HealthserviceService = /** @class */ (function () {
     };
     HealthserviceService.prototype.postEntity = function (entity) {
         var url = this.site + this.url;
+        return this.http.post(url, entity);
+    };
+    HealthserviceService.prototype.postRefreshEntity = function (entity) {
+        var url = this.site + this.url + '?refresh=true';
         return this.http.post(url, entity);
     };
     HealthserviceService.prototype.putEntity = function (entity) {
