@@ -256,7 +256,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n\r\n  <select (change)=\"filterForArticles($event.target.value)\" class=\"form-control\">\r\n    <option value=\"-1\">--選擇--</option>\r\n    <option *ngFor=\"let item of List; let i = index\" value={{i}}>\r\n      {{item.ClientName}}\r\n    </option>\r\n  </select>\r\n</div>\r\n\r\n<p></p>\r\n\r\n<div *ngIf=\"Entity.ClientId\">\r\n\r\n  <table class=\"table table-bordered table-striped\">\r\n    <tbody>\r\n\r\n      <tr>\r\n\r\n        <td>\r\n          編號:\r\n        </td>\r\n        <Td>\r\n          {{Entity.ClientId}}\r\n        </Td>\r\n      </tr>\r\n      <tr>\r\n        <td>\r\n          名稱:\r\n        </td>\r\n        <td>\r\n          <b>{{Entity.ClientName}} </b>\r\n        </td>\r\n      </tr>\r\n      <tr>\r\n        <td>\r\n          地址:\r\n        </td>\r\n        <td>\r\n          {{Entity.Address}}\r\n        </td>\r\n      </tr>\r\n      <tr>\r\n        <td>\r\n          電話:\r\n        </td>\r\n        <td>\r\n          {{Entity.Phone}}\r\n        </td>\r\n      </tr>\r\n      <tr>\r\n        <td>\r\n          身高:\r\n        </td>\r\n        <td>\r\n          {{Entity.Info.Height}}\r\n        </td>\r\n      </tr>\r\n      <tr>\r\n        <td>\r\n          備註:\r\n        </td>\r\n        <td>\r\n          {{Entity.Info.Note}}\r\n        </td>\r\n      </tr>\r\n    </tbody>\r\n  </table>\r\n  <button type=\"button\" class=\"btn btn-lg btn-primary\" (click)=save()>儲存紀錄</button>\r\n  <p></p>\r\n  <table class=\"table table-bordered table-striped\">\r\n\r\n    <tbody>\r\n      <th>\r\n        基本數據 <button type=\"button\" class=\"btn btn-success\" (click)=\"openModal()\">新增紀錄</button>\r\n      </th>\r\n      <th>\r\n        血壓\r\n      </th>\r\n      <th>\r\n        餐飲\r\n      </th>\r\n\r\n      <tr *ngFor='let item of Entity.InfoHistory; let x = index'>\r\n        <td>\r\n          {{item.DateTime}} 體重:\r\n          {{ item.Weight}} 步數:\r\n          {{ item.WalkSteps }}\r\n          <button type=\"button\" class=\"btn btn-sm btn-warning\" (click)=editform(x)>編輯</button>\r\n          <button type=\"button\" class=\"btn btn-sm btn-danger\" (click)=delete(x)>刪除</button>\r\n\r\n        </td>\r\n\r\n        <td>\r\n          <table>\r\n\r\n            <tbody class=\"table table-bordered table-striped\">\r\n              <tr *ngFor=\"let blood of item.BloodPressures\">\r\n                <td> 收縮壓:{{blood.BloodHigh}}\r\n                  舒張壓:{{blood.BloodLow}}\r\n                  脈搏: {{blood.Pulse}}\r\n                  {{blood.DateTime}}\r\n                </td>\r\n              </tr>\r\n            </tbody>\r\n          </table>\r\n\r\n        <td>\r\n          <table>\r\n\r\n\r\n            <tbody class=\"table table-bordered table-striped\">\r\n              <tr *ngFor=\"let meal of item.Meals\">\r\n                <td> {{meal.DateTime}} - {{meal.Name}}\r\n                  <img [src]=\"meal.ImageLink\" style=\"width: 100%;\" /> </td>\r\n\r\n              </tr>\r\n            </tbody>\r\n          </table>\r\n        </td>\r\n\r\n\r\n\r\n      </tr>\r\n\r\n\r\n  </table>\r\n\r\n</div>\r\n\r\n\r\n\r\n<ngx-spinner bdColor=\"rgba(51,51,51,0.8)\" size=\"medium\" color=\"#fff\" type=\"ball-scale-multiple\">\r\n  <p style=\"font-size: 20px; color: white\">處理中...</p>\r\n</ngx-spinner>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n\r\n  <select (change)=\"filterForArticles($event.target.value)\" class=\"form-control\">\r\n    <option value=\"-1\">--選擇--</option>\r\n    <option *ngFor=\"let item of List; let i = index\" value={{i}}>\r\n      {{item.ClientName}}\r\n    </option>\r\n  </select>\r\n</div>\r\n\r\n<p></p>\r\n\r\n<div *ngIf=\"Entity.ClientId\">\r\n\r\n  <table class=\"table table-bordered table-striped\">\r\n    <tbody>\r\n\r\n      <tr>\r\n\r\n        <td>\r\n          編號:\r\n        </td>\r\n        <Td>\r\n          {{Entity.ClientId}}\r\n        </Td>\r\n      </tr>\r\n      <tr>\r\n        <td>\r\n          名稱:\r\n        </td>\r\n        <td>\r\n          <b>{{Entity.ClientName}} </b>\r\n        </td>\r\n      </tr>\r\n      <tr>\r\n        <td>\r\n          地址:\r\n        </td>\r\n        <td>\r\n          {{Entity.Address}}\r\n        </td>\r\n      </tr>\r\n      <tr>\r\n        <td>\r\n          電話:\r\n        </td>\r\n        <td>\r\n          {{Entity.Phone}}\r\n        </td>\r\n      </tr>\r\n      <tr>\r\n        <td>\r\n          身高:\r\n        </td>\r\n        <td>\r\n          {{Entity.Info.Height}}\r\n        </td>\r\n      </tr>\r\n      <tr>\r\n        <td>\r\n          備註:\r\n        </td>\r\n        <td>\r\n          {{Entity.Info.Note}}\r\n        </td>\r\n      </tr>\r\n    </tbody>\r\n  </table>\r\n  <button type=\"button\" class=\"btn btn-lg btn-primary\" (click)=save()>儲存紀錄</button>\r\n  <div *ngIf=\"change\" style=\"color: red;\">The change needs to be clicked the button to save!</div>\r\n  <p></p>\r\n  <table class=\"table table-bordered table-striped\">\r\n\r\n    <tbody>\r\n      <th>\r\n        基本數據 <button type=\"button\" class=\"btn btn-success\" (click)=\"openModal()\">新增紀錄</button>\r\n      </th>\r\n      <th>\r\n        血壓\r\n      </th>\r\n      <th>\r\n        餐飲\r\n      </th>\r\n\r\n      <tr *ngFor='let item of Entity.InfoHistory; let x = index'>\r\n        <td>\r\n          {{item.DateTime}} 體重:\r\n          {{ item.Weight}}KG 步數:\r\n          <span *ngIf=\"item.WalkSteps < 10000\">{{ item.WalkSteps }} </span>\r\n          <span *ngIf=\"item.WalkSteps >= 10000\" style=\"color: red;\">{{ item.WalkSteps }} </span>步\r\n          <span *ngIf=\"item.Comment\" style=\"color:blue;\">({{item.Comment}})</span>\r\n\r\n          <table>\r\n            <tr>\r\n              <td>\r\n                <button type=\"button\" class=\"btn btn-sm btn-warning\" (click)=editform(x)>編輯</button>\r\n              </td>\r\n            </tr>\r\n            <tr>\r\n              <td>\r\n                <button type=\"button\" class=\"btn btn-sm btn-danger\" (click)=delete(x)>刪除</button>\r\n              </td>\r\n            </tr>\r\n          </table>\r\n\r\n\r\n\r\n        </td>\r\n\r\n        <td>\r\n          <table>\r\n\r\n            <tbody class=\"table table-bordered table-striped\">\r\n              <tr *ngFor=\"let blood of item.BloodPressures\">\r\n                <td> 收縮壓:{{blood.BloodHigh}}\r\n                  舒張壓:{{blood.BloodLow}}\r\n                  脈搏: {{blood.Pulse}}\r\n                  {{blood.DateTime}}\r\n                </td>\r\n              </tr>\r\n            </tbody>\r\n          </table>\r\n\r\n        <td>\r\n          <table>\r\n\r\n\r\n            <tbody class=\"table table-bordered table-striped\">\r\n              <tr *ngFor=\"let meal of item.Meals\">\r\n                <td> {{meal.DateTime}} - {{meal.Name}}\r\n                  <img [src]=\"meal.ImageLink\" style=\"width: 100%;\" /> </td>\r\n\r\n              </tr>\r\n            </tbody>\r\n          </table>\r\n        </td>\r\n\r\n\r\n\r\n      </tr>\r\n\r\n\r\n  </table>\r\n\r\n</div>\r\n\r\n\r\n\r\n<ngx-spinner bdColor=\"rgba(51,51,51,0.8)\" size=\"medium\" color=\"#fff\" type=\"ball-scale-multiple\">\r\n  <p style=\"font-size: 20px; color: white\">處理中...</p>\r\n</ngx-spinner>\r\n");
 
 /***/ }),
 
@@ -5307,6 +5307,7 @@ var HealthviewComponent = /** @class */ (function () {
         this.route = route;
         this.modalService = modalService;
         this.refresh = false;
+        this.change = false;
         this._list = [];
         this._entity = new _core_shared_model_userinfo__WEBPACK_IMPORTED_MODULE_3__["UserInfo"]();
     }
@@ -5349,6 +5350,7 @@ var HealthviewComponent = /** @class */ (function () {
         var now = new Date;
         newEntity.DateTime = now.getFullYear().toString() + '/' + now.getMonth().toPrecision() + '/' + now.getDate().toString();
         this.Entity.InfoHistory.push(newEntity);
+        this.change = true;
     };
     HealthviewComponent.prototype.filterForArticles = function (filterVal) {
         if (filterVal === '-1') {
@@ -5372,6 +5374,7 @@ var HealthviewComponent = /** @class */ (function () {
         };
         this.bsModalRef = this.modalService.show(_healthviewmodal_healthviewmodal_component__WEBPACK_IMPORTED_MODULE_6__["HealthviewmodalComponent"], { initialState: initialState });
         this.bsModalRef.setClass('modal-lg');
+        this.change = true;
     };
     HealthviewComponent.prototype.editform = function (i) {
         this.refresh = true;
@@ -5382,6 +5385,7 @@ var HealthviewComponent = /** @class */ (function () {
         };
         this.bsModalRef = this.modalService.show(_healthviewmodal_healthviewmodal_component__WEBPACK_IMPORTED_MODULE_6__["HealthviewmodalComponent"], { initialState: initialState });
         this.bsModalRef.setClass('modal-lg');
+        this.change = true;
     };
     HealthviewComponent.prototype.delete = function (i) {
         this.refresh = true;
@@ -5389,10 +5393,12 @@ var HealthviewComponent = /** @class */ (function () {
         var orginialItems = this.Entity.InfoHistory;
         var filterItems = orginialItems.slice(0, i - 1).concat(orginialItems.slice(i, orginialItems.length));
         this.Entity.InfoHistory = filterItems;
+        this.change = true;
     };
     HealthviewComponent.prototype.save = function () {
         var _this = this;
         this.spinner.show();
+        this.change = false;
         if (this.refresh === true) {
             this.service.postRefreshEntity(this.Entity).subscribe(function (x) {
                 alert('更新完成');
