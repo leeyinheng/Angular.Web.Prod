@@ -6088,8 +6088,8 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 var HealthserviceService = /** @class */ (function () {
     function HealthserviceService(http) {
         this.http = http;
-        // private site = 'https://leecloud.azurewebsites.net/';  // URL to web api
-        this.site = 'https://localhost:44347/'; // URL to web api
+        this.site = 'https://leecloud.azurewebsites.net/'; // URL to web api
+        // private site = 'https://localhost:44347/';  // URL to web api
         this.url = 'api/healthapi/';
         this.postImgurl = 'api/UploadWebPhotoapi/';
     }
