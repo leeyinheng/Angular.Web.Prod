@@ -230,7 +230,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div>\n  <span> <img src='../assets/Photos/tealogo.jpg' width=20% height=20% /></span>\n  <p></p>\n</div>\n\n<h3>所有客戶付款表</h3>\n<div>\n      <button type=\"button\" class=\"btn btn-success\" onclick=\"location.href='#/teaportal';\">返回管理頁面</button>\n      <p></p>\n</div>\n<div class=\"form form-row\">\n  <label>搜尋:</label>\n  <input type=\"string\" placeholder=\"編號或名稱\" class=\"form form-control\"\n  [(ngModel)]='Search'\n  style=\"width: 8em;\"\n  />\n</div>\n<p></p>\n<table class=\"table table-bordered table-striped table-hover\">\n  <tr>\n      <th>\n          客戶編號\n      </th>\n      <th>\n          客戶名稱\n      </th>\n      <th>\n          目前庫存\n      </th>\n      <th>\n          目前管理費\n      </th>\n      <th>\n          付款週期\n      </th>\n      <th>\n          上次付款日期\n      </th>\n      <th>\n         下次付款日期\n      </th>\n      <th>\n\n      </th>\n  </tr>\n\n\n      <tbody>\n          <tr *ngFor = 'let item of List' >\n              <td>\n                  {{item.ClientId}}\n              </td>\n              <td>{{ item.ClientName}}\n\n              </td>\n              <td>{{ item.Info.TotalStock}}</td>\n              <td>{{ item.Info.TotalFee}}</td>\n              <td>\n                  {{item.Info.PaymentPeriod}} 個月\n              </td>\n              <td>\n                {{ item.Info.LastPaymentDate}}\n              </td>\n              <td>\n                {{ item.Info.NextPaymentDate}}\n              </td>\n              <td>\n                  <button type=\"button\" class=\"btn btn-sm btn-success\" (click) = showEntity(item.ClientId)>內容</button>\n              </td>\n          </tr>\n      </tbody>\n\n</table>\n\n<div>\n      <button type=\"button\" class=\"btn btn-success\" onclick=\"location.href='#/teaportal';\">返回管理頁面</button>\n      <p></p>\n</div>\n\n<ngx-spinner\nbdColor=\"rgba(51,51,51,0.8)\"\nsize=\"medium\"\ncolor=\"#fff\"\ntype=\"ball-scale-multiple\"\n>\n<p style=\"font-size: 20px; color: white\">處理中...</p>\n</ngx-spinner>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div>\n  <span> <img src='../assets/Photos/tealogo.jpg' width=20% height=20% /></span>\n  <p></p>\n</div>\n\n<h3>所有客戶付款表</h3>\n\n<div class=\"row\">\n  <div class=\"col-sm-4\">\n    <button type=\"button\" class=\"btn btn-success\" onclick=\"location.href='#/teaportal';\">返回管理頁面</button>\n  </div>\n  <div class=\"col-sm-4\">\n\n  </div>\n  <div class=\"col-sm-4\">\n    <button type=\"button\" class=\"btn btn-warning\" (click)=\"updateUsers()\">更新付款人名單</button>\n  </div>\n</div>\n\n<p></p>\n<div class=\"form form-row\">\n  <label>搜尋:</label>\n  <input type=\"string\" placeholder=\"編號或名稱\" class=\"form form-control\"\n  [(ngModel)]='Search'\n  style=\"width: 8em;\"\n  />\n</div>\n<p></p>\n<table class=\"table table-bordered table-striped table-hover\">\n  <tr>\n      <th>\n          客戶編號\n      </th>\n      <th>\n          客戶名稱\n      </th>\n      <th>\n          目前庫存\n      </th>\n      <th>\n          目前管理費\n      </th>\n      <th>\n          付款週期\n      </th>\n      <th>\n          上次付款日期\n      </th>\n      <th>\n         下次付款日期\n      </th>\n      <th>\n\n      </th>\n  </tr>\n\n\n      <tbody>\n          <tr *ngFor = 'let item of List' >\n              <td>\n                  {{item.ClientId}}\n              </td>\n              <td>{{ item.ClientName}}\n\n              </td>\n              <td>{{ item.Info.TotalStock}}</td>\n              <td>{{ item.Info.TotalFee}}</td>\n              <td>\n                  {{item.Info.PaymentPeriod}} 個月\n              </td>\n              <td>\n                {{ item.Info.LastPaymentDate}}\n              </td>\n              <td>\n                {{ item.Info.NextPaymentDate}}\n              </td>\n              <td>\n                  <button type=\"button\" class=\"btn btn-sm btn-success\" (click) = showEntity(item.ClientId)>內容</button>\n              </td>\n          </tr>\n      </tbody>\n\n</table>\n\n<div>\n      <button type=\"button\" class=\"btn btn-success\" onclick=\"location.href='#/teaportal';\">返回管理頁面</button>\n      <p></p>\n</div>\n\n<ngx-spinner\nbdColor=\"rgba(51,51,51,0.8)\"\nsize=\"medium\"\ncolor=\"#fff\"\ntype=\"ball-scale-multiple\"\n>\n<p style=\"font-size: 20px; color: white\">處理中...</p>\n</ngx-spinner>\n");
 
 /***/ }),
 
@@ -3649,6 +3649,7 @@ var InvserviceService = /** @class */ (function () {
         this.paymentGetUrl = 'api/PaymentApi/GetEntity/';
         this.paymentPostUrl = 'api/PaymentApi/';
         this.paymentGetListUrl = 'api/PaymentApi/';
+        this.paymentUpdateUsersUrl = 'api/PaymentApi/UpdateUsers/888';
         this._list = [];
         this.messageSource = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](this.list);
         this.currentMessage = this.messageSource.asObservable();
@@ -3744,6 +3745,10 @@ var InvserviceService = /** @class */ (function () {
     };
     InvserviceService.prototype.getPaymentEntity = function (id) {
         var url = this.site + this.paymentGetUrl + id;
+        return this.http.get(url);
+    };
+    InvserviceService.prototype.updatePaymentUsers = function () {
+        var url = this.site + this.paymentUpdateUsersUrl;
         return this.http.get(url);
     };
     InvserviceService.prototype.postPaymentEntity = function (entity) {
@@ -4690,6 +4695,17 @@ var PaymentlistComponent = /** @class */ (function () {
         this.service.changePaymentInfo(this.List.filter(function (x) { return x.ClientId === id; })[0]);
         // window.open('#/payment/' + id  , '_self');
         this.router.navigate(['payment', id]);
+    };
+    PaymentlistComponent.prototype.updateUsers = function () {
+        var _this = this;
+        this.spinner.show();
+        this.service.updatePaymentUsers().subscribe(function (val) {
+            alert('藏家名單更新完成 請重新更新頁面');
+            _this.spinner.hide();
+        }, function (err) {
+            alert('發生錯誤');
+            _this.spinner.hide();
+        });
     };
     PaymentlistComponent.ctorParameters = function () { return [
         { type: _invservice_service__WEBPACK_IMPORTED_MODULE_4__["InvserviceService"] },
