@@ -5781,6 +5781,7 @@ var HealthviewComponent = /** @class */ (function () {
         this.refresh = false;
         this.change = false;
         this._list = [];
+        this.days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
         this._entity = new _core_shared_model_userinfo__WEBPACK_IMPORTED_MODULE_4__["UserInfo"]();
     }
     Object.defineProperty(HealthviewComponent.prototype, "List", {
@@ -5821,13 +5822,6 @@ var HealthviewComponent = /** @class */ (function () {
             _this.spinner.hide();
         });
     };
-    HealthviewComponent.prototype.addHealthHistory = function () {
-        var newEntity = new _core_shared_model_userinfo__WEBPACK_IMPORTED_MODULE_4__["HealthHistory"]();
-        var now = new Date;
-        newEntity.DateTime = now.getFullYear().toString() + '/' + now.getMonth().toPrecision() + '/' + now.getDate().toString();
-        this.Entity.InfoHistory.push(newEntity);
-        this.change = true;
-    };
     HealthviewComponent.prototype.filterForArticles = function (filterVal) {
         if (filterVal === '-1') {
         }
@@ -5838,7 +5832,8 @@ var HealthviewComponent = /** @class */ (function () {
     HealthviewComponent.prototype.openModal = function () {
         var newEntity = new _core_shared_model_userinfo__WEBPACK_IMPORTED_MODULE_4__["HealthHistory"]();
         var now = new Date;
-        newEntity.DateTime = now.getFullYear().toString() + '/' + (now.getMonth() + 1).toString() + '/' + now.getDate().toString();
+        newEntity.DateTime = now.getFullYear().toString() + '/' + (now.getMonth() + 1).toString() + '/'
+            + now.getDate().toString() + ' ' + this.days[now.getDay()];
         newEntity.WalkSteps = 7000;
         newEntity.Weight = '75';
         newEntity.BloodPressures = [];
