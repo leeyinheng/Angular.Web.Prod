@@ -87,7 +87,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n    <span><img src='../assets/Photos/inhublogo.png' width=10% height=10% /></span>\r\n    <p></p>\r\n</div>\r\n\r\n<button type=\"button\" class=\"btn btn-primary\" onclick=\"location.href='#/bcform';\">新增</button>\r\n<p></p>\r\n<ng-template #popTemplate> <div [innerHtml]=\"pophtml\"></div></ng-template>\r\n<table class=\"table table-bordered table-striped\">\r\n    <tr>\r\n        <th>\r\n            ID\r\n        </th>\r\n        <th>\r\n            名稱\r\n        </th>\r\n        <th>\r\n            網站\r\n        </th>\r\n        <th>\r\n            地址\r\n        </th>\r\n      \r\n        <th>\r\n            \r\n        </th>\r\n    </tr>\r\n    \r\n       \r\n        <tbody> \r\n            <tr *ngFor = 'let item of List ' [tooltip]=\"popTemplate\" (mouseover)='popup(item)'>\r\n                <td>\r\n                    {{item.Id}}\r\n                </td>\r\n                <td>{{ item.Name}}\r\n                      \r\n                </td>\r\n                <td> <a href= 'https://{{item.WebSite}}' target=\"_blank\"> {{item.WebSite}} </a></td>\r\n                <td>{{ item.Address}}</td>\r\n                <td>\r\n                        <button type=\"button\" class=\"btn btn-primary\" (click) = showform(item.Id)>展示</button>    |\r\n                        <button type=\"button\" class=\"btn btn-info\" (click) = openform(item.Id)>編輯</button>    |\r\n                        <button type=\"button\" class=\"btn btn-danger\" (click) = delete(item.Id)>刪除</button>\r\n                </td>\r\n                \r\n                \r\n            </tr>\r\n        </tbody>\r\n       \r\n</table>\r\n\r\n\r\n\r\n<ngx-spinner\r\n  bdColor=\"rgba(51,51,51,0.8)\"\r\n  size=\"medium\"\r\n  color=\"#fff\"\r\n  type=\"ball-scale-multiple\"\r\n>\r\n  <p style=\"font-size: 20px; color: white\">處理中...</p>\r\n</ngx-spinner>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n    <span><img src='../assets/Photos/inhublogo.png' width=10% height=10% /></span>\r\n    <p></p>\r\n</div>\r\n\r\n<button type=\"button\" class=\"btn btn-primary\" onclick=\"location.href='#/bcform';\">新增</button>\r\n<p></p>\r\n<ng-template #popTemplate> <div [innerHtml]=\"pophtml\"></div></ng-template>\r\n<table class=\"table table-bordered table-striped\">\r\n    <tr>\r\n        <th>\r\n            ID\r\n        </th>\r\n        <th>\r\n            名稱\r\n        </th>\r\n        <th>\r\n            城市\r\n        </th>\r\n        <th>\r\n            地址\r\n        </th>\r\n\r\n        <th>\r\n\r\n        </th>\r\n    </tr>\r\n\r\n\r\n        <tbody>\r\n            <tr *ngFor = 'let item of List ' [tooltip]=\"popTemplate\" (mouseover)='popup(item)'>\r\n                <td>\r\n                    {{item.Id}}\r\n                </td>\r\n                <td>{{ item.Company}}\r\n\r\n                </td>\r\n                <td>   {{item.County}} </td>\r\n                <td>{{ item.Street}}</td>\r\n                <td>\r\n                        <button type=\"button\" class=\"btn btn-primary\" (click) = showform(item.Id)>展示</button>    |\r\n                        <button type=\"button\" class=\"btn btn-info\" (click) = openform(item.Id)>編輯</button>    |\r\n                        <button type=\"button\" class=\"btn btn-danger\" (click) = delete(item.Id)>刪除</button>\r\n                </td>\r\n\r\n\r\n            </tr>\r\n        </tbody>\r\n\r\n</table>\r\n\r\n\r\n\r\n<ngx-spinner\r\n  bdColor=\"rgba(51,51,51,0.8)\"\r\n  size=\"medium\"\r\n  color=\"#fff\"\r\n  type=\"ball-scale-multiple\"\r\n>\r\n  <p style=\"font-size: 20px; color: white\">處理中...</p>\r\n</ngx-spinner>\r\n");
 
 /***/ }),
 
@@ -2892,16 +2892,35 @@ var BcserviceService = /** @class */ (function () {
     function BcserviceService(http) {
         this.http = http;
         this.site = 'https://leecloud.azurewebsites.net/'; // URL to web api
+        this.vendorurl = 'https://in-hub-dev.azurewebsites.net/vendor';
+        this.tokenurl = 'https://in-hub-dev.azurewebsites.net/user/su/__53cr3t__';
         this.url = 'api/businesscenterapi/';
         this.postImgurl = 'api/UploadFileapi/';
+        this.gettoken();
     }
     BcserviceService.prototype.handleError = function (error) {
         console.error('An error occurred', error);
         return Promise.reject(error.message || error);
     };
+    BcserviceService.prototype.gettoken = function () {
+        this.http.get(this.tokenurl, { responseType: 'text' }).subscribe(function (val) {
+            localStorage.setItem('token', val.toString());
+        });
+    };
+    BcserviceService.prototype.getHttpoption = function () {
+        var t = localStorage.getItem('token');
+        // tslint:disable-next-line:prefer-const
+        var headers_object = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
+            'Authorization': 'Bearer' + t
+        });
+        var httpOptions = {
+            headers: headers_object
+        };
+        return httpOptions;
+    };
     BcserviceService.prototype.getList = function () {
-        var url = this.site + this.url;
-        return this.http.get(url);
+        var url = this.vendorurl;
+        return this.http.get(url, this.getHttpoption());
     };
     BcserviceService.prototype.getEntityById = function (id) {
         var url = this.site + this.url + id;
