@@ -61,7 +61,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\r\n<div>\r\n    <span><img src='../assets/Photos/inhublogo.png' width=10% height=10% /></span>\r\n    <p></p>\r\n</div>\r\n\r\n<div class=\"nav navbar-nav navbar-right\">\r\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"SaveEntity()\">儲存</button> | \r\n        <button type=\"button\" class=\"btn btn-default\" onclick=\"location.href='#/bccenter';\">返回</button>   \r\n        <p></p>    \r\n</div>\r\n\r\n<div class=\"body-content\">\r\n\r\n        <table class=\"table table-bordered table-striped\">\r\n                <tbody>\r\n            \r\n                    <tr>\r\n                        <td>\r\n                            ID:\r\n                        </td>\r\n                        <TD>\r\n                                {{Entity.Id}}\r\n                        </TD>\r\n                    </tr>\r\n                    <tr>\r\n                        <td>\r\n                                商務中心名稱:\r\n                        </td>\r\n                        <td>\r\n                                <input [(ngModel)]=\"Entity.Name\" #ctrl=\"ngModel\" required name=\"entityname\"  #fullName=\"ngModel\" required> \r\n                        </td>\r\n                    </tr>\r\n                    <tr>\r\n                        <td>\r\n                            介紹:\r\n                        </td>\r\n                        <td>\r\n                                <!--<input type=\"textarea\" rows=\"4\" [(ngModel)]=\"Entity.Intro\" #ctrl=\"ngModel\" required name=\"Intro\" class=\"form-control\"> -->\r\n                                <textarea class=\"form-control\" \r\n                                name=\"intro\"\r\n                                rows=\"4\"\r\n                                [(ngModel)]=\"Entity.Intro\"\r\n                                #message='ngModel'\r\n                                ></textarea>\r\n                        </td>\r\n                    </tr>\r\n                    <tr>\r\n                        <td>\r\n                               營業時間: <button type=\"button\" class=\"btn btn-info\" (click)=\"openBusinessHourModal()\">編輯</button>\r\n                        </td>\r\n                        <td>\r\n                            <div fxLayout=\"column\" fxLayoutAlign=\" none\">\r\n                                <div fxFlex=\"100\" fxLayout=\"column\" fxLayoutAlign=\"space-around stretch\" fxLayout.xs=\"column\">\r\n                                  <div *ngFor=\"let i of Entity.BusinessHours\" fxFlex.xs=\"100\" fxFlex.sm=\"50\" fxFlex.md=\"33\" fxFlex.lg=\"33\" fxFlex.xl=\"33\">\r\n                                      {{i.Day}} : {{i.StartTime}} - {{i.EndTime}}\r\n                                  </div> \r\n                                </div>\r\n                              </div>\r\n            \r\n                        </td>\r\n                    </tr>\r\n                    <tr>\r\n                        <td>\r\n                            電話:\r\n                        </td>\r\n                        <td>\r\n                                <input [(ngModel)]=\"Entity.Phone\" #ctrl=\"ngModel\" name=\"phone\"> \r\n                        </td>\r\n                    </tr>\r\n                    <tr>\r\n                        <td>\r\n                            地址:\r\n                        </td>\r\n                        <td>\r\n                                <input [(ngModel)]=\"Entity.Address\" #ctrl=\"ngModel\" name=\"address\" class=\"form-control\"> \r\n                        </td>\r\n                    </tr>\r\n                    <tr>\r\n                        <td colspan=\"2\">\r\n                                <table>\r\n                                        <tr>\r\n                                                <td>\r\n                                                        最低價格:\r\n                                                    </td>\r\n                                                    <td>\r\n                                                            <input type=\"number\" [(ngModel)]=\"Entity.MinPrice\" #ctrl=\"ngModel\" name=\"minprice\" class=\"form-control\"> \r\n                                                    </td>\r\n                                                    <td>\r\n                                                          ~\r\n                                                    </td>\r\n                                                    <td>\r\n                                                        最高價格:\r\n                                                    </td>\r\n                                                    <td>\r\n                                                            <input type=\"number\" [(ngModel)]=\"Entity.MaxPrice\" #ctrl=\"ngModel\" name=\"maxprice\" class=\"form-control\"> \r\n                                                </td>\r\n                                        </tr>\r\n                                    </table>\r\n                                 \r\n                        </td>\r\n                      \r\n                    </tr>\r\n                    <tr>\r\n                            <td>\r\n                                電子郵件:\r\n                            </td>\r\n                            <td>\r\n                                    <input [(ngModel)]=\"Entity.Email\" #ctrl=\"ngModel\" name=\"Email\"> \r\n                            </td>\r\n                    </tr>\r\n                    <tr>\r\n                            <td>\r\n                                網站:\r\n                            </td>\r\n                            <td>\r\n                                    <input [(ngModel)]=\"Entity.WebSite\" #ctrl=\"ngModel\" name=\"Website\"> \r\n                            </td>\r\n                    </tr>\r\n                    <tr>\r\n                            <td>\r\n                                設備:  <button type=\"button\" class=\"btn btn-info\" (click)=\"openModal()\">編輯</button>\r\n                            </td>\r\n                            <td>\r\n                                      \r\n                \r\n                                        <div fxLayout=\"column\" fxLayoutAlign=\" none\">\r\n                                                <div fxFlex=\"100\" fxLayout=\"row wrap\" fxLayoutAlign=\"space-around stretch\" fxLayout.xs=\"column\">\r\n                                                  <div *ngFor=\"let i of Entity.Features\" fxFlex.xs=\"100\" fxFlex.sm=\"50\" fxFlex.md=\"33\" fxFlex.lg=\"33\" fxFlex.xl=\"33\">\r\n                                                       {{i.Name}} <img  [src]=\"i.Image_Url\" style=\"height: 50px; width: 50px;\">\r\n                                                  </div>\r\n                                                </div>\r\n                                        </div>\r\n                                            \r\n                                            \r\n                            </td>\r\n                        </tr>\r\n                    <tr>\r\n                        <td>\r\n                            座標:\r\n                        </td>\r\n                        <td>\r\n                            <input [(ngModel)]=\"Entity.Coordinates\" #ctrl=\"ngModel\" name=\"Coordinates\"> \r\n                        </td>\r\n                    </tr>\r\n                    <tr>\r\n                        <td colspan=\"2\">\r\n                                <google-map\r\n                                height=\"500px\"\r\n                                width=\"100%\"\r\n                                [zoom]=\"zoom\"\r\n                                [center]=\"center\"\r\n                                [options]=\"options\"\r\n                                >\r\n                                <map-marker\r\n                                    *ngFor=\"let marker of markers\"\r\n                                    [position]=\"marker.position\"\r\n                                    [label]=\"marker.label\"\r\n                                    [title]=\"marker.title\"\r\n                                    [options]=\"marker.options\"\r\n                                    (mapClick)=\"opengooglemap()\"\r\n                                >\r\n                                </map-marker>\r\n                            \r\n                            \r\n                                </google-map>\r\n                        </td>\r\n                    </tr>\r\n               \r\n                    <tr>\r\n                        <td colspan=\"2\">\r\n                            圖片:\r\n                        \r\n                                <div class=\"center\">\r\n                                        <ngx-file-drop dropZoneLabel=\"Drop files here\" (onFileDrop)=\"dropped($event)\" \r\n                                        (onFileOver)=\"fileOver($event)\" (onFileLeave)=\"fileLeave($event)\">\r\n                                            <ng-template ngx-file-drop-content-tmp let-openFileSelector=\"openFileSelector\">\r\n                                              拖曳或是選擇要上傳的圖片\r\n                                              <button type=\"button\" (click)=\"openFileSelector()\">Browse Files</button>\r\n                                            </ng-template>\r\n                                        </ngx-file-drop>\r\n                                       \r\n                                </div>\r\n                        </td>\r\n                    </tr>\r\n                    <tr>\r\n                        <td colspan=\"2\">\r\n                                <ul *ngFor=\"let i of Entity.Images; let x = index\" class=\"list-group\">\r\n                                    <li class=\"list-group-item\">\r\n                                        <img [src]=\"i.Image_Url\"   class=\"img-thumbnail\" > <p></p>\r\n                                        名稱:<input [(ngModel)]=\"i.Name\" #ctrl=\"ngModel\"  name=\"imagename\" class=\"form-control\"/> <p></p>\r\n                                        備註: <input [(ngModel)]=\"i.Comment\" #ctrl=\"ngModel\"  name=\"imageComment\" type=\"text\"  class=\"form-control\"/><p></p>\r\n                                        <button type=\"button\" class=\"btn btn-danger btn-xs\" (click) =\"RemoveImage(x)\">Remove</button>\r\n                                    </li>\r\n                                </ul>\r\n                        </td>\r\n                    </tr>    \r\n                </tbody>   \r\n                </table>\r\n            \r\n\r\n\r\n\r\n</div>\r\n\r\n    \r\n    \r\n  \r\n     <hr>\r\n    <div class=\"nav navbar-nav navbar-right\">\r\n            <button type=\"button\" class=\"btn btn-primary\" (click)=\"SaveEntity()\">儲存</button> | \r\n            <button type=\"button\" class=\"btn btn-default\" onclick=\"location.href='#/bccenter';\">返回</button>       \r\n    </div>\r\n\r\n   \r\n\r\n\r\n<ngx-spinner\r\n  bdColor=\"rgba(51,51,51,0.8)\"\r\n  size=\"medium\"\r\n  color=\"#fff\"\r\n  type=\"ball-scale-multiple\"\r\n>\r\n  <p style=\"font-size: 20px; color: white\">處理中...</p>\r\n</ngx-spinner>\r\n\r\n ");
+/* harmony default export */ __webpack_exports__["default"] = ("\r\n<div>\r\n    <span><img src='../assets/Photos/inhublogo.png' width=10% height=10% /></span>\r\n    <p></p>\r\n</div>\r\n\r\n<div class=\"nav navbar-nav navbar-right\">\r\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"SaveEntity()\">儲存</button> |\r\n        <button type=\"button\" class=\"btn btn-default\" onclick=\"location.href='#/bccenter';\">返回</button>\r\n        <p></p>\r\n</div>\r\n\r\n<div class=\"body-content\">\r\n\r\n        <table class=\"table table-bordered table-striped\">\r\n                <tbody>\r\n\r\n                    <tr>\r\n                        <td>\r\n                            ID:\r\n                        </td>\r\n                        <TD>\r\n                                {{Entity.Id}}\r\n                        </TD>\r\n                    </tr>\r\n                    <tr>\r\n                        <td>\r\n                                商務中心名稱:\r\n                        </td>\r\n                        <td>\r\n                                <input [(ngModel)]=\"Entity.Company\" #ctrl=\"ngModel\" required name=\"entityname\"  #fullName=\"ngModel\" class=\"form-control\" required>\r\n                        </td>\r\n                    </tr>\r\n                    <tr>\r\n                      <td>\r\n                              商務中心名稱 英文:\r\n                      </td>\r\n                      <td>\r\n                              <input [(ngModel)]=\"Entity.Company_en\" #ctrl=\"ngModel\" required name=\"entityname_en\"  #fullName=\"ngModel\" class=\"form-control\">\r\n                      </td>\r\n                  </tr>\r\n                    <!-- <tr>\r\n                        <td>\r\n                            介紹:\r\n                        </td>\r\n                        <td>\r\n\r\n                                <textarea class=\"form-control\"\r\n                                name=\"intro\"\r\n                                rows=\"4\"\r\n                                [(ngModel)]=\"Entity.Intro\"\r\n                                #message='ngModel'\r\n                                ></textarea>\r\n                        </td>\r\n                    </tr> -->\r\n                    <!-- <tr>\r\n                        <td>\r\n                               營業時間: <button type=\"button\" class=\"btn btn-info\" (click)=\"openBusinessHourModal()\">編輯</button>\r\n                        </td>\r\n                        <td>\r\n                            <div fxLayout=\"column\" fxLayoutAlign=\" none\">\r\n                                <div fxFlex=\"100\" fxLayout=\"column\" fxLayoutAlign=\"space-around stretch\" fxLayout.xs=\"column\">\r\n                                  <div *ngFor=\"let i of Entity.BusinessHours\" fxFlex.xs=\"100\" fxFlex.sm=\"50\" fxFlex.md=\"33\" fxFlex.lg=\"33\" fxFlex.xl=\"33\">\r\n                                      {{i.Day}} : {{i.StartTime}} - {{i.EndTime}}\r\n                                  </div>\r\n                                </div>\r\n                              </div>\r\n\r\n                        </td>\r\n                    </tr> -->\r\n\r\n                    <tr>\r\n                        <td>\r\n                            街:\r\n                        </td>\r\n                        <td>\r\n                                <input [(ngModel)]=\"Entity.Street\" #ctrl=\"ngModel\" name=\"address\" class=\"form-control\">\r\n                        </td>\r\n                    </tr>\r\n                    <tr>\r\n                      <td>\r\n                          Street:\r\n                      </td>\r\n                      <td>\r\n                              <input [(ngModel)]=\"Entity.Street_en\" #ctrl=\"ngModel\" name=\"Street_en\" class=\"form-control\">\r\n                      </td>\r\n                  </tr>\r\n\r\n                    <tr>\r\n                            <td>\r\n                                市:\r\n                            </td>\r\n                            <td>\r\n                                    <input [(ngModel)]=\"Entity.County\" #ctrl=\"ngModel\" name=\"County\">\r\n                            </td>\r\n                    </tr>\r\n                    <tr>\r\n                      <td>\r\n                          City:\r\n                      </td>\r\n                      <td>\r\n                              <input [(ngModel)]=\"Entity.County_en\" #ctrl=\"ngModel\" name=\"County_en\">\r\n                      </td>\r\n              </tr>\r\n                    <tr>\r\n                            <td>\r\n                                區:\r\n                            </td>\r\n                            <td>\r\n                                    <input [(ngModel)]=\"Entity.District\" #ctrl=\"ngModel\" name=\"District\">\r\n                            </td>\r\n                    </tr>\r\n                    <tr>\r\n                      <td>\r\n                          District :\r\n                      </td>\r\n                      <td>\r\n                              <input [(ngModel)]=\"Entity.District_en\" #ctrl=\"ngModel\" name=\"District_en\">\r\n                      </td>\r\n              </tr>\r\n                    <tr>\r\n                            <td>\r\n                                設備:  <button type=\"button\" class=\"btn btn-info\" (click)=\"openModal()\">編輯</button>\r\n                            </td>\r\n                            <td>\r\n\r\n\r\n                                        <div fxLayout=\"column\" fxLayoutAlign=\" none\">\r\n                                                <div fxFlex=\"100\" fxLayout=\"row wrap\" fxLayoutAlign=\"space-around stretch\" fxLayout.xs=\"column\">\r\n                                                  <div *ngFor=\"let i of Entity.Features\" fxFlex.xs=\"100\" fxFlex.sm=\"50\" fxFlex.md=\"33\" fxFlex.lg=\"33\" fxFlex.xl=\"33\">\r\n                                                       {{i.Name}} <img  src =\"https://image.flaticon.com/icons/svg/1642/1642269.svg\" style=\"height: 50px; width: 50px;\">\r\n                                                  </div>\r\n                                                </div>\r\n                                        </div>\r\n\r\n\r\n                            </td>\r\n                        </tr>\r\n                        <tr>\r\n                          <td>\r\n                              空位數:\r\n                          </td>\r\n                          <td>\r\n                                  <input [(ngModel)]=\"Entity.DefaultSeats\" #ctrl=\"ngModel\" name=\"DefaultSeats\">\r\n                          </td>\r\n                  </tr>\r\n                    <tr>\r\n                        <td>\r\n                            座標:    <button type=\"button\" class=\"btn btn-sm btn-primary\" (click)=\"saveGPS()\">更新GPS</button>\r\n                        </td>\r\n                        <td>\r\n                          Latitude  :  <input [(ngModel)]=\"Entity.Latitude \" #ctrl=\"ngModel\" name=\"Latitude \">\r\n                        </td>\r\n                    </tr>\r\n\r\n                    <tr>\r\n                      <td>\r\n\r\n                      </td>\r\n                      <td>\r\n                        Longitude  :   <input [(ngModel)]=\"Entity.Longitude\" #ctrl=\"ngModel\" name=\"Longitude\">\r\n                      </td>\r\n                    </tr>\r\n                    <tr>\r\n                        <td colspan=\"2\">\r\n                                <google-map\r\n                                height=\"500px\"\r\n                                width=\"100%\"\r\n                                [zoom]=\"zoom\"\r\n                                [center]=\"center\"\r\n                                [options]=\"options\"\r\n                                >\r\n                                <map-marker\r\n                                    *ngFor=\"let marker of markers\"\r\n                                    [position]=\"marker.position\"\r\n                                    [label]=\"marker.label\"\r\n                                    [title]=\"marker.title\"\r\n                                    [options]=\"marker.options\"\r\n                                    (mapClick)=\"opengooglemap()\"\r\n                                >\r\n                                </map-marker>\r\n\r\n\r\n                                </google-map>\r\n                        </td>\r\n                    </tr>\r\n\r\n                    <tr>\r\n                        <td colspan=\"2\">\r\n                            圖片:\r\n\r\n                                <div class=\"center\">\r\n                                        <ngx-file-drop dropZoneLabel=\"Drop files here\" (onFileDrop)=\"dropped($event)\"\r\n                                        (onFileOver)=\"fileOver($event)\" (onFileLeave)=\"fileLeave($event)\">\r\n                                            <ng-template ngx-file-drop-content-tmp let-openFileSelector=\"openFileSelector\">\r\n                                              拖曳或是選擇要上傳的圖片\r\n                                              <button type=\"button\" (click)=\"openFileSelector()\">Browse Files</button>\r\n                                            </ng-template>\r\n                                        </ngx-file-drop>\r\n\r\n                                </div>\r\n                        </td>\r\n                    </tr>\r\n                    <tr>\r\n                        <td colspan=\"2\">\r\n                                <ul *ngFor=\"let i of Entity.Images; let x = index\" class=\"list-group\">\r\n                                    <li class=\"list-group-item\">\r\n                                        <img [src]=\"i.Image_Url\"   class=\"img-thumbnail\" > <p></p>\r\n                                        名稱:<input [(ngModel)]=\"i.Name\" #ctrl=\"ngModel\"  name=\"imagename\" class=\"form-control\"/> <p></p>\r\n                                        備註: <input [(ngModel)]=\"i.Comment\" #ctrl=\"ngModel\"  name=\"imageComment\" type=\"text\"  class=\"form-control\"/><p></p>\r\n                                        <button type=\"button\" class=\"btn btn-danger btn-xs\" (click) =\"RemoveImage(x)\">Remove</button>\r\n                                    </li>\r\n                                </ul>\r\n                        </td>\r\n                    </tr>\r\n                </tbody>\r\n                </table>\r\n\r\n\r\n\r\n\r\n</div>\r\n\r\n\r\n\r\n\r\n     <hr>\r\n    <div class=\"nav navbar-nav navbar-right\">\r\n            <button type=\"button\" class=\"btn btn-primary\" (click)=\"SaveEntity()\">儲存</button> |\r\n            <button type=\"button\" class=\"btn btn-default\" onclick=\"location.href='#/bccenter';\">返回</button>\r\n    </div>\r\n\r\n\r\n\r\n\r\n<ngx-spinner\r\n  bdColor=\"rgba(51,51,51,0.8)\"\r\n  size=\"medium\"\r\n  color=\"#fff\"\r\n  type=\"ball-scale-multiple\"\r\n>\r\n  <p style=\"font-size: 20px; color: white\">處理中...</p>\r\n</ngx-spinner>\r\n\r\n");
 
 /***/ }),
 
@@ -87,20 +87,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n    <span><img src='../assets/Photos/inhublogo.png' width=10% height=10% /></span>\r\n    <p></p>\r\n</div>\r\n\r\n<button type=\"button\" class=\"btn btn-primary\" onclick=\"location.href='#/bcform';\">新增</button>\r\n<p></p>\r\n<ng-template #popTemplate> <div [innerHtml]=\"pophtml\"></div></ng-template>\r\n<table class=\"table table-bordered table-striped\">\r\n    <tr>\r\n        <th>\r\n            ID\r\n        </th>\r\n        <th>\r\n            名稱\r\n        </th>\r\n        <th>\r\n            城市\r\n        </th>\r\n        <th>\r\n            地址\r\n        </th>\r\n\r\n        <th>\r\n\r\n        </th>\r\n    </tr>\r\n\r\n\r\n        <tbody>\r\n            <tr *ngFor = 'let item of List ' [tooltip]=\"popTemplate\" (mouseover)='popup(item)'>\r\n                <td>\r\n                    {{item.Id}}\r\n                </td>\r\n                <td>{{ item.Company}}\r\n\r\n                </td>\r\n                <td>   {{item.County}} </td>\r\n                <td>{{ item.Street}}</td>\r\n                <td>\r\n                        <button type=\"button\" class=\"btn btn-primary\" (click) = showform(item.Id)>展示</button>    |\r\n                        <button type=\"button\" class=\"btn btn-info\" (click) = openform(item.Id)>編輯</button>    |\r\n                        <button type=\"button\" class=\"btn btn-danger\" (click) = delete(item.Id)>刪除</button>\r\n                </td>\r\n\r\n\r\n            </tr>\r\n        </tbody>\r\n\r\n</table>\r\n\r\n\r\n\r\n<ngx-spinner\r\n  bdColor=\"rgba(51,51,51,0.8)\"\r\n  size=\"medium\"\r\n  color=\"#fff\"\r\n  type=\"ball-scale-multiple\"\r\n>\r\n  <p style=\"font-size: 20px; color: white\">處理中...</p>\r\n</ngx-spinner>\r\n");
-
-/***/ }),
-
-/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/businesscenter/bcshow/bcshow.component.html":
-/*!***************************************************************************************************!*\
-  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/businesscenter/bcshow/bcshow.component.html ***!
-  \***************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\r\n<div>\r\n    <span><img src='../assets/Photos/inhublogo.png' width=10% height=10% /></span>\r\n    <p></p>\r\n</div>\r\n\r\n<div class=\"nav navbar-nav navbar-right\">\r\n         <button type=\"button\" class=\"btn btn-default\" onclick=\"location.href='#/bccenter';\">返回</button>   \r\n        <p></p>    \r\n</div>\r\n\r\n<div class=\"body-content\">\r\n\r\n    <table class=\"table table-bordered table-striped\">\r\n            <tbody>\r\n                <tr>\r\n                    <td colspan=\"2\">\r\n                           \r\n                        <carousel>\r\n                                <slide *ngFor=\"let item of Entity.Images\">\r\n                                <img [src]=\"item.Image_Url\" alt=\"Image\" style=\"display: block; width: 100%;\">\r\n                                <div class=\"carousel-caption d-none d-md-block\">\r\n                                    <h3>{{item.Name}}</h3>\r\n                                    <p>{{item.Comment}}</p>\r\n                                </div>\r\n                                </slide> \r\n                        </carousel>\r\n        \r\n\r\n                    </td>\r\n                </tr>\r\n        \r\n                <tr>\r\n                    <td>\r\n                        ID:\r\n                    </td>\r\n                    <TD>\r\n                            {{Entity.Id}}\r\n                    </TD>\r\n                </tr>\r\n                <tr>\r\n                    <td>\r\n                            商務中心名稱:\r\n                    </td>\r\n                    <td>\r\n                        <b><h1 class=\"h4\">{{Entity.Name}} </h1></b>\r\n                    </td>\r\n                </tr>\r\n                <tr>\r\n                    <td>\r\n                        介紹:\r\n                    </td>\r\n                    <td>\r\n                            {{Entity.Intro}} \r\n                    </td>\r\n                </tr>\r\n                <tr>\r\n                    <td>\r\n                           營業時間: \r\n                    </td>\r\n                    <td>\r\n                        <div fxLayout=\"column\" fxLayoutAlign=\" none\">\r\n                            <div fxFlex=\"100\" fxLayout=\"column\" fxLayoutAlign=\"space-around stretch\" fxLayout.xs=\"column\">\r\n                              <div *ngFor=\"let i of Entity.BusinessHours\" fxFlex.xs=\"100\" fxFlex.sm=\"50\" fxFlex.md=\"33\" fxFlex.lg=\"33\" fxFlex.xl=\"33\">\r\n                                  {{i.Day}} : {{i.StartTime}} - {{i.EndTime}}\r\n                              </div> \r\n                            </div>\r\n                          </div>\r\n        \r\n                    </td>\r\n                </tr>\r\n                <tr>\r\n                    <td>\r\n                        電話:\r\n                    </td>\r\n                    <td>\r\n                            {{Entity.Phone}}   \r\n                    </td>\r\n                </tr>\r\n                <tr>\r\n                    <td>\r\n                        地址:\r\n                    </td>\r\n                    <td>\r\n                            {{Entity.Address}}   \r\n                    </td>\r\n                </tr>\r\n                <tr>\r\n                    <td colspan=\"2\">\r\n                            <table>\r\n                                    <tr>\r\n                                            <td>\r\n                                                    最低價格:\r\n                                                </td>\r\n                                                <td>\r\n                                                        {{Entity.MinPrice}}     \r\n                                                </td>\r\n                                                <td>\r\n                                                      ~\r\n                                                </td>\r\n                                                <td>\r\n                                                    最高價格:\r\n                                                </td>\r\n                                                <td>\r\n                                                        {{Entity.MaxPrice}}       \r\n                                                </td>\r\n                                    </tr>\r\n                                </table>\r\n                             \r\n                    </td>\r\n                  \r\n                </tr>\r\n                <tr>\r\n                        <td>\r\n                            電子郵件:\r\n                        </td>\r\n                        <td>\r\n                                {{Entity.Email}}         \r\n                        </td>\r\n                </tr>\r\n                <tr>\r\n                        <td>\r\n                            網站:\r\n                        </td>\r\n                        <td>\r\n                                {{Entity.WebSite}}     \r\n                        </td>\r\n                </tr>\r\n                <tr>\r\n                        <td>\r\n                            設備: \r\n                        </td>\r\n                        <td>\r\n                                  \r\n            \r\n                                    <div fxLayout=\"column\" fxLayoutAlign=\" none\">\r\n                                            <div fxFlex=\"100\" fxLayout=\"row wrap\" fxLayoutAlign=\"space-around stretch\" fxLayout.xs=\"column\">\r\n                                              <div *ngFor=\"let i of Entity.Features\" fxFlex.xs=\"100\" fxFlex.sm=\"50\" fxFlex.md=\"33\" fxFlex.lg=\"33\" fxFlex.xl=\"33\">\r\n                                                   {{i.Name}} <img  [src]=\"i.Image_Url\" style=\"height: 50px; width: 50px;\">\r\n                                              </div>\r\n                                            </div>\r\n                                    </div>\r\n                                        \r\n                                        \r\n                        </td>\r\n                    </tr>\r\n               \r\n                <tr>\r\n                    <td colspan=\"2\">\r\n                            <google-map\r\n                            height=\"500px\"\r\n                            width=\"100%\"\r\n                            [zoom]=\"zoom\"\r\n                            [center]=\"center\"\r\n                            [options]=\"options\"\r\n                            >\r\n                            <map-marker\r\n                                *ngFor=\"let marker of markers\"\r\n                                [position]=\"marker.position\"\r\n                                [label]=\"marker.label\"\r\n                                [title]=\"marker.title\"\r\n                                [options]=\"marker.options\"\r\n                                (mapClick)=\"opengooglemap()\"\r\n                            >\r\n                            </map-marker>\r\n                        \r\n                        \r\n                            </google-map>\r\n                    </td>\r\n                </tr>\r\n           \r\n              \r\n            </tbody>   \r\n            </table>\r\n        \r\n\r\n\r\n\r\n</div>\r\n\r\n\r\n\r\n<ngx-spinner\r\n  bdColor=\"rgba(51,51,51,0.8)\"\r\n  size=\"medium\"\r\n  color=\"#fff\"\r\n  type=\"ball-scale-multiple\"\r\n>\r\n  <p style=\"font-size: 20px; color: white\">處理中...</p>\r\n</ngx-spinner>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n    <span><img src='../assets/Photos/inhublogo.png' width=10% height=10% /></span>\r\n    <p></p>\r\n</div>\r\n\r\n\r\n<p></p>\r\n\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-sm-4\">\r\n    <button type=\"button\" class=\"btn btn-primary\" onclick=\"location.href='#/bcform';\">新增</button>\r\n  </div>\r\n  <div class=\"col-sm-4\">\r\n\r\n  </div>\r\n  <div class=\"col-sm-4\">\r\n    <button type=\"button\" class=\"btn btn-primary\" onclick=\"location.href='#/bcuser';\">到使用者/會員管理</button>\r\n  </div>\r\n</div>\r\n\r\n<p></p>\r\n<ng-template #popTemplate> <div [innerHtml]=\"pophtml\"></div></ng-template>\r\n<table class=\"table table-bordered table-striped\">\r\n    <tr>\r\n        <th>\r\n            ID\r\n        </th>\r\n        <th>\r\n            名稱\r\n        </th>\r\n        <th>\r\n            城市\r\n        </th>\r\n        <th>\r\n            地址\r\n        </th>\r\n\r\n        <th>\r\n\r\n        </th>\r\n    </tr>\r\n\r\n\r\n        <tbody>\r\n            <tr *ngFor = 'let item of List ' [tooltip]=\"popTemplate\" (mouseover)='popup(item)'>\r\n                <td>\r\n                    {{item.Id}}\r\n                </td>\r\n                <td>{{ item.Company}}\r\n\r\n                </td>\r\n                <td>   {{item.County}} </td>\r\n                <td>{{ item.Street}}</td>\r\n                <td>\r\n                        <!-- <button type=\"button\" class=\"btn btn-primary\" (click) = showform(item.Id)>展示</button>    | -->\r\n                        <button type=\"button\" class=\"btn btn-info\" (click) = openform(item.Id)>編輯</button>    |\r\n                        <button type=\"button\" class=\"btn btn-danger\" (click) = delete(item.Id)>刪除</button>\r\n                </td>\r\n\r\n\r\n            </tr>\r\n        </tbody>\r\n\r\n</table>\r\n\r\n\r\n\r\n<ngx-spinner\r\n  bdColor=\"rgba(51,51,51,0.8)\"\r\n  size=\"medium\"\r\n  color=\"#fff\"\r\n  type=\"ball-scale-multiple\"\r\n>\r\n  <p style=\"font-size: 20px; color: white\">處理中...</p>\r\n</ngx-spinner>\r\n");
 
 /***/ }),
 
@@ -127,6 +114,32 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("<p>requestmodal works!</p>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/businesscenter/userform/userform.component.html":
+/*!*******************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/businesscenter/userform/userform.component.html ***!
+  \*******************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n<div>\n  <span><img src='../assets/Photos/inhublogo.png' width=10% height=10% /></span>\n  <p></p>\n</div>\n\n<div class=\"nav navbar-nav navbar-right\">\n      <button type=\"button\" class=\"btn btn-primary\" (click)=\"SaveEntity()\">儲存</button> |\n      <button type=\"button\" class=\"btn btn-default\" onclick=\"location.href='#/bcuser';\">返回</button>\n      <p></p>\n</div>\n\n<div class=\"body-content\">\n\n      <table class=\"table table-bordered table-striped\">\n              <tbody>\n\n                  <tr>\n                      <td>\n                          ID:\n                      </td>\n                      <td>\n                             <div *ngIf=\"!isAdd\">\n                              {{Entity.Id}}\n                             </div>\n\n                              <div *ngIf=\"isAdd\">\n                                <input [(ngModel)]=\"Entity.Id\" #ctrl=\"ngModel\" required name=\"ID\"  #fullName=\"ngModel\" class=\"form-control\" required>\n                              </div>\n\n                      </td>\n                  </tr>\n                  <tr>\n                    <td>\n                            Email :\n                    </td>\n                    <td>\n                            <input [(ngModel)]=\"Entity.Email\" #ctrl=\"ngModel\" required name=\"Email\"  #fullName=\"ngModel\" class=\"form-control\" required>\n                    </td>\n                </tr>\n                <tr>\n                  <td>\n                          Password :\n                          <div *ngIf=\"!isAdd\">\n                            <button type=\"button\" class=\"btn btn-sm btn-warning\" (click)=\"UpdatePassword()\">更新Password</button>\n                          </div>\n                  </td>\n                  <td>\n                          <input [(ngModel)]=\"Entity.Password\" #ctrl=\"ngModel\" required name=\"Password\"  #fullName=\"ngModel\" class=\"form-control\" required>\n                  </td>\n              </tr>\n\n                  <tr>\n                      <td>\n                              名:\n                      </td>\n                      <td>\n                              <input [(ngModel)]=\"Entity.FirstName\" #ctrl=\"ngModel\" required name=\"FirstName\"  #fullName=\"ngModel\" class=\"form-control\" required>\n                      </td>\n                  </tr>\n                  <tr>\n                    <td>\n                            姓:\n                    </td>\n                    <td>\n                            <input [(ngModel)]=\"Entity.LastName\" #ctrl=\"ngModel\" required name=\"LastName\"  #fullName=\"ngModel\" class=\"form-control\">\n                    </td>\n                </tr>\n\n                  <tr>\n                      <td>\n                          電話:\n                      </td>\n                      <td>\n                              <input [(ngModel)]=\"Entity.Cell \" #ctrl=\"ngModel\" name=\"Cell\" class=\"form-control\">\n                      </td>\n                  </tr>\n                  <tr *ngIf=\"!isAdd\">\n                    <td>\n                        點數:\n                    </td>\n                    <td>\n                            <input [(ngModel)]=\"Entity.Points\" #ctrl=\"ngModel\" name=\"Points\" class=\"form-control\" type=\"number\">\n                    </td>\n                </tr>\n\n                  <tr *ngIf=\"!isAdd\">\n                          <td>\n                             管理的 Vendor <button type=\"button\" class=\"btn btn-sm btn-warning\" (click)=\"AssignVendor()\">指定管理的商務中心</button>\n                          </td>\n                          <td>\n                                 {{Entity.Vendor.company}}\n\n\n                                  <div>\n                                    <select (change)=\"filterForArticles($event.target.value)\" class=\"form-control\">\n                                      <option value=\"-1\">--選擇--</option>\n                                      <option *ngFor=\"let item of List; let i = index\" value={{item.Id}}>\n                                        {{item.Company}}\n                                      </option>\n                                    </select>\n\n                                  </div>\n                          </td>\n                  </tr>\n\n              </tbody>\n              </table>\n\n\n\n\n</div>\n\n\n\n\n   <hr>\n  <div class=\"nav navbar-nav navbar-right\">\n          <button type=\"button\" class=\"btn btn-primary\" (click)=\"SaveEntity()\">儲存</button> |\n          <button type=\"button\" class=\"btn btn-default\" onclick=\"location.href='#/bcuser';\">返回</button>\n  </div>\n\n\n\n\n<ngx-spinner\nbdColor=\"rgba(51,51,51,0.8)\"\nsize=\"medium\"\ncolor=\"#fff\"\ntype=\"ball-scale-multiple\"\n>\n<p style=\"font-size: 20px; color: white\">處理中...</p>\n</ngx-spinner>\n\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/businesscenter/userlist/userlist.component.html":
+/*!*******************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/businesscenter/userlist/userlist.component.html ***!
+  \*******************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div>\n  <span><img src='../assets/Photos/inhublogo.png' width=10% height=10% /></span>\n  <p></p>\n</div>\n\n\n<p></p>\n\n\n<div class=\"row\">\n  <div class=\"col-sm-4\">\n    <button type=\"button\" class=\"btn btn-primary\" onclick=\"location.href='#/bcuserform';\">新增</button>\n  </div>\n  <div class=\"col-sm-4\">\n\n  </div>\n  <div class=\"col-sm-4\">\n    <button type=\"button\" class=\"btn btn-primary\" onclick=\"location.href='#/bccenter';\">到商務中心管理</button>\n  </div>\n</div>\n<p></p>\n\n<table class=\"table table-bordered table-striped\">\n  <tr>\n      <th>\n          ID\n      </th>\n      <th>\n        Email\n      </th>\n      <th>\n          名\n      </th>\n      <th>\n          姓\n      </th>\n      <th>\n          電話\n      </th>\n\n      <th>\n        點數\n      </th>\n\n      <th>\n\n      </th>\n  </tr>\n\n\n      <tbody>\n          <tr *ngFor = 'let item of List ' [tooltip]=\"popTemplate\" (mouseover)='popup(item)'>\n              <td>\n                  {{item.Id}}\n              </td>\n              <td>\n                {{item.Email}}\n              </td>\n              <td>{{ item.FirstName}}\n\n              </td>\n              <td>   {{item.LastName}} </td>\n              <td>{{ item.Cell}}</td>\n              <td>\n                {{item.Points}}\n              </td>\n              <td>\n                      <!-- <button type=\"button\" class=\"btn btn-primary\" (click) = showform(item.Id)>展示</button>    | -->\n                      <button type=\"button\" class=\"btn btn-info\" (click) = openform(item.Id)>編輯</button>    |\n                      <button type=\"button\" class=\"btn btn-danger\" (click) = delete(item.Id)>刪除</button>\n              </td>\n\n\n          </tr>\n      </tbody>\n\n</table>\n\n\n\n<ngx-spinner\nbdColor=\"rgba(51,51,51,0.8)\"\nsize=\"medium\"\ncolor=\"#fff\"\ntype=\"ball-scale-multiple\"\n>\n<p style=\"font-size: 20px; color: white\">處理中...</p>\n</ngx-spinner>\n");
 
 /***/ }),
 
@@ -1807,16 +1820,16 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BcformComponent", function() { return BcformComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _model_BusinessCenter__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../model/BusinessCenter */ "./src/app/businesscenter/model/BusinessCenter.ts");
-/* harmony import */ var _service_bcservice_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../service/bcservice.service */ "./src/app/businesscenter/service/bcservice.service.ts");
-/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ngx-spinner */ "./node_modules/ngx-spinner/fesm5/ngx-spinner.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var util__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! util */ "./node_modules/util/util.js");
-/* harmony import */ var util__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(util__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ngx-bootstrap/modal */ "./node_modules/ngx-bootstrap/modal/fesm5/ngx-bootstrap-modal.js");
-/* harmony import */ var _bcformmodal_bcformmodal_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../bcformmodal/bcformmodal.component */ "./src/app/businesscenter/bcformmodal/bcformmodal.component.ts");
-/* harmony import */ var _businesshourmodal_businesshourmodal_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../businesshourmodal/businesshourmodal.component */ "./src/app/businesscenter/businesshourmodal/businesshourmodal.component.ts");
-/* harmony import */ var _angular_google_maps__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/google-maps */ "./node_modules/@angular/google-maps/fesm5/google-maps.js");
+/* harmony import */ var _service_bcservice_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../service/bcservice.service */ "./src/app/businesscenter/service/bcservice.service.ts");
+/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ngx-spinner */ "./node_modules/ngx-spinner/fesm5/ngx-spinner.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var util__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! util */ "./node_modules/util/util.js");
+/* harmony import */ var util__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(util__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ngx-bootstrap/modal */ "./node_modules/ngx-bootstrap/modal/fesm5/ngx-bootstrap-modal.js");
+/* harmony import */ var _bcformmodal_bcformmodal_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../bcformmodal/bcformmodal.component */ "./src/app/businesscenter/bcformmodal/bcformmodal.component.ts");
+/* harmony import */ var _businesshourmodal_businesshourmodal_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../businesshourmodal/businesshourmodal.component */ "./src/app/businesscenter/businesshourmodal/businesshourmodal.component.ts");
+/* harmony import */ var _angular_google_maps__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/google-maps */ "./node_modules/@angular/google-maps/fesm5/google-maps.js");
+/* harmony import */ var _model_Inhub__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../model/Inhub */ "./src/app/businesscenter/model/Inhub.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1846,7 +1859,8 @@ var BcformComponent = /** @class */ (function () {
         this.spinner = spinner;
         this.route = route;
         this.modalService = modalService;
-        this._entity = new _model_BusinessCenter__WEBPACK_IMPORTED_MODULE_1__["BusinessCenter"]();
+        this.isAdd = false;
+        this._entity = new _model_Inhub__WEBPACK_IMPORTED_MODULE_9__["Vendor"]();
         this.files = [];
         this.zoom = 14;
         this.options = {
@@ -1875,7 +1889,8 @@ var BcformComponent = /** @class */ (function () {
         /** spinner starts on init */
         this.spinner.show();
         var ID = this.route.snapshot.paramMap.get('id');
-        if (Object(util__WEBPACK_IMPORTED_MODULE_5__["isNullOrUndefined"])(ID)) {
+        if (Object(util__WEBPACK_IMPORTED_MODULE_4__["isNullOrUndefined"])(ID)) {
+            this.isAdd = true;
             this.AddNew();
             this.spinner.hide();
         }
@@ -1883,7 +1898,7 @@ var BcformComponent = /** @class */ (function () {
             this.bcservice.getEntityById(ID).subscribe(function (val) {
                 _this.Entity = val;
                 _this.spinner.hide();
-                if (Object(util__WEBPACK_IMPORTED_MODULE_5__["isNullOrUndefined"])(_this.Entity.Coordinates) !== true) {
+                if (Object(util__WEBPACK_IMPORTED_MODULE_4__["isNullOrUndefined"])(_this.Entity.Latitude) !== true) {
                     _this.addMarker();
                 }
             }, function (err) {
@@ -1891,7 +1906,7 @@ var BcformComponent = /** @class */ (function () {
                 _this.spinner.hide();
             });
         }
-        if (Object(util__WEBPACK_IMPORTED_MODULE_5__["isNullOrUndefined"])(this.Entity.Coordinates) !== true) {
+        if (Object(util__WEBPACK_IMPORTED_MODULE_4__["isNullOrUndefined"])(this.Entity.Latitude) !== true) {
             this.addMarker();
         }
         else {
@@ -1907,30 +1922,55 @@ var BcformComponent = /** @class */ (function () {
      * name
      */
     BcformComponent.prototype.AddNew = function () {
-        var newEntity = new _model_BusinessCenter__WEBPACK_IMPORTED_MODULE_1__["BusinessCenter"]();
+        var newEntity = new _model_Inhub__WEBPACK_IMPORTED_MODULE_9__["Vendor"]();
         var now = new Date;
         var utc_timestamp = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate(), now.getHours(), now.getMinutes(), now.getSeconds(), now.getMilliseconds());
-        newEntity.Id = 'bc' + '-' + utc_timestamp.toString();
+        newEntity.Id = 'VendorTest' + '_' + utc_timestamp.toString();
         this.Entity = newEntity;
+    };
+    BcformComponent.prototype.saveGPS = function () {
+        var _this = this;
+        if (!Object(util__WEBPACK_IMPORTED_MODULE_4__["isNullOrUndefined"])(this.Entity.Longitude) && !Object(util__WEBPACK_IMPORTED_MODULE_4__["isNullOrUndefined"])(this.Entity.Longitude)) {
+            this.spinner.show();
+            this.bcservice.updateGPS(this.Entity).subscribe(function (res) {
+                alert('儲存GPS完畢');
+                _this.spinner.hide();
+            }, function (err) {
+                alert('error');
+                _this.spinner.hide();
+            });
+        }
+        else {
+            alert('Please enter GPS info');
+        }
     };
     BcformComponent.prototype.SaveEntity = function () {
         var _this = this;
-        if (Object(util__WEBPACK_IMPORTED_MODULE_5__["isNullOrUndefined"])(this.Entity.Name) || this.Entity.Name === '') {
+        if (Object(util__WEBPACK_IMPORTED_MODULE_4__["isNullOrUndefined"])(this.Entity.Company) || this.Entity.Company === '') {
             alert('請輸入名稱欄位');
             return;
         }
         this.spinner.show();
-        this.bcservice.postEntity(this.Entity).subscribe(function (res) {
-            alert('儲存完畢');
-            // if (isNullOrUndefined(this.Entity.Coordinates) !== true) {
-            //  this.addMarker();
-            // }
-            _this.spinner.hide();
-            window.open('#/bccenter');
-        }, function (err) {
-            alert(err);
-            _this.spinner.hide();
-        });
+        if (this.isAdd === true) {
+            this.bcservice.postEntity(this.Entity).subscribe(function (res) {
+                alert('新增完畢');
+                _this.spinner.hide();
+                window.open('#/bccenter');
+            }, function (err) {
+                alert(err);
+                _this.spinner.hide();
+            });
+        }
+        else {
+            this.bcservice.updateEntity(this.Entity).subscribe(function (res) {
+                alert('更新完畢');
+                _this.spinner.hide();
+                //  window.open('#/bccenter');
+            }, function (err) {
+                alert(err);
+                _this.spinner.hide();
+            });
+        }
     };
     BcformComponent.prototype.dropped = function (files) {
         var _this = this;
@@ -1947,17 +1987,16 @@ var BcformComponent = /** @class */ (function () {
                     formData.append(file.name, file, droppedFile.relativePath);
                     _this.spinner.show();
                     _this.bcservice.postImage(formData).subscribe(function (val) {
-                        var newImage = new _model_BusinessCenter__WEBPACK_IMPORTED_MODULE_1__["BusinessCenterImage"]();
-                        newImage.Name = 'Image';
-                        newImage.Image_Url = val;
-                        if (Object(util__WEBPACK_IMPORTED_MODULE_5__["isNullOrUndefined"])(_this.Entity.Images)) {
-                            var images = [];
-                            images.push(newImage);
-                            _this.Entity.Images = images;
-                        }
-                        else {
-                            _this.Entity.Images.push(newImage);
-                        }
+                        //   const newImage = new BusinessCenterImage();
+                        //   newImage.Name = 'Image';
+                        //   newImage.Image_Url = val;
+                        // if (isNullOrUndefined(this.Entity.Images)) {
+                        //   const images: BusinessCenterImage[] = [];
+                        //   images.push(newImage);
+                        //     this.Entity.Images = images;
+                        //  } else {
+                        //   this.Entity.Images.push(newImage);
+                        //  }
                         _this.spinner.hide();
                     });
                 });
@@ -1981,21 +2020,21 @@ var BcformComponent = /** @class */ (function () {
     };
     BcformComponent.prototype.RemoveImage = function (i) {
         i++;
-        var orginialItems = this.Entity.Images;
-        var filterItems = orginialItems.slice(0, i - 1).concat(orginialItems.slice(i, orginialItems.length));
-        this.Entity.Images = filterItems;
+        // const orginialItems = this.Entity.Images;
+        // const filterItems = orginialItems.slice(0, i - 1).concat(orginialItems.slice(i, orginialItems.length));
+        // this.Entity.Images = filterItems;
     };
     BcformComponent.prototype.openModal = function () {
         var initialState = {
             entity: this.Entity
         };
-        this.bsModalRef = this.modalService.show(_bcformmodal_bcformmodal_component__WEBPACK_IMPORTED_MODULE_7__["BcformmodalComponent"], { initialState: initialState });
+        this.bsModalRef = this.modalService.show(_bcformmodal_bcformmodal_component__WEBPACK_IMPORTED_MODULE_6__["BcformmodalComponent"], { initialState: initialState });
     };
     BcformComponent.prototype.openBusinessHourModal = function () {
         var initialState = {
             entity: this.Entity
         };
-        this.bsModalRef = this.modalService.show(_businesshourmodal_businesshourmodal_component__WEBPACK_IMPORTED_MODULE_8__["BusinesshourmodalComponent"], { initialState: initialState });
+        this.bsModalRef = this.modalService.show(_businesshourmodal_businesshourmodal_component__WEBPACK_IMPORTED_MODULE_7__["BusinesshourmodalComponent"], { initialState: initialState });
     };
     BcformComponent.prototype.zoomIn = function () {
         if (this.zoom < this.options.maxZoom) {
@@ -2009,45 +2048,45 @@ var BcformComponent = /** @class */ (function () {
     };
     BcformComponent.prototype.addMarker = function () {
         this.markers = [];
-        var coord = this.Entity.Coordinates.split(',');
+        // const coord = this.Entity.Coordinates.split(',');
         this.markers.push({
             position: {
-                lat: Number(coord[0]),
-                lng: Number(coord[1]),
+                lat: Number(this.Entity.Latitude),
+                lng: Number(this.Entity.Longitude),
             },
             label: {
                 color: 'red',
-                text: this.Entity.Name + (this.markers.length + 1),
+                text: this.Entity.Company + (this.markers.length + 1),
             },
-            title: this.Entity.Name + (this.markers.length + 1),
+            title: this.Entity.Company + (this.markers.length + 1),
             info: 'Marker info ' + (this.markers.length + 1),
-            url: 'https://www.google.com/maps/place/' + this.Entity.Coordinates,
+            url: 'https://www.google.com/maps/place/' + this.Entity.Latitude + ',' + this.Entity.Longitude,
             options: {
                 animation: google.maps.Animation.DROP
             }
         });
         this.center = {
-            lat: Number(coord[0]),
-            lng: Number(coord[1]),
+            lat: Number(this.Entity.Latitude),
+            lng: Number(this.Entity.Longitude),
         };
     };
     BcformComponent.prototype.opengooglemap = function () {
-        var url = 'https://www.google.com/maps/place/' + this.Entity.Coordinates;
+        var url = 'https://www.google.com/maps/place/' + this.Entity.Latitude + ',' + this.Entity.Longitude;
         window.open(url);
     };
     BcformComponent.ctorParameters = function () { return [
-        { type: _service_bcservice_service__WEBPACK_IMPORTED_MODULE_2__["BcserviceService"] },
-        { type: ngx_spinner__WEBPACK_IMPORTED_MODULE_3__["NgxSpinnerService"] },
-        { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"] },
-        { type: ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_6__["BsModalService"] }
+        { type: _service_bcservice_service__WEBPACK_IMPORTED_MODULE_1__["BcserviceService"] },
+        { type: ngx_spinner__WEBPACK_IMPORTED_MODULE_2__["NgxSpinnerService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"] },
+        { type: ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_5__["BsModalService"] }
     ]; };
     __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])(_angular_google_maps__WEBPACK_IMPORTED_MODULE_9__["GoogleMap"], { static: false }),
-        __metadata("design:type", _angular_google_maps__WEBPACK_IMPORTED_MODULE_9__["GoogleMap"])
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])(_angular_google_maps__WEBPACK_IMPORTED_MODULE_8__["GoogleMap"], { static: false }),
+        __metadata("design:type", _angular_google_maps__WEBPACK_IMPORTED_MODULE_8__["GoogleMap"])
     ], BcformComponent.prototype, "map", void 0);
     __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])(_angular_google_maps__WEBPACK_IMPORTED_MODULE_9__["MapInfoWindow"], { static: false }),
-        __metadata("design:type", _angular_google_maps__WEBPACK_IMPORTED_MODULE_9__["MapInfoWindow"])
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])(_angular_google_maps__WEBPACK_IMPORTED_MODULE_8__["MapInfoWindow"], { static: false }),
+        __metadata("design:type", _angular_google_maps__WEBPACK_IMPORTED_MODULE_8__["MapInfoWindow"])
     ], BcformComponent.prototype, "info", void 0);
     BcformComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -2055,7 +2094,7 @@ var BcformComponent = /** @class */ (function () {
             template: __importDefault(__webpack_require__(/*! raw-loader!./bcform.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/businesscenter/bcform/bcform.component.html")).default,
             styles: [__importDefault(__webpack_require__(/*! ./bcform.component.css */ "./src/app/businesscenter/bcform/bcform.component.css")).default]
         }),
-        __metadata("design:paramtypes", [_service_bcservice_service__WEBPACK_IMPORTED_MODULE_2__["BcserviceService"], ngx_spinner__WEBPACK_IMPORTED_MODULE_3__["NgxSpinnerService"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"], ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_6__["BsModalService"]])
+        __metadata("design:paramtypes", [_service_bcservice_service__WEBPACK_IMPORTED_MODULE_1__["BcserviceService"], ngx_spinner__WEBPACK_IMPORTED_MODULE_2__["NgxSpinnerService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"], ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_5__["BsModalService"]])
     ], BcformComponent);
     return BcformComponent;
 }());
@@ -2091,6 +2130,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ngx-bootstrap/modal */ "./node_modules/ngx-bootstrap/modal/fesm5/ngx-bootstrap-modal.js");
 /* harmony import */ var util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! util */ "./node_modules/util/util.js");
 /* harmony import */ var util__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(util__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _service_bcservice_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../service/bcservice.service */ "./src/app/businesscenter/service/bcservice.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2106,73 +2146,146 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 
 
 
+
 var BcformmodalComponent = /** @class */ (function () {
-    function BcformmodalComponent(bsModalRef) {
+    function BcformmodalComponent(bsModalRef, service) {
         this.bsModalRef = bsModalRef;
+        this.service = service;
+        //   list: BusinessCenterFeature[] = [  {
+        //     Name: '投影機',
+        //     Comment: '',
+        //     Image_Url: 'http://inhub_dev.playplus.solutions/uploads/equipment/image/1/icon01.png',
+        //     Checked: false
+        // },
+        // {
+        //   Name: '螢幕',
+        //   Comment: '',
+        //   Image_Url: 'http://inhub_dev.playplus.solutions/uploads/equipment/image/2/icon02.png',
+        //   Checked: false
+        // },
+        // {
+        //   Name: '白板',
+        //   Comment: 'Comment',
+        //   Image_Url: 'http://inhub_dev.playplus.solutions/uploads/equipment/image/3/icon03.png',
+        //   Checked: false
+        // },
+        // {
+        //   Name: 'WIFI',
+        //   Comment: 'Comment',
+        //   Image_Url: 'http://inhub_dev.playplus.solutions/uploads/equipment/image/4/icon04.png',
+        //   Checked: false
+        // },
+        // {
+        //   Name: '事務機',
+        //   Comment: 'Comment',
+        //   Image_Url: 'http://inhub_dev.playplus.solutions/uploads/equipment/image/5/icon05.png',
+        //   Checked: false
+        // },
+        // {
+        //   Name: '咖啡飲料',
+        //   Comment: 'Comment',
+        //   Image_Url: 'http://inhub_dev.playplus.solutions/uploads/equipment/image/6/icon06.png',
+        //   Checked: false
+        // },
+        // {
+        //   Name: '桌子',
+        //   Comment: 'Comment',
+        //   Image_Url: 'http://inhub_dev.playplus.solutions/uploads/equipment/image/7/icon07.png',
+        //   Checked: false
+        // },
+        // {
+        //   Name: '椅子',
+        //   Comment: 'Comment',
+        //   Image_Url: 'http://inhub_dev.playplus.solutions/uploads/equipment/image/8/icon08.png',
+        //   Checked: false
+        // },
+        // {
+        //   Name: '音響喇叭',
+        //   Comment: 'Comment',
+        //   Image_Url: 'http://inhub_dev.playplus.solutions/uploads/equipment/image/11/music-player.png',
+        //   Checked: false
+        // },
+        // {
+        //   Name: '麥克風',
+        //   Comment: 'Comment',
+        //   Image_Url: 'http://inhub_dev.playplus.solutions/uploads/equipment/image/12/microphone.png',
+        //   Checked: false
+        // }];
+        // Type – string [value can only be one the three options – equip, facility, service]
         this.list = [{
                 Name: '投影機',
-                Comment: '',
+                Name_en: 'Projector',
+                Type: 'equip',
                 Image_Url: 'http://inhub_dev.playplus.solutions/uploads/equipment/image/1/icon01.png',
                 Checked: false
             },
             {
                 Name: '螢幕',
-                Comment: '',
+                Name_en: 'Screen',
+                Type: 'equip',
                 Image_Url: 'http://inhub_dev.playplus.solutions/uploads/equipment/image/2/icon02.png',
                 Checked: false
             },
             {
                 Name: '白板',
-                Comment: 'Comment',
+                Name_en: 'White Board',
+                Type: 'equip',
                 Image_Url: 'http://inhub_dev.playplus.solutions/uploads/equipment/image/3/icon03.png',
                 Checked: false
             },
             {
                 Name: 'WIFI',
-                Comment: 'Comment',
+                Name_en: 'WIFI',
+                Type: 'facility',
                 Image_Url: 'http://inhub_dev.playplus.solutions/uploads/equipment/image/4/icon04.png',
                 Checked: false
             },
             {
                 Name: '事務機',
-                Comment: 'Comment',
+                Name_en: 'FAX/Print Machine',
+                Type: 'equip',
                 Image_Url: 'http://inhub_dev.playplus.solutions/uploads/equipment/image/5/icon05.png',
                 Checked: false
             },
             {
                 Name: '咖啡飲料',
-                Comment: 'Comment',
+                Name_en: 'Coffee/Drinks',
+                Type: 'service',
                 Image_Url: 'http://inhub_dev.playplus.solutions/uploads/equipment/image/6/icon06.png',
                 Checked: false
             },
             {
                 Name: '桌子',
-                Comment: 'Comment',
+                Name_en: 'Desk',
+                Type: 'facility',
                 Image_Url: 'http://inhub_dev.playplus.solutions/uploads/equipment/image/7/icon07.png',
                 Checked: false
             },
             {
                 Name: '椅子',
-                Comment: 'Comment',
+                Name_en: 'Chair',
+                Type: 'facility',
                 Image_Url: 'http://inhub_dev.playplus.solutions/uploads/equipment/image/8/icon08.png',
                 Checked: false
             },
             {
                 Name: '音響喇叭',
-                Comment: 'Comment',
+                Name_en: 'Speakers',
+                Type: 'facility',
                 Image_Url: 'http://inhub_dev.playplus.solutions/uploads/equipment/image/11/music-player.png',
                 Checked: false
             },
             {
                 Name: '麥克風',
-                Comment: 'Comment',
+                Name_en: 'Mic',
+                Type: 'facility',
                 Image_Url: 'http://inhub_dev.playplus.solutions/uploads/equipment/image/12/microphone.png',
                 Checked: false
             }];
     }
     BcformmodalComponent.prototype.ngOnInit = function () {
         var _this = this;
-        if (Object(util__WEBPACK_IMPORTED_MODULE_2__["isNullOrUndefined"])(this.entity.Features) !== true) {
+        if (Object(util__WEBPACK_IMPORTED_MODULE_2__["isNullOrUndefined"])(this.entity) !== true) {
             this.entity.Features.forEach(function (item) {
                 _this.list.forEach(function (i) {
                     if (i.Name === item.Name) {
@@ -2184,16 +2297,37 @@ var BcformmodalComponent = /** @class */ (function () {
     };
     BcformmodalComponent.prototype.Save = function () {
         var newlist = [];
+        this.cleanFeatures();
         this.list.forEach(function (item) {
             if (item.Checked === true) {
                 newlist.push(item);
             }
         });
         this.entity.Features = newlist;
+        this.addFeatures();
         this.bsModalRef.hide();
     };
+    BcformmodalComponent.prototype.cleanFeatures = function () {
+        var _this = this;
+        this.entity.Features.forEach(function (item) {
+            _this.service.deleteFeature(_this.entity.Id, item.Name).subscribe(function (val) {
+            }, function (error) {
+                alert('remove feature error');
+            });
+        });
+    };
+    BcformmodalComponent.prototype.addFeatures = function () {
+        var _this = this;
+        this.entity.Features.forEach(function (item) {
+            _this.service.addFeature(_this.entity.Id, item).subscribe(function (val) {
+            }, function (err) {
+                alert('add feature fail');
+            });
+        });
+    };
     BcformmodalComponent.ctorParameters = function () { return [
-        { type: ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_1__["BsModalRef"] }
+        { type: ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_1__["BsModalRef"] },
+        { type: _service_bcservice_service__WEBPACK_IMPORTED_MODULE_3__["BcserviceService"] }
     ]; };
     BcformmodalComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -2201,7 +2335,7 @@ var BcformmodalComponent = /** @class */ (function () {
             template: __importDefault(__webpack_require__(/*! raw-loader!./bcformmodal.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/businesscenter/bcformmodal/bcformmodal.component.html")).default,
             styles: [__importDefault(__webpack_require__(/*! ./bcformmodal.component.css */ "./src/app/businesscenter/bcformmodal/bcformmodal.component.css")).default]
         }),
-        __metadata("design:paramtypes", [ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_1__["BsModalRef"]])
+        __metadata("design:paramtypes", [ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_1__["BsModalRef"], _service_bcservice_service__WEBPACK_IMPORTED_MODULE_3__["BcserviceService"]])
     ], BcformmodalComponent);
     return BcformmodalComponent;
 }());
@@ -2299,6 +2433,7 @@ var BclistComponent = /** @class */ (function () {
             });
             this.bcservice.deleteEntity(Id).subscribe(function (res) {
                 console.log(res);
+                alert('已刪除 Id:' + Id);
             }, function (err) {
                 alert(err);
             });
@@ -2341,177 +2476,6 @@ var BclistComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/businesscenter/bcshow/bcshow.component.css":
-/*!************************************************************!*\
-  !*** ./src/app/businesscenter/bcshow/bcshow.component.css ***!
-  \************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2J1c2luZXNzY2VudGVyL2Jjc2hvdy9iY3Nob3cuY29tcG9uZW50LmNzcyJ9 */");
-
-/***/ }),
-
-/***/ "./src/app/businesscenter/bcshow/bcshow.component.ts":
-/*!***********************************************************!*\
-  !*** ./src/app/businesscenter/bcshow/bcshow.component.ts ***!
-  \***********************************************************/
-/*! exports provided: BcshowComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BcshowComponent", function() { return BcshowComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _model_BusinessCenter__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../model/BusinessCenter */ "./src/app/businesscenter/model/BusinessCenter.ts");
-/* harmony import */ var _service_bcservice_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../service/bcservice.service */ "./src/app/businesscenter/service/bcservice.service.ts");
-/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ngx-spinner */ "./node_modules/ngx-spinner/fesm5/ngx-spinner.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var util__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! util */ "./node_modules/util/util.js");
-/* harmony import */ var util__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(util__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ngx-bootstrap/modal */ "./node_modules/ngx-bootstrap/modal/fesm5/ngx-bootstrap-modal.js");
-/* harmony import */ var _angular_google_maps__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/google-maps */ "./node_modules/@angular/google-maps/fesm5/google-maps.js");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
-  return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-
-
-
-
-
-
-
-
-var BcshowComponent = /** @class */ (function () {
-    function BcshowComponent(bcservice, spinner, route, modalService) {
-        this.bcservice = bcservice;
-        this.spinner = spinner;
-        this.route = route;
-        this.modalService = modalService;
-        this._entity = new _model_BusinessCenter__WEBPACK_IMPORTED_MODULE_1__["BusinessCenter"]();
-        this.zoom = 14;
-        this.options = {
-            mapTypeId: 'roadmap',
-            zoomControl: true,
-            scrollwheel: false,
-            disableDoubleClickZoom: false,
-            maxZoom: 15,
-            minZoom: 8,
-        };
-        this.markers = [];
-        console.log(this.route.snapshot.paramMap.get('id'));
-    }
-    Object.defineProperty(BcshowComponent.prototype, "Entity", {
-        get: function () {
-            return this._entity;
-        },
-        set: function (value) {
-            this._entity = value;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    BcshowComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        /** spinner starts on init */
-        this.spinner.show();
-        var ID = this.route.snapshot.paramMap.get('id');
-        if (Object(util__WEBPACK_IMPORTED_MODULE_5__["isNullOrUndefined"])(ID)) {
-            alert('Wrong BC ID');
-            this.spinner.hide();
-        }
-        else {
-            this.bcservice.getEntityById(ID).subscribe(function (val) {
-                _this.Entity = val;
-                _this.spinner.hide();
-                if (Object(util__WEBPACK_IMPORTED_MODULE_5__["isNullOrUndefined"])(_this.Entity.Coordinates) !== true) {
-                    _this.addMarker();
-                }
-            }, function (err) {
-                alert('Not Found');
-                _this.spinner.hide();
-            });
-        }
-        if (Object(util__WEBPACK_IMPORTED_MODULE_5__["isNullOrUndefined"])(this.Entity.Coordinates) !== true) {
-            this.addMarker();
-        }
-        else {
-            navigator.geolocation.getCurrentPosition(function (position) {
-                _this.center = {
-                    lat: position.coords.latitude,
-                    lng: position.coords.longitude,
-                };
-            });
-        }
-    };
-    BcshowComponent.prototype.addMarker = function () {
-        this.markers = [];
-        var coord = this.Entity.Coordinates.split(',');
-        this.markers.push({
-            position: {
-                lat: Number(coord[0]),
-                lng: Number(coord[1]),
-            },
-            label: {
-                color: 'red',
-                text: this.Entity.Name + (this.markers.length + 1),
-            },
-            title: this.Entity.Name + (this.markers.length + 1),
-            info: 'Marker info ' + (this.markers.length + 1),
-            url: 'https://www.google.com/maps/place/' + this.Entity.Coordinates,
-            options: {
-                animation: google.maps.Animation.DROP
-            }
-        });
-        this.center = {
-            lat: Number(coord[0]),
-            lng: Number(coord[1]),
-        };
-    };
-    BcshowComponent.prototype.opengooglemap = function () {
-        var url = 'https://www.google.com/maps/place/' + this.Entity.Coordinates;
-        window.open(url);
-    };
-    BcshowComponent.ctorParameters = function () { return [
-        { type: _service_bcservice_service__WEBPACK_IMPORTED_MODULE_2__["BcserviceService"] },
-        { type: ngx_spinner__WEBPACK_IMPORTED_MODULE_3__["NgxSpinnerService"] },
-        { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"] },
-        { type: ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_6__["BsModalService"] }
-    ]; };
-    __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])(_angular_google_maps__WEBPACK_IMPORTED_MODULE_7__["GoogleMap"], { static: false }),
-        __metadata("design:type", _angular_google_maps__WEBPACK_IMPORTED_MODULE_7__["GoogleMap"])
-    ], BcshowComponent.prototype, "map", void 0);
-    __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])(_angular_google_maps__WEBPACK_IMPORTED_MODULE_7__["MapInfoWindow"], { static: false }),
-        __metadata("design:type", _angular_google_maps__WEBPACK_IMPORTED_MODULE_7__["MapInfoWindow"])
-    ], BcshowComponent.prototype, "info", void 0);
-    BcshowComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: 'app-bcshow',
-            template: __importDefault(__webpack_require__(/*! raw-loader!./bcshow.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/businesscenter/bcshow/bcshow.component.html")).default,
-            styles: [__importDefault(__webpack_require__(/*! ./bcshow.component.css */ "./src/app/businesscenter/bcshow/bcshow.component.css")).default]
-        }),
-        __metadata("design:paramtypes", [_service_bcservice_service__WEBPACK_IMPORTED_MODULE_2__["BcserviceService"], ngx_spinner__WEBPACK_IMPORTED_MODULE_3__["NgxSpinnerService"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"], ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_6__["BsModalService"]])
-    ], BcshowComponent);
-    return BcshowComponent;
-}());
-
-
-
-/***/ }),
-
 /***/ "./src/app/businesscenter/businesscenter.module.ts":
 /*!*********************************************************!*\
   !*** ./src/app/businesscenter/businesscenter.module.ts ***!
@@ -2541,9 +2505,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm5/ng-bootstrap.js");
 /* harmony import */ var _angular_google_maps__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @angular/google-maps */ "./node_modules/@angular/google-maps/fesm5/google-maps.js");
 /* harmony import */ var ngx_bootstrap_tooltip__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ngx-bootstrap/tooltip */ "./node_modules/ngx-bootstrap/tooltip/fesm5/ngx-bootstrap-tooltip.js");
-/* harmony import */ var _bcshow_bcshow_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./bcshow/bcshow.component */ "./src/app/businesscenter/bcshow/bcshow.component.ts");
-/* harmony import */ var ngx_bootstrap_carousel__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ngx-bootstrap/carousel */ "./node_modules/ngx-bootstrap/carousel/fesm5/ngx-bootstrap-carousel.js");
-/* harmony import */ var _requestmodal_requestmodal_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./requestmodal/requestmodal.component */ "./src/app/businesscenter/requestmodal/requestmodal.component.ts");
+/* harmony import */ var ngx_bootstrap_carousel__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ngx-bootstrap/carousel */ "./node_modules/ngx-bootstrap/carousel/fesm5/ngx-bootstrap-carousel.js");
+/* harmony import */ var _requestmodal_requestmodal_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./requestmodal/requestmodal.component */ "./src/app/businesscenter/requestmodal/requestmodal.component.ts");
+/* harmony import */ var _userlist_userlist_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./userlist/userlist.component */ "./src/app/businesscenter/userlist/userlist.component.ts");
+/* harmony import */ var _userform_userform_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./userform/userform.component */ "./src/app/businesscenter/userform/userform.component.ts");
+/* harmony import */ var _service_bcservice_service__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./service/bcservice.service */ "./src/app/businesscenter/service/bcservice.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2553,6 +2519,8 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
   return (mod && mod.__esModule) ? mod : { "default": mod };
 };
+
+
 
 
 
@@ -2598,26 +2566,35 @@ var BusinesscenterModule = /** @class */ (function () {
                 _angular_material__WEBPACK_IMPORTED_MODULE_14__["MatInputModule"],
                 _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_16__["NgbModule"],
                 _angular_google_maps__WEBPACK_IMPORTED_MODULE_17__["GoogleMapsModule"],
-                ngx_bootstrap_carousel__WEBPACK_IMPORTED_MODULE_20__["CarouselModule"].forRoot(),
+                ngx_bootstrap_carousel__WEBPACK_IMPORTED_MODULE_19__["CarouselModule"].forRoot(),
                 ngx_bootstrap_tooltip__WEBPACK_IMPORTED_MODULE_18__["TooltipModule"].forRoot(),
                 _angular_router__WEBPACK_IMPORTED_MODULE_4__["RouterModule"].forChild([
                     {
                         path: 'bccenter', component: _bclist_bclist_component__WEBPACK_IMPORTED_MODULE_7__["BclistComponent"]
                     },
                     {
-                        path: 'bcform', component: _bcform_bcform_component__WEBPACK_IMPORTED_MODULE_8__["BcformComponent"]
-                    },
-                    {
                         path: 'bcform/:id', component: _bcform_bcform_component__WEBPACK_IMPORTED_MODULE_8__["BcformComponent"]
                     },
                     {
-                        path: 'bcshow/:id', component: _bcshow_bcshow_component__WEBPACK_IMPORTED_MODULE_19__["BcshowComponent"]
+                        path: 'bcform', component: _bcform_bcform_component__WEBPACK_IMPORTED_MODULE_8__["BcformComponent"]
+                    },
+                    {
+                        path: 'bcuser', component: _userlist_userlist_component__WEBPACK_IMPORTED_MODULE_21__["UserlistComponent"]
+                    },
+                    {
+                        path: 'bcuserform', component: _userform_userform_component__WEBPACK_IMPORTED_MODULE_22__["UserformComponent"]
+                    },
+                    {
+                        path: 'bcuserform/:id', component: _userform_userform_component__WEBPACK_IMPORTED_MODULE_22__["UserformComponent"]
                     }
                 ])
             ],
             declarations: [_bclist_bclist_component__WEBPACK_IMPORTED_MODULE_7__["BclistComponent"], _bcform_bcform_component__WEBPACK_IMPORTED_MODULE_8__["BcformComponent"], _bcformmodal_bcformmodal_component__WEBPACK_IMPORTED_MODULE_11__["BcformmodalComponent"], _businesshourmodal_businesshourmodal_component__WEBPACK_IMPORTED_MODULE_15__["BusinesshourmodalComponent"],
-                _bcshow_bcshow_component__WEBPACK_IMPORTED_MODULE_19__["BcshowComponent"], _requestmodal_requestmodal_component__WEBPACK_IMPORTED_MODULE_21__["RequestmodalComponent"]],
-            entryComponents: [_bcformmodal_bcformmodal_component__WEBPACK_IMPORTED_MODULE_11__["BcformmodalComponent"], _businesshourmodal_businesshourmodal_component__WEBPACK_IMPORTED_MODULE_15__["BusinesshourmodalComponent"]]
+                _requestmodal_requestmodal_component__WEBPACK_IMPORTED_MODULE_20__["RequestmodalComponent"],
+                _userlist_userlist_component__WEBPACK_IMPORTED_MODULE_21__["UserlistComponent"],
+                _userform_userform_component__WEBPACK_IMPORTED_MODULE_22__["UserformComponent"]],
+            entryComponents: [_bcformmodal_bcformmodal_component__WEBPACK_IMPORTED_MODULE_11__["BcformmodalComponent"], _businesshourmodal_businesshourmodal_component__WEBPACK_IMPORTED_MODULE_15__["BusinesshourmodalComponent"]],
+            providers: [_service_bcservice_service__WEBPACK_IMPORTED_MODULE_23__["BcserviceService"]]
         })
     ], BusinesscenterModule);
     return BusinesscenterModule;
@@ -2736,58 +2713,52 @@ var BusinesshourmodalComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/businesscenter/model/BusinessCenter.ts":
-/*!********************************************************!*\
-  !*** ./src/app/businesscenter/model/BusinessCenter.ts ***!
-  \********************************************************/
-/*! exports provided: BusinessCenter, BusinessCenterImage, BusinessCenterMeetingRoom, BusinessCenterFeature, BusinessHour, Request */
+/***/ "./src/app/businesscenter/model/Inhub.ts":
+/*!***********************************************!*\
+  !*** ./src/app/businesscenter/model/Inhub.ts ***!
+  \***********************************************/
+/*! exports provided: Vendor, Feature, Gps, User, User_Vendor */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BusinessCenter", function() { return BusinessCenter; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BusinessCenterImage", function() { return BusinessCenterImage; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BusinessCenterMeetingRoom", function() { return BusinessCenterMeetingRoom; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BusinessCenterFeature", function() { return BusinessCenterFeature; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BusinessHour", function() { return BusinessHour; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Request", function() { return Request; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Vendor", function() { return Vendor; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Feature", function() { return Feature; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Gps", function() { return Gps; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "User", function() { return User; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "User_Vendor", function() { return User_Vendor; });
 var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
   return (mod && mod.__esModule) ? mod : { "default": mod };
 };
-var BusinessCenter = /** @class */ (function () {
-    function BusinessCenter() {
+var Vendor = /** @class */ (function () {
+    function Vendor() {
     }
-    return BusinessCenter;
+    return Vendor;
 }());
 
-var BusinessCenterImage = /** @class */ (function () {
-    function BusinessCenterImage() {
+var Feature = /** @class */ (function () {
+    function Feature() {
     }
-    return BusinessCenterImage;
+    return Feature;
 }());
 
-var BusinessCenterMeetingRoom = /** @class */ (function () {
-    function BusinessCenterMeetingRoom() {
+var Gps = /** @class */ (function () {
+    function Gps() {
     }
-    return BusinessCenterMeetingRoom;
+    return Gps;
 }());
 
-var BusinessCenterFeature = /** @class */ (function () {
-    function BusinessCenterFeature() {
+var User = /** @class */ (function () {
+    function User() {
     }
-    return BusinessCenterFeature;
+    return User;
 }());
 
-var BusinessHour = /** @class */ (function () {
-    function BusinessHour() {
+// tslint:disable-next-line:class-name
+var User_Vendor = /** @class */ (function () {
+    function User_Vendor() {
     }
-    return BusinessHour;
-}());
-
-var Request = /** @class */ (function () {
-    function Request() {
-    }
-    return Request;
+    return User_Vendor;
 }());
 
 
@@ -2874,6 +2845,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BcserviceService", function() { return BcserviceService; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _model_Inhub__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../model/Inhub */ "./src/app/businesscenter/model/Inhub.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2888,11 +2860,13 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 };
 
 
+
 var BcserviceService = /** @class */ (function () {
     function BcserviceService(http) {
         this.http = http;
         this.site = 'https://leecloud.azurewebsites.net/'; // URL to web api
         this.vendorurl = 'https://in-hub-dev.azurewebsites.net/vendor';
+        this.userurl = 'https://in-hub-dev.azurewebsites.net/user';
         this.tokenurl = 'https://in-hub-dev.azurewebsites.net/user/su/__53cr3t__';
         this.url = 'api/businesscenterapi/';
         this.postImgurl = 'api/UploadFileapi/';
@@ -2909,9 +2883,8 @@ var BcserviceService = /** @class */ (function () {
     };
     BcserviceService.prototype.getHttpoption = function () {
         var t = localStorage.getItem('token');
-        // tslint:disable-next-line:prefer-const
         var headers_object = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
-            'Authorization': 'Bearer' + t
+            'Authorization': 'Bearer ' + t
         });
         var httpOptions = {
             headers: headers_object
@@ -2922,29 +2895,64 @@ var BcserviceService = /** @class */ (function () {
         var url = this.vendorurl;
         return this.http.get(url, this.getHttpoption());
     };
+    BcserviceService.prototype.getUserList = function () {
+        var url = this.userurl;
+        return this.http.get(url, this.getHttpoption());
+    };
     BcserviceService.prototype.getEntityById = function (id) {
-        var url = this.site + this.url + id;
-        return this.http.get(url);
+        var url = this.vendorurl + '/' + id;
+        return this.http.get(url, this.getHttpoption());
+    };
+    BcserviceService.prototype.getUser = function (id) {
+        var url = this.userurl + '/' + id;
+        return this.http.get(url, this.getHttpoption());
     };
     BcserviceService.prototype.postEntity = function (entity) {
-        var url = this.site + this.url;
-        return this.http.post(url, entity);
+        var url = this.vendorurl;
+        return this.http.post(url, entity, this.getHttpoption());
     };
-    BcserviceService.prototype.putEntity = function (entity) {
-        var url = this.site + this.url + entity.Id;
-        this.http.put(url, entity).subscribe(function (val) {
-            console.log('PUT call successful value returned in body', val);
-        }, function (response) {
-            console.log('PUT call in error', response);
-        }, function () {
-            console.log('The PUT observable is now completed.');
-        });
+    BcserviceService.prototype.postUser = function (entity) {
+        var url = this.userurl;
+        return this.http.post(url, entity, this.getHttpoption());
     };
-    BcserviceService.prototype.PostRequest = function (req) {
+    BcserviceService.prototype.updateGPS = function (entity) {
+        var url = this.vendorurl + '/' + entity.Id + '/position';
+        var corrd = new _model_Inhub__WEBPACK_IMPORTED_MODULE_2__["Gps"]();
+        corrd.Longitude = entity.Longitude;
+        corrd.Latitude = entity.Latitude;
+        return this.http.patch(url, entity, this.getHttpoption());
+    };
+    BcserviceService.prototype.addFeature = function (vendorid, feature) {
+        var url = this.vendorurl + '/' + vendorid + '/feature';
+        return this.http.post(url, feature, this.getHttpoption());
+    };
+    BcserviceService.prototype.deleteFeature = function (vendorid, featurename) {
+        var url = this.vendorurl + '/' + vendorid + '/feature/' + featurename;
+        return this.http.delete(url, this.getHttpoption());
+    };
+    BcserviceService.prototype.updateEntity = function (entity) {
+        var url = this.vendorurl + '/' + entity.Id;
+        return this.http.patch(url, entity, this.getHttpoption());
+    };
+    BcserviceService.prototype.updateUser = function (entity) {
+        var url = this.userurl + '/' + entity.Id;
+        return this.http.patch(url, entity, this.getHttpoption());
     };
     BcserviceService.prototype.deleteEntity = function (id) {
-        var url = this.site + this.url + id;
-        return this.http.delete(url);
+        var url = this.vendorurl + '/' + id;
+        return this.http.delete(url, this.getHttpoption());
+    };
+    BcserviceService.prototype.deleteUser = function (id) {
+        var url = this.userurl + '/' + id;
+        return this.http.delete(url, this.getHttpoption());
+    };
+    BcserviceService.prototype.assignVendor = function (userId, vendorId) {
+        var url = this.userurl + '/' + userId + '/vendor/' + vendorId;
+        return this.http.patch(url, null, this.getHttpoption());
+    };
+    BcserviceService.prototype.updatePassword = function (userId, password) {
+        var url = this.userurl + '/' + userId + '/' + password;
+        return this.http.patch(url, null, this.getHttpoption());
     };
     BcserviceService.prototype.postImage = function (file) {
         var url = this.site + this.postImgurl;
@@ -2966,6 +2974,294 @@ var BcserviceService = /** @class */ (function () {
         __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
     ], BcserviceService);
     return BcserviceService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/businesscenter/userform/userform.component.css":
+/*!****************************************************************!*\
+  !*** ./src/app/businesscenter/userform/userform.component.css ***!
+  \****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2J1c2luZXNzY2VudGVyL3VzZXJmb3JtL3VzZXJmb3JtLmNvbXBvbmVudC5jc3MifQ== */");
+
+/***/ }),
+
+/***/ "./src/app/businesscenter/userform/userform.component.ts":
+/*!***************************************************************!*\
+  !*** ./src/app/businesscenter/userform/userform.component.ts ***!
+  \***************************************************************/
+/*! exports provided: UserformComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UserformComponent", function() { return UserformComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _service_bcservice_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../service/bcservice.service */ "./src/app/businesscenter/service/bcservice.service.ts");
+/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ngx-spinner */ "./node_modules/ngx-spinner/fesm5/ngx-spinner.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var util__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! util */ "./node_modules/util/util.js");
+/* harmony import */ var util__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(util__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _model_Inhub__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../model/Inhub */ "./src/app/businesscenter/model/Inhub.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+
+
+
+
+var UserformComponent = /** @class */ (function () {
+    function UserformComponent(bcservice, spinner, route) {
+        this.bcservice = bcservice;
+        this.spinner = spinner;
+        this.route = route;
+        this.isAdd = false;
+        this.vendorId = '';
+        this._entity = new _model_Inhub__WEBPACK_IMPORTED_MODULE_5__["User"]();
+        this._list = [];
+    }
+    Object.defineProperty(UserformComponent.prototype, "Entity", {
+        get: function () {
+            return this._entity;
+        },
+        set: function (value) {
+            this._entity = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(UserformComponent.prototype, "List", {
+        get: function () {
+            return this._list;
+        },
+        set: function (value) {
+            this._list = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    UserformComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        /** spinner starts on init */
+        this.spinner.show();
+        var ID = this.route.snapshot.paramMap.get('id');
+        this.GetList();
+        if (Object(util__WEBPACK_IMPORTED_MODULE_4__["isNullOrUndefined"])(ID)) {
+            this.isAdd = true;
+            this.AddNew();
+            this.spinner.hide();
+        }
+        else {
+            this.bcservice.getUser(ID).subscribe(function (val) {
+                _this.Entity = val;
+                _this.spinner.hide();
+            }, function (err) {
+                alert('Not Found');
+                _this.spinner.hide();
+            });
+        }
+    };
+    UserformComponent.prototype.GetList = function () {
+        var _this = this;
+        this.spinner.show();
+        this.bcservice.getList().subscribe(function (val) {
+            _this.List = val;
+            // this.spinner.hide();
+        }, function (err) {
+            alert('Not Found');
+            //   this.spinner.hide();
+        });
+    };
+    UserformComponent.prototype.AddNew = function () {
+        var newEntity = new _model_Inhub__WEBPACK_IMPORTED_MODULE_5__["User"]();
+        this.Entity = newEntity;
+    };
+    UserformComponent.prototype.AssignVendor = function () {
+        this.bcservice.assignVendor(this.Entity.Id, this.vendorId).subscribe(function (val) {
+            alert('Assign complete');
+        }, function (err) {
+            alert('assign error');
+        });
+    };
+    UserformComponent.prototype.filterForArticles = function (filterVal) {
+        if (filterVal === '-1') {
+        }
+        else {
+            this.vendorId = filterVal;
+        }
+    };
+    UserformComponent.prototype.UpdatePassword = function () {
+        this.bcservice.updatePassword(this.Entity.Id, this.Entity.Password).subscribe(function (val) {
+            alert('Update Password complete');
+        }, function (err) {
+            alert('Update Password error');
+        });
+    };
+    UserformComponent.prototype.SaveEntity = function () {
+        var _this = this;
+        if (Object(util__WEBPACK_IMPORTED_MODULE_4__["isNullOrUndefined"])(this.Entity.Id) || this.Entity.Id === '') {
+            alert('請輸入 ID 欄位');
+            return;
+        }
+        this.spinner.show();
+        if (this.isAdd === true) {
+            this.bcservice.postUser(this.Entity).subscribe(function (res) {
+                alert('新增完畢');
+                _this.spinner.hide();
+                window.open('#/bcuser');
+            }, function (err) {
+                alert(err);
+                _this.spinner.hide();
+            });
+        }
+        else {
+            this.bcservice.updateUser(this.Entity).subscribe(function (res) {
+                alert('更新完畢');
+                _this.spinner.hide();
+                //  window.open('#/bccenter');
+            }, function (err) {
+                alert(err);
+                _this.spinner.hide();
+            });
+        }
+    };
+    UserformComponent.ctorParameters = function () { return [
+        { type: _service_bcservice_service__WEBPACK_IMPORTED_MODULE_1__["BcserviceService"] },
+        { type: ngx_spinner__WEBPACK_IMPORTED_MODULE_2__["NgxSpinnerService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"] }
+    ]; };
+    UserformComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-userform',
+            template: __importDefault(__webpack_require__(/*! raw-loader!./userform.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/businesscenter/userform/userform.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./userform.component.css */ "./src/app/businesscenter/userform/userform.component.css")).default]
+        }),
+        __metadata("design:paramtypes", [_service_bcservice_service__WEBPACK_IMPORTED_MODULE_1__["BcserviceService"], ngx_spinner__WEBPACK_IMPORTED_MODULE_2__["NgxSpinnerService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"]])
+    ], UserformComponent);
+    return UserformComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/businesscenter/userlist/userlist.component.css":
+/*!****************************************************************!*\
+  !*** ./src/app/businesscenter/userlist/userlist.component.css ***!
+  \****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2J1c2luZXNzY2VudGVyL3VzZXJsaXN0L3VzZXJsaXN0LmNvbXBvbmVudC5jc3MifQ== */");
+
+/***/ }),
+
+/***/ "./src/app/businesscenter/userlist/userlist.component.ts":
+/*!***************************************************************!*\
+  !*** ./src/app/businesscenter/userlist/userlist.component.ts ***!
+  \***************************************************************/
+/*! exports provided: UserlistComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UserlistComponent", function() { return UserlistComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _service_bcservice_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../service/bcservice.service */ "./src/app/businesscenter/service/bcservice.service.ts");
+/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ngx-spinner */ "./node_modules/ngx-spinner/fesm5/ngx-spinner.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+
+var UserlistComponent = /** @class */ (function () {
+    function UserlistComponent(bcservice, spinner) {
+        this.bcservice = bcservice;
+        this.spinner = spinner;
+    }
+    Object.defineProperty(UserlistComponent.prototype, "List", {
+        get: function () {
+            return this._list;
+        },
+        set: function (value) {
+            this._list = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    UserlistComponent.prototype.ngOnInit = function () {
+        this.GetList();
+    };
+    UserlistComponent.prototype.GetList = function () {
+        var _this = this;
+        this.spinner.show();
+        this.bcservice.getUserList().subscribe(function (list) {
+            _this.List = list;
+            _this.spinner.hide();
+        });
+    };
+    UserlistComponent.prototype.openform = function (Id) {
+        window.open('#/bcuserform/' + Id, '_self');
+    };
+    UserlistComponent.prototype.delete = function (Id) {
+        var _this = this;
+        if (confirm('確定刪除 ID: ' + Id + '?')) {
+            this.List.forEach(function (item, index) {
+                if (item.Id === Id) {
+                    _this.List.splice(index, 1);
+                }
+            });
+            this.bcservice.deleteUser(Id).subscribe(function (res) {
+                console.log(res);
+                alert('已刪除 Id:' + Id);
+            }, function (err) {
+                alert(err);
+            });
+        }
+    };
+    UserlistComponent.ctorParameters = function () { return [
+        { type: _service_bcservice_service__WEBPACK_IMPORTED_MODULE_1__["BcserviceService"] },
+        { type: ngx_spinner__WEBPACK_IMPORTED_MODULE_2__["NgxSpinnerService"] }
+    ]; };
+    UserlistComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-userlist',
+            template: __importDefault(__webpack_require__(/*! raw-loader!./userlist.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/businesscenter/userlist/userlist.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./userlist.component.css */ "./src/app/businesscenter/userlist/userlist.component.css")).default]
+        }),
+        __metadata("design:paramtypes", [_service_bcservice_service__WEBPACK_IMPORTED_MODULE_1__["BcserviceService"], ngx_spinner__WEBPACK_IMPORTED_MODULE_2__["NgxSpinnerService"]])
+    ], UserlistComponent);
+    return UserlistComponent;
 }());
 
 
