@@ -2883,7 +2883,6 @@ var BcserviceService = /** @class */ (function () {
     };
     BcserviceService.prototype.getHttpoption = function () {
         var t = localStorage.getItem('token');
-        alert(t); // test
         var headers_object = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
             'Authorization': 'Bearer ' + t
         });
