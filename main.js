@@ -2846,6 +2846,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 /* harmony import */ var _model_Inhub__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../model/Inhub */ "./src/app/businesscenter/model/Inhub.ts");
+/* harmony import */ var util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! util */ "./node_modules/util/util.js");
+/* harmony import */ var util__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(util__WEBPACK_IMPORTED_MODULE_3__);
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2858,6 +2860,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
   return (mod && mod.__esModule) ? mod : { "default": mod };
 };
+
 
 
 
@@ -2879,9 +2882,21 @@ var BcserviceService = /** @class */ (function () {
     BcserviceService.prototype.gettoken = function () {
         this.http.get(this.tokenurl, { responseType: 'text' }).subscribe(function (val) {
             localStorage.setItem('token', val.toString());
+            var date = new Date();
+            window.localStorage.setItem('date', date.toString());
         });
     };
     BcserviceService.prototype.getHttpoption = function () {
+        var date = window.localStorage.getItem('date');
+        // alert(date);
+        var saveddate = new Date(date);
+        var today = new Date();
+        var diff = today.getMinutes() - saveddate.getMinutes();
+        // alert(diff);
+        if (diff > 60) {
+            alert('頁面已經逾時 請更新頁面再操作');
+            return;
+        }
         var t = localStorage.getItem('token');
         var headers_object = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
             'Authorization': 'Bearer ' + t
@@ -2892,7 +2907,22 @@ var BcserviceService = /** @class */ (function () {
         return httpOptions;
     };
     BcserviceService.prototype.getList = function () {
+        var _this = this;
         var url = this.vendorurl;
+        if (Object(util__WEBPACK_IMPORTED_MODULE_3__["isNullOrUndefined"])(localStorage.getItem('token'))) {
+            this.gettoken();
+        }
+        if (Object(util__WEBPACK_IMPORTED_MODULE_3__["isNullOrUndefined"])(localStorage.getItem('token'))) {
+            this.http.get(this.tokenurl, { responseType: 'text' }).subscribe(function (val) {
+                var headers_object = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
+                    'Authorization': 'Bearer ' + val.toString()
+                });
+                var httpOptions = {
+                    headers: headers_object
+                };
+                return _this.http.get(url, httpOptions);
+            });
+        }
         return this.http.get(url, this.getHttpoption());
     };
     BcserviceService.prototype.getUserList = function () {
