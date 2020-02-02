@@ -61,7 +61,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\r\n<div>\r\n    <span><img src='../assets/Photos/inhublogo.png' width=10% height=10% /></span>\r\n    <p></p>\r\n</div>\r\n\r\n<div class=\"nav navbar-nav navbar-right\">\r\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"SaveEntity()\">儲存</button> |\r\n        <button type=\"button\" class=\"btn btn-default\" onclick=\"location.href='#/bccenter';\">返回</button>\r\n        <p></p>\r\n</div>\r\n\r\n<div class=\"body-content\">\r\n\r\n        <table class=\"table table-bordered table-striped\">\r\n                <tbody>\r\n\r\n                    <tr>\r\n                        <td>\r\n                            ID:\r\n                        </td>\r\n                        <TD>\r\n                                {{Entity.Id}}\r\n                        </TD>\r\n                    </tr>\r\n                    <tr>\r\n                        <td>\r\n                                商務中心名稱:\r\n                        </td>\r\n                        <td>\r\n                                <input [(ngModel)]=\"Entity.Company\" #ctrl=\"ngModel\" required name=\"entityname\"  #fullName=\"ngModel\" class=\"form-control\" required>\r\n                        </td>\r\n                    </tr>\r\n                    <tr>\r\n                      <td>\r\n                              商務中心名稱 英文:\r\n                      </td>\r\n                      <td>\r\n                              <input [(ngModel)]=\"Entity.Company_en\" #ctrl=\"ngModel\" required name=\"entityname_en\"  #fullName=\"ngModel\" class=\"form-control\">\r\n                      </td>\r\n                  </tr>\r\n                    <!-- <tr>\r\n                        <td>\r\n                            介紹:\r\n                        </td>\r\n                        <td>\r\n\r\n                                <textarea class=\"form-control\"\r\n                                name=\"intro\"\r\n                                rows=\"4\"\r\n                                [(ngModel)]=\"Entity.Intro\"\r\n                                #message='ngModel'\r\n                                ></textarea>\r\n                        </td>\r\n                    </tr> -->\r\n                    <!-- <tr>\r\n                        <td>\r\n                               營業時間: <button type=\"button\" class=\"btn btn-info\" (click)=\"openBusinessHourModal()\">編輯</button>\r\n                        </td>\r\n                        <td>\r\n                            <div fxLayout=\"column\" fxLayoutAlign=\" none\">\r\n                                <div fxFlex=\"100\" fxLayout=\"column\" fxLayoutAlign=\"space-around stretch\" fxLayout.xs=\"column\">\r\n                                  <div *ngFor=\"let i of Entity.BusinessHours\" fxFlex.xs=\"100\" fxFlex.sm=\"50\" fxFlex.md=\"33\" fxFlex.lg=\"33\" fxFlex.xl=\"33\">\r\n                                      {{i.Day}} : {{i.StartTime}} - {{i.EndTime}}\r\n                                  </div>\r\n                                </div>\r\n                              </div>\r\n\r\n                        </td>\r\n                    </tr> -->\r\n\r\n                    <tr>\r\n                        <td>\r\n                            街:\r\n                        </td>\r\n                        <td>\r\n                                <input [(ngModel)]=\"Entity.Street\" #ctrl=\"ngModel\" name=\"address\" class=\"form-control\">\r\n                        </td>\r\n                    </tr>\r\n                    <tr>\r\n                      <td>\r\n                          Street:\r\n                      </td>\r\n                      <td>\r\n                              <input [(ngModel)]=\"Entity.Street_en\" #ctrl=\"ngModel\" name=\"Street_en\" class=\"form-control\">\r\n                      </td>\r\n                  </tr>\r\n\r\n                    <tr>\r\n                            <td>\r\n                                市:\r\n                            </td>\r\n                            <td>\r\n                                    <input [(ngModel)]=\"Entity.County\" #ctrl=\"ngModel\" name=\"County\">\r\n                            </td>\r\n                    </tr>\r\n                    <tr>\r\n                      <td>\r\n                          City:\r\n                      </td>\r\n                      <td>\r\n                              <input [(ngModel)]=\"Entity.County_en\" #ctrl=\"ngModel\" name=\"County_en\">\r\n                      </td>\r\n              </tr>\r\n                    <tr>\r\n                            <td>\r\n                                區:\r\n                            </td>\r\n                            <td>\r\n                                    <input [(ngModel)]=\"Entity.District\" #ctrl=\"ngModel\" name=\"District\">\r\n                            </td>\r\n                    </tr>\r\n                    <tr>\r\n                      <td>\r\n                          District :\r\n                      </td>\r\n                      <td>\r\n                              <input [(ngModel)]=\"Entity.District_en\" #ctrl=\"ngModel\" name=\"District_en\">\r\n                      </td>\r\n              </tr>\r\n                    <tr>\r\n                            <td>\r\n                                設備:  <button type=\"button\" class=\"btn btn-info\" (click)=\"openModal()\">編輯</button>\r\n                            </td>\r\n                            <td>\r\n\r\n\r\n                                        <div fxLayout=\"column\" fxLayoutAlign=\" none\">\r\n                                                <div fxFlex=\"100\" fxLayout=\"row wrap\" fxLayoutAlign=\"space-around stretch\" fxLayout.xs=\"column\">\r\n                                                  <div *ngFor=\"let i of Entity.Features\" fxFlex.xs=\"100\" fxFlex.sm=\"50\" fxFlex.md=\"33\" fxFlex.lg=\"33\" fxFlex.xl=\"33\">\r\n                                                       {{i.Name}} <img  src =\"https://image.flaticon.com/icons/svg/1642/1642269.svg\" style=\"height: 50px; width: 50px;\">\r\n                                                  </div>\r\n                                                </div>\r\n                                        </div>\r\n\r\n\r\n                            </td>\r\n                        </tr>\r\n                        <tr>\r\n                          <td>\r\n                              空位數:\r\n                          </td>\r\n                          <td>\r\n                                  <input [(ngModel)]=\"Entity.DefaultSeats\" #ctrl=\"ngModel\" name=\"DefaultSeats\">\r\n                          </td>\r\n                  </tr>\r\n                    <tr>\r\n                        <td>\r\n                            座標:    <button type=\"button\" class=\"btn btn-sm btn-primary\" (click)=\"saveGPS()\">更新GPS</button>\r\n                        </td>\r\n                        <td>\r\n                          Latitude  :  <input [(ngModel)]=\"Entity.Latitude \" #ctrl=\"ngModel\" name=\"Latitude \">\r\n                        </td>\r\n                    </tr>\r\n\r\n                    <tr>\r\n                      <td>\r\n\r\n                      </td>\r\n                      <td>\r\n                        Longitude  :   <input [(ngModel)]=\"Entity.Longitude\" #ctrl=\"ngModel\" name=\"Longitude\">\r\n                      </td>\r\n                    </tr>\r\n                    <tr>\r\n                        <td colspan=\"2\">\r\n                                <google-map\r\n                                height=\"500px\"\r\n                                width=\"100%\"\r\n                                [zoom]=\"zoom\"\r\n                                [center]=\"center\"\r\n                                [options]=\"options\"\r\n                                >\r\n                                <map-marker\r\n                                    *ngFor=\"let marker of markers\"\r\n                                    [position]=\"marker.position\"\r\n                                    [label]=\"marker.label\"\r\n                                    [title]=\"marker.title\"\r\n                                    [options]=\"marker.options\"\r\n                                    (mapClick)=\"opengooglemap()\"\r\n                                >\r\n                                </map-marker>\r\n\r\n\r\n                                </google-map>\r\n                        </td>\r\n                    </tr>\r\n\r\n                    <tr>\r\n                        <td colspan=\"2\">\r\n                            圖片:\r\n\r\n                                <div class=\"center\">\r\n                                        <ngx-file-drop dropZoneLabel=\"Drop files here\" (onFileDrop)=\"dropped($event)\"\r\n                                        (onFileOver)=\"fileOver($event)\" (onFileLeave)=\"fileLeave($event)\">\r\n                                            <ng-template ngx-file-drop-content-tmp let-openFileSelector=\"openFileSelector\">\r\n                                              拖曳或是選擇要上傳的圖片\r\n                                              <button type=\"button\" (click)=\"openFileSelector()\">Browse Files</button>\r\n                                            </ng-template>\r\n                                        </ngx-file-drop>\r\n\r\n                                </div>\r\n                        </td>\r\n                    </tr>\r\n                    <tr>\r\n                        <td colspan=\"2\">\r\n                                <ul *ngFor=\"let i of Entity.Images; let x = index\" class=\"list-group\">\r\n                                    <li class=\"list-group-item\">\r\n                                        <img [src]=\"i.Image_Url\"   class=\"img-thumbnail\" > <p></p>\r\n                                        名稱:<input [(ngModel)]=\"i.Name\" #ctrl=\"ngModel\"  name=\"imagename\" class=\"form-control\"/> <p></p>\r\n                                        備註: <input [(ngModel)]=\"i.Comment\" #ctrl=\"ngModel\"  name=\"imageComment\" type=\"text\"  class=\"form-control\"/><p></p>\r\n                                        <button type=\"button\" class=\"btn btn-danger btn-xs\" (click) =\"RemoveImage(x)\">Remove</button>\r\n                                    </li>\r\n                                </ul>\r\n                        </td>\r\n                    </tr>\r\n                </tbody>\r\n                </table>\r\n\r\n\r\n\r\n\r\n</div>\r\n\r\n\r\n\r\n\r\n     <hr>\r\n    <div class=\"nav navbar-nav navbar-right\">\r\n            <button type=\"button\" class=\"btn btn-primary\" (click)=\"SaveEntity()\">儲存</button> |\r\n            <button type=\"button\" class=\"btn btn-default\" onclick=\"location.href='#/bccenter';\">返回</button>\r\n    </div>\r\n\r\n\r\n\r\n\r\n<ngx-spinner\r\n  bdColor=\"rgba(51,51,51,0.8)\"\r\n  size=\"medium\"\r\n  color=\"#fff\"\r\n  type=\"ball-scale-multiple\"\r\n>\r\n  <p style=\"font-size: 20px; color: white\">處理中...</p>\r\n</ngx-spinner>\r\n\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("\r\n<div>\r\n    <span><img src='../assets/Photos/inhublogo.png' width=10% height=10% /></span>\r\n    <p></p>\r\n</div>\r\n\r\n<div class=\"nav navbar-nav navbar-right\">\r\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"SaveEntity()\">儲存</button> |\r\n        <button type=\"button\" class=\"btn btn-default\" onclick=\"location.href='#/bccenter';\">返回</button>\r\n        <p></p>\r\n</div>\r\n\r\n<div class=\"body-content\">\r\n\r\n        <table class=\"table table-bordered table-striped\">\r\n                <tbody>\r\n\r\n                    <tr>\r\n                        <td>\r\n                            ID:\r\n                        </td>\r\n                        <TD>\r\n                                {{Entity.Id}}\r\n                        </TD>\r\n                    </tr>\r\n                    <tr>\r\n                        <td>\r\n                                商務中心名稱:\r\n                        </td>\r\n                        <td>\r\n                                <input [(ngModel)]=\"Entity.Company\" #ctrl=\"ngModel\" required name=\"entityname\"  #fullName=\"ngModel\" class=\"form-control\" required>\r\n                        </td>\r\n                    </tr>\r\n                    <tr>\r\n                      <td>\r\n                              商務中心名稱 英文:\r\n                      </td>\r\n                      <td>\r\n                              <input [(ngModel)]=\"Entity.Company_en\" #ctrl=\"ngModel\" required name=\"entityname_en\"  #fullName=\"ngModel\" class=\"form-control\">\r\n                      </td>\r\n                  </tr>\r\n                  <tr>\r\n                        <td>\r\n                            介紹:\r\n                        </td>\r\n                        <td>\r\n\r\n                                <textarea class=\"form-control\"\r\n                                name=\"intro\"\r\n                                rows=\"4\"\r\n                                [(ngModel)]=\"Entity.Intro\"\r\n                                #message='ngModel'\r\n                                ></textarea>\r\n                        </td>\r\n                    </tr>\r\n                    <tr>\r\n                      <td>\r\n                          介紹 (英文):\r\n                      </td>\r\n                      <td>\r\n\r\n                              <textarea class=\"form-control\"\r\n                              name=\"intro_en\"\r\n                              rows=\"4\"\r\n                              [(ngModel)]=\"Entity.Intro_en\"\r\n                              #message='ngModel'\r\n                              ></textarea>\r\n                      </td>\r\n                  </tr>\r\n\r\n\r\n                    <tr>\r\n                        <td>\r\n                            街:\r\n                        </td>\r\n                        <td>\r\n                                <input [(ngModel)]=\"Entity.Street\" #ctrl=\"ngModel\" name=\"address\" class=\"form-control\">\r\n                        </td>\r\n                    </tr>\r\n                    <tr>\r\n                      <td>\r\n                          Street:\r\n                      </td>\r\n                      <td>\r\n                              <input [(ngModel)]=\"Entity.Street_en\" #ctrl=\"ngModel\" name=\"Street_en\" class=\"form-control\">\r\n                      </td>\r\n                  </tr>\r\n\r\n                    <tr>\r\n                            <td>\r\n                                市:\r\n                            </td>\r\n                            <td>\r\n                                    <input [(ngModel)]=\"Entity.County\" #ctrl=\"ngModel\" name=\"County\">\r\n                            </td>\r\n                    </tr>\r\n                    <tr>\r\n                      <td>\r\n                          City:\r\n                      </td>\r\n                      <td>\r\n                              <input [(ngModel)]=\"Entity.County_en\" #ctrl=\"ngModel\" name=\"County_en\">\r\n                      </td>\r\n              </tr>\r\n                    <tr>\r\n                            <td>\r\n                                區:\r\n                            </td>\r\n                            <td>\r\n                                    <input [(ngModel)]=\"Entity.District\" #ctrl=\"ngModel\" name=\"District\">\r\n                            </td>\r\n                    </tr>\r\n                    <tr>\r\n                      <td>\r\n                          District :\r\n                      </td>\r\n                      <td>\r\n                              <input [(ngModel)]=\"Entity.District_en\" #ctrl=\"ngModel\" name=\"District_en\">\r\n                      </td>\r\n              </tr>\r\n                    <tr *ngIf=\"!isAdd\">\r\n                            <td>\r\n                                設備:  <button type=\"button\" class=\"btn btn-info\" (click)=\"openModal()\">編輯</button>\r\n                            </td>\r\n                            <td>\r\n\r\n\r\n                                        <div fxLayout=\"column\" fxLayoutAlign=\" none\">\r\n                                                <div fxFlex=\"100\" fxLayout=\"row wrap\" fxLayoutAlign=\"space-around stretch\" fxLayout.xs=\"column\">\r\n                                                  <div *ngFor=\"let i of Entity.Features\" fxFlex.xs=\"100\" fxFlex.sm=\"50\" fxFlex.md=\"33\" fxFlex.lg=\"33\" fxFlex.xl=\"33\">\r\n                                                       {{i.Name}} <img  src =\"https://image.flaticon.com/icons/svg/1642/1642269.svg\" style=\"height: 50px; width: 50px;\">\r\n                                                  </div>\r\n                                                </div>\r\n                                        </div>\r\n\r\n\r\n                            </td>\r\n                        </tr>\r\n                        <tr  *ngIf=\"!isAdd\">\r\n                          <td>\r\n                              空位數:\r\n                          </td>\r\n                          <td>\r\n                                  <input [(ngModel)]=\"Entity.DefaultSeats\" #ctrl=\"ngModel\" name=\"DefaultSeats\">\r\n                          </td>\r\n                  </tr  >\r\n                    <tr *ngIf=\"!isAdd\">\r\n                        <td>\r\n                            座標:    <button type=\"button\" class=\"btn btn-sm btn-primary\" (click)=\"saveGPS()\">更新GPS</button>\r\n                        </td>\r\n                        <td>\r\n                          Latitude  :  <input [(ngModel)]=\"Entity.Latitude \" #ctrl=\"ngModel\" name=\"Latitude \">\r\n                        </td>\r\n                    </tr>\r\n\r\n                    <tr  *ngIf=\"!isAdd\">\r\n                      <td>\r\n\r\n                      </td>\r\n                      <td>\r\n                        Longitude  :   <input [(ngModel)]=\"Entity.Longitude\" #ctrl=\"ngModel\" name=\"Longitude\">\r\n                      </td>\r\n                    </tr>\r\n                    <tr  *ngIf=\"!isAdd\">\r\n                        <td colspan=\"2\">\r\n                                <google-map\r\n                                height=\"500px\"\r\n                                width=\"100%\"\r\n                                [zoom]=\"zoom\"\r\n                                [center]=\"center\"\r\n                                [options]=\"options\"\r\n                                >\r\n                                <map-marker\r\n                                    *ngFor=\"let marker of markers\"\r\n                                    [position]=\"marker.position\"\r\n                                    [label]=\"marker.label\"\r\n                                    [title]=\"marker.title\"\r\n                                    [options]=\"marker.options\"\r\n                                    (mapClick)=\"opengooglemap()\"\r\n                                >\r\n                                </map-marker>\r\n\r\n\r\n                                </google-map>\r\n                        </td>\r\n                    </tr>\r\n\r\n                    <tr  *ngIf=\"!isAdd\">\r\n                        <td colspan=\"2\">\r\n                            圖片:\r\n\r\n                                <div class=\"center\">\r\n                                        <ngx-file-drop dropZoneLabel=\"Drop files here\" (onFileDrop)=\"dropped($event)\"\r\n                                        (onFileOver)=\"fileOver($event)\" (onFileLeave)=\"fileLeave($event)\">\r\n                                            <ng-template ngx-file-drop-content-tmp let-openFileSelector=\"openFileSelector\">\r\n                                              拖曳或是選擇要上傳的圖片\r\n                                              <button type=\"button\" (click)=\"openFileSelector()\">Browse Files</button>\r\n                                            </ng-template>\r\n                                        </ngx-file-drop>\r\n\r\n                                </div>\r\n                        </td>\r\n                    </tr>\r\n                    <tr  *ngIf=\"!isAdd\">\r\n                        <td colspan=\"2\">\r\n                                <ul *ngFor=\"let i of Entity.ImageUrls; let x = index\" class=\"list-group\">\r\n                                    <li class=\"list-group-item\">\r\n                                        <img src='https://in-hub-dev.azurewebsites.net/{{i}}'   class=\"img-thumbnail\" > <p></p>\r\n                                        <!-- 名稱:<input [(ngModel)]=\"i.Name\" #ctrl=\"ngModel\"  name=\"imagename\" class=\"form-control\"/> <p></p>\r\n                                        備註: <input [(ngModel)]=\"i.Comment\" #ctrl=\"ngModel\"  name=\"imageComment\" type=\"text\"  class=\"form-control\"/><p></p> -->\r\n                                        <button type=\"button\" class=\"btn btn-danger btn-xs\" (click) =\"RemoveImage(x)\">Remove</button>\r\n                                    </li>\r\n                                </ul>\r\n                        </td>\r\n                    </tr>\r\n                </tbody>\r\n                </table>\r\n\r\n\r\n\r\n\r\n</div>\r\n\r\n\r\n\r\n\r\n     <hr>\r\n    <div class=\"nav navbar-nav navbar-right\">\r\n            <button type=\"button\" class=\"btn btn-primary\" (click)=\"SaveEntity()\">儲存</button> |\r\n            <button type=\"button\" class=\"btn btn-default\" onclick=\"location.href='#/bccenter';\">返回</button>\r\n    </div>\r\n\r\n\r\n\r\n\r\n<ngx-spinner\r\n  bdColor=\"rgba(51,51,51,0.8)\"\r\n  size=\"medium\"\r\n  color=\"#fff\"\r\n  type=\"ball-scale-multiple\"\r\n>\r\n  <p style=\"font-size: 20px; color: white\">處理中...</p>\r\n</ngx-spinner>\r\n\r\n");
 
 /***/ }),
 
@@ -1984,19 +1984,13 @@ var BcformComponent = /** @class */ (function () {
                     console.log(droppedFile.relativePath, file);
                     // You could upload it like this:
                     var formData = new FormData();
-                    formData.append(file.name, file, droppedFile.relativePath);
+                    formData.append('image', file, droppedFile.relativePath);
                     _this.spinner.show();
-                    _this.bcservice.postImage(formData).subscribe(function (val) {
-                        //   const newImage = new BusinessCenterImage();
-                        //   newImage.Name = 'Image';
-                        //   newImage.Image_Url = val;
-                        // if (isNullOrUndefined(this.Entity.Images)) {
-                        //   const images: BusinessCenterImage[] = [];
-                        //   images.push(newImage);
-                        //     this.Entity.Images = images;
-                        //  } else {
-                        //   this.Entity.Images.push(newImage);
-                        //  }
+                    _this.bcservice.postImage(_this.Entity.Id, formData).subscribe(function (val) {
+                        _this.spinner.hide();
+                        _this.Entity.ImageUrls.push(file.name);
+                    }, function (err) {
+                        alert('upload image error');
                         _this.spinner.hide();
                     });
                 });
@@ -2019,10 +2013,19 @@ var BcformComponent = /** @class */ (function () {
         console.log(event);
     };
     BcformComponent.prototype.RemoveImage = function (i) {
-        i++;
-        // const orginialItems = this.Entity.Images;
-        // const filterItems = orginialItems.slice(0, i - 1).concat(orginialItems.slice(i, orginialItems.length));
-        // this.Entity.Images = filterItems;
+        var _this = this;
+        var imagename = this.Entity.ImageUrls[i];
+        if (confirm('Are you sure you want to delete ' + imagename + ' ?')) {
+            this.bcservice.removeImage(this.Entity.Id, imagename).subscribe(function (val) {
+                alert('Image Delete Complete');
+                i++;
+                var orginialItems = _this.Entity.ImageUrls;
+                var filterItems = orginialItems.slice(0, i - 1).concat(orginialItems.slice(i, orginialItems.length));
+                _this.Entity.ImageUrls = filterItems;
+            }, function (err) {
+                alert('Image delete error');
+            });
+        }
     };
     BcformComponent.prototype.openModal = function () {
         var initialState = {
@@ -2444,11 +2447,11 @@ var BclistComponent = /** @class */ (function () {
             entity: item
         };
         var imageurl = '';
-        if (Object(util__WEBPACK_IMPORTED_MODULE_4__["isNullOrUndefined"])(item.Images) !== true) {
-            imageurl = item.Images[0].Image_Url;
+        if (Object(util__WEBPACK_IMPORTED_MODULE_4__["isNullOrUndefined"])(item.ImageUrls) !== true) {
+            imageurl = item.ImageUrls[0];
         }
         this.pophtml = '<talbe> <tr> <td>' + item.Intro + '</td> </tr>';
-        this.pophtml += '<tr><td>' + '<img src=' + imageurl + ' width=90% height=90%> </td></tr>';
+        this.pophtml += '<tr><td>' + '<img src=https://in-hub-dev.azurewebsites.net/' + imageurl + ' width=90% height=90%> </td></tr>';
         this.pophtml += '</table>';
         // this.bsModalRef = this.modalService.show(BcformmodalComponent, {initialState});
     };
@@ -2872,7 +2875,7 @@ var BcserviceService = /** @class */ (function () {
         this.userurl = 'https://in-hub-dev.azurewebsites.net/user';
         this.tokenurl = 'https://in-hub-dev.azurewebsites.net/user/su/__53cr3t__';
         this.url = 'api/businesscenterapi/';
-        this.postImgurl = 'api/UploadFileapi/';
+        this.postImgurl = '/upload';
         this.gettoken();
     }
     BcserviceService.prototype.handleError = function (error) {
@@ -2886,7 +2889,8 @@ var BcserviceService = /** @class */ (function () {
             window.localStorage.setItem('date', date.toString());
         });
     };
-    BcserviceService.prototype.getHttpoption = function () {
+    BcserviceService.prototype.getHttpoption = function (isImage) {
+        if (isImage === void 0) { isImage = false; }
         var date = window.localStorage.getItem('date');
         // alert(date);
         var saveddate = new Date(date);
@@ -2898,13 +2902,25 @@ var BcserviceService = /** @class */ (function () {
             return;
         }
         var t = localStorage.getItem('token');
-        var headers_object = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
-            'Authorization': 'Bearer ' + t
-        });
-        var httpOptions = {
-            headers: headers_object
-        };
-        return httpOptions;
+        if (isImage === true) {
+            var headers_object = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
+                'ContentType': 'multipart/form-data',
+                'Authorization': 'Bearer ' + t
+            });
+            var httpOptions = {
+                headers: headers_object
+            };
+            return httpOptions;
+        }
+        else {
+            var headers_object = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
+                'Authorization': 'Bearer ' + t
+            });
+            var httpOptions = {
+                headers: headers_object
+            };
+            return httpOptions;
+        }
     };
     BcserviceService.prototype.getList = function () {
         var _this = this;
@@ -2984,15 +3000,19 @@ var BcserviceService = /** @class */ (function () {
         var url = this.userurl + '/' + userId + '/' + password;
         return this.http.patch(url, null, this.getHttpoption());
     };
-    BcserviceService.prototype.postImage = function (file) {
-        var url = this.site + this.postImgurl;
-        // Headers
-        var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
-            ContentType: 'multipart/form-data'
-        });
+    BcserviceService.prototype.postImage = function (vendorId, image) {
+        var url = this.vendorurl + '/' + vendorId + '/upload';
+        //  // Headers
+        //  const headers = new HttpHeaders ({
+        //   ContentType: 'multipart/form-data'
+        // });
         // return  this.http.post(url, file, {headers: headers});
         return this.http
-            .post(url, file, { headers: headers, responseType: 'text' });
+            .post(url, image, this.getHttpoption(true));
+    };
+    BcserviceService.prototype.removeImage = function (vendorId, imagename) {
+        var url = this.vendorurl + '/' + vendorId + '/imageUrl/' + imagename;
+        return this.http.delete(url, this.getHttpoption());
     };
     BcserviceService.ctorParameters = function () { return [
         { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"] }
