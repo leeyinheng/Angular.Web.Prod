@@ -2913,7 +2913,8 @@ var BcserviceService = /** @class */ (function () {
     BcserviceService.prototype.getList = function () {
         var url = this.vendorurl;
         if (Object(util__WEBPACK_IMPORTED_MODULE_3__["isNullOrUndefined"])(sessionStorage.getItem('token'))) {
-            this.gettoken();
+            alert('Session is expired, Please refresh again');
+            return;
         }
         return this.http.get(url, this.getHttpoption());
     };
