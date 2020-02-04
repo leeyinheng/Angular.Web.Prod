@@ -2884,24 +2884,12 @@ var BcserviceService = /** @class */ (function () {
     };
     BcserviceService.prototype.gettoken = function () {
         this.http.get(this.tokenurl, { responseType: 'text' }).subscribe(function (val) {
-            localStorage.setItem('token', val.toString());
-            var date = new Date();
-            window.localStorage.setItem('date', date.toString());
+            sessionStorage.setItem('token', val.toString());
         });
     };
     BcserviceService.prototype.getHttpoption = function (isImage) {
         if (isImage === void 0) { isImage = false; }
-        var date = window.localStorage.getItem('date');
-        // alert(date);
-        var saveddate = new Date(date);
-        var today = new Date();
-        var diff = today.getMinutes() - saveddate.getMinutes();
-        // alert(diff);
-        if (diff > 60) {
-            alert('頁面已經逾時 請更新頁面再操作');
-            return;
-        }
-        var t = localStorage.getItem('token');
+        var t = sessionStorage.getItem('token');
         if (isImage === true) {
             var headers_object = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
                 'ContentType': 'multipart/form-data',
@@ -2924,7 +2912,7 @@ var BcserviceService = /** @class */ (function () {
     };
     BcserviceService.prototype.getList = function () {
         var url = this.vendorurl;
-        if (Object(util__WEBPACK_IMPORTED_MODULE_3__["isNullOrUndefined"])(localStorage.getItem('token'))) {
+        if (Object(util__WEBPACK_IMPORTED_MODULE_3__["isNullOrUndefined"])(sessionStorage.getItem('token'))) {
             this.gettoken();
         }
         return this.http.get(url, this.getHttpoption());
