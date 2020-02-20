@@ -6341,7 +6341,6 @@ var HealthviewmodalComponent = /** @class */ (function () {
         var _this = this;
         this.service.getTemp().subscribe(function (val) {
             _this.CurrentTemp = val.main.temp;
-            alert(val.main.temp);
         });
     };
     HealthviewmodalComponent.prototype.newblood = function () {
@@ -6468,7 +6467,7 @@ var HealthserviceService = /** @class */ (function () {
         // private site = 'https://localhost:44347/';  // URL to web api
         this.url = 'api/healthapi/';
         this.postImgurl = 'api/UploadWebPhotoapi/';
-        this.weatherUrl = 'http://api.openweathermap.org/data/2.5/weather?id=1668284&APPID=678b74a297f51d823a3d69b025b4829a&units=metric';
+        this.weatherUrl = 'https://api.openweathermap.org/data/2.5/weather?id=1668284&APPID=678b74a297f51d823a3d69b025b4829a&units=metric';
     }
     HealthserviceService.prototype.getList = function () {
         var url = this.site + this.url;
