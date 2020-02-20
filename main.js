@@ -6341,6 +6341,7 @@ var HealthviewmodalComponent = /** @class */ (function () {
         var _this = this;
         this.service.getTemp().subscribe(function (val) {
             _this.CurrentTemp = val.main.temp;
+            alert(val.main.temp);
         });
     };
     HealthviewmodalComponent.prototype.newblood = function () {
