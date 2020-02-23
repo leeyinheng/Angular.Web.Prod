@@ -87,7 +87,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n    <span><img src='../assets/Photos/inhublogo.png' width=10% height=10% /></span>\r\n    <p></p>\r\n</div>\r\n\r\n\r\n<p></p>\r\n\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-sm-4\">\r\n    <button type=\"button\" class=\"btn btn-primary\" onclick=\"location.href='#/bcform';\">新增</button>\r\n  </div>\r\n  <div class=\"col-sm-4\">\r\n\r\n  </div>\r\n  <div class=\"col-sm-4\">\r\n    <button type=\"button\" class=\"btn btn-primary\" onclick=\"location.href='#/bcuser';\">到使用者/會員管理</button>\r\n  </div>\r\n</div>\r\n\r\n<p></p>\r\n<ng-template #popTemplate> <div [innerHtml]=\"pophtml\"></div></ng-template>\r\n<table class=\"table table-bordered table-striped\">\r\n    <tr>\r\n        <th>\r\n            ID\r\n        </th>\r\n        <th>\r\n            名稱\r\n        </th>\r\n        <th>\r\n            城市\r\n        </th>\r\n        <th>\r\n            地址\r\n        </th>\r\n\r\n        <th>\r\n\r\n        </th>\r\n    </tr>\r\n\r\n\r\n        <tbody>\r\n            <tr *ngFor = 'let item of List ' [tooltip]=\"popTemplate\" (mouseover)='popup(item)'>\r\n                <td>\r\n                    {{item.Id}}\r\n                </td>\r\n                <td>{{ item.Company}}\r\n\r\n                </td>\r\n                <td>   {{item.County}} </td>\r\n                <td>{{ item.Street}}</td>\r\n                <td>\r\n                        <!-- <button type=\"button\" class=\"btn btn-primary\" (click) = showform(item.Id)>展示</button>    | -->\r\n                        <button type=\"button\" class=\"btn btn-info\" (click) = openform(item.Id)>編輯</button>    |\r\n                        <button type=\"button\" class=\"btn btn-danger\" (click) = delete(item.Id)>刪除</button>\r\n                </td>\r\n\r\n\r\n            </tr>\r\n        </tbody>\r\n\r\n</table>\r\n\r\n\r\n\r\n<ngx-spinner\r\n  bdColor=\"rgba(51,51,51,0.8)\"\r\n  size=\"medium\"\r\n  color=\"#fff\"\r\n  type=\"ball-scale-multiple\"\r\n>\r\n  <p style=\"font-size: 20px; color: white\">處理中...</p>\r\n</ngx-spinner>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n    <span><img src='../assets/Photos/inhublogo.png' width=10% height=10% /></span>\r\n    <p></p>\r\n</div>\r\n\r\n\r\n<p></p>\r\n\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-sm-4\">\r\n    <button type=\"button\" class=\"btn btn-primary\" onclick=\"location.href='#/bcform';\">新增</button>\r\n  </div>\r\n  <div class=\"col-sm-4\">\r\n    <button type=\"button\" class=\"btn btn-info\" onclick=\"location.href='#/InHubLog';\">WebJobs Logs</button>\r\n  </div>\r\n  <div class=\"col-sm-4\">\r\n    <button type=\"button\" class=\"btn btn-primary\" onclick=\"location.href='#/bcuser';\">到使用者/會員管理</button>\r\n  </div>\r\n</div>\r\n\r\n<p></p>\r\n<ng-template #popTemplate> <div [innerHtml]=\"pophtml\"></div></ng-template>\r\n<table class=\"table table-bordered table-striped\">\r\n    <tr>\r\n        <th>\r\n            ID\r\n        </th>\r\n        <th>\r\n            名稱\r\n        </th>\r\n        <th>\r\n            城市\r\n        </th>\r\n        <th>\r\n            地址\r\n        </th>\r\n\r\n        <th>\r\n\r\n        </th>\r\n    </tr>\r\n\r\n\r\n        <tbody>\r\n            <tr *ngFor = 'let item of List ' [tooltip]=\"popTemplate\" (mouseover)='popup(item)'>\r\n                <td>\r\n                    {{item.Id}}\r\n                </td>\r\n                <td>{{ item.Company}}\r\n\r\n                </td>\r\n                <td>   {{item.County}} </td>\r\n                <td>{{ item.Street}}</td>\r\n                <td>\r\n                        <!-- <button type=\"button\" class=\"btn btn-primary\" (click) = showform(item.Id)>展示</button>    | -->\r\n                        <button type=\"button\" class=\"btn btn-info\" (click) = openform(item.Id)>編輯</button>    |\r\n                        <button type=\"button\" class=\"btn btn-danger\" (click) = delete(item.Id)>刪除</button>\r\n                </td>\r\n\r\n\r\n            </tr>\r\n        </tbody>\r\n\r\n</table>\r\n\r\n\r\n\r\n<ngx-spinner\r\n  bdColor=\"rgba(51,51,51,0.8)\"\r\n  size=\"medium\"\r\n  color=\"#fff\"\r\n  type=\"ball-scale-multiple\"\r\n>\r\n  <p style=\"font-size: 20px; color: white\">處理中...</p>\r\n</ngx-spinner>\r\n");
 
 /***/ }),
 
@@ -101,6 +101,19 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("<div class=\"modal-header table-hover\">\r\n        \r\n    </div>\r\n              <div class=\"modal-body\">\r\n    \r\n              <div fxLayout=\"column\" fxLayoutAlign=\" none\">\r\n                <div fxFlex=\"100\" fxLayout=\"column\" fxLayoutAlign=\"space-around stretch\" fxLayout.xs=\"column\">\r\n                  <div *ngFor=\"let i of list; let x = index\" fxFlex.xs=\"100\" fxFlex.sm=\"50\" fxFlex.md=\"33\" fxFlex.lg=\"33\" fxFlex.xl=\"33\">\r\n                      {{i.Day}} : <input [(ngModel)]=\"i.StartTime\" #ctrl=\"ngModel\" name=\"strttime\"> -\r\n                      <input [(ngModel)]=\"i.EndTime\" #ctrl=\"ngModel\" name=\"endtime\"> \r\n                  </div> \r\n                </div>\r\n              </div>\r\n                      \r\n              </div>\r\n              <div class=\"modal-footer\">\r\n                     <button type=\"button\" class=\"btn btn-primary\" (click)=\"Save()\">儲存</button>  \r\n                    <button type=\"button\" class=\"btn btn-secondary\" (click)=\"bsModalRef.hide()\">取消</button>\r\n              </div>\r\n        \r\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/businesscenter/logview/logview.component.html":
+/*!*****************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/businesscenter/logview/logview.component.html ***!
+  \*****************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div>\n  <span><img src='../assets/Photos/inhublogo.png' width=10% height=10% /></span>\n  <p></p>\n</div>\n\n\n<p></p>\n\n<button type=\"button\" class=\"btn btn-primary\" onclick=\"location.href='#/bccenter';\">到商務中心管理</button>\n<p></p>\n\n<table class=\"table table-bordered table-striped\">\n  <tr>\n      <th>\n        Name\n      </th>\n      <th>\n        Action\n      </th>\n      <th>\n        User\n      </th>\n      <th>\n        RecordTime\n      </th>\n\n      <th>\n        Comment\n      </th>\n  </tr>\n\n\n      <tbody>\n\n          <tr *ngFor = 'let item of List | paginate: { itemsPerPage: 30, currentPage: p} ' >\n              <td>\n                  {{item.Name}}\n              </td>\n              <td>{{ item.Action}}\n\n              </td>\n              <td>   {{item.User}} </td>\n              <td>{{ item.RecordTime}}</td>\n              <td>\n                {{item.Comment}}\n              </td>\n          </tr>\n      </tbody>\n      <pagination-controls (pageChange)=\"p = $event\"></pagination-controls>\n</table>\n");
 
 /***/ }),
 
@@ -2516,6 +2529,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _userlist_userlist_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./userlist/userlist.component */ "./src/app/businesscenter/userlist/userlist.component.ts");
 /* harmony import */ var _userform_userform_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./userform/userform.component */ "./src/app/businesscenter/userform/userform.component.ts");
 /* harmony import */ var _service_bcservice_service__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./service/bcservice.service */ "./src/app/businesscenter/service/bcservice.service.ts");
+/* harmony import */ var _logview_logview_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./logview/logview.component */ "./src/app/businesscenter/logview/logview.component.ts");
+/* harmony import */ var ngx_pagination__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ngx-pagination */ "./node_modules/ngx-pagination/dist/ngx-pagination.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2525,6 +2540,8 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
   return (mod && mod.__esModule) ? mod : { "default": mod };
 };
+
+
 
 
 
@@ -2570,6 +2587,7 @@ var BusinesscenterModule = /** @class */ (function () {
                 _angular_material__WEBPACK_IMPORTED_MODULE_14__["MatButtonModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_14__["MatFormFieldModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_14__["MatInputModule"],
+                ngx_pagination__WEBPACK_IMPORTED_MODULE_25__["NgxPaginationModule"],
                 _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_16__["NgbModule"],
                 _angular_google_maps__WEBPACK_IMPORTED_MODULE_17__["GoogleMapsModule"],
                 ngx_bootstrap_carousel__WEBPACK_IMPORTED_MODULE_19__["CarouselModule"].forRoot(),
@@ -2592,13 +2610,17 @@ var BusinesscenterModule = /** @class */ (function () {
                     },
                     {
                         path: 'bcuserform/:id', component: _userform_userform_component__WEBPACK_IMPORTED_MODULE_22__["UserformComponent"]
+                    },
+                    {
+                        path: 'InHubLog', component: _logview_logview_component__WEBPACK_IMPORTED_MODULE_24__["LogviewComponent"]
                     }
                 ])
             ],
             declarations: [_bclist_bclist_component__WEBPACK_IMPORTED_MODULE_7__["BclistComponent"], _bcform_bcform_component__WEBPACK_IMPORTED_MODULE_8__["BcformComponent"], _bcformmodal_bcformmodal_component__WEBPACK_IMPORTED_MODULE_11__["BcformmodalComponent"], _businesshourmodal_businesshourmodal_component__WEBPACK_IMPORTED_MODULE_15__["BusinesshourmodalComponent"],
                 _requestmodal_requestmodal_component__WEBPACK_IMPORTED_MODULE_20__["RequestmodalComponent"],
                 _userlist_userlist_component__WEBPACK_IMPORTED_MODULE_21__["UserlistComponent"],
-                _userform_userform_component__WEBPACK_IMPORTED_MODULE_22__["UserformComponent"]],
+                _userform_userform_component__WEBPACK_IMPORTED_MODULE_22__["UserformComponent"],
+                _logview_logview_component__WEBPACK_IMPORTED_MODULE_24__["LogviewComponent"]],
             entryComponents: [_bcformmodal_bcformmodal_component__WEBPACK_IMPORTED_MODULE_11__["BcformmodalComponent"], _businesshourmodal_businesshourmodal_component__WEBPACK_IMPORTED_MODULE_15__["BusinesshourmodalComponent"]],
             providers: [_service_bcservice_service__WEBPACK_IMPORTED_MODULE_23__["BcserviceService"]]
         })
@@ -2713,6 +2735,86 @@ var BusinesshourmodalComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_1__["BsModalRef"]])
     ], BusinesshourmodalComponent);
     return BusinesshourmodalComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/businesscenter/logview/logview.component.css":
+/*!**************************************************************!*\
+  !*** ./src/app/businesscenter/logview/logview.component.css ***!
+  \**************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2J1c2luZXNzY2VudGVyL2xvZ3ZpZXcvbG9ndmlldy5jb21wb25lbnQuY3NzIn0= */");
+
+/***/ }),
+
+/***/ "./src/app/businesscenter/logview/logview.component.ts":
+/*!*************************************************************!*\
+  !*** ./src/app/businesscenter/logview/logview.component.ts ***!
+  \*************************************************************/
+/*! exports provided: LogviewComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LogviewComponent", function() { return LogviewComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _service_bcservice_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../service/bcservice.service */ "./src/app/businesscenter/service/bcservice.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+var LogviewComponent = /** @class */ (function () {
+    function LogviewComponent(bcservice) {
+        this.bcservice = bcservice;
+    }
+    Object.defineProperty(LogviewComponent.prototype, "List", {
+        get: function () {
+            return this._list;
+        },
+        set: function (value) {
+            this._list = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    LogviewComponent.prototype.ngOnInit = function () {
+        this.GetList();
+    };
+    LogviewComponent.prototype.GetList = function () {
+        var _this = this;
+        this.bcservice.getLogs().subscribe(function (list) {
+            _this.List = list;
+        });
+    };
+    LogviewComponent.ctorParameters = function () { return [
+        { type: _service_bcservice_service__WEBPACK_IMPORTED_MODULE_1__["BcserviceService"] }
+    ]; };
+    LogviewComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-logview',
+            template: __importDefault(__webpack_require__(/*! raw-loader!./logview.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/businesscenter/logview/logview.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./logview.component.css */ "./src/app/businesscenter/logview/logview.component.css")).default]
+        }),
+        __metadata("design:paramtypes", [_service_bcservice_service__WEBPACK_IMPORTED_MODULE_1__["BcserviceService"]])
+    ], LogviewComponent);
+    return LogviewComponent;
 }());
 
 
@@ -2879,6 +2981,7 @@ var BcserviceService = /** @class */ (function () {
         this.tokenurl = 'https://in-hub-dev.azurewebsites.net/user/su/__53cr3t__';
         this.url = 'api/businesscenterapi/';
         this.postImgurl = '/upload';
+        this.logurl = this.site + 'api/logapi/';
         this.gettoken();
     }
     BcserviceService.prototype.handleError = function (error) {
@@ -2924,6 +3027,10 @@ var BcserviceService = /** @class */ (function () {
     BcserviceService.prototype.getUserList = function () {
         var url = this.userurl;
         return this.http.get(url, this.getHttpoption());
+    };
+    BcserviceService.prototype.getLogs = function () {
+        var url = this.logurl;
+        return this.http.get(url);
     };
     BcserviceService.prototype.getEntityById = function (id) {
         var url = this.vendorurl + '/' + id;
