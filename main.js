@@ -6473,6 +6473,7 @@ var HealthviewmodalComponent = /** @class */ (function () {
         if (this.Mode === 'Add') {
             this.Entity.InfoHistory.unshift(this.History);
         }
+        this.History.Changed = true; // marked as edited
         this.bsModalRef.hide();
     };
     HealthviewmodalComponent.prototype.dropped = function (files) {
