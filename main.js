@@ -308,7 +308,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n\r\n  <select (change)=\"filterForArticles($event.target.value)\" class=\"form-control\">\r\n    <option value=\"-1\">--選擇--</option>\r\n    <option *ngFor=\"let item of List; let i = index\" value={{i}}>\r\n      {{item.ClientName}}\r\n    </option>\r\n  </select>\r\n</div>\r\n\r\n<p></p>\r\n\r\n<div *ngIf=\"Entity.ClientId\">\r\n\r\n  <table class=\"table table-bordered table-striped\">\r\n    <tbody>\r\n\r\n      <tr>\r\n\r\n        <td>\r\n          編號:\r\n        </td>\r\n        <Td>\r\n          {{Entity.ClientId}}\r\n        </Td>\r\n      </tr>\r\n      <tr>\r\n        <td>\r\n          名稱:\r\n        </td>\r\n        <td>\r\n          <b>{{Entity.ClientName}} </b>\r\n        </td>\r\n      </tr>\r\n      <tr>\r\n        <td>\r\n          地址:\r\n        </td>\r\n        <td>\r\n          {{Entity.Address}}\r\n        </td>\r\n      </tr>\r\n      <tr>\r\n        <td>\r\n          電話:\r\n        </td>\r\n        <td>\r\n          {{Entity.Phone}}\r\n        </td>\r\n      </tr>\r\n      <tr>\r\n        <td>\r\n          身高:\r\n        </td>\r\n        <td>\r\n          {{Entity.Info.Height}}\r\n        </td>\r\n      </tr>\r\n      <tr>\r\n        <td>\r\n          備註:\r\n        </td>\r\n        <td>\r\n          {{Entity.Info.Note}}\r\n        </td>\r\n      </tr>\r\n    </tbody>\r\n  </table>\r\n  <button type=\"button\" class=\"btn btn-lg btn-primary\" (click)=save()>儲存紀錄</button>\r\n  <div *ngIf=\"change\" style=\"color: red;\">All changes need to click the button to save!</div>\r\n  <p></p>\r\n  <table class=\"table table-bordered table-striped\">\r\n\r\n    <tbody>\r\n      <th>\r\n        基本數據 <button type=\"button\" class=\"btn btn-success\" (click)=\"openModal()\">新增紀錄</button>\r\n      </th>\r\n      <th>\r\n        血壓\r\n      </th>\r\n      <th>\r\n        餐飲\r\n      </th>\r\n\r\n      <tr *ngFor='let item of Entity.InfoHistory | paginate: { itemsPerPage: 7, currentPage: p} ; let x = index'>\r\n        <td>\r\n          {{item.DateTime}} 體重:\r\n          {{ item.Weight}}\r\n          KG 步數:\r\n          <span *ngIf=\"item.WalkSteps < 10000\">{{ item.WalkSteps }} </span>\r\n          <span *ngIf=\"item.WalkSteps >= 10000\" style=\"color: red;\">{{ item.WalkSteps }} </span>步\r\n          <span *ngIf=\"item.Comment\" style=\"color:blue;\">({{item.Comment}})</span>\r\n\r\n          <table>\r\n\r\n\r\n            <tbody class=\"table table-bordered table-striped\">\r\n              <tr *ngFor=\"let meal of item.Activities\">\r\n                <td> {{meal.DateTime}} - {{meal.Name}}\r\n                  <img [src]=\"meal.ImageLink\" style=\"width: 100%;\" /> </td>\r\n\r\n              </tr>\r\n            </tbody>\r\n          </table>\r\n\r\n          <table>\r\n            <tr>\r\n              <td>\r\n                <button type=\"button\" class=\"btn btn-sm btn-warning\" (click)=editform(x)>編輯</button>\r\n              </td>\r\n            </tr>\r\n            <tr>\r\n              <td>\r\n                <button type=\"button\" class=\"btn btn-sm btn-danger\" (click)=delete(x)>刪除</button>\r\n              </td>\r\n            </tr>\r\n          </table>\r\n\r\n\r\n\r\n        </td>\r\n\r\n        <td>\r\n          <table>\r\n\r\n            <tbody class=\"table table-bordered table-striped\">\r\n              <tr *ngFor=\"let blood of item.BloodPressures\">\r\n                <td> 收縮壓:\r\n                  <span *ngIf=\"blood.BloodHigh >= 140\" style=\"color: red;\">{{ blood.BloodHigh }} </span>\r\n                  <span *ngIf=\"blood.BloodHigh < 140\" style=\"color: green;\">{{ blood.BloodHigh }} </span>\r\n\r\n\r\n                  舒張壓:<span *ngIf=\"blood.BloodLow >= 90\" style=\"color: red;\">{{ blood.BloodLow }} </span>\r\n                  <span *ngIf=\"blood.BloodLow < 90\" style=\"color: green;\">{{ blood.BloodLow }} </span>\r\n                  脈搏: {{blood.Pulse}}\r\n                  溫度: {{blood.Comment}} c\r\n                  {{blood.DateTime}}\r\n                </td>\r\n              </tr>\r\n            </tbody>\r\n          </table>\r\n\r\n        <td>\r\n          <table>\r\n\r\n\r\n            <tbody class=\"table table-bordered table-striped\">\r\n              <tr *ngFor=\"let meal of item.Meals\">\r\n                <td> {{meal.DateTime}} - {{meal.Name}}\r\n                  <img [src]=\"meal.ImageLink\" style=\"width: 100%;\" /> </td>\r\n\r\n              </tr>\r\n            </tbody>\r\n          </table>\r\n        </td>\r\n      </tr>\r\n      </tbody>\r\n      <pagination-controls (pageChange)=\"p = $event\"></pagination-controls>\r\n  </table>\r\n\r\n</div>\r\n\r\n\r\n\r\n<ngx-spinner bdColor=\"rgba(51,51,51,0.8)\" size=\"medium\" color=\"#fff\" type=\"ball-scale-multiple\">\r\n  <p style=\"font-size: 20px; color: white\">處理中...</p>\r\n</ngx-spinner>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n\r\n  <select (change)=\"filterForArticles($event.target.value)\" class=\"form-control\">\r\n    <option value=\"-1\">--選擇--</option>\r\n    <option *ngFor=\"let item of List; let i = index\" value={{i}}>\r\n      {{item.ClientName}}\r\n    </option>\r\n  </select>\r\n</div>\r\n\r\n<p></p>\r\n\r\n<div *ngIf=\"Entity.ClientId\">\r\n\r\n  <table class=\"table table-bordered table-striped\">\r\n    <tbody>\r\n\r\n      <tr>\r\n\r\n        <td>\r\n          編號:\r\n        </td>\r\n        <Td>\r\n          {{Entity.ClientId}}\r\n        </Td>\r\n      </tr>\r\n      <tr>\r\n        <td>\r\n          名稱:\r\n        </td>\r\n        <td>\r\n          <b>{{Entity.ClientName}} </b>\r\n        </td>\r\n      </tr>\r\n      <tr>\r\n        <td>\r\n          地址:\r\n        </td>\r\n        <td>\r\n          {{Entity.Address}}\r\n        </td>\r\n      </tr>\r\n      <tr>\r\n        <td>\r\n          電話:\r\n        </td>\r\n        <td>\r\n          {{Entity.Phone}}\r\n        </td>\r\n      </tr>\r\n      <tr>\r\n        <td>\r\n          身高:\r\n        </td>\r\n        <td>\r\n          {{Entity.Info.Height}}\r\n        </td>\r\n      </tr>\r\n      <tr>\r\n        <td>\r\n          備註:\r\n        </td>\r\n        <td>\r\n          {{Entity.Info.Note}}\r\n        </td>\r\n      </tr>\r\n    </tbody>\r\n  </table>\r\n  <button type=\"button\" class=\"btn btn-lg btn-primary\" (click)=save()>儲存紀錄</button>\r\n  <div *ngIf=\"change\" style=\"color: red;\">All changes need to click the button to save!</div>\r\n  <p></p>\r\n  <table class=\"table table-bordered table-striped\">\r\n\r\n    <tbody>\r\n      <th>\r\n        基本數據 <button type=\"button\" class=\"btn btn-success\" (click)=\"openModal()\">新增紀錄</button>\r\n      </th>\r\n      <th>\r\n        血壓\r\n      </th>\r\n      <th>\r\n        餐飲\r\n      </th>\r\n\r\n      <tr *ngFor='let item of Entity.InfoHistory | paginate: { itemsPerPage: 7, currentPage: p} ; let x = index'>\r\n        <td>\r\n          {{item.DateTime}} 體重:\r\n          {{ item.Weight}}\r\n          KG 步數:\r\n          <span *ngIf=\"item.WalkSteps < 10000\">{{ item.WalkSteps }} </span>\r\n          <span *ngIf=\"item.WalkSteps >= 10000\" style=\"color: red;\">{{ item.WalkSteps }} </span>步\r\n          <span *ngIf=\"item.Comment\" style=\"color:blue;\">({{item.Comment}})</span>\r\n\r\n          <table>\r\n\r\n\r\n            <tbody class=\"table table-bordered table-striped\">\r\n              <tr *ngFor=\"let meal of item.Activities\">\r\n                <td> {{meal.DateTime}} - {{meal.Name}}\r\n                  <a [href]= \"meal.ImageUrl\" target=\"_blank\">\r\n                  <img [src]=\"meal.ImageLink\" style=\"width: 100%;\" />\r\n                </a>\r\n                 </td>\r\n              </tr>\r\n            </tbody>\r\n          </table>\r\n\r\n          <table>\r\n            <tr>\r\n              <td>\r\n                <button type=\"button\" class=\"btn btn-sm btn-warning\" (click)=editform(x)>編輯</button>\r\n              </td>\r\n            </tr>\r\n            <tr>\r\n              <td>\r\n                <button type=\"button\" class=\"btn btn-sm btn-danger\" (click)=delete(x)>刪除</button>\r\n              </td>\r\n            </tr>\r\n          </table>\r\n\r\n\r\n\r\n        </td>\r\n\r\n        <td>\r\n          <table>\r\n\r\n            <tbody class=\"table table-bordered table-striped\">\r\n              <tr *ngFor=\"let blood of item.BloodPressures\">\r\n                <td> 收縮壓:\r\n                  <span *ngIf=\"blood.BloodHigh >= 140\" style=\"color: red;\">{{ blood.BloodHigh }} </span>\r\n                  <span *ngIf=\"blood.BloodHigh < 140\" style=\"color: green;\">{{ blood.BloodHigh }} </span>\r\n\r\n\r\n                  舒張壓:<span *ngIf=\"blood.BloodLow >= 90\" style=\"color: red;\">{{ blood.BloodLow }} </span>\r\n                  <span *ngIf=\"blood.BloodLow < 90\" style=\"color: green;\">{{ blood.BloodLow }} </span>\r\n                  脈搏: {{blood.Pulse}}\r\n                  溫度: {{blood.Comment}} c\r\n                  {{blood.DateTime}}\r\n                </td>\r\n              </tr>\r\n            </tbody>\r\n          </table>\r\n\r\n        <td>\r\n          <table>\r\n\r\n\r\n            <tbody class=\"table table-bordered table-striped\">\r\n              <tr *ngFor=\"let meal of item.Meals\">\r\n                <td> {{meal.DateTime}} - {{meal.Name}}\r\n                  <img [src]=\"meal.ImageLink\" style=\"width: 100%;\" /> </td>\r\n\r\n              </tr>\r\n            </tbody>\r\n          </table>\r\n        </td>\r\n      </tr>\r\n      </tbody>\r\n      <pagination-controls (pageChange)=\"p = $event\"></pagination-controls>\r\n  </table>\r\n\r\n</div>\r\n\r\n\r\n\r\n<ngx-spinner bdColor=\"rgba(51,51,51,0.8)\" size=\"medium\" color=\"#fff\" type=\"ball-scale-multiple\">\r\n  <p style=\"font-size: 20px; color: white\">處理中...</p>\r\n</ngx-spinner>\r\n");
 
 /***/ }),
 
@@ -5610,6 +5610,62 @@ var CryptserviceService = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/core/shared/service/newsservice.service.ts":
+/*!************************************************************!*\
+  !*** ./src/app/core/shared/service/newsservice.service.ts ***!
+  \************************************************************/
+/*! exports provided: NewsserviceService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NewsserviceService", function() { return NewsserviceService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+var NewsserviceService = /** @class */ (function () {
+    function NewsserviceService(http) {
+        this.http = http;
+        this.apiKey = '08e7ba32ec0440c8ab88ac2e9a980d4a';
+        this.url = 'http://newsapi.org/v2/top-headlines?country=us&apiKey=' + this.apiKey;
+    }
+    NewsserviceService.prototype.getnews = function () {
+        // Headers
+        var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
+            ContentType: 'application/json'
+        });
+        return this.http
+            .get(this.url);
+    };
+    NewsserviceService.ctorParameters = function () { return [
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"] }
+    ]; };
+    NewsserviceService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+            providedIn: 'root'
+        }),
+        __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
+    ], NewsserviceService);
+    return NewsserviceService;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/core/shared/service/postservice.service.ts":
 /*!************************************************************!*\
   !*** ./src/app/core/shared/service/postservice.service.ts ***!
@@ -5682,6 +5738,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _service_authservice_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./service/authservice.service */ "./src/app/core/shared/service/authservice.service.ts");
 /* harmony import */ var _service_cryptservice_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./service/cryptservice.service */ "./src/app/core/shared/service/cryptservice.service.ts");
 /* harmony import */ var _service_postservice_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./service/postservice.service */ "./src/app/core/shared/service/postservice.service.ts");
+/* harmony import */ var _service_newsservice_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./service/newsservice.service */ "./src/app/core/shared/service/newsservice.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -5696,6 +5753,7 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 
 
 
+
 var SharedModule = /** @class */ (function () {
     function SharedModule() {
     }
@@ -5703,7 +5761,7 @@ var SharedModule = /** @class */ (function () {
     SharedModule.forRoot = function () {
         return {
             ngModule: SharedModule_1,
-            providers: [_service_authservice_service__WEBPACK_IMPORTED_MODULE_2__["AuthserviceService"], _service_cryptservice_service__WEBPACK_IMPORTED_MODULE_3__["CryptserviceService"], _service_postservice_service__WEBPACK_IMPORTED_MODULE_4__["PostFileService"]]
+            providers: [_service_authservice_service__WEBPACK_IMPORTED_MODULE_2__["AuthserviceService"], _service_cryptservice_service__WEBPACK_IMPORTED_MODULE_3__["CryptserviceService"], _service_postservice_service__WEBPACK_IMPORTED_MODULE_4__["PostFileService"], _service_newsservice_service__WEBPACK_IMPORTED_MODULE_5__["NewsserviceService"]]
         };
     };
     var SharedModule_1;
@@ -6131,6 +6189,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var ngx_bootstrap__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ngx-bootstrap */ "./node_modules/ngx-bootstrap/esm5/ngx-bootstrap.js");
 /* harmony import */ var _healthviewmodal_healthviewmodal_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./healthviewmodal/healthviewmodal.component */ "./src/app/health/healthviewmodal/healthviewmodal.component.ts");
 /* harmony import */ var ngx_pagination__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ngx-pagination */ "./node_modules/ngx-pagination/dist/ngx-pagination.js");
+/* harmony import */ var _core_shared_shared_module__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../core/shared/shared.module */ "./src/app/core/shared/shared.module.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -6140,6 +6199,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
   return (mod && mod.__esModule) ? mod : { "default": mod };
 };
+
 
 
 
@@ -6169,6 +6229,7 @@ var HealthModule = /** @class */ (function () {
                 ngx_spinner__WEBPACK_IMPORTED_MODULE_8__["NgxSpinnerModule"],
                 _angular_flex_layout__WEBPACK_IMPORTED_MODULE_9__["FlexLayoutModule"],
                 ngx_pagination__WEBPACK_IMPORTED_MODULE_12__["NgxPaginationModule"],
+                _core_shared_shared_module__WEBPACK_IMPORTED_MODULE_13__["SharedModule"].forRoot(),
                 _angular_router__WEBPACK_IMPORTED_MODULE_5__["RouterModule"].forChild([
                     {
                         path: 'health', component: _healthview_healthview_component__WEBPACK_IMPORTED_MODULE_2__["HealthviewComponent"]
@@ -6408,6 +6469,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ngx-bootstrap/modal */ "./node_modules/ngx-bootstrap/modal/fesm5/ngx-bootstrap-modal.js");
 /* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ngx-spinner */ "./node_modules/ngx-spinner/fesm5/ngx-spinner.js");
 /* harmony import */ var _service_healthservice_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../service/healthservice.service */ "./src/app/health/service/healthservice.service.ts");
+/* harmony import */ var _core_shared_service_newsservice_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../../core/shared/service/newsservice.service */ "./src/app/core/shared/service/newsservice.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -6425,11 +6487,13 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 
 
 
+
 var HealthviewmodalComponent = /** @class */ (function () {
-    function HealthviewmodalComponent(bsModalRef, spinner, service) {
+    function HealthviewmodalComponent(bsModalRef, spinner, service, newsservice) {
         this.bsModalRef = bsModalRef;
         this.spinner = spinner;
         this.service = service;
+        this.newsservice = newsservice;
         this._entity = new _core_shared_model_userinfo__WEBPACK_IMPORTED_MODULE_1__["UserInfo"]();
         this.CurrentTemp = 0;
         this.Mode = 'Add';
@@ -6449,6 +6513,14 @@ var HealthviewmodalComponent = /** @class */ (function () {
         var _this = this;
         this.service.getTemp().subscribe(function (val) {
             _this.CurrentTemp = val.main.temp;
+        });
+        this.newsservice.getnews().subscribe(function (val) {
+            var newImage = new _core_shared_model_userinfo__WEBPACK_IMPORTED_MODULE_1__["Meal"]();
+            newImage.Name = val.articles[0].title;
+            newImage.ImageLink = val.articles[0].urlToImage;
+            newImage.DateTime = new Date().toLocaleString();
+            newImage.ImageUrl = val.articles[0].url;
+            _this.History.Activities.unshift(newImage);
         });
     };
     HealthviewmodalComponent.prototype.newblood = function () {
@@ -6574,7 +6646,8 @@ var HealthviewmodalComponent = /** @class */ (function () {
     HealthviewmodalComponent.ctorParameters = function () { return [
         { type: ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_2__["BsModalRef"] },
         { type: ngx_spinner__WEBPACK_IMPORTED_MODULE_3__["NgxSpinnerService"] },
-        { type: _service_healthservice_service__WEBPACK_IMPORTED_MODULE_4__["HealthserviceService"] }
+        { type: _service_healthservice_service__WEBPACK_IMPORTED_MODULE_4__["HealthserviceService"] },
+        { type: _core_shared_service_newsservice_service__WEBPACK_IMPORTED_MODULE_5__["NewsserviceService"] }
     ]; };
     HealthviewmodalComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -6582,7 +6655,8 @@ var HealthviewmodalComponent = /** @class */ (function () {
             template: __importDefault(__webpack_require__(/*! raw-loader!./healthviewmodal.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/health/healthviewmodal/healthviewmodal.component.html")).default,
             styles: [__importDefault(__webpack_require__(/*! ./healthviewmodal.component.css */ "./src/app/health/healthviewmodal/healthviewmodal.component.css")).default]
         }),
-        __metadata("design:paramtypes", [ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_2__["BsModalRef"], ngx_spinner__WEBPACK_IMPORTED_MODULE_3__["NgxSpinnerService"], _service_healthservice_service__WEBPACK_IMPORTED_MODULE_4__["HealthserviceService"]])
+        __metadata("design:paramtypes", [ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_2__["BsModalRef"], ngx_spinner__WEBPACK_IMPORTED_MODULE_3__["NgxSpinnerService"], _service_healthservice_service__WEBPACK_IMPORTED_MODULE_4__["HealthserviceService"],
+            _core_shared_service_newsservice_service__WEBPACK_IMPORTED_MODULE_5__["NewsserviceService"]])
     ], HealthviewmodalComponent);
     return HealthviewmodalComponent;
 }());
