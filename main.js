@@ -5640,7 +5640,7 @@ var NewsserviceService = /** @class */ (function () {
     function NewsserviceService(http) {
         this.http = http;
         this.apiKey = '08e7ba32ec0440c8ab88ac2e9a980d4a';
-        this.url = 'http://newsapi.org/v2/top-headlines?country=us&apiKey=' + this.apiKey;
+        this.url = 'https://newsapi.org/v2/top-headlines?country=us&apiKey=' + this.apiKey;
     }
     NewsserviceService.prototype.getnews = function () {
         // Headers
