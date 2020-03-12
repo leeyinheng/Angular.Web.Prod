@@ -104,6 +104,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/businesscenter/login/login.component.html":
+/*!*************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/businesscenter/login/login.component.html ***!
+  \*************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n<span> <img src='../assets/Photos/inhublogo.png' width=20% height=20% /></span>\n<p></p>\n\n\n<div>\n  <div class=\"container mt-5\">\n    <h2>行動辦公室 App 後臺管理登入</h2>\n    <div class=\"row mt-5\">\n      <div class=\"col-md-4 mt-2 m-auto \">\n          <button class=\"loginBtn loginBtn--google\" #loginRef>\n              Login with Google\n            </button>\n      </div>\n    </div>\n  </div>\n</div>\n\n\n\n\n");
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/businesscenter/logview/logview.component.html":
 /*!*****************************************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/businesscenter/logview/logview.component.html ***!
@@ -2531,6 +2544,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _service_bcservice_service__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./service/bcservice.service */ "./src/app/businesscenter/service/bcservice.service.ts");
 /* harmony import */ var _logview_logview_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./logview/logview.component */ "./src/app/businesscenter/logview/logview.component.ts");
 /* harmony import */ var ngx_pagination__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ngx-pagination */ "./node_modules/ngx-pagination/dist/ngx-pagination.js");
+/* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./login/login.component */ "./src/app/businesscenter/login/login.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2540,6 +2554,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
   return (mod && mod.__esModule) ? mod : { "default": mod };
 };
+
 
 
 
@@ -2613,6 +2628,9 @@ var BusinesscenterModule = /** @class */ (function () {
                     },
                     {
                         path: 'InHubLog', component: _logview_logview_component__WEBPACK_IMPORTED_MODULE_24__["LogviewComponent"]
+                    },
+                    {
+                        path: 'bclogin', component: _login_login_component__WEBPACK_IMPORTED_MODULE_26__["LoginComponent"]
                     }
                 ])
             ],
@@ -2620,7 +2638,8 @@ var BusinesscenterModule = /** @class */ (function () {
                 _requestmodal_requestmodal_component__WEBPACK_IMPORTED_MODULE_20__["RequestmodalComponent"],
                 _userlist_userlist_component__WEBPACK_IMPORTED_MODULE_21__["UserlistComponent"],
                 _userform_userform_component__WEBPACK_IMPORTED_MODULE_22__["UserformComponent"],
-                _logview_logview_component__WEBPACK_IMPORTED_MODULE_24__["LogviewComponent"]],
+                _logview_logview_component__WEBPACK_IMPORTED_MODULE_24__["LogviewComponent"],
+                _login_login_component__WEBPACK_IMPORTED_MODULE_26__["LoginComponent"]],
             entryComponents: [_bcformmodal_bcformmodal_component__WEBPACK_IMPORTED_MODULE_11__["BcformmodalComponent"], _businesshourmodal_businesshourmodal_component__WEBPACK_IMPORTED_MODULE_15__["BusinesshourmodalComponent"]],
             providers: [_service_bcservice_service__WEBPACK_IMPORTED_MODULE_23__["BcserviceService"]]
         })
@@ -2735,6 +2754,106 @@ var BusinesshourmodalComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_1__["BsModalRef"]])
     ], BusinesshourmodalComponent);
     return BusinesshourmodalComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/businesscenter/login/login.component.css":
+/*!**********************************************************!*\
+  !*** ./src/app/businesscenter/login/login.component.css ***!
+  \**********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2J1c2luZXNzY2VudGVyL2xvZ2luL2xvZ2luLmNvbXBvbmVudC5jc3MifQ== */");
+
+/***/ }),
+
+/***/ "./src/app/businesscenter/login/login.component.ts":
+/*!*********************************************************!*\
+  !*** ./src/app/businesscenter/login/login.component.ts ***!
+  \*********************************************************/
+/*! exports provided: LoginComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginComponent", function() { return LoginComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+var LoginComponent = /** @class */ (function () {
+    function LoginComponent() {
+    }
+    LoginComponent.prototype.ngOnInit = function () {
+        this.googleSDK();
+    };
+    LoginComponent.prototype.prepareLoginButton = function () {
+        this.auth2.attachClickHandler(this.loginElement.nativeElement, {}, function (googleUser) {
+            var profile = googleUser.getBasicProfile();
+            console.log('Token || ' + googleUser.getAuthResponse().id_token);
+            console.log('ID: ' + profile.getId());
+            console.log('Name: ' + profile.getName());
+            console.log('Image URL: ' + profile.getImageUrl());
+            console.log('Email: ' + profile.getEmail());
+            // YOUR CODE HERE
+            alert(profile.getEmail());
+        }, function (error) {
+            alert(JSON.stringify(error, undefined, 2));
+        });
+    };
+    LoginComponent.prototype.googleSDK = function () {
+        var _this = this;
+        window['googleSDKLoaded'] = function () {
+            window['gapi'].load('auth2', function () {
+                _this.auth2 = window['gapi'].auth2.init({
+                    client_id: '534315275533-6cqgtdgov7b2uoav77rph3ed4a14ktvr.apps.googleusercontent.com',
+                    cookiepolicy: 'single_host_origin',
+                    scope: 'profile email'
+                });
+                _this.prepareLoginButton();
+            });
+        };
+        (function (d, s, id) {
+            // tslint:disable-next-line:prefer-const
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
+            js.src = 'https://apis.google.com/js/platform.js?onload=googleSDKLoaded';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'google-jssdk'));
+    };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('loginRef', { static: true }),
+        __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"])
+    ], LoginComponent.prototype, "loginElement", void 0);
+    LoginComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-login',
+            template: __importDefault(__webpack_require__(/*! raw-loader!./login.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/businesscenter/login/login.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./login.component.css */ "./src/app/businesscenter/login/login.component.css")).default]
+        }),
+        __metadata("design:paramtypes", [])
+    ], LoginComponent);
+    return LoginComponent;
 }());
 
 
