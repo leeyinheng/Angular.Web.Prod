@@ -113,7 +113,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n<span> <img src='../assets/Photos/inhublogo.png' width=20% height=20% /></span>\n<p></p>\n\n\n<div>\n  <div class=\"container mt-5\">\n    <h2>行動辦公室 App 後臺管理登入</h2>\n    <div class=\"row mt-5\">\n      <div class=\"col-md-4 mt-2 m-auto \">\n          <button class=\"loginBtn loginBtn--google\" #loginRef>\n              Login with Google\n            </button>\n      </div>\n    </div>\n  </div>\n</div>\n\n\n\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("\n<span> <img src='../assets/Photos/inhublogo.png' width=20% height=20% /></span>\n<p></p>\n\n\n<div>\n  <div class=\"container mt-5\">\n    <h2>行動辦公室 App 後臺管理登入</h2>\n    <div class=\"row mt-5\">\n      <div class=\"col-md-4 mt-2 m-auto \">\n          <button class=\"loginBtn loginBtn--google\" #loginRef>\n              Login with Google\n            </button>\n      </div>\n\n\n    </div>\n  </div>\n</div>\n\n\n\n\n\n\n<ngx-spinner\n  bdColor=\"rgba(51,51,51,0.8)\"\n  size=\"medium\"\n  color=\"#fff\"\n  type=\"ball-scale-multiple\"\n>\n  <p style=\"font-size: 20px; color: white\">驗證中...</p>\n</ngx-spinner>\n");
 
 /***/ }),
 
@@ -217,7 +217,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<span> <img src='../assets/Photos/tealogo.jpg' width=20% height=20% /></span>\r\n<p></p>\r\n\r\n\r\n<carousel>\r\n  <slide *ngFor=\"let item of AdImages\" class=\"animated fadeIn\">\r\n    <a [href]=\"item.Target_Url\" target=\"_blank\">\r\n\r\n      <img [src]=\"item.Image_Url\" alt=\"Pages\" style=\"display: block; width: 100%;\">\r\n      <div class=\"carousel-caption d-none d-md-block\" style=\"color: black;\">\r\n        <h3>{{item.Name}}</h3>\r\n        <p>{{item.Comment}}</p>\r\n      </div>\r\n\r\n    </a>\r\n  </slide>\r\n</carousel>\r\n<p></p>\r\n<form>\r\n    <div *ngIf=\"IsManager\">\r\n           <button type=\"button\" class=\"btn btn-success\" onclick=\"location.href='#/clientlist';\">返回列表</button>\r\n           <p></p>\r\n   </div>\r\n\r\n  <div class=\"form-group\">\r\n        <table class=\"table table-bordered table-striped\">\r\n                <tbody>\r\n\r\n                    <tr>\r\n\r\n                        <td>\r\n                            客戶編號:\r\n                        </td>\r\n                        <TD>\r\n                                {{Entity.ClientId}}\r\n                        </TD>\r\n                    </tr>\r\n                    <tr>\r\n                        <td>\r\n                               客戶名稱:\r\n                        </td>\r\n                        <td>\r\n                            <b><h1 class=\"h4\">{{Entity.ClientName}} </h1></b>\r\n                        </td>\r\n                    </tr>\r\n                    <tr>\r\n                        <td>\r\n                            地址:\r\n                        </td>\r\n                        <td>\r\n                                {{Entity.Address}}\r\n                        </td>\r\n                    </tr>\r\n                    <tr>\r\n                        <td>\r\n                            電話:\r\n                        </td>\r\n                        <td>\r\n                            {{Entity.Phone}}\r\n                        </td>\r\n                </tbody>\r\n        </table>\r\n        <div>\r\n          <table class=\"table table-bordered table-striped table-hover\">\r\n            <tr>\r\n              <th>\r\n                倉儲管理費\r\n              </th>\r\n              <th>\r\n                上次付費日期\r\n              </th>\r\n              <th>\r\n                下次付費日期\r\n              </th>\r\n              <th>\r\n                備註\r\n              </th>\r\n            </tr>\r\n            <tr>\r\n              <td>{{paymentInfo.Info.TotalFee}}</td>\r\n              <td>{{paymentInfo.Info.LastPaymentDate}}</td>\r\n              <td>{{paymentInfo.Info.NextPaymentDate}}</td>\r\n              <td>{{paymentInfo.Info.Comment}}</td>\r\n            </tr>\r\n            <tr>\r\n              <table>\r\n                <tbody>\r\n                  <tr *ngFor = 'let item of paymentInfo.InfoHistory; let x = index  ' >\r\n                    <td>\r\n                      {{item.Date}}\r\n                    </td>\r\n                    <td>\r\n                      {{item.Item}}\r\n                    </td>\r\n                    <td>\r\n                      {{item.PaymentType}}\r\n                    </td>\r\n                    <td>\r\n                      {{item.Amount}}\r\n                    </td>\r\n                    <td>\r\n                      {{item.Comment}}\r\n                    </td>\r\n                  </tr>\r\n                </tbody>\r\n\r\n              </table>\r\n            </tr>\r\n          </table>\r\n        </div>\r\n        <div *ngIf=\"IsManager\">\r\n            <table class=\"table table-bordered table-striped table-hover\">\r\n                <tr>\r\n                    <th>\r\n                        序號\r\n                    </th>\r\n                    <th>\r\n                       產品編號\r\n                    </th>\r\n                    <th>\r\n                        產品名稱\r\n                    </th>\r\n                    <th>\r\n                        入庫數量\r\n                    </th>\r\n                    <th>\r\n                        單位\r\n                    </th>\r\n                    <th>\r\n                        出庫數量\r\n                    </th>\r\n                    <th>\r\n                        庫存量\r\n                  </th>\r\n                </tr>\r\n\r\n\r\n                    <tbody>\r\n                        <tr *ngFor = 'let item of Entity.Inventories; let x = index  ' >\r\n                            <td>\r\n                                {{ x  + 1 }}\r\n                            </td>\r\n                            <td>\r\n                                {{item.ProductId}}\r\n                            </td>\r\n                            <td>\r\n                                {{ item.ProductName}}\r\n                            </td>\r\n                            <td>{{ item.Stock }}</td>\r\n\r\n                            <td>\r\n                                {{ item.Unit }}\r\n                            </td>\r\n                            <td>\r\n                                {{ item.Return}}\r\n                            </td>\r\n                            <td>\r\n                                {{ item.NotReturn}}\r\n                            </td>\r\n\r\n                        </tr>\r\n                    </tbody>\r\n                    <tfoot>\r\n                            <tr>\r\n                              <td>總計</td>\r\n                              <td>\r\n\r\n                                </td>\r\n                                <td>\r\n\r\n                                </td>\r\n                                <td>\r\n                                    {{ stock_sum }}\r\n\r\n                                </td>\r\n\r\n                                <td>\r\n\r\n                                </td>\r\n                                <td>\r\n                                    {{ return_sum}}\r\n                                </td>\r\n                                <td>\r\n                                    {{ notreturn_sum }}\r\n                                </td>\r\n                            </tr>\r\n                    </tfoot>\r\n\r\n            </table>\r\n        </div>\r\n        <div *ngIf=\"!IsManager\">\r\n            <table class=\"table table-bordered table-striped table-hover\">\r\n                <tr>\r\n                        <th>\r\n                                序號\r\n                            </th>\r\n                            <th>\r\n                               產品編號\r\n                            </th>\r\n                            <th>\r\n                                產品名稱\r\n                            </th>\r\n                            <th>\r\n                                入庫數量\r\n                            </th>\r\n                            <th>\r\n                                單位\r\n                            </th>\r\n                            <th>\r\n                                出庫數量\r\n                            </th>\r\n                            <th>\r\n                                庫存量\r\n                          </th>\r\n                </tr>\r\n\r\n\r\n                    <tbody>\r\n                        <tr *ngFor = 'let item of userInvertories; let x = index;' >\r\n                            <td>\r\n                                {{ x  + 1 }}\r\n                            </td>\r\n                            <td>\r\n                                {{item.ProductId}}\r\n                            </td>\r\n                            <td>\r\n                                {{ item.ProductName}}\r\n                            </td>\r\n                            <td>{{ item.Stock }}</td>\r\n\r\n                            <td>\r\n                                {{ item.Unit }}\r\n                            </td>\r\n                            <td>\r\n                                {{ item.Return}}\r\n                            </td>\r\n                            <td>\r\n                                {{ item.NotReturn}}\r\n                            </td>\r\n\r\n                        </tr>\r\n                    </tbody>\r\n                    <tfoot>\r\n                            <tr>\r\n                              <td>總計</td>\r\n                              <td>\r\n\r\n                                </td>\r\n                                <td>\r\n\r\n                                </td>\r\n                                <td>\r\n                                    {{ stock_sum }}\r\n\r\n                                </td>\r\n\r\n                                <td>\r\n\r\n                                </td>\r\n                                <td>\r\n                                    {{ return_sum}}\r\n                                </td>\r\n                                <td>\r\n                                    {{ notreturn_sum }}\r\n                                </td>\r\n                            </tr>\r\n                          </tfoot>\r\n\r\n            </table>\r\n        </div>\r\n\r\n\r\n\r\n    <div *ngIf=\"IsManager\">\r\n      <p></p>\r\n      <button type=\"button\" class=\"btn btn-success\" onclick=\"location.href='#/clientlist';\">返回列表</button>\r\n      <p></p>\r\n    </div>\r\n\r\n        <h2>近六月溫濕度資料表</h2>\r\n        <carousel  interval=\"0\">\r\n                <slide *ngFor=\"let item of images\">\r\n                  <img [src]=\"item.ImageUrl\" alt=\"Pages\" style=\"display: block; width: 100%;\">\r\n                  <div class=\"carousel-caption d-none d-md-block\">\r\n                  </div>\r\n                </slide>\r\n        </carousel>\r\n\r\n        <div *ngIf=\"IsManager\">\r\n            <p></p>\r\n                <button type=\"button\" class=\"btn btn-success\" onclick=\"location.href='#/clientlist';\">返回列表</button>\r\n                <p></p>\r\n        </div>\r\n\r\n        <hr>\r\n\r\n\r\n    <ul>\r\n      <li *ngFor=\"let item of AdTextLinks\">\r\n        <h2> <a [href]=\"item.Target_Url\" target=\"_blank\"> {{item.Name}}</a></h2>\r\n      </li>\r\n    </ul>\r\n    <div class=\"embed-responsive embed-responsive-16by9\">\r\n      <iframe class=\"embed-responsive-item\" src=\"https://www.youtube.com/embed/WynX1gM7JT4\" frameborder=\"1\"\r\n        allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\r\n    </div>\r\n\r\n\r\n  </div>\r\n</form>\r\n\r\n\r\n\r\n<ngx-spinner bdColor=\"rgba(51,51,51,0.8)\" size=\"medium\" color=\"#fff\" type=\"ball-scale-multiple\">\r\n  <p style=\"font-size: 20px; color: white\">處理中...</p>\r\n</ngx-spinner>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<span> <img src='../assets/Photos/tealogo.jpg' width=20% height=20% /></span>\r\n<p></p>\r\n\r\n\r\n<carousel>\r\n  <slide *ngFor=\"let item of AdImages\" class=\"animated fadeIn\">\r\n    <a [href]=\"item.Target_Url\" target=\"_blank\">\r\n\r\n      <img [src]=\"item.Image_Url\" alt=\"Pages\" style=\"display: block; width: 100%;\">\r\n      <div class=\"carousel-caption d-none d-md-block\" style=\"color: black;\">\r\n        <h3>{{item.Name}}</h3>\r\n        <p>{{item.Comment}}</p>\r\n      </div>\r\n\r\n    </a>\r\n  </slide>\r\n</carousel>\r\n<p></p>\r\n<form>\r\n    <div *ngIf=\"IsManager\">\r\n           <button type=\"button\" class=\"btn btn-success\" onclick=\"location.href='#/clientlist';\">返回列表</button>\r\n           <p></p>\r\n   </div>\r\n\r\n  <div class=\"form-group\">\r\n        <table class=\"table table-bordered table-striped\">\r\n                <tbody>\r\n\r\n                    <tr>\r\n\r\n                        <td>\r\n                            客戶編號:\r\n                        </td>\r\n                        <TD>\r\n                                {{Entity.ClientId}}\r\n                        </TD>\r\n                    </tr>\r\n                    <tr>\r\n                        <td>\r\n                               客戶名稱:\r\n                        </td>\r\n                        <td>\r\n                            <b><h1 class=\"h4\">{{Entity.ClientName}} </h1></b>\r\n                        </td>\r\n                    </tr>\r\n                    <tr>\r\n                        <td>\r\n                            地址:\r\n                        </td>\r\n                        <td>\r\n                                {{Entity.Address}}\r\n                        </td>\r\n                    </tr>\r\n                    <tr>\r\n                        <td>\r\n                            電話:\r\n                        </td>\r\n                        <td>\r\n                            {{Entity.Phone}}\r\n                        </td>\r\n                </tbody>\r\n        </table>\r\n        <div>\r\n          <table class=\"table table-bordered table-striped table-hover\">\r\n            <tr>\r\n              <th>\r\n                倉儲管理費\r\n              </th>\r\n              <th>\r\n                上次付費日期\r\n              </th>\r\n              <th>\r\n                下次付費日期\r\n              </th>\r\n              <th>\r\n                備註\r\n              </th>\r\n            </tr>\r\n            <tr>\r\n              <td>{{paymentInfo.Info.TotalFee}}</td>\r\n              <td>{{paymentInfo.Info.LastPaymentDate}}</td>\r\n              <td>{{paymentInfo.Info.NextPaymentDate}}</td>\r\n              <td>{{paymentInfo.Info.Comment}}</td>\r\n            </tr>\r\n            <tr>\r\n              <td colspan=\"4\">\r\n                <table>\r\n                  <tbody>\r\n                    <tr *ngFor = 'let item of paymentInfo.InfoHistory; let x = index  ' >\r\n                      <td>\r\n                        {{item.Date}}\r\n                      </td>\r\n                      <td>\r\n                        {{item.Item}}\r\n                      </td>\r\n                      <td>\r\n                        {{item.PaymentType}}\r\n                      </td>\r\n                      <td>\r\n                        {{item.Amount}}\r\n                      </td>\r\n                      <td>\r\n                        {{item.Comment}}\r\n                      </td>\r\n                    </tr>\r\n                  </tbody>\r\n\r\n                </table>\r\n              </td>\r\n            </tr>\r\n          </table>\r\n        </div>\r\n        <div *ngIf=\"IsManager\">\r\n            <table class=\"table table-bordered table-striped table-hover\">\r\n                <tr>\r\n                    <th>\r\n                        序號\r\n                    </th>\r\n                    <th>\r\n                       產品編號\r\n                    </th>\r\n                    <th>\r\n                        產品名稱\r\n                    </th>\r\n                    <th>\r\n                        入庫數量\r\n                    </th>\r\n                    <th>\r\n                        單位\r\n                    </th>\r\n                    <th>\r\n                        出庫數量\r\n                    </th>\r\n                    <th>\r\n                        庫存量\r\n                  </th>\r\n                </tr>\r\n\r\n\r\n                    <tbody>\r\n                        <tr *ngFor = 'let item of Entity.Inventories; let x = index  ' >\r\n                            <td>\r\n                                {{ x  + 1 }}\r\n                            </td>\r\n                            <td>\r\n                                {{item.ProductId}}\r\n                            </td>\r\n                            <td>\r\n                                {{ item.ProductName}}\r\n                            </td>\r\n                            <td>{{ item.Stock }}</td>\r\n\r\n                            <td>\r\n                                {{ item.Unit }}\r\n                            </td>\r\n                            <td>\r\n                                {{ item.Return}}\r\n                            </td>\r\n                            <td>\r\n                                {{ item.NotReturn}}\r\n                            </td>\r\n\r\n                        </tr>\r\n                    </tbody>\r\n                    <tfoot>\r\n                            <tr>\r\n                              <td>總計</td>\r\n                              <td>\r\n\r\n                                </td>\r\n                                <td>\r\n\r\n                                </td>\r\n                                <td>\r\n                                    {{ stock_sum }}\r\n\r\n                                </td>\r\n\r\n                                <td>\r\n\r\n                                </td>\r\n                                <td>\r\n                                    {{ return_sum}}\r\n                                </td>\r\n                                <td>\r\n                                    {{ notreturn_sum }}\r\n                                </td>\r\n                            </tr>\r\n                    </tfoot>\r\n\r\n            </table>\r\n        </div>\r\n        <div *ngIf=\"!IsManager\">\r\n            <table class=\"table table-bordered table-striped table-hover\">\r\n                <tr>\r\n                        <th>\r\n                                序號\r\n                            </th>\r\n                            <th>\r\n                               產品編號\r\n                            </th>\r\n                            <th>\r\n                                產品名稱\r\n                            </th>\r\n                            <th>\r\n                                入庫數量\r\n                            </th>\r\n                            <th>\r\n                                單位\r\n                            </th>\r\n                            <th>\r\n                                出庫數量\r\n                            </th>\r\n                            <th>\r\n                                庫存量\r\n                          </th>\r\n                </tr>\r\n\r\n\r\n                    <tbody>\r\n                        <tr *ngFor = 'let item of userInvertories; let x = index;' >\r\n                            <td>\r\n                                {{ x  + 1 }}\r\n                            </td>\r\n                            <td>\r\n                                {{item.ProductId}}\r\n                            </td>\r\n                            <td>\r\n                                {{ item.ProductName}}\r\n                            </td>\r\n                            <td>{{ item.Stock }}</td>\r\n\r\n                            <td>\r\n                                {{ item.Unit }}\r\n                            </td>\r\n                            <td>\r\n                                {{ item.Return}}\r\n                            </td>\r\n                            <td>\r\n                                {{ item.NotReturn}}\r\n                            </td>\r\n\r\n                        </tr>\r\n                    </tbody>\r\n                    <tfoot>\r\n                            <tr>\r\n                              <td>總計</td>\r\n                              <td>\r\n\r\n                                </td>\r\n                                <td>\r\n\r\n                                </td>\r\n                                <td>\r\n                                    {{ stock_sum }}\r\n\r\n                                </td>\r\n\r\n                                <td>\r\n\r\n                                </td>\r\n                                <td>\r\n                                    {{ return_sum}}\r\n                                </td>\r\n                                <td>\r\n                                    {{ notreturn_sum }}\r\n                                </td>\r\n                            </tr>\r\n                          </tfoot>\r\n\r\n            </table>\r\n        </div>\r\n\r\n\r\n\r\n    <div *ngIf=\"IsManager\">\r\n      <p></p>\r\n      <button type=\"button\" class=\"btn btn-success\" onclick=\"location.href='#/clientlist';\">返回列表</button>\r\n      <p></p>\r\n    </div>\r\n\r\n        <h2>近六月溫濕度資料表</h2>\r\n        <carousel  interval=\"0\">\r\n                <slide *ngFor=\"let item of images\">\r\n                  <img [src]=\"item.ImageUrl\" alt=\"Pages\" style=\"display: block; width: 100%;\">\r\n                  <div class=\"carousel-caption d-none d-md-block\">\r\n                  </div>\r\n                </slide>\r\n        </carousel>\r\n\r\n        <div *ngIf=\"IsManager\">\r\n            <p></p>\r\n                <button type=\"button\" class=\"btn btn-success\" onclick=\"location.href='#/clientlist';\">返回列表</button>\r\n                <p></p>\r\n        </div>\r\n\r\n        <hr>\r\n\r\n\r\n    <ul>\r\n      <li *ngFor=\"let item of AdTextLinks\">\r\n        <h2> <a [href]=\"item.Target_Url\" target=\"_blank\"> {{item.Name}}</a></h2>\r\n      </li>\r\n    </ul>\r\n    <div class=\"embed-responsive embed-responsive-16by9\">\r\n      <iframe class=\"embed-responsive-item\" src=\"https://www.youtube.com/embed/WynX1gM7JT4\" frameborder=\"1\"\r\n        allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\r\n    </div>\r\n\r\n\r\n  </div>\r\n</form>\r\n\r\n\r\n\r\n<ngx-spinner bdColor=\"rgba(51,51,51,0.8)\" size=\"medium\" color=\"#fff\" type=\"ball-scale-multiple\">\r\n  <p style=\"font-size: 20px; color: white\">處理中...</p>\r\n</ngx-spinner>\r\n");
 
 /***/ }),
 
@@ -2769,7 +2769,7 @@ var BusinesshourmodalComponent = /** @class */ (function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2J1c2luZXNzY2VudGVyL2xvZ2luL2xvZ2luLmNvbXBvbmVudC5jc3MifQ== */");
+/* harmony default export */ __webpack_exports__["default"] = (".loginBtn{\r\n  box-sizing: border-box;\r\n  position: relative;\r\n\r\n  margin: 0.2em;\r\n  padding: 0 15px 0 46px;\r\n  border: none;\r\n  text-align: left;\r\n  line-height: 34px;\r\n  white-space: nowrap;\r\n  border-radius: 0.2em;\r\n  font-size: 16px;\r\n  color: #FFF;\r\n}\r\n.loginBtn:before {\r\n  content: \"\";\r\n  box-sizing: border-box;\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  width: 34px;\r\n  height: 100%;\r\n}\r\n.loginBtn:focus {\r\n  outline: none;\r\n}\r\n.loginBtn:active {\r\n  box-shadow: inset 0 0 0 32px rgba(0,0,0,0.1);\r\n}\r\n.loginBtn--google {\r\n\r\n  background: #DD4B39;\r\n}\r\n.loginBtn--google:before {\r\n  border-right: #BB3F30 1px solid;\r\n  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_google.png') 6px 6px no-repeat;\r\n}\r\n.loginBtn--google:hover, .loginBtn--google:focus {\r\n  background: #E74B37;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYnVzaW5lc3NjZW50ZXIvbG9naW4vbG9naW4uY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLHNCQUFzQjtFQUN0QixrQkFBa0I7O0VBRWxCLGFBQWE7RUFDYixzQkFBc0I7RUFDdEIsWUFBWTtFQUNaLGdCQUFnQjtFQUNoQixpQkFBaUI7RUFDakIsbUJBQW1CO0VBQ25CLG9CQUFvQjtFQUNwQixlQUFlO0VBQ2YsV0FBVztBQUNiO0FBQ0E7RUFDRSxXQUFXO0VBQ1gsc0JBQXNCO0VBQ3RCLGtCQUFrQjtFQUNsQixNQUFNO0VBQ04sT0FBTztFQUNQLFdBQVc7RUFDWCxZQUFZO0FBQ2Q7QUFDQTtFQUNFLGFBQWE7QUFDZjtBQUNBO0VBQ0UsNENBQTRDO0FBQzlDO0FBRUE7O0VBRUUsbUJBQW1CO0FBQ3JCO0FBQ0E7RUFDRSwrQkFBK0I7RUFDL0IsdUdBQXVHO0FBQ3pHO0FBQ0E7RUFDRSxtQkFBbUI7QUFDckIiLCJmaWxlIjoic3JjL2FwcC9idXNpbmVzc2NlbnRlci9sb2dpbi9sb2dpbi5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmxvZ2luQnRue1xyXG4gIGJveC1zaXppbmc6IGJvcmRlci1ib3g7XHJcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG5cclxuICBtYXJnaW46IDAuMmVtO1xyXG4gIHBhZGRpbmc6IDAgMTVweCAwIDQ2cHg7XHJcbiAgYm9yZGVyOiBub25lO1xyXG4gIHRleHQtYWxpZ246IGxlZnQ7XHJcbiAgbGluZS1oZWlnaHQ6IDM0cHg7XHJcbiAgd2hpdGUtc3BhY2U6IG5vd3JhcDtcclxuICBib3JkZXItcmFkaXVzOiAwLjJlbTtcclxuICBmb250LXNpemU6IDE2cHg7XHJcbiAgY29sb3I6ICNGRkY7XHJcbn1cclxuLmxvZ2luQnRuOmJlZm9yZSB7XHJcbiAgY29udGVudDogXCJcIjtcclxuICBib3gtc2l6aW5nOiBib3JkZXItYm94O1xyXG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICB0b3A6IDA7XHJcbiAgbGVmdDogMDtcclxuICB3aWR0aDogMzRweDtcclxuICBoZWlnaHQ6IDEwMCU7XHJcbn1cclxuLmxvZ2luQnRuOmZvY3VzIHtcclxuICBvdXRsaW5lOiBub25lO1xyXG59XHJcbi5sb2dpbkJ0bjphY3RpdmUge1xyXG4gIGJveC1zaGFkb3c6IGluc2V0IDAgMCAwIDMycHggcmdiYSgwLDAsMCwwLjEpO1xyXG59XHJcblxyXG4ubG9naW5CdG4tLWdvb2dsZSB7XHJcblxyXG4gIGJhY2tncm91bmQ6ICNERDRCMzk7XHJcbn1cclxuLmxvZ2luQnRuLS1nb29nbGU6YmVmb3JlIHtcclxuICBib3JkZXItcmlnaHQ6ICNCQjNGMzAgMXB4IHNvbGlkO1xyXG4gIGJhY2tncm91bmQ6IHVybCgnaHR0cHM6Ly9zMy11cy13ZXN0LTIuYW1hem9uYXdzLmNvbS9zLmNkcG4uaW8vMTQwODIvaWNvbl9nb29nbGUucG5nJykgNnB4IDZweCBuby1yZXBlYXQ7XHJcbn1cclxuLmxvZ2luQnRuLS1nb29nbGU6aG92ZXIsIC5sb2dpbkJ0bi0tZ29vZ2xlOmZvY3VzIHtcclxuICBiYWNrZ3JvdW5kOiAjRTc0QjM3O1xyXG59XHJcbiJdfQ== */");
 
 /***/ }),
 
@@ -2784,6 +2784,9 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginComponent", function() { return LoginComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _service_bcservice_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../service/bcservice.service */ "./src/app/businesscenter/service/bcservice.service.ts");
+/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ngx-spinner */ "./node_modules/ngx-spinner/fesm5/ngx-spinner.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2797,13 +2800,22 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
   return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
+
+
+
 var LoginComponent = /** @class */ (function () {
-    function LoginComponent() {
+    function LoginComponent(bcservice, spinner, router, ngzone) {
+        this.bcservice = bcservice;
+        this.spinner = spinner;
+        this.router = router;
+        this.ngzone = ngzone;
     }
     LoginComponent.prototype.ngOnInit = function () {
+        this.spinner.hide();
         this.googleSDK();
     };
     LoginComponent.prototype.prepareLoginButton = function () {
+        var _this = this;
         this.auth2.attachClickHandler(this.loginElement.nativeElement, {}, function (googleUser) {
             var profile = googleUser.getBasicProfile();
             console.log('Token || ' + googleUser.getAuthResponse().id_token);
@@ -2812,7 +2824,18 @@ var LoginComponent = /** @class */ (function () {
             console.log('Image URL: ' + profile.getImageUrl());
             console.log('Email: ' + profile.getEmail());
             // YOUR CODE HERE
-            alert(profile.getEmail());
+            // alert(profile.getEmail());
+            // this.spinner.show();
+            sessionStorage.setItem('loginEmail', profile.getEmail());
+            sessionStorage.setItem('loginName', profile.getName());
+            _this.bcservice.gettoken().subscribe(function (val) {
+                sessionStorage.setItem('token', val.toString());
+                // this.spinner.hide();
+                // do ngzone inside the subscription
+                _this.ngzone.run(function () {
+                    _this.router.navigate(['bccenter']);
+                });
+            });
         }, function (error) {
             alert(JSON.stringify(error, undefined, 2));
         });
@@ -2841,6 +2864,12 @@ var LoginComponent = /** @class */ (function () {
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'google-jssdk'));
     };
+    LoginComponent.ctorParameters = function () { return [
+        { type: _service_bcservice_service__WEBPACK_IMPORTED_MODULE_1__["BcserviceService"] },
+        { type: ngx_spinner__WEBPACK_IMPORTED_MODULE_2__["NgxSpinnerService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
+        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgZone"] }
+    ]; };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('loginRef', { static: true }),
         __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"])
@@ -2851,7 +2880,7 @@ var LoginComponent = /** @class */ (function () {
             template: __importDefault(__webpack_require__(/*! raw-loader!./login.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/businesscenter/login/login.component.html")).default,
             styles: [__importDefault(__webpack_require__(/*! ./login.component.css */ "./src/app/businesscenter/login/login.component.css")).default]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_service_bcservice_service__WEBPACK_IMPORTED_MODULE_1__["BcserviceService"], ngx_spinner__WEBPACK_IMPORTED_MODULE_2__["NgxSpinnerService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgZone"]])
     ], LoginComponent);
     return LoginComponent;
 }());
@@ -3075,6 +3104,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _model_Inhub__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../model/Inhub */ "./src/app/businesscenter/model/Inhub.ts");
 /* harmony import */ var util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! util */ "./node_modules/util/util.js");
 /* harmony import */ var util__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(util__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3091,9 +3121,11 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 
 
 
+
 var BcserviceService = /** @class */ (function () {
-    function BcserviceService(http) {
+    function BcserviceService(http, router) {
         this.http = http;
+        this.router = router;
         this.site = 'https://leecloud.azurewebsites.net/'; // URL to web api
         this.vendorurl = 'https://in-hub-dev.azurewebsites.net/vendor';
         this.userurl = 'https://in-hub-dev.azurewebsites.net/user';
@@ -3101,19 +3133,21 @@ var BcserviceService = /** @class */ (function () {
         this.url = 'api/businesscenterapi/';
         this.postImgurl = '/upload';
         this.logurl = this.site + 'api/logapi/';
-        this.gettoken();
     }
     BcserviceService.prototype.handleError = function (error) {
         console.error('An error occurred', error);
         return Promise.reject(error.message || error);
     };
     BcserviceService.prototype.gettoken = function () {
-        this.http.get(this.tokenurl, { responseType: 'text' }).subscribe(function (val) {
-            sessionStorage.setItem('token', val.toString());
-        });
+        return this.http.get(this.tokenurl, { responseType: 'text' });
     };
     BcserviceService.prototype.getHttpoption = function (isImage) {
         if (isImage === void 0) { isImage = false; }
+        if (Object(util__WEBPACK_IMPORTED_MODULE_3__["isNullOrUndefined"])(sessionStorage.getItem('token'))) {
+            alert('Session Expired or Unauthorized , 請登入');
+            this.router.navigate(['bclogin']);
+            return;
+        }
         var t = sessionStorage.getItem('token');
         if (isImage === true) {
             var headers_object = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
@@ -3136,14 +3170,20 @@ var BcserviceService = /** @class */ (function () {
         }
     };
     BcserviceService.prototype.getList = function () {
-        var url = this.vendorurl;
         if (Object(util__WEBPACK_IMPORTED_MODULE_3__["isNullOrUndefined"])(sessionStorage.getItem('token'))) {
-            alert('Session is expired, Please wait a min and then refresh .. ');
+            alert('Session Expired or Unauthorized , 請登入');
+            this.router.navigate(['bclogin']);
             return;
         }
+        var url = this.vendorurl;
         return this.http.get(url, this.getHttpoption());
     };
     BcserviceService.prototype.getUserList = function () {
+        if (Object(util__WEBPACK_IMPORTED_MODULE_3__["isNullOrUndefined"])(sessionStorage.getItem('token'))) {
+            alert('Session Expired or Unauthorized , 請登入');
+            this.router.navigate(['bclogin']);
+            return;
+        }
         var url = this.userurl;
         return this.http.get(url, this.getHttpoption());
     };
@@ -3221,13 +3261,14 @@ var BcserviceService = /** @class */ (function () {
         return this.http.delete(url, this.getHttpoption());
     };
     BcserviceService.ctorParameters = function () { return [
-        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"] }
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] }
     ]; };
     BcserviceService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
             providedIn: 'root'
         }),
-        __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
+        __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]])
     ], BcserviceService);
     return BcserviceService;
 }());
