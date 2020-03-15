@@ -113,7 +113,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n<span> <img src='../assets/Photos/inhublogo.png' width=20% height=20% /></span>\n<p></p>\n\n\n<div>\n  <div class=\"container mt-5\">\n    <h2>行動辦公室 App 後臺管理登入</h2>\n    <div class=\"row mt-5\">\n      <div class=\"col-md-4 mt-2 m-auto \">\n          <button class=\"loginBtn loginBtn--google\" #loginRef>\n              Login with Google\n            </button>\n      </div>\n\n\n    </div>\n  </div>\n</div>\n\n\n\n\n\n\n<ngx-spinner\n  bdColor=\"rgba(51,51,51,0.8)\"\n  size=\"medium\"\n  color=\"#fff\"\n  type=\"ball-scale-multiple\"\n>\n  <p style=\"font-size: 20px; color: white\">驗證中...</p>\n</ngx-spinner>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("\n<span> <img src='../assets/Photos/inhublogo.png' width=20% height=20% /></span>\n<p></p>\n\n<h3>\n  請用您的google 帳號登入, 如果資料庫管理員名單有符合您的Gmail 帳號, 則會登入成功\n</h3>\n<div>\n  <div class=\"container mt-5\">\n    <h2>行動辦公室 App 後臺管理登入</h2>\n    <div class=\"row mt-5\">\n      <div class=\"col-md-4 mt-2 m-auto \">\n          <button class=\"loginBtn loginBtn--google\" #loginRef>\n              Login with Google\n            </button>\n      </div>\n     </div>\n  </div>\n\n\n</div>\n\n\n\n\n\n\n\n<ngx-spinner\n  bdColor=\"rgba(51,51,51,0.8)\"\n  size=\"medium\"\n  color=\"#fff\"\n  type=\"ball-scale-multiple\"\n>\n  <p style=\"font-size: 20px; color: white\">驗證中...</p>\n</ngx-spinner>\n");
 
 /***/ }),
 
@@ -2787,6 +2787,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _service_bcservice_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../service/bcservice.service */ "./src/app/businesscenter/service/bcservice.service.ts");
 /* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ngx-spinner */ "./node_modules/ngx-spinner/fesm5/ngx-spinner.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _core_shared_service_authservice_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../../core/shared/service/authservice.service */ "./src/app/core/shared/service/authservice.service.ts");
+/* harmony import */ var _core_shared_model_user__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../core/shared/model/user */ "./src/app/core/shared/model/user.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2803,12 +2805,15 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 
 
 
+
+
 var LoginComponent = /** @class */ (function () {
-    function LoginComponent(bcservice, spinner, router, ngzone) {
+    function LoginComponent(bcservice, spinner, router, ngzone, service) {
         this.bcservice = bcservice;
         this.spinner = spinner;
         this.router = router;
         this.ngzone = ngzone;
+        this.service = service;
     }
     LoginComponent.prototype.ngOnInit = function () {
         this.spinner.hide();
@@ -2826,15 +2831,26 @@ var LoginComponent = /** @class */ (function () {
             // YOUR CODE HERE
             // alert(profile.getEmail());
             // this.spinner.show();
-            sessionStorage.setItem('loginEmail', profile.getEmail());
-            sessionStorage.setItem('loginName', profile.getName());
-            _this.bcservice.gettoken().subscribe(function (val) {
-                sessionStorage.setItem('token', val.toString());
-                // this.spinner.hide();
-                // do ngzone inside the subscription
-                _this.ngzone.run(function () {
-                    _this.router.navigate(['bccenter']);
+            var user = new _core_shared_model_user__WEBPACK_IMPORTED_MODULE_5__["AppUser"]();
+            var datestring = new Date().toLocaleString();
+            user.UserID = profile.getEmail();
+            user.Password = 'password';
+            user.Application = 'BcCenter';
+            user.LogInTime = datestring;
+            alert(user.UserID);
+            _this.service.authUser(user).subscribe(function (res) {
+                alert('歡迎管理員:' + res.Name + ' 您上次登入時間:' + res.LastLogInTime);
+                sessionStorage.setItem('loginEmail', profile.getEmail());
+                sessionStorage.setItem('loginName', profile.getName());
+                _this.bcservice.gettoken().subscribe(function (val) {
+                    // alert(val.toString());
+                    sessionStorage.setItem('token', val.toString());
+                    _this.ngzone.run(function () {
+                        _this.router.navigate(['bccenter']);
+                    });
                 });
+            }, function (error) {
+                alert('帳戶不是管理員 拒絕登入 或聯絡 Henry Lee 加入');
             });
         }, function (error) {
             alert(JSON.stringify(error, undefined, 2));
@@ -2868,7 +2884,8 @@ var LoginComponent = /** @class */ (function () {
         { type: _service_bcservice_service__WEBPACK_IMPORTED_MODULE_1__["BcserviceService"] },
         { type: ngx_spinner__WEBPACK_IMPORTED_MODULE_2__["NgxSpinnerService"] },
         { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgZone"] }
+        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgZone"] },
+        { type: _core_shared_service_authservice_service__WEBPACK_IMPORTED_MODULE_4__["AuthserviceService"] }
     ]; };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('loginRef', { static: true }),
@@ -2880,7 +2897,8 @@ var LoginComponent = /** @class */ (function () {
             template: __importDefault(__webpack_require__(/*! raw-loader!./login.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/businesscenter/login/login.component.html")).default,
             styles: [__importDefault(__webpack_require__(/*! ./login.component.css */ "./src/app/businesscenter/login/login.component.css")).default]
         }),
-        __metadata("design:paramtypes", [_service_bcservice_service__WEBPACK_IMPORTED_MODULE_1__["BcserviceService"], ngx_spinner__WEBPACK_IMPORTED_MODULE_2__["NgxSpinnerService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgZone"]])
+        __metadata("design:paramtypes", [_service_bcservice_service__WEBPACK_IMPORTED_MODULE_1__["BcserviceService"], ngx_spinner__WEBPACK_IMPORTED_MODULE_2__["NgxSpinnerService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgZone"], _core_shared_service_authservice_service__WEBPACK_IMPORTED_MODULE_4__["AuthserviceService"]])
     ], LoginComponent);
     return LoginComponent;
 }());
