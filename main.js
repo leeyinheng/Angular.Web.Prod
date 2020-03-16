@@ -2816,12 +2816,12 @@ var LoginComponent = /** @class */ (function () {
         this.service = service;
     }
     LoginComponent.prototype.ngOnInit = function () {
-        this.spinner.hide();
         this.googleSDK();
     };
     LoginComponent.prototype.prepareLoginButton = function () {
         var _this = this;
         this.auth2.attachClickHandler(this.loginElement.nativeElement, {}, function (googleUser) {
+            _this.ngzone.run(function () { _this.spinner.show(); });
             var profile = googleUser.getBasicProfile();
             console.log('Token || ' + googleUser.getAuthResponse().id_token);
             console.log('ID: ' + profile.getId());
@@ -2837,7 +2837,6 @@ var LoginComponent = /** @class */ (function () {
             user.Password = 'password';
             user.Application = 'BcCenter';
             user.LogInTime = datestring;
-            alert(user.UserID);
             _this.service.authUser(user).subscribe(function (res) {
                 alert('歡迎管理員:' + res.Name + ' 您上次登入時間:' + res.LastLogInTime);
                 sessionStorage.setItem('loginEmail', profile.getEmail());
@@ -2845,6 +2844,7 @@ var LoginComponent = /** @class */ (function () {
                 _this.bcservice.gettoken().subscribe(function (val) {
                     // alert(val.toString());
                     sessionStorage.setItem('token', val.toString());
+                    _this.spinner.hide();
                     _this.ngzone.run(function () {
                         _this.router.navigate(['bccenter']);
                     });
