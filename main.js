@@ -5147,9 +5147,9 @@ var PaymentformComponent = /** @class */ (function () {
         var entitystring = entity.year + '/' + entity.month + '/' + entity.day;
         this.Entity.Info.LastPaymentDate = entitystring;
         var jsDate = new Date(entity.year, entity.month - 1, entity.day);
-        var addmonth = (+jsDate.getMonth() + +1 + +this.Entity.Info.PaymentPeriod);
+        var addmonth = (+jsDate.getMonth() + +this.Entity.Info.PaymentPeriod);
         var nextpaymentdate = new Date(jsDate.setMonth(addmonth));
-        this.model2 = new _ng_bootstrap_ng_bootstrap___WEBPACK_IMPORTED_MODULE_6__["NgbDate"](nextpaymentdate.getFullYear(), nextpaymentdate.getMonth(), nextpaymentdate.getDate());
+        this.model2 = new _ng_bootstrap_ng_bootstrap___WEBPACK_IMPORTED_MODULE_6__["NgbDate"](nextpaymentdate.getFullYear(), nextpaymentdate.getMonth() + 1, nextpaymentdate.getDate());
         this.selectnextpaymentday(this.model2);
         this.changeState();
     };
