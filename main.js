@@ -338,6 +338,32 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/linepair/form/form.component.html":
+/*!*****************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/linepair/form/form.component.html ***!
+  \*****************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"home-banner\">\n  <div class=\"banner-container\">\n    <div class=\"banner-image\"></div>\n  </div>\n</div>\n\n<p></p>\n\n<div class=\"body-content\">\n\n    <mat-vertical-stepper  linear=true>\n\n      <mat-step [stepControl]=\"firstFormGroup\" label= \"基本資料\">\n        <form [formGroup]=\"firstFormGroup\">\n\n          <mat-card>\n            ID: {{Entity.Id}} <br>\n\n            <mat-form-field >\n              <mat-label>姓名</mat-label>\n              <input matInput type=\"string\"\n              [(ngModel)]='Entity.Name' required formControlName=\"firstCtrl\"\n              />\n            </mat-form-field>\n\n            <br>\n\n            <mat-form-field>\n              <mat-label>性別</mat-label>\n              <select matNativeControl [(ngModel)]=\"Entity.Gender\" formControlName=\"firstCtrl\" required>\n                <option value=\"男性\">男性</option>\n                <option value=\"女性\">女性</option>\n              </select>\n            </mat-form-field>\n\n            <br>\n\n            <mat-form-field class=\"example-full-width\">\n              <mat-label>生日 (選擇日期)</mat-label>\n              <input matInput [matDatepicker]=\"picker\" [(ngModel)]=\"Entity.Birthday\" formControlName=\"otherCtrl\">\n              <mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle>\n              <mat-datepicker touchUi #picker></mat-datepicker>\n            </mat-form-field>\n\n            <br>\n\n\n              <mat-label>身高(cm)</mat-label>\n              {{Entity.Height}} 公分\n              <mat-slider [(ngModel)]=\"Entity.Height\" formControlName=\"otherCtrl\"\n              thumbLabel\n              [displayWith]=\"formatLabel\"\n              tickInterval=\"2\"\n              min=\"140\"\n              max=\"210\"></mat-slider>\n\n              <br>\n\n              <mat-label>體重(kg)</mat-label>\n              {{Entity.Weight}} 公斤\n              <mat-slider [(ngModel)]=\"Entity.Weight\" formControlName=\"otherCtrl\"\n              thumbLabel\n              [displayWith]=\"formatLabel\"\n              tickInterval=\"2\"\n              min=\"40\"\n              max=\"160\"></mat-slider>\n\n          </mat-card>\n          <br>\n          <div>\n\n            <button mat-raised-button\tcolor=\"primary\" matStepperNext>下一步</button>\n\n          </div>\n\n        </form>\n\n\n\n      </mat-step>\n\n      <mat-step label= \"聯絡方式\" [stepControl]=\"secondFormGroup\">\n\n        <form [formGroup]=\"secondFormGroup\">\n\n          <mat-card>\n\n            <mat-form-field>\n              <mat-label>居住地</mat-label>\n              <div>\n                <select matNativeControl [(ngModel)]=\"Entity.City\" (change) = 'CheckInput()' formControlName=\"secondCtrl\"  required>\n\n                  <option value=\"台北市\">台北市</option>\n                  <option value=\"新北市\">新北市</option>\n                  <option value=\"新竹市\">新竹市</option>\n                  <option value=\"桃園市\">桃園市</option>\n                  <option value=\"台中市\">台中市</option>\n                  <option value=\"台南市\">台南市</option>\n                  <option value=\"高雄市\">高雄市</option>\n                  <option value=\"基隆市\">基隆市</option>\n                  <option value=\"嘉義市\">嘉義市</option>\n                  <option value=\"新竹縣\">新竹縣</option>\n                  <option value=\"苗栗縣\">苗栗縣</option>\n                  <option value=\"彰化縣\">彰化縣</option>\n                  <option value=\"南投縣\">南投縣</option>\n                  <option value=\"雲林縣\">雲林縣</option>\n                  <option value=\"嘉義縣\">嘉義縣</option>\n                  <option value=\"屏東縣\">屏東縣</option>\n                  <option value=\"宜蘭縣\">宜蘭縣</option>\n                  <option value=\"花蓮縣\">花蓮縣</option>\n                  <option value=\"台東縣\">台東縣</option>\n                  <option value=\"澎湖縣\">澎湖縣</option>\n                  <option value=\"中國大陸\">中國大陸</option>\n                  <option value=\"歐美地區\">歐美地區</option>\n                  <option value=\"其他\">其他</option>\n                </select>\n              </div>\n\n\n            </mat-form-field>\n\n            <div *ngIf=\"showInput\">\n              <input matInput type=\"string\"\n              [(ngModel)]='showInputVal' formControlName=\"secondCtrl\" placeholder=\"請手動輸入所在地\"\n              />\n            </div>\n\n            <br>\n\n            <mat-form-field>\n              <mat-label>手機號碼</mat-label>\n              <input matInput type=\"number\"\n              [(ngModel)]='Entity.Phone' required formControlName=\"secondCtrl\"\n              />\n            </mat-form-field>\n\n            <br>\n\n            <mat-form-field>\n              <mat-label>電子郵件</mat-label>\n              <input matInput type=\"email\"\n              [(ngModel)]='Entity.Email' placeholder=\"Ex. pat@example.com\" required formControlName=\"other2Ctrl\"\n              />\n            </mat-form-field>\n\n            <br>\n\n            <mat-form-field>\n              <mat-label>Line ID</mat-label>\n              <input matInput type=\"string\"\n              [(ngModel)]='Entity.LineId' required formControlName=\"other2Ctrl\"\n              />\n            </mat-form-field>\n\n            <br>\n\n          </mat-card>\n          <div>\n            <br>\n            <button mat-raised-button\tcolor=\"warn\" class=\"btn-space\"  mat-button matStepperPrevious>上一步</button>\n            <button mat-raised-button\tcolor=\"primary\"   mat-button matStepperNext>下一步</button>\n          </div>\n\n        </form>\n\n\n      </mat-step>\n\n      <mat-step label= \"職業學歷\" [stepControl]=\"thirdFormGroup\">\n\n        <form [formGroup]=\"thirdFormGroup\">\n\n          <mat-card>\n\n            <mat-form-field>\n              <mat-label>職業</mat-label>\n              <input matInput type=\"string\"\n              [(ngModel)]='Entity.Occuptation' required formControlName=\"other3Ctrl\"\n              />\n            </mat-form-field>\n\n            <br>\n\n            <mat-form-field>\n              <mat-label>學歷</mat-label>\n              <select matNativeControl [(ngModel)]=\"Entity.School\" formControlName=\"thirdCtrl\" required>\n                <option value=\"高中職\">高中職</option>\n                <option value=\"國內大學\">國內大學</option>\n                <option value=\"國外大學\">國外大學</option>\n                <option value=\"國內碩士\">國內碩士</option>\n                <option value=\"國外碩士\">國外碩士</option>\n                <option value=\"國內博士\">國內博士</option>\n                <option value=\"國外博士\">國外博士</option>\n              </select>\n            </mat-form-field>\n\n            <br>\n\n            <mat-form-field>\n              <mat-label>薪水區間(月薪)</mat-label>\n              <select matNativeControl [(ngModel)]=\"Entity.SalaryRange\" formControlName=\"thirdCtrl\" required>\n                <option value=\"1\">三萬元台幣以下</option>\n                <option value=\"2\">三萬到五萬台幣</option>\n                <option value=\"3\">五萬到十萬台幣</option>\n                <option value=\"4\">十萬台幣以上</option>\n              </select>\n            </mat-form-field>\n\n            <br>\n\n          </mat-card>\n          <br>\n          <div>\n            <button mat-raised-button\tcolor=\"warn\"  class=\"btn-space\" mat-button matStepperPrevious>上一步</button>\n            <button mat-raised-button\tcolor=\"primary\"    mat-button matStepperNext>下一步</button>\n          </div>\n\n        </form>\n\n\n      </mat-step>\n\n      <mat-step label= \"生活狀況\" >\n\n          <mat-card>\n\n            <mat-form-field>\n              <mat-label>婚姻狀況</mat-label>\n              <select matNativeControl [(ngModel)]=\"Entity.Married\">\n                <option value=\"單身\">單身</option>\n                <option value=\"二春\">二春</option>\n              </select>\n            </mat-form-field>\n\n            <br>\n\n            <mat-checkbox  [(ngModel)]=\"Entity.HasCar\">有車</mat-checkbox>\n\n\n            <br>\n\n            <mat-checkbox  [(ngModel)]=\"Entity.HasHouse\">有房</mat-checkbox>\n\n\n            <br>\n\n\n            <mat-form-field style=\"width: 70%;\">\n              <mat-label>自我簡介</mat-label>\n              <textarea matInput [(ngModel)]=\"Entity.Intro\" placeholder=\"多告訴一點未來的對象關於您自己!\"></textarea>\n            </mat-form-field>\n\n\n          </mat-card>\n          <br>\n          <div>\n            <button mat-raised-button\tcolor=\"warn\" class=\"btn-space\"  mat-button matStepperPrevious>上一步</button>\n            <button mat-raised-button\tcolor=\"primary\"    mat-button matStepperNext>下一步</button>\n          </div>\n\n      </mat-step>\n\n      <mat-step label= \"上傳相片\" >\n\n        <mat-card>\n\n          <div class=\"center\">\n            <ngx-file-drop dropZoneLabel=\"Drop files here\" (onFileDrop)=\"dropped($event)\"\n            (onFileOver)=\"fileOver($event)\" (onFileLeave)=\"fileLeave($event)\">\n                <ng-template ngx-file-drop-content-tmp let-openFileSelector=\"openFileSelector\">\n                  拖曳或是選擇要上傳的圖片\n                  <button type=\"button\" (click)=\"openFileSelector()\">選擇相片</button>\n                </ng-template>\n            </ngx-file-drop>\n\n          </div>\n\n          <div >\n            <img src='{{Entity.ImgLink}}'   class=\"img-thumbnail\" >\n          </div>\n\n        </mat-card>\n        <br>\n        <div>\n          <button mat-raised-button\tcolor=\"warn\"  class=\"btn-space\" mat-button matStepperPrevious>上一步</button>\n          <button mat-raised-button\tcolor=\"primary\"    mat-button matStepperNext>下一步</button>\n        </div>\n\n      </mat-step>\n\n\n      <mat-step label= \"確認上傳\" >\n        <div>\n          <button mat-raised-button\tcolor=\"warn\"   mat-button matStepperPrevious class=\"btn-space\">上一步</button>\n        </div>\n        <br>\n        <mat-card>\n          <mat-card-header>\n            <mat-card-title>{{Entity.Name}}</mat-card-title>\n            <mat-card-subtitle>生日: {{Entity.Birthday}} </mat-card-subtitle>\n            <mat-card-subtitle>{{Entity.Gender}} 身高: {{Entity.Height}} 公分 體重: {{Entity.Weight}} 公斤</mat-card-subtitle>\n          </mat-card-header>\n          <img mat-card-image src=\"{{Entity.ImgLink}}\" alt=\"Photo\" style=\"width: 50%;\">\n          <mat-card-content>\n            <p>\n             Hello~ LinePair 很高興認識您, 請確認以下資料是否正確 <b>\n\n             </b> 您的電話是 {{Entity.Phone}} , 電子郵件是 {{Entity.Email}} , 居住在 {{Entity.City}} , 職業是 {{Entity.Occuptation}} ,\n             目前狀態是 {{Entity.Married}} , 自我介紹是 <b></b> {{Entity.Intro}}\n            </p>\n          </mat-card-content>\n          <mat-card-actions>\n\n            <button mat-fab (click)=\"SaveEntity()\"><mat-icon>favorite</mat-icon> 上傳</button>\n          </mat-card-actions>\n        </mat-card>\n\n      </mat-step>\n\n\n    </mat-vertical-stepper>\n\n\n\n\n</div>\n\n\n\n\n\n\n\n<ngx-spinner\nbdColor=\"rgba(51,51,51,0.8)\"\nsize=\"medium\"\ncolor=\"#fff\"\ntype=\"ball-scale-multiple\"\n>\n<p style=\"font-size: 20px; color: white\">處理中...</p>\n</ngx-spinner>\n\n\n\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/linepair/list/list.component.html":
+/*!*****************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/linepair/list/list.component.html ***!
+  \*****************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<p>LINE PAIR ROCKS!</p>\n\n您的幸福就交給我們拉 !\n");
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/menu.component.html":
 /*!***************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/menu.component.html ***!
@@ -954,7 +980,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _clientinventory_clientinventory_module__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./clientinventory/clientinventory.module */ "./src/app/clientinventory/clientinventory.module.ts");
 /* harmony import */ var _health_health_module__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./health/health.module */ "./src/app/health/health.module.ts");
 /* harmony import */ var igniteui_angular__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! igniteui-angular */ "./node_modules/igniteui-angular/fesm5/igniteui-angular.js");
-/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _material_module__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./material-module */ "./src/app/material-module.ts");
+/* harmony import */ var _linepair_linepair_module__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./linepair/linepair.module */ "./src/app/linepair/linepair.module.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1000,6 +1027,7 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 
 
 
+
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -1007,12 +1035,13 @@ var AppModule = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
-                _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClientModule"],
                 _angular_http__WEBPACK_IMPORTED_MODULE_4__["HttpModule"],
                 ngx_pagination__WEBPACK_IMPORTED_MODULE_22__["NgxPaginationModule"],
                 _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_23__["BrowserAnimationsModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_30__["MatCardModule"], _angular_material__WEBPACK_IMPORTED_MODULE_30__["MatIconModule"], _angular_material__WEBPACK_IMPORTED_MODULE_30__["MatToolbarModule"], _angular_material__WEBPACK_IMPORTED_MODULE_30__["MatButtonModule"], _angular_material__WEBPACK_IMPORTED_MODULE_30__["MatFormFieldModule"], _angular_material__WEBPACK_IMPORTED_MODULE_30__["MatInputModule"], _angular_material__WEBPACK_IMPORTED_MODULE_30__["MatCheckboxModule"],
+                _material_module__WEBPACK_IMPORTED_MODULE_30__["MaterialModule"],
+                _linepair_linepair_module__WEBPACK_IMPORTED_MODULE_31__["LinepairModule"],
                 _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_24__["NgbModule"],
                 _core_shared_shared_module__WEBPACK_IMPORTED_MODULE_7__["SharedModule"].forRoot(),
                 ngx_bootstrap__WEBPACK_IMPORTED_MODULE_6__["ModalModule"].forRoot(),
@@ -6937,6 +6966,584 @@ var HealthserviceService = /** @class */ (function () {
     return HealthserviceService;
 }());
 
+
+
+/***/ }),
+
+/***/ "./src/app/linepair/form/form.component.css":
+/*!**************************************************!*\
+  !*** ./src/app/linepair/form/form.component.css ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (".home-banner {\r\n  display: -webkit-box;\r\n  display: flex;\r\n  -webkit-box-orient: vertical;\r\n  -webkit-box-direction: normal;\r\n          flex-direction: column;\r\n  -webkit-box-pack: center;\r\n          justify-content: center;\r\n  text-align: center;\r\n}\r\n\r\n.banner-image {\r\n  width: 100%;\r\n  height: 100%;\r\n  min-height: 150px; /* Added to show image */\r\n  background-image: url('LinePairLogo.jpg');\r\n  background-position: center;\r\n  background-repeat: no-repeat;\r\n  display: inline-block;\r\n}\r\n\r\nmat-slider {\r\n  width: 300px;\r\n}\r\n\r\n.btn-space {\r\n  margin-right: 5px;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbGluZXBhaXIvZm9ybS9mb3JtLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxvQkFBYTtFQUFiLGFBQWE7RUFDYiw0QkFBc0I7RUFBdEIsNkJBQXNCO1VBQXRCLHNCQUFzQjtFQUN0Qix3QkFBdUI7VUFBdkIsdUJBQXVCO0VBQ3ZCLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLFdBQVc7RUFDWCxZQUFZO0VBQ1osaUJBQWlCLEVBQUUsd0JBQXdCO0VBQzNDLHlDQUFrRTtFQUNsRSwyQkFBMkI7RUFDM0IsNEJBQTRCO0VBQzVCLHFCQUFxQjtBQUN2Qjs7QUFHQTtFQUNFLFlBQVk7QUFDZDs7QUFHQTtFQUNFLGlCQUFpQjtBQUNuQiIsImZpbGUiOiJzcmMvYXBwL2xpbmVwYWlyL2Zvcm0vZm9ybS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmhvbWUtYmFubmVyIHtcclxuICBkaXNwbGF5OiBmbGV4O1xyXG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XHJcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG59XHJcblxyXG4uYmFubmVyLWltYWdlIHtcclxuICB3aWR0aDogMTAwJTtcclxuICBoZWlnaHQ6IDEwMCU7XHJcbiAgbWluLWhlaWdodDogMTUwcHg7IC8qIEFkZGVkIHRvIHNob3cgaW1hZ2UgKi9cclxuICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoJy4vLi4vLi4vLi4vYXNzZXRzL1Bob3Rvcy9MaW5lUGFpckxvZ28uanBnJyk7XHJcbiAgYmFja2dyb3VuZC1wb3NpdGlvbjogY2VudGVyO1xyXG4gIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XHJcbiAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG59XHJcblxyXG5cclxubWF0LXNsaWRlciB7XHJcbiAgd2lkdGg6IDMwMHB4O1xyXG59XHJcblxyXG5cclxuLmJ0bi1zcGFjZSB7XHJcbiAgbWFyZ2luLXJpZ2h0OiA1cHg7XHJcbn1cclxuIl19 */");
+
+/***/ }),
+
+/***/ "./src/app/linepair/form/form.component.ts":
+/*!*************************************************!*\
+  !*** ./src/app/linepair/form/form.component.ts ***!
+  \*************************************************/
+/*! exports provided: FormComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FormComponent", function() { return FormComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _model_user__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../model/user */ "./src/app/linepair/model/user.ts");
+/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ngx-spinner */ "./node_modules/ngx-spinner/fesm5/ngx-spinner.js");
+/* harmony import */ var _service_linepairservice_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../service/linepairservice.service */ "./src/app/linepair/service/linepairservice.service.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _app_core_shared_service_postservice_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../app/core/shared//service/postservice.service */ "./src/app/core/shared/service/postservice.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+
+
+
+
+var FormComponent = /** @class */ (function () {
+    function FormComponent(service, spinner, _formBuilder, postservice) {
+        this.service = service;
+        this.spinner = spinner;
+        this._formBuilder = _formBuilder;
+        this.postservice = postservice;
+        this.showInput = false;
+        this.showInputVal = '';
+        this._entity = new _model_user__WEBPACK_IMPORTED_MODULE_1__["LinePairUser"]();
+        this.files = [];
+    }
+    Object.defineProperty(FormComponent.prototype, "Entity", {
+        get: function () {
+            return this._entity;
+        },
+        set: function (value) {
+            this._entity = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    FormComponent.prototype.ngOnInit = function () {
+        this.firstFormGroup = this._formBuilder.group({
+            firstCtrl: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required],
+            otherCtrl: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].nullValidator]
+        });
+        this.secondFormGroup = this._formBuilder.group({
+            secondCtrl: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required],
+            other2Ctrl: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].nullValidator]
+        });
+        this.thirdFormGroup = this._formBuilder.group({
+            thirdCtrl: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required],
+            other3Ctrl: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].nullValidator]
+        });
+        this.forthFormGroup = this._formBuilder.group({
+            forthCtrl: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required],
+            other4Ctrl: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].nullValidator]
+        });
+        this.AddNew();
+    };
+    FormComponent.prototype.CheckInput = function () {
+        if (this.Entity.City === '其他') {
+            this.showInput = true;
+        }
+        else {
+            this.showInput = false;
+        }
+    };
+    FormComponent.prototype.AddNew = function () {
+        var newEntity = new _model_user__WEBPACK_IMPORTED_MODULE_1__["LinePairUser"]();
+        var now = new Date;
+        var utc_timestamp = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate(), now.getHours(), now.getMinutes(), now.getSeconds(), now.getMilliseconds());
+        newEntity.Id = 'LinePair' + '_' + utc_timestamp.toString();
+        newEntity.ImgLink = 'https://leecloud.blob.core.windows.net/image/profile.png';
+        this.Entity = newEntity;
+    };
+    FormComponent.prototype.SaveEntity = function () {
+        var _this = this;
+        this.spinner.show();
+        if (this.showInput) {
+            this.Entity.City = this.showInputVal;
+        }
+        this.service.postEntity(this.Entity).subscribe(function (res) {
+            alert('上傳成功!');
+            _this.spinner.hide();
+            window.open('#/linepairlist');
+        }, function (err) {
+            alert(err);
+            _this.spinner.hide();
+        });
+    };
+    FormComponent.prototype.dropped = function (files) {
+        var _this = this;
+        this.files = files;
+        var _loop_1 = function (droppedFile) {
+            // Is it a file?
+            if (droppedFile.fileEntry.isFile) {
+                var fileEntry = droppedFile.fileEntry;
+                fileEntry.file(function (file) {
+                    // Here you can access the real file
+                    console.log(droppedFile.relativePath, file);
+                    // You could upload it like this:
+                    var formData = new FormData();
+                    formData.append('image', file, droppedFile.relativePath);
+                    _this.spinner.show();
+                    _this.postservice.postImage(formData).subscribe(function (val) {
+                        _this.spinner.hide();
+                        _this.Entity.ImgLink = val;
+                    }, function (err) {
+                        alert('upload image error');
+                        _this.spinner.hide();
+                    });
+                });
+            }
+            else {
+                // It was a directory (empty directories are added, otherwise only files)
+                var fileEntry = droppedFile.fileEntry;
+                console.log(droppedFile.relativePath, fileEntry);
+            }
+        };
+        for (var _i = 0, files_1 = files; _i < files_1.length; _i++) {
+            var droppedFile = files_1[_i];
+            _loop_1(droppedFile);
+        }
+    };
+    FormComponent.prototype.fileOver = function (event) {
+        console.log(event);
+    };
+    FormComponent.prototype.fileLeave = function (event) {
+        console.log(event);
+    };
+    FormComponent.ctorParameters = function () { return [
+        { type: _service_linepairservice_service__WEBPACK_IMPORTED_MODULE_3__["LinepairserviceService"] },
+        { type: ngx_spinner__WEBPACK_IMPORTED_MODULE_2__["NgxSpinnerService"] },
+        { type: _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"] },
+        { type: _app_core_shared_service_postservice_service__WEBPACK_IMPORTED_MODULE_5__["PostFileService"] }
+    ]; };
+    FormComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-form',
+            template: __importDefault(__webpack_require__(/*! raw-loader!./form.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/linepair/form/form.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./form.component.css */ "./src/app/linepair/form/form.component.css")).default]
+        }),
+        __metadata("design:paramtypes", [_service_linepairservice_service__WEBPACK_IMPORTED_MODULE_3__["LinepairserviceService"],
+            ngx_spinner__WEBPACK_IMPORTED_MODULE_2__["NgxSpinnerService"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"],
+            _app_core_shared_service_postservice_service__WEBPACK_IMPORTED_MODULE_5__["PostFileService"]])
+    ], FormComponent);
+    return FormComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/linepair/linepair.module.ts":
+/*!*********************************************!*\
+  !*** ./src/app/linepair/linepair.module.ts ***!
+  \*********************************************/
+/*! exports provided: LinepairModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LinepairModule", function() { return LinepairModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _list_list_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./list/list.component */ "./src/app/linepair/list/list.component.ts");
+/* harmony import */ var _form_form_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./form/form.component */ "./src/app/linepair/form/form.component.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ngx-spinner */ "./node_modules/ngx-spinner/fesm5/ngx-spinner.js");
+/* harmony import */ var _material_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../material-module */ "./src/app/material-module.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _app_core_shared_shared_module__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./../../app/core/shared/shared.module */ "./src/app/core/shared/shared.module.ts");
+/* harmony import */ var ngx_file_drop__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ngx-file-drop */ "./node_modules/ngx-file-drop/fesm5/ngx-file-drop.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+
+
+
+
+
+
+
+
+var LinepairModule = /** @class */ (function () {
+    function LinepairModule() {
+    }
+    LinepairModule = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
+            declarations: [_list_list_component__WEBPACK_IMPORTED_MODULE_2__["ListComponent"], _form_form_component__WEBPACK_IMPORTED_MODULE_3__["FormComponent"]],
+            imports: [
+                _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_7__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_7__["ReactiveFormsModule"],
+                ngx_spinner__WEBPACK_IMPORTED_MODULE_5__["NgxSpinnerModule"],
+                _material_module__WEBPACK_IMPORTED_MODULE_6__["MaterialModule"],
+                _app_core_shared_shared_module__WEBPACK_IMPORTED_MODULE_8__["SharedModule"],
+                ngx_file_drop__WEBPACK_IMPORTED_MODULE_9__["NgxFileDropModule"],
+                _angular_router__WEBPACK_IMPORTED_MODULE_4__["RouterModule"].forChild([
+                    {
+                        path: 'linepairlist', component: _list_list_component__WEBPACK_IMPORTED_MODULE_2__["ListComponent"]
+                    },
+                    {
+                        path: 'linepair', component: _form_form_component__WEBPACK_IMPORTED_MODULE_3__["FormComponent"]
+                    }
+                ])
+            ]
+        })
+    ], LinepairModule);
+    return LinepairModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/linepair/list/list.component.css":
+/*!**************************************************!*\
+  !*** ./src/app/linepair/list/list.component.css ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2xpbmVwYWlyL2xpc3QvbGlzdC5jb21wb25lbnQuY3NzIn0= */");
+
+/***/ }),
+
+/***/ "./src/app/linepair/list/list.component.ts":
+/*!*************************************************!*\
+  !*** ./src/app/linepair/list/list.component.ts ***!
+  \*************************************************/
+/*! exports provided: ListComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ListComponent", function() { return ListComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+var ListComponent = /** @class */ (function () {
+    function ListComponent() {
+    }
+    ListComponent.prototype.ngOnInit = function () {
+    };
+    ListComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-list',
+            template: __importDefault(__webpack_require__(/*! raw-loader!./list.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/linepair/list/list.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./list.component.css */ "./src/app/linepair/list/list.component.css")).default]
+        }),
+        __metadata("design:paramtypes", [])
+    ], ListComponent);
+    return ListComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/linepair/model/user.ts":
+/*!****************************************!*\
+  !*** ./src/app/linepair/model/user.ts ***!
+  \****************************************/
+/*! exports provided: LinePairUser, LinePairPayment, LinePairArrange */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LinePairUser", function() { return LinePairUser; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LinePairPayment", function() { return LinePairPayment; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LinePairArrange", function() { return LinePairArrange; });
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+var LinePairUser = /** @class */ (function () {
+    function LinePairUser() {
+    }
+    return LinePairUser;
+}());
+
+var LinePairPayment = /** @class */ (function () {
+    function LinePairPayment() {
+    }
+    return LinePairPayment;
+}());
+
+var LinePairArrange = /** @class */ (function () {
+    function LinePairArrange() {
+    }
+    return LinePairArrange;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/linepair/service/linepairservice.service.ts":
+/*!*************************************************************!*\
+  !*** ./src/app/linepair/service/linepairservice.service.ts ***!
+  \*************************************************************/
+/*! exports provided: LinepairserviceService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LinepairserviceService", function() { return LinepairserviceService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+
+var LinepairserviceService = /** @class */ (function () {
+    function LinepairserviceService(http, router) {
+        this.http = http;
+        this.router = router;
+        this.site = 'https://leecloud.azurewebsites.net/'; // URL to web api
+        this.url = 'api/linepairapi/';
+    }
+    LinepairserviceService.prototype.getUserList = function () {
+        var url = this.site + this.url;
+        return this.http.get(url);
+    };
+    LinepairserviceService.prototype.getEntityById = function (id) {
+        var url = this.site + this.url + '/' + id;
+        return this.http.get(url);
+    };
+    LinepairserviceService.prototype.postEntity = function (entity) {
+        var url = this.site + this.url;
+        return this.http.post(url, entity);
+    };
+    LinepairserviceService.prototype.deleteEntity = function (id) {
+        var url = this.site + this.url + '/' + id;
+        return this.http.delete(url);
+    };
+    LinepairserviceService.ctorParameters = function () { return [
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] }
+    ]; };
+    LinepairserviceService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+            providedIn: 'root'
+        }),
+        __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
+    ], LinepairserviceService);
+    return LinepairserviceService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/material-module.ts":
+/*!************************************!*\
+  !*** ./src/app/material-module.ts ***!
+  \************************************/
+/*! exports provided: MaterialModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MaterialModule", function() { return MaterialModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/cdk/a11y */ "./node_modules/@angular/cdk/esm5/a11y.es5.js");
+/* harmony import */ var _angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/cdk/drag-drop */ "./node_modules/@angular/cdk/esm5/drag-drop.es5.js");
+/* harmony import */ var _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/cdk/portal */ "./node_modules/@angular/cdk/esm5/portal.es5.js");
+/* harmony import */ var _angular_cdk_scrolling__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/cdk/scrolling */ "./node_modules/@angular/cdk/esm5/scrolling.es5.js");
+/* harmony import */ var _angular_cdk_stepper__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/cdk/stepper */ "./node_modules/@angular/cdk/esm5/stepper.es5.js");
+/* harmony import */ var _angular_cdk_table__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/cdk/table */ "./node_modules/@angular/cdk/esm5/table.es5.js");
+/* harmony import */ var _angular_cdk_tree__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/cdk/tree */ "./node_modules/@angular/cdk/esm5/tree.es5.js");
+/* harmony import */ var _angular_material_autocomplete__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/material/autocomplete */ "./node_modules/@angular/material/esm5/autocomplete.es5.js");
+/* harmony import */ var _angular_material_badge__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/material/badge */ "./node_modules/@angular/material/esm5/badge.es5.js");
+/* harmony import */ var _angular_material_bottom_sheet__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/material/bottom-sheet */ "./node_modules/@angular/material/esm5/bottom-sheet.es5.js");
+/* harmony import */ var _angular_material_button__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/material/button */ "./node_modules/@angular/material/esm5/button.es5.js");
+/* harmony import */ var _angular_material_button_toggle__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/material/button-toggle */ "./node_modules/@angular/material/esm5/button-toggle.es5.js");
+/* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/material/card */ "./node_modules/@angular/material/esm5/card.es5.js");
+/* harmony import */ var _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/material/checkbox */ "./node_modules/@angular/material/esm5/checkbox.es5.js");
+/* harmony import */ var _angular_material_chips__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/material/chips */ "./node_modules/@angular/material/esm5/chips.es5.js");
+/* harmony import */ var _angular_material_stepper__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/material/stepper */ "./node_modules/@angular/material/esm5/stepper.es5.js");
+/* harmony import */ var _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @angular/material/datepicker */ "./node_modules/@angular/material/esm5/datepicker.es5.js");
+/* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/esm5/dialog.es5.js");
+/* harmony import */ var _angular_material_divider__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @angular/material/divider */ "./node_modules/@angular/material/esm5/divider.es5.js");
+/* harmony import */ var _angular_material_expansion__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @angular/material/expansion */ "./node_modules/@angular/material/esm5/expansion.es5.js");
+/* harmony import */ var _angular_material_grid_list__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @angular/material/grid-list */ "./node_modules/@angular/material/esm5/grid-list.es5.js");
+/* harmony import */ var _angular_material_icon__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @angular/material/icon */ "./node_modules/@angular/material/esm5/icon.es5.js");
+/* harmony import */ var _angular_material_input__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! @angular/material/input */ "./node_modules/@angular/material/esm5/input.es5.js");
+/* harmony import */ var _angular_material_list__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! @angular/material/list */ "./node_modules/@angular/material/esm5/list.es5.js");
+/* harmony import */ var _angular_material_menu__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! @angular/material/menu */ "./node_modules/@angular/material/esm5/menu.es5.js");
+/* harmony import */ var _angular_material_core__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! @angular/material/core */ "./node_modules/@angular/material/esm5/core.es5.js");
+/* harmony import */ var _angular_material_paginator__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! @angular/material/paginator */ "./node_modules/@angular/material/esm5/paginator.es5.js");
+/* harmony import */ var _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! @angular/material/progress-bar */ "./node_modules/@angular/material/esm5/progress-bar.es5.js");
+/* harmony import */ var _angular_material_progress_spinner__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! @angular/material/progress-spinner */ "./node_modules/@angular/material/esm5/progress-spinner.es5.js");
+/* harmony import */ var _angular_material_radio__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! @angular/material/radio */ "./node_modules/@angular/material/esm5/radio.es5.js");
+/* harmony import */ var _angular_material_select__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! @angular/material/select */ "./node_modules/@angular/material/esm5/select.es5.js");
+/* harmony import */ var _angular_material_sidenav__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! @angular/material/sidenav */ "./node_modules/@angular/material/esm5/sidenav.es5.js");
+/* harmony import */ var _angular_material_slider__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! @angular/material/slider */ "./node_modules/@angular/material/esm5/slider.es5.js");
+/* harmony import */ var _angular_material_slide_toggle__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! @angular/material/slide-toggle */ "./node_modules/@angular/material/esm5/slide-toggle.es5.js");
+/* harmony import */ var _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! @angular/material/snack-bar */ "./node_modules/@angular/material/esm5/snack-bar.es5.js");
+/* harmony import */ var _angular_material_sort__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! @angular/material/sort */ "./node_modules/@angular/material/esm5/sort.es5.js");
+/* harmony import */ var _angular_material_table__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! @angular/material/table */ "./node_modules/@angular/material/esm5/table.es5.js");
+/* harmony import */ var _angular_material_tabs__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! @angular/material/tabs */ "./node_modules/@angular/material/esm5/tabs.es5.js");
+/* harmony import */ var _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! @angular/material/toolbar */ "./node_modules/@angular/material/esm5/toolbar.es5.js");
+/* harmony import */ var _angular_material_tooltip__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! @angular/material/tooltip */ "./node_modules/@angular/material/esm5/tooltip.es5.js");
+/* harmony import */ var _angular_material_tree__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! @angular/material/tree */ "./node_modules/@angular/material/esm5/tree.es5.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var MaterialModule = /** @class */ (function () {
+    function MaterialModule() {
+    }
+    MaterialModule = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
+            exports: [
+                _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_1__["A11yModule"],
+                _angular_cdk_stepper__WEBPACK_IMPORTED_MODULE_5__["CdkStepperModule"],
+                _angular_cdk_table__WEBPACK_IMPORTED_MODULE_6__["CdkTableModule"],
+                _angular_cdk_tree__WEBPACK_IMPORTED_MODULE_7__["CdkTreeModule"],
+                _angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_2__["DragDropModule"],
+                _angular_material_autocomplete__WEBPACK_IMPORTED_MODULE_8__["MatAutocompleteModule"],
+                _angular_material_badge__WEBPACK_IMPORTED_MODULE_9__["MatBadgeModule"],
+                _angular_material_bottom_sheet__WEBPACK_IMPORTED_MODULE_10__["MatBottomSheetModule"],
+                _angular_material_button__WEBPACK_IMPORTED_MODULE_11__["MatButtonModule"],
+                _angular_material_button_toggle__WEBPACK_IMPORTED_MODULE_12__["MatButtonToggleModule"],
+                _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCardModule"],
+                _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_14__["MatCheckboxModule"],
+                _angular_material_chips__WEBPACK_IMPORTED_MODULE_15__["MatChipsModule"],
+                _angular_material_stepper__WEBPACK_IMPORTED_MODULE_16__["MatStepperModule"],
+                _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_17__["MatDatepickerModule"],
+                _angular_material_dialog__WEBPACK_IMPORTED_MODULE_18__["MatDialogModule"],
+                _angular_material_divider__WEBPACK_IMPORTED_MODULE_19__["MatDividerModule"],
+                _angular_material_expansion__WEBPACK_IMPORTED_MODULE_20__["MatExpansionModule"],
+                _angular_material_grid_list__WEBPACK_IMPORTED_MODULE_21__["MatGridListModule"],
+                _angular_material_icon__WEBPACK_IMPORTED_MODULE_22__["MatIconModule"],
+                _angular_material_input__WEBPACK_IMPORTED_MODULE_23__["MatInputModule"],
+                _angular_material_list__WEBPACK_IMPORTED_MODULE_24__["MatListModule"],
+                _angular_material_menu__WEBPACK_IMPORTED_MODULE_25__["MatMenuModule"],
+                _angular_material_core__WEBPACK_IMPORTED_MODULE_26__["MatNativeDateModule"],
+                _angular_material_paginator__WEBPACK_IMPORTED_MODULE_27__["MatPaginatorModule"],
+                _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_28__["MatProgressBarModule"],
+                _angular_material_progress_spinner__WEBPACK_IMPORTED_MODULE_29__["MatProgressSpinnerModule"],
+                _angular_material_radio__WEBPACK_IMPORTED_MODULE_30__["MatRadioModule"],
+                _angular_material_core__WEBPACK_IMPORTED_MODULE_26__["MatRippleModule"],
+                _angular_material_select__WEBPACK_IMPORTED_MODULE_31__["MatSelectModule"],
+                _angular_material_sidenav__WEBPACK_IMPORTED_MODULE_32__["MatSidenavModule"],
+                _angular_material_slider__WEBPACK_IMPORTED_MODULE_33__["MatSliderModule"],
+                _angular_material_slide_toggle__WEBPACK_IMPORTED_MODULE_34__["MatSlideToggleModule"],
+                _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_35__["MatSnackBarModule"],
+                _angular_material_sort__WEBPACK_IMPORTED_MODULE_36__["MatSortModule"],
+                _angular_material_table__WEBPACK_IMPORTED_MODULE_37__["MatTableModule"],
+                _angular_material_tabs__WEBPACK_IMPORTED_MODULE_38__["MatTabsModule"],
+                _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_39__["MatToolbarModule"],
+                _angular_material_tooltip__WEBPACK_IMPORTED_MODULE_40__["MatTooltipModule"],
+                _angular_material_tree__WEBPACK_IMPORTED_MODULE_41__["MatTreeModule"],
+                _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_3__["PortalModule"],
+                _angular_cdk_scrolling__WEBPACK_IMPORTED_MODULE_4__["ScrollingModule"],
+            ]
+        })
+    ], MaterialModule);
+    return MaterialModule;
+}());
+
+/**  Copyright 2019 Google LLC. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at http://angular.io/license */
 
 
 /***/ }),
