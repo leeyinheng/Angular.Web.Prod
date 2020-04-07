@@ -6999,6 +6999,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _service_linepairservice_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../service/linepairservice.service */ "./src/app/linepair/service/linepairservice.service.ts");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var _app_core_shared_service_postservice_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../app/core/shared//service/postservice.service */ "./src/app/core/shared/service/postservice.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -7017,12 +7018,14 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 
 
 
+
 var FormComponent = /** @class */ (function () {
-    function FormComponent(service, spinner, _formBuilder, postservice) {
+    function FormComponent(service, spinner, _formBuilder, postservice, router) {
         this.service = service;
         this.spinner = spinner;
         this._formBuilder = _formBuilder;
         this.postservice = postservice;
+        this.router = router;
         this.showInput = false;
         this.showInputVal = '';
         this.uploadImage = false;
@@ -7087,7 +7090,7 @@ var FormComponent = /** @class */ (function () {
         this.service.postEntity(this.Entity).subscribe(function (res) {
             alert('上傳成功!');
             _this.spinner.hide();
-            window.open('#/linepairlist');
+            _this.router.navigate(['linepairlist']);
         }, function (err) {
             alert(err);
             _this.spinner.hide();
@@ -7138,7 +7141,8 @@ var FormComponent = /** @class */ (function () {
         { type: _service_linepairservice_service__WEBPACK_IMPORTED_MODULE_3__["LinepairserviceService"] },
         { type: ngx_spinner__WEBPACK_IMPORTED_MODULE_2__["NgxSpinnerService"] },
         { type: _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"] },
-        { type: _app_core_shared_service_postservice_service__WEBPACK_IMPORTED_MODULE_5__["PostFileService"] }
+        { type: _app_core_shared_service_postservice_service__WEBPACK_IMPORTED_MODULE_5__["PostFileService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_6__["Router"] }
     ]; };
     FormComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -7149,7 +7153,8 @@ var FormComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [_service_linepairservice_service__WEBPACK_IMPORTED_MODULE_3__["LinepairserviceService"],
             ngx_spinner__WEBPACK_IMPORTED_MODULE_2__["NgxSpinnerService"],
             _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"],
-            _app_core_shared_service_postservice_service__WEBPACK_IMPORTED_MODULE_5__["PostFileService"]])
+            _app_core_shared_service_postservice_service__WEBPACK_IMPORTED_MODULE_5__["PostFileService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_6__["Router"]])
     ], FormComponent);
     return FormComponent;
 }());
