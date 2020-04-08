@@ -338,6 +338,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/linepair/edit-dialog/edit-dialog.component.html":
+/*!*******************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/linepair/edit-dialog/edit-dialog.component.html ***!
+  \*******************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<h5 mat-dialog-title> ID:  {{Entity.Id}}</h5>\n\n<mat-dialog-content>\n\n  <div class=\"example-container\">\n\n  <mat-card>\n    <mat-form-field>\n      <mat-label>姓名</mat-label>\n      <input matInput placeholder=\"Name\" [(ngModel)] = \"Entity.Name\">\n    </mat-form-field>\n    <br>\n    <mat-form-field>\n      <mat-label>性別</mat-label>\n      <select matNativeControl [(ngModel)]=\"Entity.Gender\">\n        <option value=\"男性\">男性</option>\n        <option value=\"女性\">女性</option>\n      </select>\n    </mat-form-field>\n    <br>\n\n    <mat-form-field class=\"example-full-width\">\n      <mat-label>生日 (選擇日期)</mat-label>\n      <input matInput [matDatepicker]=\"picker\" [(ngModel)]=\"Entity.Birthday\" >\n      <mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle>\n      <mat-datepicker touchUi #picker></mat-datepicker>\n    </mat-form-field>\n\n    <br>\n\n    <mat-label>身高(cm)</mat-label>\n    {{Entity.Height}} 公分\n    <mat-slider [(ngModel)]=\"Entity.Height\"\n    thumbLabel\n    [displayWith]=\"formatLabel\"\n    tickInterval=\"2\"\n    min=\"140\"\n    max=\"200\"></mat-slider>\n\n    <br>\n\n    <mat-label>體重(kg)</mat-label>\n    {{Entity.Weight}} 公斤\n    <mat-slider [(ngModel)]=\"Entity.Weight\"\n    thumbLabel\n    [displayWith]=\"formatLabel\"\n    tickInterval=\"2\"\n    min=\"40\"\n    max=\"160\"></mat-slider>\n\n    <br>\n\n    <mat-form-field>\n      <mat-label>居住地</mat-label>\n      <input matInput placeholder=\"City\" [(ngModel)] = \"Entity.City\">\n    </mat-form-field>\n    <br>\n\n    <mat-form-field>\n      <mat-label>手機號碼</mat-label>\n      <input matInput type=\"tel\"\n      [(ngModel)]='Entity.Phone'\n      />\n    </mat-form-field>\n\n    <br>\n\n    <mat-form-field>\n      <mat-label>電子郵件</mat-label>\n      <input matInput type=\"email\"\n      [(ngModel)]='Entity.Email' placeholder=\"Ex. pat@example.com\"\n      />\n    </mat-form-field>\n\n    <br>\n\n    <mat-form-field>\n      <mat-label>Line ID</mat-label>\n      <input matInput type=\"string\"\n      [(ngModel)]='Entity.LineId'\n      />\n    </mat-form-field>\n\n    <br>\n\n    <mat-form-field>\n      <mat-label>職業</mat-label>\n      <input matInput type=\"string\"\n      [(ngModel)]='Entity.Occuptation'\n      />\n    </mat-form-field>\n\n    <br>\n\n    <mat-form-field>\n      <mat-label>學歷</mat-label>\n      <select matNativeControl [(ngModel)]=\"Entity.School\"  >\n        <option value=\"高中職\">高中職</option>\n        <option value=\"國內大學\">國內大學</option>\n        <option value=\"國外大學\">國外大學</option>\n        <option value=\"國內碩士\">國內碩士</option>\n        <option value=\"國外碩士\">國外碩士</option>\n        <option value=\"國內博士\">國內博士</option>\n        <option value=\"國外博士\">國外博士</option>\n      </select>\n    </mat-form-field>\n\n    <br>\n\n    <mat-form-field>\n      <mat-label>薪水區間(月薪)</mat-label>\n      <select matNativeControl [(ngModel)]=\"Entity.SalaryRange\"  >\n        <option value=\"1\">三萬元台幣以下</option>\n        <option value=\"2\">三萬到五萬台幣</option>\n        <option value=\"3\">五萬到十萬台幣</option>\n        <option value=\"4\">十萬台幣以上</option>\n      </select>\n    </mat-form-field>\n\n    <br>\n\n    <mat-form-field>\n      <mat-label>婚姻狀況</mat-label>\n      <select matNativeControl [(ngModel)]=\"Entity.Married\">\n        <option value=\"單身\">單身</option>\n        <option value=\"二春\">二春</option>\n      </select>\n    </mat-form-field>\n\n    <br>\n\n    <mat-checkbox  [(ngModel)]=\"Entity.HasCar\">有車</mat-checkbox>\n\n\n    <br>\n\n    <mat-checkbox  [(ngModel)]=\"Entity.HasHouse\">有房</mat-checkbox>\n\n\n    <br>\n\n    <mat-form-field style=\"width: 70%;\">\n      <mat-label>自我簡介</mat-label>\n      <textarea matInput [(ngModel)]=\"Entity.Intro\" placeholder=\"多告訴一點未來的對象關於您自己!\"></textarea>\n    </mat-form-field>\n\n    <br>\n    <div class=\"center\">\n      <ngx-file-drop dropZoneLabel=\"Drop files here\" (onFileDrop)=\"dropped($event)\"\n      (onFileOver)=\"fileOver($event)\" (onFileLeave)=\"fileLeave($event)\">\n          <ng-template ngx-file-drop-content-tmp let-openFileSelector=\"openFileSelector\">\n            拖曳或是選擇要上傳的圖片\n            <button type=\"button\" (click)=\"openFileSelector()\">選擇相片</button>\n          </ng-template>\n      </ngx-file-drop>\n\n    </div>\n\n    <div >\n      <img src='{{Entity.ImgLink}}'   class=\"img-thumbnail\" >\n    </div>\n\n  </mat-card>\n\n  </div>\n\n</mat-dialog-content>\n\n<mat-dialog-actions>\n  <button mat-raised-button\tcolor=\"primary\" (click)=\"Save()\"><mat-icon>save</mat-icon> 儲存</button>\n  <button mat-raised-button\tcolor=\"primary\" (click)=\"Cancel()\"><mat-icon>cancel</mat-icon> 取消</button>\n</mat-dialog-actions>\n\n\n\n\n<ngx-spinner\nbdColor=\"rgba(51,51,51,0.8)\"\nsize=\"medium\"\ncolor=\"#fff\"\ntype=\"ball-scale-multiple\"\n>\n<p style=\"font-size: 20px; color: white\">處理中...</p>\n</ngx-spinner>\n");
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/linepair/form/form.component.html":
 /*!*****************************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/linepair/form/form.component.html ***!
@@ -360,7 +373,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<p>LINE PAIR ROCKS!</p>\n\n您的幸福就交給我們拉 !\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"home-banner\">\n  <div class=\"banner-container\">\n    <div class=\"banner-image\"></div>\n  </div>\n</div>\n<br>\n\n<div class=\"example-container mat-elevation-z8\" >\n   <div class=\"example-header\">\n     <mat-form-field>\n       <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"搜尋\">\n     </mat-form-field>\n   </div>\n\n  <mat-table #table [dataSource]=\"dataSource\"  multiTemplateDataRows>\n\n    <ng-container matColumnDef=\"{{column}}\" *ngFor=\"let column of displayedColumns\">\n      <th mat-header-cell *matHeaderCellDef> {{column}} </th>\n      <td mat-cell *matCellDef=\"let LinePairUser\"> {{LinePairUser[column]}} </td>\n    </ng-container>\n\n     <!-- Expanded Content Column - The detail row is made up of this one column that spans across all columns -->\n  <ng-container matColumnDef=\"expandedDetail\">\n    <td mat-cell *matCellDef=\"let LinePairUser\" [attr.colspan]=\"displayedColumns.length\">\n      <div class=\"example-element-detail\"\n           [@detailExpand]=\"LinePairUser == expandedElement ? 'expanded' : 'collapsed'\">\n\n           <img src='{{LinePairUser.ImgLink}}'  style=\"width:10%;\" >\n\n         <div class=\"example-element-diagram\">\n          <div class=\"example-element-position\">  {{LinePairUser.Height}} 公分 | {{LinePairUser.Weight}} 公斤 | {{LinePairUser.Email}}</div>\n\n          <div class=\"example-element-name\"> {{LinePairUser.Married}} | {{LinePairUser.School}}| Line: {{LinePairUser.LineId}}</div>\n          <div class=\"example-element-weight\">  </div>\n        </div>\n\n        <div class=\"example-element-description\">\n          {{HasCar(LinePairUser.HasCar)}} |\n          {{HasHouse(LinePairUser.HasHouse)}} | 月薪: {{SalaryTerm(LinePairUser.SalaryRange)}} |\n          {{LinePairUser.Intro}} |\n          <button mat-raised-button\tcolor=\"primary\" class=\"btn-space\" (click)=\"Edit(LinePairUser)\"><mat-icon>edit</mat-icon> 編輯</button>\n          <button mat-raised-button\tcolor=\"warn\" (click)=\"Delete(LinePairUser)\"><mat-icon>delete</mat-icon> 刪除</button>\n\n        </div>\n\n      </div>\n    </td>\n  </ng-container>\n\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n  <tr mat-row *matRowDef=\"let LinePairUser; columns: displayedColumns;\"\n      class=\"example-element-row\"\n      [class.example-expanded-row]=\"LinePairUser === element\"\n      (click)=\"expandedElement = expandedElement === LinePairUser ? null : LinePairUser\">\n  </tr>\n  <tr mat-row *matRowDef=\"let row; columns: ['expandedDetail']\" class=\"example-detail-row\"></tr>\n\n  </mat-table>\n\n  <mat-paginator #paginator [pageSize]=\"8\" [pageSizeOptions] = \"[5,10,20]\">\n\n  </mat-paginator>\n</div>\n");
 
 /***/ }),
 
@@ -6970,6 +6983,145 @@ var HealthserviceService = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/linepair/edit-dialog/edit-dialog.component.css":
+/*!****************************************************************!*\
+  !*** ./src/app/linepair/edit-dialog/edit-dialog.component.css ***!
+  \****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (".example-container {\r\n  display: -webkit-box;\r\n  display: flex;\r\n  -webkit-box-orient: vertical;\r\n  -webkit-box-direction: normal;\r\n          flex-direction: column;\r\n}\r\n\r\n.example-container > * {\r\n  width: 100%\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbGluZXBhaXIvZWRpdC1kaWFsb2cvZWRpdC1kaWFsb2cuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLG9CQUFhO0VBQWIsYUFBYTtFQUNiLDRCQUFzQjtFQUF0Qiw2QkFBc0I7VUFBdEIsc0JBQXNCO0FBQ3hCOztBQUVBO0VBQ0U7QUFDRiIsImZpbGUiOiJzcmMvYXBwL2xpbmVwYWlyL2VkaXQtZGlhbG9nL2VkaXQtZGlhbG9nLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhhbXBsZS1jb250YWluZXIge1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcclxufVxyXG5cclxuLmV4YW1wbGUtY29udGFpbmVyID4gKiB7XHJcbiAgd2lkdGg6IDEwMCVcclxufVxyXG4iXX0= */");
+
+/***/ }),
+
+/***/ "./src/app/linepair/edit-dialog/edit-dialog.component.ts":
+/*!***************************************************************!*\
+  !*** ./src/app/linepair/edit-dialog/edit-dialog.component.ts ***!
+  \***************************************************************/
+/*! exports provided: EditDialogComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EditDialogComponent", function() { return EditDialogComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _service_linepairservice_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../service/linepairservice.service */ "./src/app/linepair/service/linepairservice.service.ts");
+/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ngx-spinner */ "./node_modules/ngx-spinner/fesm5/ngx-spinner.js");
+/* harmony import */ var _app_core_shared_service_postservice_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../app/core/shared//service/postservice.service */ "./src/app/core/shared/service/postservice.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (undefined && undefined.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+
+
+
+var EditDialogComponent = /** @class */ (function () {
+    function EditDialogComponent(dialogRef, service, spinner, postservice, data) {
+        this.dialogRef = dialogRef;
+        this.service = service;
+        this.spinner = spinner;
+        this.postservice = postservice;
+        this.Entity = data;
+    }
+    EditDialogComponent.prototype.ngOnInit = function () {
+    };
+    EditDialogComponent.prototype.Save = function () {
+        var _this = this;
+        this.spinner.show();
+        this.service.updateEntity(this.Entity).subscribe(function (val) {
+            alert('更新完成');
+            _this.spinner.hide();
+            _this.dialogRef.close(null);
+        }, function (err) {
+            alert('發生錯誤 ' + err);
+            _this.spinner.hide();
+            _this.dialogRef.close(null);
+        });
+    };
+    EditDialogComponent.prototype.Cancel = function () {
+        this.dialogRef.close(null);
+    };
+    EditDialogComponent.prototype.dropped = function (files) {
+        var _this = this;
+        var _loop_1 = function (droppedFile) {
+            // Is it a file?
+            if (droppedFile.fileEntry.isFile) {
+                var fileEntry = droppedFile.fileEntry;
+                fileEntry.file(function (file) {
+                    // Here you can access the real file
+                    console.log(droppedFile.relativePath, file);
+                    // You could upload it like this:
+                    var formData = new FormData();
+                    formData.append('image', file, droppedFile.relativePath);
+                    _this.spinner.show();
+                    _this.postservice.postImage(formData).subscribe(function (val) {
+                        _this.spinner.hide();
+                        _this.Entity.ImgLink = val;
+                    }, function (err) {
+                        alert('upload image error');
+                        _this.spinner.hide();
+                    });
+                });
+            }
+            else {
+                // It was a directory (empty directories are added, otherwise only files)
+                var fileEntry = droppedFile.fileEntry;
+                console.log(droppedFile.relativePath, fileEntry);
+            }
+        };
+        for (var _i = 0, files_1 = files; _i < files_1.length; _i++) {
+            var droppedFile = files_1[_i];
+            _loop_1(droppedFile);
+        }
+    };
+    EditDialogComponent.prototype.fileOver = function (event) {
+        console.log(event);
+    };
+    EditDialogComponent.prototype.fileLeave = function (event) {
+        console.log(event);
+    };
+    EditDialogComponent.ctorParameters = function () { return [
+        { type: _angular_material__WEBPACK_IMPORTED_MODULE_1__["MatDialogRef"] },
+        { type: _service_linepairservice_service__WEBPACK_IMPORTED_MODULE_2__["LinepairserviceService"] },
+        { type: ngx_spinner__WEBPACK_IMPORTED_MODULE_3__["NgxSpinnerService"] },
+        { type: _app_core_shared_service_postservice_service__WEBPACK_IMPORTED_MODULE_4__["PostFileService"] },
+        { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"], args: [_angular_material__WEBPACK_IMPORTED_MODULE_1__["MAT_DIALOG_DATA"],] }] }
+    ]; };
+    EditDialogComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-edit-dialog',
+            template: __importDefault(__webpack_require__(/*! raw-loader!./edit-dialog.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/linepair/edit-dialog/edit-dialog.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./edit-dialog.component.css */ "./src/app/linepair/edit-dialog/edit-dialog.component.css")).default]
+        }),
+        __param(4, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])(_angular_material__WEBPACK_IMPORTED_MODULE_1__["MAT_DIALOG_DATA"])),
+        __metadata("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_1__["MatDialogRef"],
+            _service_linepairservice_service__WEBPACK_IMPORTED_MODULE_2__["LinepairserviceService"],
+            ngx_spinner__WEBPACK_IMPORTED_MODULE_3__["NgxSpinnerService"],
+            _app_core_shared_service_postservice_service__WEBPACK_IMPORTED_MODULE_4__["PostFileService"], Object])
+    ], EditDialogComponent);
+    return EditDialogComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/linepair/form/form.component.css":
 /*!**************************************************!*\
   !*** ./src/app/linepair/form/form.component.css ***!
@@ -6979,7 +7131,7 @@ var HealthserviceService = /** @class */ (function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".home-banner {\r\n  display: -webkit-box;\r\n  display: flex;\r\n  -webkit-box-orient: vertical;\r\n  -webkit-box-direction: normal;\r\n          flex-direction: column;\r\n  -webkit-box-pack: center;\r\n          justify-content: center;\r\n  text-align: center;\r\n}\r\n\r\n.banner-image {\r\n  width: 100%;\r\n  height: 100%;\r\n  min-height: 150px; /* Added to show image */\r\n  background-image: url('LinePairLogo.jpg');\r\n  background-position: center;\r\n  background-repeat: no-repeat;\r\n  display: inline-block;\r\n}\r\n\r\nmat-slider {\r\n  width: 300px;\r\n}\r\n\r\n.btn-space {\r\n  margin-right: 5px;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbGluZXBhaXIvZm9ybS9mb3JtLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxvQkFBYTtFQUFiLGFBQWE7RUFDYiw0QkFBc0I7RUFBdEIsNkJBQXNCO1VBQXRCLHNCQUFzQjtFQUN0Qix3QkFBdUI7VUFBdkIsdUJBQXVCO0VBQ3ZCLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLFdBQVc7RUFDWCxZQUFZO0VBQ1osaUJBQWlCLEVBQUUsd0JBQXdCO0VBQzNDLHlDQUFrRTtFQUNsRSwyQkFBMkI7RUFDM0IsNEJBQTRCO0VBQzVCLHFCQUFxQjtBQUN2Qjs7QUFHQTtFQUNFLFlBQVk7QUFDZDs7QUFHQTtFQUNFLGlCQUFpQjtBQUNuQiIsImZpbGUiOiJzcmMvYXBwL2xpbmVwYWlyL2Zvcm0vZm9ybS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmhvbWUtYmFubmVyIHtcclxuICBkaXNwbGF5OiBmbGV4O1xyXG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XHJcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG59XHJcblxyXG4uYmFubmVyLWltYWdlIHtcclxuICB3aWR0aDogMTAwJTtcclxuICBoZWlnaHQ6IDEwMCU7XHJcbiAgbWluLWhlaWdodDogMTUwcHg7IC8qIEFkZGVkIHRvIHNob3cgaW1hZ2UgKi9cclxuICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoJy4vLi4vLi4vLi4vYXNzZXRzL1Bob3Rvcy9MaW5lUGFpckxvZ28uanBnJyk7XHJcbiAgYmFja2dyb3VuZC1wb3NpdGlvbjogY2VudGVyO1xyXG4gIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XHJcbiAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG59XHJcblxyXG5cclxubWF0LXNsaWRlciB7XHJcbiAgd2lkdGg6IDMwMHB4O1xyXG59XHJcblxyXG5cclxuLmJ0bi1zcGFjZSB7XHJcbiAgbWFyZ2luLXJpZ2h0OiA1cHg7XHJcbn1cclxuIl19 */");
+/* harmony default export */ __webpack_exports__["default"] = (".home-banner {\r\n  display: -webkit-box;\r\n  display: flex;\r\n  -webkit-box-orient: vertical;\r\n  -webkit-box-direction: normal;\r\n          flex-direction: column;\r\n  -webkit-box-pack: center;\r\n          justify-content: center;\r\n  text-align: center;\r\n}\r\n\r\n.banner-image {\r\n  width: 100%;\r\n  height: 100%;\r\n  min-height: 150px; /* Added to show image */\r\n  background-image: url('LinePairLogo.jpg');\r\n  background-position: center;\r\n  background-repeat: no-repeat;\r\n  display: inline-block;\r\n}\r\n\r\n.btn-space {\r\n  margin-right: 5px;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbGluZXBhaXIvZm9ybS9mb3JtLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxvQkFBYTtFQUFiLGFBQWE7RUFDYiw0QkFBc0I7RUFBdEIsNkJBQXNCO1VBQXRCLHNCQUFzQjtFQUN0Qix3QkFBdUI7VUFBdkIsdUJBQXVCO0VBQ3ZCLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLFdBQVc7RUFDWCxZQUFZO0VBQ1osaUJBQWlCLEVBQUUsd0JBQXdCO0VBQzNDLHlDQUFrRTtFQUNsRSwyQkFBMkI7RUFDM0IsNEJBQTRCO0VBQzVCLHFCQUFxQjtBQUN2Qjs7QUFNQTtFQUNFLGlCQUFpQjtBQUNuQiIsImZpbGUiOiJzcmMvYXBwL2xpbmVwYWlyL2Zvcm0vZm9ybS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmhvbWUtYmFubmVyIHtcclxuICBkaXNwbGF5OiBmbGV4O1xyXG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XHJcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG59XHJcblxyXG4uYmFubmVyLWltYWdlIHtcclxuICB3aWR0aDogMTAwJTtcclxuICBoZWlnaHQ6IDEwMCU7XHJcbiAgbWluLWhlaWdodDogMTUwcHg7IC8qIEFkZGVkIHRvIHNob3cgaW1hZ2UgKi9cclxuICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoJy4vLi4vLi4vLi4vYXNzZXRzL1Bob3Rvcy9MaW5lUGFpckxvZ28uanBnJyk7XHJcbiAgYmFja2dyb3VuZC1wb3NpdGlvbjogY2VudGVyO1xyXG4gIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XHJcbiAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG59XHJcblxyXG5cclxuXHJcblxyXG5cclxuLmJ0bi1zcGFjZSB7XHJcbiAgbWFyZ2luLXJpZ2h0OiA1cHg7XHJcbn1cclxuIl19 */");
 
 /***/ }),
 
@@ -7183,6 +7335,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var _app_core_shared_shared_module__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./../../app/core/shared/shared.module */ "./src/app/core/shared/shared.module.ts");
 /* harmony import */ var ngx_file_drop__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ngx-file-drop */ "./node_modules/ngx-file-drop/fesm5/ngx-file-drop.js");
+/* harmony import */ var _edit_dialog_edit_dialog_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./edit-dialog/edit-dialog.component */ "./src/app/linepair/edit-dialog/edit-dialog.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -7202,12 +7355,13 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 
 
 
+
 var LinepairModule = /** @class */ (function () {
     function LinepairModule() {
     }
     LinepairModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
-            declarations: [_list_list_component__WEBPACK_IMPORTED_MODULE_2__["ListComponent"], _form_form_component__WEBPACK_IMPORTED_MODULE_3__["FormComponent"]],
+            declarations: [_list_list_component__WEBPACK_IMPORTED_MODULE_2__["ListComponent"], _form_form_component__WEBPACK_IMPORTED_MODULE_3__["FormComponent"], _edit_dialog_edit_dialog_component__WEBPACK_IMPORTED_MODULE_10__["EditDialogComponent"]],
             imports: [
                 _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_7__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_7__["ReactiveFormsModule"],
@@ -7223,6 +7377,9 @@ var LinepairModule = /** @class */ (function () {
                         path: 'linepair', component: _form_form_component__WEBPACK_IMPORTED_MODULE_3__["FormComponent"]
                     }
                 ])
+            ],
+            entryComponents: [
+                _edit_dialog_edit_dialog_component__WEBPACK_IMPORTED_MODULE_10__["EditDialogComponent"]
             ]
         })
     ], LinepairModule);
@@ -7242,7 +7399,7 @@ var LinepairModule = /** @class */ (function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2xpbmVwYWlyL2xpc3QvbGlzdC5jb21wb25lbnQuY3NzIn0= */");
+/* harmony default export */ __webpack_exports__["default"] = (".example-container {\r\n  display: -webkit-box;\r\n  display: flex;\r\n  -webkit-box-orient: vertical;\r\n  -webkit-box-direction: normal;\r\n          flex-direction: column;\r\n  min-width: 300px;\r\n}\r\n\r\n.example-header {\r\n  min-height: 64px;\r\n  padding: 8px 24px 0;\r\n}\r\n\r\n.mat-form-field {\r\n  font-size: 14px;\r\n  width: 100%\r\n}\r\n\r\n.mat-table {\r\n  overflow: auto;\r\n  max-height: 500px;\r\n}\r\n\r\nth.mat-sort-header-sorted {\r\n  color: black;\r\n}\r\n\r\ntable {\r\n  width: 100%;\r\n}\r\n\r\ntr.example-detail-row {\r\n  height: 0;\r\n}\r\n\r\ntr.example-element-row:not(.example-expanded-row):hover {\r\n  background: whitesmoke;\r\n}\r\n\r\ntr.example-element-row:not(.example-expanded-row):active {\r\n  background: #efefef;\r\n}\r\n\r\n.example-element-row td {\r\n  border-bottom-width: 0;\r\n}\r\n\r\n.example-element-detail {\r\n  overflow: hidden;\r\n  display: -webkit-box;\r\n  display: flex;\r\n}\r\n\r\n.example-element-diagram {\r\n  min-width: 80px;\r\n  border: 2px solid black;\r\n  padding: 8px;\r\n  font-weight: lighter;\r\n  margin: 8px 0;\r\n  height: 104px;\r\n}\r\n\r\n.example-element-symbol {\r\n  font-weight: bold;\r\n  font-size: 40px;\r\n  line-height: normal;\r\n}\r\n\r\n.example-element-description {\r\n  padding: 16px;\r\n}\r\n\r\n.example-element-description-attribution {\r\n  opacity: 0.5;\r\n}\r\n\r\n.home-banner {\r\n  display: -webkit-box;\r\n  display: flex;\r\n  -webkit-box-orient: vertical;\r\n  -webkit-box-direction: normal;\r\n          flex-direction: column;\r\n  -webkit-box-pack: center;\r\n          justify-content: center;\r\n  text-align: center;\r\n}\r\n\r\n.banner-image {\r\n  width: 100%;\r\n  height: 100%;\r\n  min-height: 150px; /* Added to show image */\r\n  background-image: url('LinePairLogo.jpg');\r\n  background-position: center;\r\n  background-repeat: no-repeat;\r\n  display: inline-block;\r\n}\r\n\r\n.btn-space {\r\n  margin-right: 5px;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbGluZXBhaXIvbGlzdC9saXN0LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxvQkFBYTtFQUFiLGFBQWE7RUFDYiw0QkFBc0I7RUFBdEIsNkJBQXNCO1VBQXRCLHNCQUFzQjtFQUN0QixnQkFBZ0I7QUFDbEI7O0FBRUE7RUFDRSxnQkFBZ0I7RUFDaEIsbUJBQW1CO0FBQ3JCOztBQUVBO0VBQ0UsZUFBZTtFQUNmO0FBQ0Y7O0FBRUE7RUFDRSxjQUFjO0VBQ2QsaUJBQWlCO0FBQ25COztBQUVBO0VBQ0UsWUFBWTtBQUNkOztBQUVBO0VBQ0UsV0FBVztBQUNiOztBQUVBO0VBQ0UsU0FBUztBQUNYOztBQUVBO0VBQ0Usc0JBQXNCO0FBQ3hCOztBQUVBO0VBQ0UsbUJBQW1CO0FBQ3JCOztBQUVBO0VBQ0Usc0JBQXNCO0FBQ3hCOztBQUVBO0VBQ0UsZ0JBQWdCO0VBQ2hCLG9CQUFhO0VBQWIsYUFBYTtBQUNmOztBQUVBO0VBQ0UsZUFBZTtFQUNmLHVCQUF1QjtFQUN2QixZQUFZO0VBQ1osb0JBQW9CO0VBQ3BCLGFBQWE7RUFDYixhQUFhO0FBQ2Y7O0FBRUE7RUFDRSxpQkFBaUI7RUFDakIsZUFBZTtFQUNmLG1CQUFtQjtBQUNyQjs7QUFFQTtFQUNFLGFBQWE7QUFDZjs7QUFFQTtFQUNFLFlBQVk7QUFDZDs7QUFFQTtFQUNFLG9CQUFhO0VBQWIsYUFBYTtFQUNiLDRCQUFzQjtFQUF0Qiw2QkFBc0I7VUFBdEIsc0JBQXNCO0VBQ3RCLHdCQUF1QjtVQUF2Qix1QkFBdUI7RUFDdkIsa0JBQWtCO0FBQ3BCOztBQUVBO0VBQ0UsV0FBVztFQUNYLFlBQVk7RUFDWixpQkFBaUIsRUFBRSx3QkFBd0I7RUFDM0MseUNBQWtFO0VBQ2xFLDJCQUEyQjtFQUMzQiw0QkFBNEI7RUFDNUIscUJBQXFCO0FBQ3ZCOztBQUlBO0VBQ0UsaUJBQWlCO0FBQ25CIiwiZmlsZSI6InNyYy9hcHAvbGluZXBhaXIvbGlzdC9saXN0LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhhbXBsZS1jb250YWluZXIge1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcclxuICBtaW4td2lkdGg6IDMwMHB4O1xyXG59XHJcblxyXG4uZXhhbXBsZS1oZWFkZXIge1xyXG4gIG1pbi1oZWlnaHQ6IDY0cHg7XHJcbiAgcGFkZGluZzogOHB4IDI0cHggMDtcclxufVxyXG5cclxuLm1hdC1mb3JtLWZpZWxkIHtcclxuICBmb250LXNpemU6IDE0cHg7XHJcbiAgd2lkdGg6IDEwMCVcclxufVxyXG5cclxuLm1hdC10YWJsZSB7XHJcbiAgb3ZlcmZsb3c6IGF1dG87XHJcbiAgbWF4LWhlaWdodDogNTAwcHg7XHJcbn1cclxuXHJcbnRoLm1hdC1zb3J0LWhlYWRlci1zb3J0ZWQge1xyXG4gIGNvbG9yOiBibGFjaztcclxufVxyXG5cclxudGFibGUge1xyXG4gIHdpZHRoOiAxMDAlO1xyXG59XHJcblxyXG50ci5leGFtcGxlLWRldGFpbC1yb3cge1xyXG4gIGhlaWdodDogMDtcclxufVxyXG5cclxudHIuZXhhbXBsZS1lbGVtZW50LXJvdzpub3QoLmV4YW1wbGUtZXhwYW5kZWQtcm93KTpob3ZlciB7XHJcbiAgYmFja2dyb3VuZDogd2hpdGVzbW9rZTtcclxufVxyXG5cclxudHIuZXhhbXBsZS1lbGVtZW50LXJvdzpub3QoLmV4YW1wbGUtZXhwYW5kZWQtcm93KTphY3RpdmUge1xyXG4gIGJhY2tncm91bmQ6ICNlZmVmZWY7XHJcbn1cclxuXHJcbi5leGFtcGxlLWVsZW1lbnQtcm93IHRkIHtcclxuICBib3JkZXItYm90dG9tLXdpZHRoOiAwO1xyXG59XHJcblxyXG4uZXhhbXBsZS1lbGVtZW50LWRldGFpbCB7XHJcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcclxuICBkaXNwbGF5OiBmbGV4O1xyXG59XHJcblxyXG4uZXhhbXBsZS1lbGVtZW50LWRpYWdyYW0ge1xyXG4gIG1pbi13aWR0aDogODBweDtcclxuICBib3JkZXI6IDJweCBzb2xpZCBibGFjaztcclxuICBwYWRkaW5nOiA4cHg7XHJcbiAgZm9udC13ZWlnaHQ6IGxpZ2h0ZXI7XHJcbiAgbWFyZ2luOiA4cHggMDtcclxuICBoZWlnaHQ6IDEwNHB4O1xyXG59XHJcblxyXG4uZXhhbXBsZS1lbGVtZW50LXN5bWJvbCB7XHJcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XHJcbiAgZm9udC1zaXplOiA0MHB4O1xyXG4gIGxpbmUtaGVpZ2h0OiBub3JtYWw7XHJcbn1cclxuXHJcbi5leGFtcGxlLWVsZW1lbnQtZGVzY3JpcHRpb24ge1xyXG4gIHBhZGRpbmc6IDE2cHg7XHJcbn1cclxuXHJcbi5leGFtcGxlLWVsZW1lbnQtZGVzY3JpcHRpb24tYXR0cmlidXRpb24ge1xyXG4gIG9wYWNpdHk6IDAuNTtcclxufVxyXG5cclxuLmhvbWUtYmFubmVyIHtcclxuICBkaXNwbGF5OiBmbGV4O1xyXG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XHJcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG59XHJcblxyXG4uYmFubmVyLWltYWdlIHtcclxuICB3aWR0aDogMTAwJTtcclxuICBoZWlnaHQ6IDEwMCU7XHJcbiAgbWluLWhlaWdodDogMTUwcHg7IC8qIEFkZGVkIHRvIHNob3cgaW1hZ2UgKi9cclxuICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoJy4vLi4vLi4vLi4vYXNzZXRzL1Bob3Rvcy9MaW5lUGFpckxvZ28uanBnJyk7XHJcbiAgYmFja2dyb3VuZC1wb3NpdGlvbjogY2VudGVyO1xyXG4gIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XHJcbiAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG59XHJcblxyXG5cclxuXHJcbi5idG4tc3BhY2Uge1xyXG4gIG1hcmdpbi1yaWdodDogNXB4O1xyXG59XHJcbiJdfQ== */");
 
 /***/ }),
 
@@ -7257,6 +7414,11 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ListComponent", function() { return ListComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ngx-spinner */ "./node_modules/ngx-spinner/fesm5/ngx-spinner.js");
+/* harmony import */ var _service_linepairservice_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../service/linepairservice.service */ "./src/app/linepair/service/linepairservice.service.ts");
+/* harmony import */ var _angular_animations__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/animations */ "./node_modules/@angular/animations/fesm5/animations.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _edit_dialog_edit_dialog_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../edit-dialog/edit-dialog.component */ "./src/app/linepair/edit-dialog/edit-dialog.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -7270,18 +7432,144 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
   return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
+
+
+
+
+
 var ListComponent = /** @class */ (function () {
-    function ListComponent() {
+    function ListComponent(service, spinner, dialog) {
+        this.service = service;
+        this.spinner = spinner;
+        this.dialog = dialog;
+        this.displayedColumns = ['Name', 'Gender', 'City', 'Phone', 'Occuptation', 'Birthday'];
     }
+    Object.defineProperty(ListComponent.prototype, "List", {
+        get: function () {
+            return this._list;
+        },
+        set: function (value) {
+            this._list = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
     ListComponent.prototype.ngOnInit = function () {
+        this.GetList();
     };
+    ListComponent.prototype.GetList = function () {
+        var _this = this;
+        this.spinner.show();
+        this.service.getUserList().subscribe(function (list) {
+            _this.List = list;
+            _this.dataSource = new _angular_material__WEBPACK_IMPORTED_MODULE_4__["MatTableDataSource"](list);
+            _this.dataSource.paginator = _this.paginator;
+            _this.dataSource.sort = _this.sort;
+            _this.spinner.hide();
+        });
+    };
+    ListComponent.prototype.applyFilter = function (filterValue) {
+        filterValue = filterValue.trim();
+        filterValue = filterValue.toLowerCase();
+        this.dataSource.filter = filterValue;
+    };
+    ListComponent.prototype.HasCar = function (value) {
+        if (value) {
+            return '有車';
+        }
+        else {
+            return '沒車';
+        }
+    };
+    ListComponent.prototype.HasHouse = function (value) {
+        if (value) {
+            return '有房';
+        }
+        else {
+            return '沒房';
+        }
+    };
+    ListComponent.prototype.Edit = function (value) {
+        var dialogConfig = new _angular_material__WEBPACK_IMPORTED_MODULE_4__["MatDialogConfig"]();
+        dialogConfig.disableClose = true;
+        dialogConfig.autoFocus = true;
+        dialogConfig.width = '80%';
+        dialogConfig.data = value;
+        this.dialog.open(_edit_dialog_edit_dialog_component__WEBPACK_IMPORTED_MODULE_5__["EditDialogComponent"], dialogConfig);
+    };
+    ListComponent.prototype.Delete = function (value) {
+        var _this = this;
+        var name = value.Name;
+        if (confirm('確定要刪除' + name + '?')) {
+            this.spinner.show();
+            this.service.deleteEntity(value.Id).subscribe(function (rep) {
+                alert('已刪除' + name);
+                _this.List.forEach(function (item, index) {
+                    if (item.Id === value.Id) {
+                        _this.List.splice(index, 1);
+                        _this.dataSource = new _angular_material__WEBPACK_IMPORTED_MODULE_4__["MatTableDataSource"](_this.List);
+                    }
+                });
+                _this.spinner.hide();
+            }, function (err) {
+                alert('發生錯誤' + err);
+                _this.spinner.hide();
+            });
+        }
+    };
+    ListComponent.prototype.SalaryTerm = function (range) {
+        switch (range) {
+            case 1: {
+                return '三萬以下';
+                break;
+            }
+            case 2: {
+                return '三萬到五萬';
+                break;
+            }
+            case 3: {
+                return '五萬到十萬';
+                break;
+            }
+            case 4: {
+                return '十萬以上';
+                break;
+            }
+            default: {
+                return '無資料';
+                break;
+            }
+        }
+    };
+    ListComponent.ctorParameters = function () { return [
+        { type: _service_linepairservice_service__WEBPACK_IMPORTED_MODULE_2__["LinepairserviceService"] },
+        { type: ngx_spinner__WEBPACK_IMPORTED_MODULE_1__["NgxSpinnerService"] },
+        { type: _angular_material__WEBPACK_IMPORTED_MODULE_4__["MatDialog"] }
+    ]; };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])(_angular_material__WEBPACK_IMPORTED_MODULE_4__["MatPaginator"], { static: true }),
+        __metadata("design:type", _angular_material__WEBPACK_IMPORTED_MODULE_4__["MatPaginator"])
+    ], ListComponent.prototype, "paginator", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])(_angular_material__WEBPACK_IMPORTED_MODULE_4__["MatSort"], { static: true }),
+        __metadata("design:type", _angular_material__WEBPACK_IMPORTED_MODULE_4__["MatSort"])
+    ], ListComponent.prototype, "sort", void 0);
     ListComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-list',
             template: __importDefault(__webpack_require__(/*! raw-loader!./list.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/linepair/list/list.component.html")).default,
+            animations: [
+                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_3__["trigger"])('detailExpand', [
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_3__["state"])('collapsed', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_3__["style"])({ height: '0px', minHeight: '0' })),
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_3__["state"])('expanded', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_3__["style"])({ height: '*' })),
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_3__["transition"])('expanded <=> collapsed', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_3__["animate"])('225ms cubic-bezier(0.4, 0.0, 0.2, 1)'))
+                ])
+            ],
             styles: [__importDefault(__webpack_require__(/*! ./list.component.css */ "./src/app/linepair/list/list.component.css")).default]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_service_linepairservice_service__WEBPACK_IMPORTED_MODULE_2__["LinepairserviceService"],
+            ngx_spinner__WEBPACK_IMPORTED_MODULE_1__["NgxSpinnerService"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_4__["MatDialog"]])
     ], ListComponent);
     return ListComponent;
 }());
@@ -7373,6 +7661,10 @@ var LinepairserviceService = /** @class */ (function () {
     LinepairserviceService.prototype.postEntity = function (entity) {
         var url = this.site + this.url;
         return this.http.post(url, entity);
+    };
+    LinepairserviceService.prototype.updateEntity = function (entity) {
+        var url = this.site + this.url + '888';
+        return this.http.put(url, entity);
     };
     LinepairserviceService.prototype.deleteEntity = function (id) {
         var url = this.site + this.url + '/' + id;
