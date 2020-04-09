@@ -377,6 +377,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/linepair/love/love.component.html":
+/*!*****************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/linepair/love/love.component.html ***!
+  \*****************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"home-banner\">\n  <div class=\"banner-container\">\n    <div class=\"banner-image\"></div>\n  </div>\n</div>\n\n\n<hr>\n\n<div class=\"container\">\n  <img src=\"../../../assets/Photos/love.png\" alt=\"Cinque Terre\" width=\"100%\" >\n  <div class=\"center\">謝謝您! 您的幸福就交給 Line Pair 啦 ! </div>\n</div>\n");
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/menu.component.html":
 /*!***************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/menu.component.html ***!
@@ -7242,7 +7255,7 @@ var FormComponent = /** @class */ (function () {
         this.service.postEntity(this.Entity).subscribe(function (res) {
             alert('上傳成功!');
             _this.spinner.hide();
-            _this.router.navigate(['linepairlist']);
+            _this.router.navigate(['linepairlove']);
         }, function (err) {
             alert(err);
             _this.spinner.hide();
@@ -7336,6 +7349,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _app_core_shared_shared_module__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./../../app/core/shared/shared.module */ "./src/app/core/shared/shared.module.ts");
 /* harmony import */ var ngx_file_drop__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ngx-file-drop */ "./node_modules/ngx-file-drop/fesm5/ngx-file-drop.js");
 /* harmony import */ var _edit_dialog_edit_dialog_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./edit-dialog/edit-dialog.component */ "./src/app/linepair/edit-dialog/edit-dialog.component.ts");
+/* harmony import */ var _love_love_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./love/love.component */ "./src/app/linepair/love/love.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -7356,12 +7370,13 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 
 
 
+
 var LinepairModule = /** @class */ (function () {
     function LinepairModule() {
     }
     LinepairModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
-            declarations: [_list_list_component__WEBPACK_IMPORTED_MODULE_2__["ListComponent"], _form_form_component__WEBPACK_IMPORTED_MODULE_3__["FormComponent"], _edit_dialog_edit_dialog_component__WEBPACK_IMPORTED_MODULE_10__["EditDialogComponent"]],
+            declarations: [_list_list_component__WEBPACK_IMPORTED_MODULE_2__["ListComponent"], _form_form_component__WEBPACK_IMPORTED_MODULE_3__["FormComponent"], _edit_dialog_edit_dialog_component__WEBPACK_IMPORTED_MODULE_10__["EditDialogComponent"], _love_love_component__WEBPACK_IMPORTED_MODULE_11__["LoveComponent"]],
             imports: [
                 _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_7__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_7__["ReactiveFormsModule"],
@@ -7375,6 +7390,9 @@ var LinepairModule = /** @class */ (function () {
                     },
                     {
                         path: 'linepair', component: _form_form_component__WEBPACK_IMPORTED_MODULE_3__["FormComponent"]
+                    },
+                    {
+                        path: 'linepairlove', component: _love_love_component__WEBPACK_IMPORTED_MODULE_11__["LoveComponent"]
                     }
                 ])
             ],
@@ -7572,6 +7590,63 @@ var ListComponent = /** @class */ (function () {
             _angular_material__WEBPACK_IMPORTED_MODULE_4__["MatDialog"]])
     ], ListComponent);
     return ListComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/linepair/love/love.component.css":
+/*!**************************************************!*\
+  !*** ./src/app/linepair/love/love.component.css ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (".container {\r\n  position: relative;\r\n}\r\n\r\n.center {\r\n  position: absolute;\r\n  top: 50%;\r\n  left: 50%;\r\n  -webkit-transform: translate(-50%, -50%);\r\n          transform: translate(-50%, -50%);\r\n  font-size: 22px;\r\n}\r\n\r\nimg {\r\n  width: 100%;\r\n  height: auto;\r\n  opacity: 0.3;\r\n}\r\n\r\n.home-banner {\r\n  display: -webkit-box;\r\n  display: flex;\r\n  -webkit-box-orient: vertical;\r\n  -webkit-box-direction: normal;\r\n          flex-direction: column;\r\n  -webkit-box-pack: center;\r\n          justify-content: center;\r\n  text-align: center;\r\n}\r\n\r\n.banner-image {\r\n  width: 100%;\r\n  height: 100%;\r\n  min-height: 150px; /* Added to show image */\r\n  background-image: url('LinePairLogo.jpg');\r\n  background-position: center;\r\n  background-repeat: no-repeat;\r\n  display: inline-block;\r\n}\r\n\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbGluZXBhaXIvbG92ZS9sb3ZlLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxrQkFBa0I7QUFDcEI7O0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIsUUFBUTtFQUNSLFNBQVM7RUFDVCx3Q0FBZ0M7VUFBaEMsZ0NBQWdDO0VBQ2hDLGVBQWU7QUFDakI7O0FBRUE7RUFDRSxXQUFXO0VBQ1gsWUFBWTtFQUNaLFlBQVk7QUFDZDs7QUFHQTtFQUNFLG9CQUFhO0VBQWIsYUFBYTtFQUNiLDRCQUFzQjtFQUF0Qiw2QkFBc0I7VUFBdEIsc0JBQXNCO0VBQ3RCLHdCQUF1QjtVQUF2Qix1QkFBdUI7RUFDdkIsa0JBQWtCO0FBQ3BCOztBQUVBO0VBQ0UsV0FBVztFQUNYLFlBQVk7RUFDWixpQkFBaUIsRUFBRSx3QkFBd0I7RUFDM0MseUNBQWtFO0VBQ2xFLDJCQUEyQjtFQUMzQiw0QkFBNEI7RUFDNUIscUJBQXFCO0FBQ3ZCIiwiZmlsZSI6InNyYy9hcHAvbGluZXBhaXIvbG92ZS9sb3ZlLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY29udGFpbmVyIHtcclxuICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbn1cclxuXHJcbi5jZW50ZXIge1xyXG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICB0b3A6IDUwJTtcclxuICBsZWZ0OiA1MCU7XHJcbiAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSwgLTUwJSk7XHJcbiAgZm9udC1zaXplOiAyMnB4O1xyXG59XHJcblxyXG5pbWcge1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIGhlaWdodDogYXV0bztcclxuICBvcGFjaXR5OiAwLjM7XHJcbn1cclxuXHJcblxyXG4uaG9tZS1iYW5uZXIge1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcclxuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcclxuICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbn1cclxuXHJcbi5iYW5uZXItaW1hZ2Uge1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIGhlaWdodDogMTAwJTtcclxuICBtaW4taGVpZ2h0OiAxNTBweDsgLyogQWRkZWQgdG8gc2hvdyBpbWFnZSAqL1xyXG4gIGJhY2tncm91bmQtaW1hZ2U6IHVybCgnLi8uLi8uLi8uLi9hc3NldHMvUGhvdG9zL0xpbmVQYWlyTG9nby5qcGcnKTtcclxuICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiBjZW50ZXI7XHJcbiAgYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDtcclxuICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XHJcbn1cclxuXHJcbiJdfQ== */");
+
+/***/ }),
+
+/***/ "./src/app/linepair/love/love.component.ts":
+/*!*************************************************!*\
+  !*** ./src/app/linepair/love/love.component.ts ***!
+  \*************************************************/
+/*! exports provided: LoveComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoveComponent", function() { return LoveComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+var LoveComponent = /** @class */ (function () {
+    function LoveComponent() {
+    }
+    LoveComponent.prototype.ngOnInit = function () {
+    };
+    LoveComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-love',
+            template: __importDefault(__webpack_require__(/*! raw-loader!./love.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/linepair/love/love.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./love.component.css */ "./src/app/linepair/love/love.component.css")).default]
+        }),
+        __metadata("design:paramtypes", [])
+    ], LoveComponent);
+    return LoveComponent;
 }());
 
 
