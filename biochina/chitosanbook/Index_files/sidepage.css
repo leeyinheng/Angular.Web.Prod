@@ -1,0 +1,97 @@
+#bottomcontact section{
+	overflow:visible;
+}
+#bottomcontact .contactway span{
+	font-size: 20px;
+    display: inline-block;
+    line-height: 100%;
+}
+#bottomcontact .contactway span b{
+    font-size: 30px;
+    font-weight: normal;
+    line-height: 100%;
+    display: inline-block;
+    vertical-align: text-bottom;
+}
+#bottomcontact .contactway h3{
+	text-align:center;
+	line-height: 100%;
+	margin: 20px 0;
+}
+#bottomcontact .contactway h3 b{
+	font-size:30px;
+	font-weight: normal;
+	line-height: 100%;
+	position:relative;
+	z-index:2;
+}
+#bottomcontact .contactway h3 b:after,
+#bottomcontact .contactway h3 b:before{
+	position:absolute;
+	z-index:1;
+	width:50%;
+	left:-60%;
+	top:49%;
+	height:1px;
+	background:#fff;
+	content:'';
+}
+#bottomcontact .contactway h3 b:before{
+	right:-60%;
+	left:inherit;
+}
+#bottomcontact{
+	background-image:url(bg.jpg);
+	background-repeat:no-repeat;
+	background-position:100% 100%;
+	padding: 100px 0;
+	position:relative;
+}
+#bottomcontact .contactway{
+    color: #fff;
+	text-align: center;	
+	margin-bottom: 50px;
+}
+#bottomcontact .contactlist li{
+    text-align: center;
+    color: #fff;	
+}
+#bottomcontact .contactlist li a{
+    color: #fff;	
+}
+#bottomcontact #community{
+	text-align:center;
+	margin-top: 50px;
+}
+#bottomcontact #community a{
+    color: #fff;
+    font-size: 20px;
+    display: inline-block;
+    margin: 0 10px;
+}
+#bottomcontact .bottomhand{
+    position: absolute;
+    left: 0;
+    top: 30%;
+	max-width: 35%;
+    animation-name: pulse;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@media screen and (max-width: 1280px) {
+	#bottomcontact section{
+		position: relative;
+		z-index: 3;	
+	}
+	#bottomcontact .contactway h3 b{
+		font-size: 24px;	
+	}
+	#bottomcontact .contactway span{
+		font-size:18px;
+	}
+}
+@media screen and (max-width: 480px) {
+	#bottomcontact .bottomhand{
+	    top: 80%;	
+	}
+}

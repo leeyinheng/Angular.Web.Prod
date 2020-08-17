@@ -1,0 +1,49 @@
+.content-wrap .waylink .protitle h3{
+	font-size:30px;
+}
+.content-wrap .waylink .protitle span{
+	font-size:20px;
+}
+.content-wrap .waylink ul li a{
+	font-size:12px;
+}
+.content-wrap .waylink .protitle span:first-letter{
+	font-size:28px;
+}
+@media screen and (max-width: 1280px) {
+	#sub-banner{
+		margin-top: 61px;	
+	}
+}
+@media screen and (max-width: 980px) {
+	.content-wrap .waylink ul,
+	.content-wrap .waylink .protitle{
+		float:none;
+	}
+	.content-wrap .waylink ul{
+	    text-align: right;	
+	}
+	.content-wrap .waylink .protitle{
+		margin-top:15px;
+	}
+}
+@media screen and (max-width: 640px) {
+	.content-wrap .waylink .protitle h3{
+		font-size:24px;
+	}
+	.content-wrap .waylink .protitle span{
+		font-size:16px;
+	}
+	.content-wrap .waylink .protitle span:first-letter{
+		font-size:20px;
+	}
+}
+@media screen and (max-width: 480px) {
+	.content-wrap{
+	    padding: 50px 0;
+		background-size: contain;	
+	}
+	.content-main{
+	    margin: 20px 0;	
+	}
+}
