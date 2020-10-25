@@ -345,6 +345,9 @@ SOFTWARE.
 ngx-clipboard
 MIT
 
+ngx-facebook
+MIT
+
 ngx-file-drop
 MIT
 
