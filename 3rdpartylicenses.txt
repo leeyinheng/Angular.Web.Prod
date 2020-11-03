@@ -348,6 +348,8 @@ MIT
 ngx-file-drop
 MIT
 
+ngx-image-compress
+
 ngx-pagination
 MIT
 The MIT License (MIT)
